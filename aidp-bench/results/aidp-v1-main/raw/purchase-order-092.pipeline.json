@@ -1,0 +1,856 @@
+{
+ "id": "purchase-order-092",
+ "slug": "purchase-order",
+ "lane": "pipeline",
+ "ts": "2026-10-23T13:03:17.071Z",
+ "attempts": 1,
+ "classification": {
+  "category": "Purchase Order",
+  "ms": 72700,
+  "cache_hit": false
+ },
+ "ocr_text": "# --- | Page 1 | --- #\n\nHelvetia Präzision AG                               BESTELLUNG\nBahnhofstrasse 12, 4051 Basel, Switzerland\nMWST-Nr: CHE-233.951.690 MWST\n\nRECHNUNGSADRESSE                                         Order No          PO-2026-35561\nHelvetia Präzision AG                                  Order Date        27.03.2026\nIndustriestrasse 55                                    Zahlbar bis       11.05.2026\n1201 Genève                                            Your Reference    Beat Steiner\nSwitzerland                                            Currency          CHF\nMWST-Nr: CHE-706.253.605 MWST\n\nPos  Art-Nr       Bezeichnung             Spec                Anzahl  Einheit  Preis    Betrag\n1    MAINT-30905  Maintenance Contract    Quarterly service      42  pcs      277.05   11'636.10\n2    MAINT-20528  Maintenance Contract    Quarterly service      41  pcs      114.53    4'695.73\n3    FRT-97860    Freight & Handling      Road transport          2  pcs      194.94      389.88\n\n                                                     Zwischentotal              16'721.71\n                                                     MwSt 8.1%                   1'354.46\n                                                     TOTAL CHF                  18'076.17\n\nZAHLUNGSVERBINDUNG\n\nBank           Switzerland Commercial Bank\nIBAN           CH19 6993 6423 4517 7009 86\nBIC            FYBKSE86\nPayment Terms  Payment due within 30 days.\n\nBesten Dank für Ihren Auftrag.",
+ "ms": 12357,
+ "extraction": {
+  "Buyer": {
+   "Name": "Helvetia Präzision AG",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 55",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "VAT No": "CHE-706.253.605 MWST"
+  },
+  "Seller": {
+   "Name": "Helvetia Präzision AG",
+   "Name 2": "",
+   "Street 1": "Bahnhofstrasse 12",
+   "Street 2": "",
+   "City": "Basel",
+   "Postal Code": "4051",
+   "Country": "Switzerland",
+   "Country Code": "CH"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 55",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": "",
+   "Ship To Location Code": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-35561",
+   "Compromisso Code": "",
+   "PO Date": "27/03/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "11/05/2026",
+   "Cost Center": "",
+   "Your Reference": "Beat Steiner",
+   "Posting Date": "",
+   "Net Amount": "16721.71",
+   "Total Amount": "18076.17",
+   "Rounding Amount": "",
+   "Currency Code": "CHF",
+   "Contact Name": "Beat Steiner"
+  },
+  "Items": [
+   {
+    "Article ID": "MAINT-30905",
+    "Article Name": "Maintenance Contract",
+    "Description": "Quarterly service",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "42",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "277.05",
+    "Net Amount": "11636.10",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "MAINT-20528",
+    "Article Name": "Maintenance Contract",
+    "Description": "Quarterly service",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "41",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "114.53",
+    "Net Amount": "4695.73",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "FRT-97860",
+    "Article Name": "Freight & Handling",
+    "Description": "Road transport",
+    "Order Number": "3",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "2",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "194.94",
+    "Net Amount": "389.88",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "Bank Switzerland Commercial Bank IBAN CH19 6993 6423 4517 7009 86 BIC FYBKSE86 Payment Terms Payment due within 30 days.",
+   "Subtotal": "",
+   "Tax Rate": "8.1",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "1354.46",
+     "rate": "8.1",
+     "exchange_rate": "",
+     "Code": "MwSt",
+     "Amount": "1354.46",
+     "Rate": "8.1",
+     "Exchange Rate": ""
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": "",
+   "Payment Methods": [
+    {
+     "Payment Method": "IBAN",
+     "Account Number": "CH19699364234517700986",
+     "BIC/SWIFT Code": "FYBKSE86",
+     "Method": "IBAN",
+     "BIC/Swift Code": "FYBKSE86"
+    }
+   ]
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "CH19699364234517700986",
+    "BIC/SWIFT Code": "FYBKSE86",
+    "Method": "IBAN",
+    "BIC/Swift Code": "FYBKSE86"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": [],
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "derivations": [],
+  "derived_count": 0,
+  "flagged_count": 0,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 70,
+  "evidence_inputs": {
+   "analyze_result": true,
+   "layer_sound_pages": [
+    1
+   ],
+   "native_layer": "trusted",
+   "ocr_quality": 1,
+   "ocr_text": true,
+   "summary": true,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Buyer.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"CH\" is the standard ISO 3166-1 alpha-2 country code for \"Switzerland\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Buyer.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Buyer.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.VAT No": {
+    "c": 0.995,
+    "checks": [
+     "vat_format"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.96
+   },
+   "Items.0.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"11'636.10\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Order Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.UOM": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Unit Price": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Article Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"4'695.73\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Order Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.UOM": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Unit Price": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Article Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Net Amount": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Order Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.UOM": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Unit Price": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Order Details.Contact Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Order Details.Currency Code": {
+    "c": 0.995,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Order Details.Due Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"11.05.2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Order Details.Net Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"16'721.71\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Order Details.PO Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"27.03.2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Order Details.PO Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Order Details.Payment Terms": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Order Details.Total Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"18'076.17\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Order Details.Your Reference": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Payment Details Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax Rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1'354.46\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Methods.0.Account Number": {
+    "c": 0.3,
+    "fidelity": 0.98,
+    "flags": [
+     "checksum_fail:iban_mod97"
+    ],
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "low",
+    "validity": 0.2
+   },
+   "Payment Methods.0.BIC/SWIFT Code": {
+    "c": 0.995,
+    "checks": [
+     "bic_shape"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.96
+   },
+   "Payment Methods.0.Payment Method": {
+    "c": 0.995,
+    "checks": [
+     "payment_method_is_a_label"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Seller.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"CH\" is the standard ISO 3166-1 alpha-2 country code for \"Switzerland\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Seller.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Seller.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"CH\" is the standard ISO 3166-1 alpha-2 country code for \"Switzerland\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Shipping Details.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 1,
+  "mean_confidence": 0.946,
+  "scored_fields": 59,
+  "summary_agreement": {
+   "buyer": "agree",
+   "party_swap_suspect": false,
+   "seller": "agree"
+  }
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "purchase-order",
+ "document_id": "01a168dc-e69d-707d-826c-306625f34200",
+ "request_id": "b700ba82-cef7-4c74-9adf-394b794cf146",
+ "ok": true
+}

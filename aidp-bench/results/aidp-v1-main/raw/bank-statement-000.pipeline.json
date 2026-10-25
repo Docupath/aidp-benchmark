@@ -1,0 +1,869 @@
+{
+ "id": "bank-statement-000",
+ "slug": "bank-statement",
+ "lane": "pipeline",
+ "ts": "2026-10-23T07:49:39.027Z",
+ "attempts": 1,
+ "classification": {
+  "category": "Bank Statement",
+  "ms": 52614,
+  "cache_hit": false
+ },
+ "ocr_text": "# --- | Page 1 | --- #\n\nHarborline Foods Corp                               ACCOUNT STATEMENT\n88 Commerce Drive, 62701 Springfield, United States\nVAT No: US27-0435056\nReg No: US-648373\n\nFROM                                                     BILL TO\nHarborline Foods Corp                                   Summit Medical Devices Inc\n88 Commerce Drive                                       742 Evergreen Terrace\n62701 Springfield                                       73301 Austin\nUnited States                                           United States\nVAT: US27-0435056\n\nAccount Holder    Summit Medical Devices Inc\nAccount No        5927-365561-07\nIBAN              US75 8601 7456 5130 1773 35\nStatement Period  03/01/2026 - 03/28/2026\nOpening Balance   41,015.90\nClosing Balance   30,449.54\n\nTransactions\n\nDate        Description    Debit     Credit    Balance\n03/01/2026  ATM withdrawal 3,009.22            38,006.68\n03/02/2026  Interest       144.23              37,862.45\n03/03/2026  ATM withdrawal 3,599.75            34,262.70\n03/04/2026  Interest                 2,559.61  36,822.31\n03/05/2026  Fee            1,117.20            35,705.11\n03/06/2026  SEPA transfer  2,308.29            33,396.82\n03/07/2026  Interest       1,605.94            31,790.88\n03/08/2026  SEPA transfer  1,341.34            30,449.54",
+ "ms": 16735,
+ "extraction": {
+  "Statement Header": {
+   "Name": "Harborline Foods Corp",
+   "Branch Name": "",
+   "Address": "88 Commerce Drive",
+   "Branch Code / Identifier": "",
+   "SWIFT/BIC Code": "",
+   "IBAN": "US75860174565130177335",
+   "Japanese Bank Code": "",
+   "Japanese Branch Code": "",
+   "Statement Reference Number": "",
+   "Statement Date": "",
+   "Currency": ""
+  },
+  "Account Holder Information": {
+   "Name": "Summit Medical Devices Inc",
+   "Address": "742 Evergreen Terrace",
+   "Account Number": "5927-365561-07",
+   "Account Type": "",
+   "Customer Reference": "",
+   "Tax Identifier": ""
+  },
+  "Statement Period Summary": {
+   "Period Start Date": "01/03/2026",
+   "Period End Date": "28/03/2026",
+   "Number of Days": "",
+   "Opening Balance": "41015.90",
+   "Closing Balance": "30449.54",
+   "Available Balance": ""
+  },
+  "Summary & Totals": {
+   "Total Debits": "",
+   "Total Credits": "",
+   "Total Fees": "",
+   "Total Interest Earned": "",
+   "Average Daily Balance": ""
+  },
+  "Transaction Details": [
+   {
+    "Transaction Date": "01/03/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "ATM withdrawal",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "ATM withdrawal",
+    "Merchant Name": "",
+    "Payee Name": "",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "3009.22",
+    "Credit Amount": "",
+    "Running Balance": "38006.68",
+    "Currency": ""
+   },
+   {
+    "Transaction Date": "02/03/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Interest",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Interest",
+    "Merchant Name": "",
+    "Payee Name": "Interest",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "144.23",
+    "Credit Amount": "",
+    "Running Balance": "37862.45",
+    "Currency": ""
+   },
+   {
+    "Transaction Date": "03/03/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "ATM withdrawal",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "ATM withdrawal",
+    "Merchant Name": "",
+    "Payee Name": "",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "3599.75",
+    "Credit Amount": "",
+    "Running Balance": "34262.70",
+    "Currency": ""
+   },
+   {
+    "Transaction Date": "04/03/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Interest",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Interest",
+    "Merchant Name": "",
+    "Payee Name": "",
+    "Payer Name": "Interest",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "",
+    "Credit Amount": "2559.61",
+    "Running Balance": "36822.31",
+    "Currency": ""
+   },
+   {
+    "Transaction Date": "05/03/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Fee",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Fee",
+    "Merchant Name": "",
+    "Payee Name": "Fee",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "1117.20",
+    "Credit Amount": "",
+    "Running Balance": "35705.11",
+    "Currency": ""
+   },
+   {
+    "Transaction Date": "06/03/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "SEPA transfer",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "SEPA transfer",
+    "Merchant Name": "",
+    "Payee Name": "",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "2308.29",
+    "Credit Amount": "",
+    "Running Balance": "33396.82",
+    "Currency": ""
+   },
+   {
+    "Transaction Date": "07/03/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Interest",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Interest",
+    "Merchant Name": "",
+    "Payee Name": "Interest",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "1605.94",
+    "Credit Amount": "",
+    "Running Balance": "31790.88",
+    "Currency": ""
+   },
+   {
+    "Transaction Date": "08/03/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "SEPA transfer",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "SEPA transfer",
+    "Merchant Name": "",
+    "Payee Name": "",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "1341.34",
+    "Credit Amount": "",
+    "Running Balance": "30449.54",
+    "Currency": ""
+   }
+  ],
+  "Fees & Interest": [],
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "corrected_count": 2,
+  "derivations": [
+   {
+    "after": "88 Commerce Drive",
+    "before": "88 Commerce Drive, 62701 Springfield, United States",
+    "field_path": "Statement Header.Address",
+    "inputs": [
+     "summary_json"
+    ],
+    "kind": "corrected",
+    "method": "address locality cleanup",
+    "reason": "the Statement Header Address duplicated the city/postcode/province/country that belong in their own fields; trimmed to the street line(s) per the street-only Address contract"
+   },
+   {
+    "after": "742 Evergreen Terrace",
+    "before": "742 Evergreen Terrace, 73301 Austin, United States",
+    "field_path": "Account Holder Information.Address",
+    "inputs": [
+     "summary_json"
+    ],
+    "kind": "corrected",
+    "method": "address locality cleanup",
+    "reason": "the Account Holder Information Address duplicated the city/postcode/province/country that belong in their own fields; trimmed to the street line(s) per the street-only Address contract"
+   }
+  ],
+  "derived_count": 0,
+  "flagged_count": 0,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 166,
+  "evidence_inputs": {
+   "analyze_result": true,
+   "layer_sound_pages": [
+    1
+   ],
+   "native_layer": "trusted",
+   "ocr_quality": 1,
+   "ocr_text": true,
+   "summary": false,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Account Holder Information.Account Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Account Holder Information.Address": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Account Holder Information.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Statement Header.Address": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Statement Header.IBAN": {
+    "c": 0.3,
+    "fidelity": 0.98,
+    "flags": [
+     "checksum_fail:iban_mod97"
+    ],
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "low",
+    "validity": 0.2
+   },
+   "Statement Header.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Statement Period Summary.Closing Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"30,449.54\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Statement Period Summary.Opening Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"41,015.90\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Statement Period Summary.Period End Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"03/28/2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Statement Period Summary.Period Start Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"03/01/2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Transaction Details.0.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"3,009.22\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.0.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.0.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"38,006.68\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.0.Transaction Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"03/01/2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Transaction Details.0.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.1.Debit Amount": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.1.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.1.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.1.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"37,862.45\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.1.Transaction Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"03/02/2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Transaction Details.1.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.2.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"3,599.75\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.2.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.2.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"34,262.70\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.2.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.2.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.3.Credit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2,559.61\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.3.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.3.Payer Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.3.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"36,822.31\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.3.Transaction Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"03/04/2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Transaction Details.3.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.4.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1,117.20\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.4.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.4.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.4.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"35,705.11\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.4.Transaction Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"03/05/2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Transaction Details.4.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.5.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2,308.29\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.5.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.5.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"33,396.82\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.5.Transaction Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"03/06/2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Transaction Details.5.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.6.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1,605.94\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.6.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.6.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.6.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"31,790.88\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.6.Transaction Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"03/07/2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Transaction Details.6.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.7.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1,341.34\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.7.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.7.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"30,449.54\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.7.Transaction Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"03/08/2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Transaction Details.7.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 1,
+  "mean_confidence": 0.914,
+  "scored_fields": 54
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "bank-statement",
+ "document_id": "01a167bd-743b-76de-987b-cfa705d76649",
+ "request_id": "9d71914b-134f-4794-9d0d-a33cc14beb3d",
+ "ok": true
+}

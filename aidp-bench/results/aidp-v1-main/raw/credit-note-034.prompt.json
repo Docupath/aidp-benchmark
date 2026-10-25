@@ -1,0 +1,629 @@
+{
+ "id": "credit-note-034",
+ "slug": "credit-note",
+ "lane": "prompt",
+ "ts": "2026-10-23T09:00:13.828Z",
+ "attempts": 1,
+ "ms": 8895,
+ "extraction": {
+  "Buyer": {
+   "Name": "Lusitana Ferramentas Lda",
+   "Address": "Avenida da Liberdade 50",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT"
+  },
+  "Seller": {
+   "Name": "Atlântico Distribuição SA",
+   "Address": "Rua Augusta 100",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT462692561",
+   "Registration No": "PT-881137"
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Avenida da Liberdade 50",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "CN-2026-54374",
+   "Compromisso Code": "",
+   "Invoice Date": "12/02/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "29/03/2026",
+   "Cost Center": "",
+   "Your Reference": "João Silva",
+   "Posting Date": "",
+   "Net Amount": "284.46",
+   "Total Tax": "65.43",
+   "Total Amount": "349.89",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "VAL-68816",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "33",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "8.62",
+    "Net Amount": "284.46",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "Dados de pagamento Bank Portugal Commercial Bank IBAN PT88 8560 2997 6541 0000 28 BIC DXBKDE32 Payment Terms Payment due within 30 days.",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "PT88856029976541000028",
+     "BIC_or_Swift_code": "DXBKDE32",
+     "Method": "IBAN",
+     "Account Number": "PT88856029976541000028",
+     "BIC/Swift Code": "DXBKDE32"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "65.43",
+   "Tax Rate": "23",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "65.43",
+     "rate": "23",
+     "exchange_rate": "",
+     "Code": "IVA",
+     "Amount": "65.43",
+     "Rate": "23",
+     "Exchange Rate": ""
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": [],
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "corrected_count": 0,
+  "derivations": [
+   {
+    "after": "PT88856029976541000028",
+    "before": "PT88856029976541000028",
+    "field_path": "Payment Details.Payment Methods.0.account_no",
+    "inputs": [
+     "IBAN mod-97"
+    ],
+    "kind": "mismatch",
+    "method": "IBAN mod-97",
+    "reason": "account_no looks like an IBAN but fails the mod-97 check digit (likely an OCR transcription error); left as printed, flagged."
+   }
+  ],
+  "derived_count": 0,
+  "flagged_count": 1,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 46,
+  "evidence_inputs": {
+   "analyze_result": false,
+   "native_layer": "absent",
+   "ocr_quality": null,
+   "ocr_text": true,
+   "summary": false,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Buyer.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"PT\" is the standard ISO 3166-1 alpha-2 country code for \"Portugal\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Buyer.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Currency Code": {
+    "c": 0.95,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Invoice Details.Due Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"29-03-2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Invoice Details.Invoice Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"12-02-2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Invoice Details.Invoice Number": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Invoice Type": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Net Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"284,46\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Payment Terms": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Total Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"349,89\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Total Tax": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"65,43\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Your Reference": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Item No": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "justification": "the position of this line in the list (row 1), not a value printed on the page",
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high"
+   },
+   "Items.0.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"284,46\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.UOM": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"8,62\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Payment Details.Payment Details Description": {
+    "c": 0.75,
+    "fidelity": 0.75,
+    "page": 1,
+    "placement": "unknown",
+    "source": "fuzzy",
+    "tier": "medium"
+   },
+   "Payment Details.Payment Methods.0.BIC_or_Swift_code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Payment Methods.0.account_no": {
+    "c": 0.3,
+    "fidelity": 0.93,
+    "flags": [
+     "checksum_fail:iban_mod97",
+     "printed_mismatch"
+    ],
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "low",
+    "validity": 0.2
+   },
+   "Payment Details.Payment Methods.0.payment_method": {
+    "c": 0.95,
+    "checks": [
+     "payment_method_is_a_label"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Payment Details.Tax Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"65,43\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax Rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"65,43\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"PT\" is the standard ISO 3166-1 alpha-2 country code for \"Portugal\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Seller.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Registration No": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.VAT No": {
+    "c": 0.95,
+    "checks": [
+     "vat_format"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.96
+   },
+   "Shipping Details.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"PT\" is the standard ISO 3166-1 alpha-2 country code for \"Portugal\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Shipping Details.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 1,
+  "mean_confidence": 0.898,
+  "model_derivations": {
+   "Buyer.Country": "the buyer address ends with Portugal, so the country is Portugal",
+   "Buyer.Country Code": "the buyer country is Portugal, so the ISO code is PT",
+   "Invoice Details.Invoice Type": "the document says NOTA DE CRÉDITO and Credit Note, so it is a Credit document",
+   "Payment Details.Tax Amount": "taken as the sum of the tax array values",
+   "Payment Details.Tax Rate": "the totals show a single IVA rate of 23%, so this is the overall tax rate",
+   "Seller.Country": "the seller address ends with Portugal, so the country is Portugal",
+   "Seller.Country Code": "the seller country is Portugal, so the ISO code is PT",
+   "Shipping Details.Address": "no ship-to block is printed, so the delivery address falls back to the buyer address",
+   "Shipping Details.City": "no ship-to block is printed, so the delivery city falls back to the buyer address",
+   "Shipping Details.Country": "no ship-to block is printed, so the delivery country falls back to the buyer address",
+   "Shipping Details.Country Code": "no ship-to block is printed, so the delivery country code falls back to the buyer address",
+   "Shipping Details.Postal Code": "no ship-to block is printed, so the delivery postal code falls back to the buyer address"
+  },
+  "scored_fields": 46
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "credit-note",
+ "document_id": "01a167fd-44a3-74c7-9d4c-e8cfb7b097fb",
+ "request_id": "1f2113a5-3fdc-404b-813a-8fa74bd8f8d0",
+ "ok": true
+}

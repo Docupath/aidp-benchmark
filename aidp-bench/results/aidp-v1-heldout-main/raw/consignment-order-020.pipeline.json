@@ -1,0 +1,566 @@
+{
+ "id": "consignment-order-020",
+ "slug": "consignment-order",
+ "lane": "pipeline",
+ "ts": "2026-10-24T06:35:56.623Z",
+ "attempts": 1,
+ "classification": {
+  "category": "Consignment Order",
+  "ms": 140175,
+  "cache_hit": false
+ },
+ "ocr_text": "# --- | Page 1 | --- #\n\nRandstad Componenten BV                                  CONSIGNMENT ORDER\nKeizersgracht 12, 3011 AA Rotterdam, Netherlands\nBTW-nummer: NL776756477B01\n\nFACTUURADRES\nRandstad Componenten BV                                  Order No         CSG-2026-33869\nIndustrieweg 88                                          Order Date       20-03-2026\n1015 CX Amsterdam                                        Vervaldatum      03-04-2026\nNetherlands                                              Your Reference   Emma Bakker\nBTW-nummer: NL898377995B01                               Currency         EUR\n\nNr  Artikelnr  Omschrijving      Spec          Aantal  Prijs p/st  Totaal\n1   DEV-54844  Software          Sprint        1       2.756,20    2.756,20 [obscured]\n               Development       delivery\n\n                                              Subtotaal                    2.756,20\n                                              BTW 21%                        578,80\n                                              TOTAAL                      3.335,00\n\nBETAALGEGEVENS\n Bank          Netherlands Commercial Bank\n IBAN          NL92 1569 4915 4633 4300 94\n BIC           AQBKDE19\n Payment Terms Payment due within 30 days.\n\nBedankt voor uw bestelling.",
+ "ms": 12144,
+ "extraction": {
+  "Buyer": {
+   "Name": "Randstad Componenten BV",
+   "Name 2": "",
+   "Street 1": "Industrieweg 88",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL898377995B01",
+   "Contact Name": "Emma Bakker"
+  },
+  "Seller": {
+   "Name": "Randstad Componenten BV",
+   "Name 2": "",
+   "Street 1": "Keizersgracht 12",
+   "Street 2": "",
+   "City": "Rotterdam",
+   "Postal Code": "3011 AA",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL776756477B01",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industrieweg 88",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": "",
+   "Ship To Location Code": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-33869",
+   "Consignment Date": "20/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "03/04/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Emma Bakker"
+  },
+  "Items": [
+   {
+    "Article ID": "DEV-54844",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Quantity": "1",
+    "UOM": "",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "2756.20",
+    "Net Amount": "2756.20",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "2756.20",
+   "Tax": [
+    {
+     "tax_code": "BTW",
+     "tax_total": "578.80",
+     "rate": "21",
+     "exchange_rate": "",
+     "Code": "BTW",
+     "Amount": "578.80",
+     "Rate": "21",
+     "Exchange Rate": ""
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "3335.00",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": [],
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "derivations": [],
+  "derived_count": 0,
+  "flagged_count": 0,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 28,
+  "evidence_inputs": {
+   "analyze_result": true,
+   "layer_sound_pages": [
+    1
+   ],
+   "native_layer": "trusted",
+   "ocr_quality": 1,
+   "ocr_text": true,
+   "summary": true,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Buyer.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Contact Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"NL\" is the standard ISO 3166-1 alpha-2 country code for \"Netherlands\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Buyer.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Buyer.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.VAT No": {
+    "c": 0.995,
+    "checks": [
+     "vat_format"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.96
+   },
+   "Consignment Details.Consignment Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"20-03-2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Consignment Details.Consignment Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Consignment Details.Contact Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Consignment Details.Currency Code": {
+    "c": 0.995,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Consignment Details.Payment Due Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"03-04-2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Consignment Details.Payment Terms": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article Name": {
+    "c": 0.8,
+    "fidelity": 0.8,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "fuzzy",
+    "tier": "medium"
+   },
+   "Items.0.Description": {
+    "c": 0.8,
+    "fidelity": 0.8,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "fuzzy",
+    "tier": "medium"
+   },
+   "Items.0.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.756,20\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.756,20\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Payment Details.Payment Methods": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Subtotal": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.756,20\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"578,80\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"3.335,00\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"NL\" is the standard ISO 3166-1 alpha-2 country code for \"Netherlands\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Seller.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Seller.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.VAT No": {
+    "c": 0.995,
+    "checks": [
+     "vat_format"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.96
+   },
+   "Shipping Details.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"NL\" is the standard ISO 3166-1 alpha-2 country code for \"Netherlands\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Shipping Details.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 0,
+  "mean_confidence": 0.945,
+  "model_derivations": {
+   "Buyer.Country Code": "derived from the printed country Netherlands.",
+   "Consignment Details.Consignment Date": "normalized from the printed Order Date 20-03-2026.",
+   "Consignment Details.Payment Due Date": "normalized from the printed Vervaldatum 03-04-2026.",
+   "Items.Article Name": "joined from the wrapped item name lines Software and Development.",
+   "Items.Net Amount": "normalized from the printed total 2.756,20.",
+   "Items.Unit Price": "normalized from the printed price 2.756,20.",
+   "Payment Details.Subtotal": "normalized from the printed Subtotaal 2.756,20.",
+   "Payment Details.Tax": "normalized from the printed BTW 21% 578,80 line.",
+   "Payment Details.Total": "normalized from the printed TOTAAL 3.335,00.",
+   "Seller.Country Code": "derived from the printed country Netherlands.",
+   "Shipping Details.City": "no separate ship-to block is printed, so it falls back to the buyer address.",
+   "Shipping Details.Country": "no separate ship-to block is printed, so it falls back to the buyer address.",
+   "Shipping Details.Country Code": "no separate ship-to block is printed, so it falls back to the buyer address.",
+   "Shipping Details.Postal Code": "no separate ship-to block is printed, so it falls back to the buyer address.",
+   "Shipping Details.Street 1": "no separate ship-to block is printed, so it falls back to the buyer address."
+  },
+  "scored_fields": 38,
+  "summary_agreement": {
+   "buyer": "agree",
+   "party_swap_suspect": false,
+   "seller": "agree"
+  }
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "consignment-order",
+ "document_id": "01a16ca1-ab31-7701-b053-5f54248d900b",
+ "request_id": "fca02b13-b06c-4a65-8956-3c01d5369427",
+ "ok": true
+}

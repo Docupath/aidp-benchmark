@@ -1,0 +1,832 @@
+{
+ "id": "freight-invoice-148",
+ "slug": "freight-invoice",
+ "lane": "pipeline",
+ "ts": "2026-10-23T15:02:45.785Z",
+ "attempts": 1,
+ "classification": {
+  "category": "Freight Invoice",
+  "ms": 80592,
+  "cache_hit": false
+ },
+ "ocr_text": "# --- | Page 1 | --- #\n\nDistribuciones Ibérica SL                              FREIGHT INVOICE\nAvenida Diagonal 220, 28001 Madrid, Spain\nCIF/NIF: ESB09697173\nReg No: ES-209516\n\nFROM                                                   FACTURAR A\nDistribuciones Ibérica SL                              Talleres Mediterráneo SA\nAvenida Diagonal 220                                   Calle Mayor 15\n28001 Madrid                                           46001 Valencia\nSpain                                                  Spain\nVAT: ESB09697173\n\n  Nº Factura             INV-2026-56852\n  Fecha factura          23/01/2026\n  Vencimiento            06/02/2026\n  Currency               EUR\n\nShipment\n\n  Shipment Reference     SH-361211\n  Master Bill of Lading  MBL738658491\n  House Bill of Lading   HBL912711188\n  Vessel / Voyage        MAERSK ESSEX / 2383W\n  Origin                 Hamburg, DE\n  Destination            Singapore, SG\n  Containers             MSKU5966547\n\nCharges\n\nDescription                    Shipment            Importe\nOcean Freight                  SH-361211           1.831,19\nTHC Origin                     SH-361211           134,56\nDocumentation Fee              SH-361211           48,56\nFuel Surcharge                 SH-361211           149,53\n\n Base imponible                2.163,84\n IVA 21%                       454,41\n TOTAL                         2.618,25\n\nGracias por su confianza.",
+ "ms": 11157,
+ "extraction": {
+  "Buyer": {
+   "Name": "Talleres Mediterráneo SA",
+   "Address": "Calle Mayor 15",
+   "City": "Valencia",
+   "Postal Code": "46001",
+   "Country": "Spain",
+   "Country Code": "ES"
+  },
+  "Seller": {
+   "Name": "Distribuciones Ibérica SL",
+   "Address": "Avenida Diagonal 220",
+   "City": "Madrid",
+   "Postal Code": "28001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB09697173",
+   "Registration No": "ES-209516"
+  },
+  "Invoice Details": {
+   "Invoice Number": "INV-2026-56852",
+   "Invoice Date": "23/01/2026",
+   "Due Date": "06/02/2026",
+   "Payment Terms": "",
+   "Currency Code": "EUR",
+   "Net Amount": "2163.84",
+   "Total Tax": "454.41",
+   "Total Amount": "2618.25"
+  },
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [],
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "454.41",
+     "rate": "21",
+     "Code": "IVA",
+     "Amount": "454.41",
+     "Rate": "21"
+    }
+   ]
+  },
+  "Freight Shipments": [
+   {
+    "Shipment Reference": "SH-361211",
+    "Job Number": "",
+    "Mode Of Transport": "OCEAN",
+    "Service Level": "",
+    "Carrier Name": "",
+    "Carrier Code": "",
+    "Booking Number": "",
+    "Master Bill Of Lading": "MBL738658491",
+    "House Bill Of Lading": "HBL912711188",
+    "Vessel Name": "MAERSK ESSEX",
+    "Voyage Number": "2383W",
+    "Ship From": "SF1",
+    "Ship To": "ST1",
+    "Origin Location": "Hamburg, DE",
+    "Departure Location": "DL1",
+    "Origin Country Code": "DE",
+    "Departure Date": "",
+    "Destination Location": "Singapore, SG",
+    "Arrival Location": "AL1",
+    "Destination Country Code": "SG",
+    "Arrival Date": "",
+    "Incoterms": "",
+    "Customer Reference": "",
+    "Shipper Reference": "",
+    "Customs Reference": "",
+    "Packages": "",
+    "Weight": "",
+    "Chargeable Weight": "",
+    "Volume": "",
+    "Equipment Type": "",
+    "Containers": "S1-N1",
+    "Shipment Total": "2163.84",
+    "Line Charges": "S1-C1,S1-C2,S1-C3,S1-C4"
+   }
+  ],
+  "Ship From": [
+   {
+    "ID": "SF1",
+    "Company Name": "",
+    "Street Address": "",
+    "Postal Code": "",
+    "City": "",
+    "Country": ""
+   }
+  ],
+  "Ship To": [
+   {
+    "ID": "ST1",
+    "Company Name": "",
+    "Street Address": "",
+    "Postal Code": "",
+    "City": "",
+    "Country": ""
+   }
+  ],
+  "Departure Location": [
+   {
+    "ID": "DL1",
+    "Postal Code": "",
+    "City": "Hamburg",
+    "IATA Code": "",
+    "UNLOC Code": ""
+   }
+  ],
+  "Arrival Location": [
+   {
+    "ID": "AL1",
+    "Postal Code": "",
+    "City": "Singapore",
+    "IATA Code": "",
+    "UNLOC Code": ""
+   }
+  ],
+  "Line Containers": [
+   {
+    "ID": "S1-N1",
+    "Container ID": "MSKU5966547",
+    "Equipment Type": ""
+   }
+  ],
+  "Line Charges": [
+   {
+    "Charge ID": "S1-C1",
+    "Charge Group": "",
+    "Charge Code": "Ocean Freight",
+    "Description": "Ocean Freight",
+    "Currency": "EUR",
+    "Amount": "1831.19",
+    "Rate": "",
+    "VAT Rate": "",
+    "VAT Amount": "",
+    "PrepaidOrCollect": "",
+    "Charge Payment Term": ""
+   },
+   {
+    "Charge ID": "S1-C2",
+    "Charge Group": "",
+    "Charge Code": "THC Origin",
+    "Description": "THC Origin",
+    "Currency": "EUR",
+    "Amount": "134.56",
+    "Rate": "",
+    "VAT Rate": "",
+    "VAT Amount": "",
+    "PrepaidOrCollect": "",
+    "Charge Payment Term": ""
+   },
+   {
+    "Charge ID": "S1-C3",
+    "Charge Group": "",
+    "Charge Code": "Documentation Fee",
+    "Description": "Documentation Fee",
+    "Currency": "EUR",
+    "Amount": "48.56",
+    "Rate": "",
+    "VAT Rate": "",
+    "VAT Amount": "",
+    "PrepaidOrCollect": "",
+    "Charge Payment Term": ""
+   },
+   {
+    "Charge ID": "S1-C4",
+    "Charge Group": "",
+    "Charge Code": "Fuel Surcharge",
+    "Description": "Fuel Surcharge",
+    "Currency": "EUR",
+    "Amount": "149.53",
+    "Rate": "",
+    "VAT Rate": "",
+    "VAT Amount": "",
+    "PrepaidOrCollect": "",
+    "Charge Payment Term": ""
+   }
+  ],
+  "Invoice Containers": [
+   {
+    "Container ID": "MSKU5966547",
+    "Equipment Type": ""
+   }
+  ],
+  "Invoice Charges": [],
+  "Payment Methods": [],
+  "Tax": [
+   {
+    "tax_code": "IVA",
+    "tax_total": "454.41",
+    "rate": "21",
+    "Code": "IVA",
+    "Amount": "454.41",
+    "Rate": "21"
+   }
+  ],
+  "Barcodes": [],
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "corrected_count": 0,
+  "derivations": [
+   {
+    "after": "EUR",
+    "before": "",
+    "field_path": "Line Charges[].Currency",
+    "inputs": [
+     "EUR"
+    ],
+    "kind": "derived",
+    "method": "fallback to Invoice Details.Currency Code",
+    "reason": "4 charge line(s) did not print a currency of their own. A charge with no stated currency is in the invoice's currency, which this invoice states as EUR, so that was filled in. Lines that DID print their own currency were left exactly as printed."
+   },
+   {
+    "after": "2163.84",
+    "before": "",
+    "field_path": "Freight Shipments.0.Shipment Total",
+    "inputs": [
+     "1831.19",
+     "134.56",
+     "48.56",
+     "149.53"
+    ],
+    "kind": "derived",
+    "method": "sum(Line Charges[].Amount)",
+    "reason": "Shipment SH-361211 prints no total of its own, so it was added up from its own 4 charge line(s): 2163.84. Every charge amount used is one printed on the document."
+   }
+  ],
+  "derived_count": 2,
+  "flagged_count": 0,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 56,
+  "evidence_inputs": {
+   "analyze_result": true,
+   "layer_sound_pages": [
+    1
+   ],
+   "native_layer": "trusted",
+   "ocr_quality": 1,
+   "ocr_text": true,
+   "summary": true,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Arrival Location.0.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Address": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"ES\" is the standard ISO 3166-1 alpha-2 country code for \"Spain\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Buyer.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Buyer.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Departure Location.0.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Freight Shipments.0.Destination Country Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Freight Shipments.0.Destination Location": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Freight Shipments.0.House Bill Of Lading": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Freight Shipments.0.Master Bill Of Lading": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Freight Shipments.0.Mode Of Transport": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Freight Shipments.0.Origin Country Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Freight Shipments.0.Origin Location": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Freight Shipments.0.Shipment Reference": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Freight Shipments.0.Shipment Total": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Freight Shipments.0.Vessel Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Freight Shipments.0.Voyage Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Containers.0.Container ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Currency Code": {
+    "c": 0.995,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Invoice Details.Due Date": {
+    "c": 0.995,
+    "checks": [
+     "date_label_match"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Invoice Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Invoice Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Net Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.163,84\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Total Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.618,25\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Total Tax": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"454,41\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.0.Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1.831,19\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.0.Charge Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.0.Currency": {
+    "c": 0.995,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Line Charges.0.Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.1.Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"134,56\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.1.Charge Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.1.Currency": {
+    "c": 0.995,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Line Charges.1.Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.2.Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"48,56\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.2.Charge Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.2.Currency": {
+    "c": 0.995,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Line Charges.2.Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.3.Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"149,53\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.3.Charge Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Charges.3.Currency": {
+    "c": 0.995,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Line Charges.3.Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Line Containers.0.Container ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Address": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"ES\" is the standard ISO 3166-1 alpha-2 country code for \"Spain\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Seller.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Seller.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Registration No": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.VAT No": {
+    "c": 0.995,
+    "checks": [
+     "vat_format"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.96
+   },
+   "Tax.0.rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax.0.tax_code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax.0.tax_total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"454,41\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 0,
+  "mean_confidence": 0.95,
+  "model_derivations": {
+   "Freight Shipments[0].Destination Country Code": "the destination line ends with SG, so the country code is SG",
+   "Freight Shipments[0].Origin Country Code": "the origin line ends with DE, so the country code is DE"
+  },
+  "scored_fields": 55,
+  "summary_agreement": {
+   "buyer": "agree",
+   "party_swap_suspect": false,
+   "seller": "agree"
+  }
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "freight-invoice",
+ "document_id": "01a1694a-6821-7359-a430-a542e498db52",
+ "request_id": "f5220660-8ce5-4e8e-b304-9dfedc03b4ca",
+ "ok": true
+}

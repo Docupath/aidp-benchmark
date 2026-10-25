@@ -1,0 +1,716 @@
+{
+ "id": "consignment-invoice-139",
+ "slug": "consignment-invoice",
+ "lane": "prompt",
+ "ts": "2026-10-23T14:44:38.216Z",
+ "attempts": 1,
+ "ms": 48316,
+ "extraction": {
+  "Buyer": {
+   "Name": "Bluepeak Industries Inc",
+   "Name 2": "",
+   "Street 1": "450 Madison Avenue",
+   "Street 2": "",
+   "City": "Springfield",
+   "Postal Code": "62701",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US88-5993247",
+   "Contact Name": "David Kim"
+  },
+  "Seller": {
+   "Name": "Bluepeak Industries Inc",
+   "Name 2": "",
+   "Street 1": "88 Commerce Drive",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US12-6975174",
+   "Registration No": "US-468123",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "450 Madison Avenue",
+   "Street 2": "",
+   "City": "Springfield",
+   "Postal Code": "62701",
+   "Country": "United States",
+   "Country Code": "US",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": "",
+   "Ship To Location Code": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-68797",
+   "Consignment Date": "17/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "31/01/2026",
+   "Currency Code": "USD",
+   "Contact Name": "David Kim"
+  },
+  "Items": [
+   {
+    "Article ID": "SNS-95027",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "6",
+    "UOM": "box",
+    "Serial Number": "SN19862042",
+    "Lot Number": "LOT899646",
+    "Unit Price": "55.01",
+    "Net Amount": "330.06",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "MTR-10147",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "",
+    "Quantity": "43",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "LOT488149",
+    "Unit Price": "62.53",
+    "Net Amount": "2688.79",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "MTR-91732",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "",
+    "Quantity": "36",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "LOT639677",
+    "Unit Price": "116.73",
+    "Net Amount": "4202.28",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "7221.13",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "613.80",
+     "rate": "8.5",
+     "exchange_rate": "",
+     "Code": "Sales Tax",
+     "Amount": "613.80",
+     "Rate": "8.5",
+     "Exchange Rate": ""
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "7834.93",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": [
+   {
+    "Text": "(01)00068976112608(17)281115(10)LOT899646(21)SN19862042"
+   }
+  ],
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "derivations": [],
+  "derived_count": 0,
+  "flagged_count": 0,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 38,
+  "evidence_inputs": {
+   "analyze_result": false,
+   "native_layer": "absent",
+   "ocr_quality": null,
+   "ocr_text": true,
+   "summary": false,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Barcodes.0.Text": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Contact Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"US\" is the standard ISO 3166-1 alpha-2 country code for \"United States\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Buyer.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Street 1": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.VAT No": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Consignment Details.Consignment Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"01/17/2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Consignment Details.Consignment Number": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Consignment Details.Contact Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Consignment Details.Currency Code": {
+    "c": 0.95,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Consignment Details.Payment Due Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"01/31/2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Consignment Details.Payment Terms": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Lot Number": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Serial Number": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.UOM": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Lot Number": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2,688.79\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.UOM": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Lot Number": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"4,202.28\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.UOM": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Payment Details.Payment Methods": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Subtotal": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"7,221.13\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"7,834.93\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"US\" is the standard ISO 3166-1 alpha-2 country code for \"United States\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Seller.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Registration No": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Street 1": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.VAT No": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"US\" is the standard ISO 3166-1 alpha-2 country code for \"United States\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Shipping Details.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Street 1": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 0,
+  "mean_confidence": 0.917,
+  "scored_fields": 59
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "consignment-invoice",
+ "document_id": "01a16938-94e2-7023-be09-d5451bb2dc6c",
+ "request_id": "169532e7-97ad-4530-ac27-75cc26bead72",
+ "ok": true
+}

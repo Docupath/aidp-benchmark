@@ -1,0 +1,872 @@
+{
+ "id": "receipt-036",
+ "slug": "receipt",
+ "lane": "pipeline",
+ "ts": "2026-10-23T09:05:11.793Z",
+ "attempts": 1,
+ "classification": {
+  "category": "Receipt",
+  "ms": 69017,
+  "cache_hit": false
+ },
+ "ocr_text": "# --- | Page 1 | --- #\n\nGroupe Horizon SA                                                  RECEIPT\n45 Avenue Victor Hugo, 69001 Lyon, France\nN° TVA: FR50 516240561\n\nFACTURÉ À                                                     Date        26/01/2026 14:39\nAtelier Provence SAS                                           Receipt No   R-752650\n45 Avenue Victor Hugo                                          Cashier     Pierre Martin\n75008 Paris\nFrance\n\nN°  Réf        Désignation          Spec                      Qté  Unité  Prix unitaire  Montant\n1   WGT-74747  Widget Pro 2000      Precision widget, anodized  7  set          319,73   2 238,11\n2   CBL-34337  Cable Assembly 3m    Shielded, 3 meter         46  kg           336,13  15 461,98\n3   MTR-95832  Servo Motor SM-400   400W, with encoder        36  pcs          329,71  11 869,56\n\n                                                    Sous-total                 29 569,65\n                                                    TVA 20%                     5 913,93\n                                                    TOTAL TTC                  35 483,58\n\nCOORDONNÉES BANCAIRES\n Payment    MASTERCARD ****1387\n Paid       35 485,00\n Change     1,42\n\nMerci de votre confiance. - This is not an invoice.",
+ "ms": 12107,
+ "extraction": {
+  "Customer": {
+   "Name": "Atelier Provence SAS",
+   "VAT No": "",
+   "Loyalty/Member ID": "",
+   "Email": ""
+  },
+  "Merchant": {
+   "Name": "Groupe Horizon SA",
+   "Store/Branch Name": "",
+   "Address": "45 Avenue Victor Hugo",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "Phone": "",
+   "Email": "",
+   "Website": "",
+   "Tax/Registration ID": "FR50516240561"
+  },
+  "Receipt Details": {
+   "Receipt Number": "R-752650",
+   "Order/Check Number": "",
+   "Control Number / Control Slip No.": "",
+   "Date": "26/01/2026",
+   "Time": "14:39",
+   "Currency Code": "EUR",
+   "Table / Seat / Guests": "",
+   "Order Type": "",
+   "Register/Terminal ID": "",
+   "Cashier/Server": "Pierre Martin",
+   "Store ID / Location Code": "",
+   "Notes": ""
+  },
+  "Totals": {
+   "Subtotal Net": "29569.65",
+   "Discounts Total": "",
+   "Service Charge": "",
+   "Tip/Gratuity": "",
+   "Rounding Amount": "",
+   "Total Tax": "5913.93",
+   "Total Amount": "35483.58",
+   "Amount Paid": "35485.00",
+   "Change Due": "1.42",
+   "Prices Include Tax (Yes/No)": "Yes",
+   "Prices Include Tax": "Yes"
+  },
+  "Items": [
+   {
+    "Line Number": "1",
+    "Article ID": "WGT-74747",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Category Code": "",
+    "Quantity": "7",
+    "UOM": "",
+    "Unit Price": "319.73",
+    "Net Amount": "2238.11",
+    "Tax ID": "AUTO_TAX_ID_1",
+    "Tax Rate": "20",
+    "Tax Amount": "447.62",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount (with tax)": "2685.73",
+    "Gross Amount": "2685.73"
+   },
+   {
+    "Line Number": "2",
+    "Article ID": "CBL-34337",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Category Code": "",
+    "Quantity": "46",
+    "UOM": "kg",
+    "Unit Price": "336.13",
+    "Net Amount": "15461.98",
+    "Tax ID": "AUTO_TAX_ID_1",
+    "Tax Rate": "20",
+    "Tax Amount": "3092.40",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount (with tax)": "18554.38",
+    "Gross Amount": "18554.38"
+   },
+   {
+    "Line Number": "3",
+    "Article ID": "MTR-95832",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Category Code": "",
+    "Quantity": "36",
+    "UOM": "pcs",
+    "Unit Price": "329.71",
+    "Net Amount": "11869.56",
+    "Tax ID": "AUTO_TAX_ID_1",
+    "Tax Rate": "20",
+    "Tax Amount": "2373.91",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount (with tax)": "14243.47",
+    "Gross Amount": "14243.47"
+   }
+  ],
+  "Payments": [
+   {
+    "Payment Method": "Card",
+    "Amount": "35485.00",
+    "Currency Code": "EUR",
+    "Card Scheme": "MASTERCARD",
+    "Masked PAN": "****1387",
+    "Approval/Auth Code": "",
+    "Transaction/Reference ID": "",
+    "Merchant ID": "",
+    "Terminal ID": "",
+    "Entry Mode": "",
+    "AID": "",
+    "Note": ""
+   }
+  ],
+  "Tax Summary": [
+   {
+    "Tax ID": "AUTO_TAX_ID_1",
+    "Tax Type": "TVA",
+    "Code": "",
+    "Rate": "20",
+    "Taxable Amount": "29569.65",
+    "Tax Amount": "5913.93",
+    "Total With Tax": "35483.58"
+   }
+  ],
+  "Barcodes": [],
+  "Footer Notes": {
+   "Notes": "Merci de votre confiance. - This is not an invoice.This is a Receipt document. Strictly follow the JSON structure and use the exact keys. Do not add any other text or comments."
+  },
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": false,
+  "derivations": [],
+  "derived_count": 0,
+  "flagged_count": 0,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 36,
+  "evidence_inputs": {
+   "analyze_result": true,
+   "layer_sound_pages": [
+    1
+   ],
+   "native_layer": "trusted",
+   "ocr_quality": 1,
+   "ocr_text": true,
+   "summary": true,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Customer.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Footer Notes.Notes": {
+    "c": 0.45,
+    "fidelity": 0.3,
+    "flags": [
+     "unverified_in_source"
+    ],
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "none",
+    "tier": "low"
+   },
+   "Items.0.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Gross Amount (with tax)": {
+    "c": 0.7,
+    "justification": "computed by adding each item's net amount and tax amount",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.0.Line Number": {
+    "c": 0.995,
+    "fidelity": 0.97,
+    "justification": "the position of this line in the list (row 1), not a value printed on the page",
+    "layer": "confirmed",
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high"
+   },
+   "Items.0.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2 238,11\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Tax Amount": {
+    "c": 0.7,
+    "justification": "computed from each item's net amount using the printed 20% TVA rate",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.0.Tax ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"01\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Tax Rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"319,73\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Article Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Gross Amount (with tax)": {
+    "c": 0.7,
+    "justification": "computed by adding each item's net amount and tax amount",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.1.Line Number": {
+    "c": 0.995,
+    "fidelity": 0.97,
+    "justification": "the position of this line in the list (row 2), not a value printed on the page",
+    "layer": "confirmed",
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high"
+   },
+   "Items.1.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"15 461,98\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Tax Amount": {
+    "c": 0.7,
+    "justification": "computed from each item's net amount using the printed 20% TVA rate",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.1.Tax ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"01\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Tax Rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.UOM": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"336,13\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Article Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Gross Amount (with tax)": {
+    "c": 0.7,
+    "justification": "computed by adding each item's net amount and tax amount",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.2.Line Number": {
+    "c": 0.995,
+    "fidelity": 0.97,
+    "justification": "the position of this line in the list (row 3), not a value printed on the page",
+    "layer": "confirmed",
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high"
+   },
+   "Items.2.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"11 869,56\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Tax Amount": {
+    "c": 0.7,
+    "justification": "computed from each item's net amount using the printed 20% TVA rate",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.2.Tax ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"01\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Tax Rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.UOM": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"329,71\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Merchant.Address": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Merchant.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Merchant.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Merchant.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"FR\" is the standard ISO 3166-1 alpha-2 country code for \"France\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Merchant.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Merchant.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Merchant.Tax/Registration ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payments.0.Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"35 485,00\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payments.0.Card Scheme": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payments.0.Currency Code": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of France, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Payments.0.Masked PAN": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payments.0.Payment Method": {
+    "c": 0.995,
+    "checks": [
+     "payment_method_is_a_label"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Receipt Details.Cashier/Server": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Receipt Details.Currency Code": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of France, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Receipt Details.Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Receipt Details.Receipt Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Receipt Details.Time": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Tax Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"5 913,93\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Tax ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"01\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Tax Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Taxable Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"29 569,65\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Total With Tax": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"35 483,58\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Totals.Amount Paid": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"35 485,00\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Totals.Change Due": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1,42\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Totals.Prices Include Tax (Yes/No)": {
+    "c": 0.7,
+    "justification": "the system read the document as a whole and categorized it as \"Yes\" - a judgment from the overall content and layout, not a value copied off any single line",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Totals.Subtotal Net": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"29 569,65\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Totals.Total Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"35 483,58\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Totals.Total Tax": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"5 913,93\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 1,
+  "mean_confidence": 0.911,
+  "model_derivations": {
+   "Items.Gross Amount (with tax)": "computed by adding each item's net amount and tax amount",
+   "Items.Tax Amount": "computed from each item's net amount using the printed 20% TVA rate",
+   "Items.Tax ID": "the items use the only tax bucket shown in the tax summary",
+   "Items.Tax Rate": "the receipt shows a single TVA 20% rate, so it applies to all items",
+   "Payments.Currency Code": "the receipt is in France and shows no other currency, so the payment currency is EUR",
+   "Payments.Payment Method": "payment line shows MASTERCARD, which is a card payment",
+   "Receipt Details.Currency Code": "the receipt is in France and shows no other currency, so the currency is EUR",
+   "Totals.Prices Include Tax (Yes/No)": "the total is labeled TOTAL TTC, which indicates tax is included"
+  },
+  "scored_fields": 66,
+  "summary_agreement": {
+   "buyer": "agree",
+   "party_swap_suspect": false,
+   "seller": "agree"
+  }
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "receipt",
+ "document_id": "01a16802-de5b-71e3-adc2-d434d82c8b95",
+ "request_id": "73804665-0c1e-4d05-a309-803176f223a0",
+ "ok": true
+}

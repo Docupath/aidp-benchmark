@@ -1,0 +1,655 @@
+{
+ "id": "purchase-order-131",
+ "slug": "purchase-order",
+ "lane": "pipeline",
+ "ts": "2026-10-23T14:28:39.790Z",
+ "attempts": 1,
+ "classification": {
+  "category": "Purchase Order",
+  "ms": 87154,
+  "cache_hit": false
+ },
+ "ocr_text": "# --- | Page 1 | --- #\n\n東京精密機器株式会社                                                                 注文書\n港区芝浦1-2-3, 104-0061 東京都, Japan\n登録番号: T7156738437594\n\n請求先\n株式会社山田製作所\n港区芝浦1-2-3\n530-0001 大阪市\nJapan\n登録番号: T1567275306593\n\n                                                     注文番号            PO-2026-79654\n                                                     Order Date        2026年01月14日\n                                                     支払期限            2026年02月13日\n                                                     Your Reference    佐藤健一\n                                                     通貨                JPY\n\nNo  品番         品名                  Spec                    数量  単位   単価    金額\n1   BRK-59398    Mounting Bracket L    Steel bracket, left     1    box    3,500   3,500\n\n                                                       小計                         3,500\n                                                       消費税 10%                    350\n                                                       合計                         3,851\n\nお振込先\n銀行      Japan Commercial Bank\nIBAN    DE28 9064 0908 8432 5874 51\nBIC       CYBKSE74\n支払条件    お支払いは30日以内にお願いします。\n\nPO-2026-79654\n\n毎度ありがとうございます。\n\n## Barcodes:\n\nBarcode: PO-2026-79654\n\n---",
+ "ms": 7860,
+ "extraction": {
+  "Buyer": {
+   "Name": "株式会社山田製作所",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "大阪市",
+   "Postal Code": "530-0001",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "VAT No": ""
+  },
+  "Seller": {
+   "Name": "東京精密機器株式会社",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "東京都",
+   "Postal Code": "104-0061",
+   "Country": "Japan",
+   "Country Code": "JP"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "大阪市",
+   "Postal Code": "530-0001",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": "",
+   "Ship To Location Code": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-79654",
+   "Compromisso Code": "",
+   "PO Date": "14/01/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "お支払いは30日以内にお願いします。",
+   "Due Date": "13/02/2026",
+   "Cost Center": "",
+   "Your Reference": "佐藤健一",
+   "Posting Date": "",
+   "Net Amount": "3500",
+   "Total Amount": "3851",
+   "Rounding Amount": "",
+   "Currency Code": "JPY",
+   "Contact Name": "佐藤健一"
+  },
+  "Items": [
+   {
+    "Article ID": "BRK-59398",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "1",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "3500",
+    "Net Amount": "3500",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "銀行 Japan Commercial Bank IBAN DE28 9064 0908 8432 5874 51 BIC CYBKSE74",
+   "Subtotal": "",
+   "Tax Rate": "",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "消費税",
+     "tax_total": "350",
+     "rate": "10",
+     "exchange_rate": "",
+     "Code": "消費税",
+     "Amount": "350",
+     "Rate": "10",
+     "Exchange Rate": ""
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": "",
+   "Payment Methods": [
+    {
+     "Payment Method": "IBAN",
+     "Account Number": "DE28906409088432587451",
+     "BIC/SWIFT Code": "CYBKSE74",
+     "Method": "IBAN",
+     "BIC/Swift Code": "CYBKSE74"
+    }
+   ]
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "DE28906409088432587451",
+    "BIC/SWIFT Code": "CYBKSE74",
+    "Method": "IBAN",
+    "BIC/Swift Code": "CYBKSE74"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": [
+   {
+    "Text": "PO-2026-79654"
+   }
+  ],
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "derivations": [
+   {
+    "after": "3850",
+    "before": "3851",
+    "field_path": "Order Details.Total Amount",
+    "inputs": [],
+    "kind": "mismatch",
+    "method": "net + tax",
+    "reason": "Printed Total Amount (3851) does not match Net Amount + sum(Payment Details.Tax[].tax_total) (3850); left as printed, flagged."
+   }
+  ],
+  "derived_count": 0,
+  "flagged_count": 1,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 48,
+  "evidence_inputs": {
+   "analyze_result": true,
+   "layer_sound_pages": [
+    1
+   ],
+   "native_layer": "trusted",
+   "ocr_quality": 1,
+   "ocr_text": true,
+   "summary": true,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Barcodes.0.Text": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"JP\" is the standard ISO 3166-1 alpha-2 country code for \"Japan\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Buyer.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Buyer.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"3,500\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Order Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.UOM": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"3,500\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Order Details.Contact Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Order Details.Currency Code": {
+    "c": 0.995,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Order Details.Due Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"2026年02月13日\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Order Details.Net Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"3,500\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Order Details.PO Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"2026年01月14日\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Order Details.PO Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Order Details.Payment Terms": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Order Details.Total Amount": {
+    "c": 0.35,
+    "fidelity": 0.93,
+    "flags": [
+     "printed_mismatch"
+    ],
+    "justification": "printed on the page as \"3,851\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "low",
+    "validity": 0.3
+   },
+   "Order Details.Your Reference": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Payment Details Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_total": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Methods.0.Account Number": {
+    "c": 0.3,
+    "fidelity": 0.98,
+    "flags": [
+     "checksum_fail:iban_mod97"
+    ],
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "low",
+    "validity": 0.2
+   },
+   "Payment Methods.0.BIC/SWIFT Code": {
+    "c": 0.995,
+    "checks": [
+     "bic_shape"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.96
+   },
+   "Payment Methods.0.Payment Method": {
+    "c": 0.995,
+    "checks": [
+     "payment_method_is_a_label"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Seller.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"JP\" is the standard ISO 3166-1 alpha-2 country code for \"Japan\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Seller.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Seller.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"JP\" is the standard ISO 3166-1 alpha-2 country code for \"Japan\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Shipping Details.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 2,
+  "mean_confidence": 0.926,
+  "model_derivations": {
+   "Buyer.CountryCode": "the printed country is Japan, so the ISO country code is JP",
+   "Order Details.Currency Code": "the document prints 通貨 JPY, so the currency code is JPY",
+   "Seller.CountryCode": "the printed country is Japan, so the ISO country code is JP",
+   "Shipping Details.Country": "the shipping fields fall back to the buyer address because no separate delivery block is printed",
+   "Shipping Details.Country Code": "the shipping fields fall back to the buyer address in Japan, so the ISO country code is JP"
+  },
+  "scored_fields": 42,
+  "summary_agreement": {
+   "buyer": "agree",
+   "party_swap_suspect": false,
+   "seller": "agree"
+  }
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "purchase-order",
+ "document_id": "01a1692b-4b56-7070-a2da-96ba7c343714",
+ "request_id": "b3fdde36-a6eb-4290-becf-069b91a98313",
+ "ok": true
+}

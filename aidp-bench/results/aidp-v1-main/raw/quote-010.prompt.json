@@ -1,0 +1,899 @@
+{
+ "id": "quote-010",
+ "slug": "quote",
+ "lane": "prompt",
+ "ts": "2026-10-23T08:12:41.901Z",
+ "attempts": 1,
+ "ms": 11401,
+ "extraction": {
+  "Buyer": {
+   "Name": "Harborline Foods Corp",
+   "Address": "1200 Industrial Parkway",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US"
+  },
+  "Seller": {
+   "Name": "Northwind Trading Inc",
+   "Address": "450 Madison Avenue",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US29-2877495",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "1200 Industrial Parkway",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Quote Details": {
+   "Quote Type": "Debit",
+   "Quote Number": "Q-03364",
+   "Quote Date": "18/01/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "17/02/2026",
+   "Ref/Cost Center": "",
+   "Posting Date": "",
+   "Net Amount": "21256.95",
+   "Total Tax": "1806.84",
+   "Total Amount": "23063.79",
+   "Rounding Amount": "",
+   "Currency Code": "USD",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Article ID": "BRK-94211",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "",
+    "Your Reference Number": "",
+    "Quantity": "21",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "12.88",
+    "Net Amount": "270.48",
+    "Tax Rate": "8.5",
+    "Tax Amount": "22.99",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount": "",
+    "Gross Amount": "293.47"
+   },
+   {
+    "Article ID": "BRK-29847",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "",
+    "Your Reference Number": "",
+    "Quantity": "21",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "409.65",
+    "Net Amount": "8602.65",
+    "Tax Rate": "8.5",
+    "Tax Amount": "731.23",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount": "",
+    "Gross Amount": "9333.88"
+   },
+   {
+    "Article ID": "MTR-03772",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "",
+    "Your Reference Number": "",
+    "Quantity": "27",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "458.66",
+    "Net Amount": "12383.82",
+    "Tax Rate": "8.5",
+    "Tax Amount": "1052.62",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount": "",
+    "Gross Amount": "13436.44"
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "Payment Details Bank United Commercial Bank IBAN US44 2153 3240 0545 3336 81 BIC CXBKFR37 Payment Terms Payment due within 30 days.",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "US44215332400545333681",
+     "BIC_or_Swift_code": "CXBKFR37",
+     "Method": "IBAN",
+     "Account Number": "US44215332400545333681",
+     "BIC/Swift Code": "CXBKFR37"
+    }
+   ],
+   "Quote Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "8.5",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "1806.84",
+     "rate": "8.5",
+     "exchange_rate": "",
+     "Code": "Sales Tax",
+     "Amount": "1806.84",
+     "Rate": "8.5",
+     "Exchange Rate": ""
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": [],
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "corrected_count": 0,
+  "derivations": [
+   {
+    "after": "22.99",
+    "before": "",
+    "field_path": "Items.0.Tax Amount",
+    "inputs": [
+     "270.48",
+     "8.5"
+    ],
+    "kind": "derived",
+    "method": "Net Amount * Tax Rate%",
+    "reason": "Line Tax Amount was blank; computed as Tax Rate% of Net Amount."
+   },
+   {
+    "after": "293.47",
+    "before": "",
+    "field_path": "Items.0.Gross Amount",
+    "inputs": [
+     "270.48",
+     "22.99"
+    ],
+    "kind": "derived",
+    "method": "Net Amount + Tax Amount",
+    "reason": "Line Gross Amount was blank; computed as Net Amount + Tax Amount."
+   },
+   {
+    "after": "731.23",
+    "before": "",
+    "field_path": "Items.1.Tax Amount",
+    "inputs": [
+     "8602.65",
+     "8.5"
+    ],
+    "kind": "derived",
+    "method": "Net Amount * Tax Rate%",
+    "reason": "Line Tax Amount was blank; computed as Tax Rate% of Net Amount."
+   },
+   {
+    "after": "9333.88",
+    "before": "",
+    "field_path": "Items.1.Gross Amount",
+    "inputs": [
+     "8602.65",
+     "731.23"
+    ],
+    "kind": "derived",
+    "method": "Net Amount + Tax Amount",
+    "reason": "Line Gross Amount was blank; computed as Net Amount + Tax Amount."
+   },
+   {
+    "after": "1052.62",
+    "before": "",
+    "field_path": "Items.2.Tax Amount",
+    "inputs": [
+     "12383.82",
+     "8.5"
+    ],
+    "kind": "derived",
+    "method": "Net Amount * Tax Rate%",
+    "reason": "Line Tax Amount was blank; computed as Tax Rate% of Net Amount."
+   },
+   {
+    "after": "13436.44",
+    "before": "",
+    "field_path": "Items.2.Gross Amount",
+    "inputs": [
+     "12383.82",
+     "1052.62"
+    ],
+    "kind": "derived",
+    "method": "Net Amount + Tax Amount",
+    "reason": "Line Gross Amount was blank; computed as Net Amount + Tax Amount."
+   },
+   {
+    "after": "US44215332400545333681",
+    "before": "US44215332400545333681",
+    "field_path": "Payment Details.Payment Methods.0.account_no",
+    "inputs": [
+     "IBAN mod-97"
+    ],
+    "kind": "mismatch",
+    "method": "IBAN mod-97",
+    "reason": "account_no looks like an IBAN but fails the mod-97 check digit (likely an OCR transcription error); left as printed, flagged."
+   }
+  ],
+  "derived_count": 6,
+  "flagged_count": 1,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 51,
+  "evidence_inputs": {
+   "analyze_result": false,
+   "native_layer": "absent",
+   "ocr_quality": null,
+   "ocr_text": true,
+   "summary": false,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Buyer.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"US\" is the standard ISO 3166-1 alpha-2 country code for \"United States\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Buyer.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Gross Amount": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Tax Amount": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Tax Rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.UOM": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Gross Amount": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"8,602.65\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Tax Amount": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Tax Rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.UOM": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Gross Amount": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"12,383.82\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Tax Amount": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Tax Rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.UOM": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Payment Details.Payment Details Description": {
+    "c": 0.75,
+    "fidelity": 0.75,
+    "page": 1,
+    "placement": "unknown",
+    "source": "fuzzy",
+    "tier": "medium"
+   },
+   "Payment Details.Payment Methods.0.BIC_or_Swift_code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Payment Methods.0.account_no": {
+    "c": 0.3,
+    "fidelity": 0.93,
+    "flags": [
+     "checksum_fail:iban_mod97",
+     "printed_mismatch"
+    ],
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "low",
+    "validity": 0.2
+   },
+   "Payment Details.Payment Methods.0.payment_method": {
+    "c": 0.95,
+    "checks": [
+     "payment_method_is_a_label"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Payment Details.Tax Rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1,806.84\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Quote Details.Currency Code": {
+    "c": 0.95,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Quote Details.Due Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"02/17/2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Quote Details.Net Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"21,256.95\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Quote Details.Payment Terms": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Quote Details.Quote Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"01/18/2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Quote Details.Quote Number": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Quote Details.Quote Type": {
+    "c": 0.7,
+    "justification": "The document title says QUOTATION, so this is a debit quote.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Quote Details.Total Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"23,063.79\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Quote Details.Total Tax": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1,806.84\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"US\" is the standard ISO 3166-1 alpha-2 country code for \"United States\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Seller.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.VAT No": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"US\" is the standard ISO 3166-1 alpha-2 country code for \"United States\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Shipping Details.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 1,
+  "mean_confidence": 0.906,
+  "model_derivations": {
+   "Buyer.Country": "The buyer address ends with United States, so the country code is US.",
+   "Buyer.Country Code": "Derived from the printed buyer country United States.",
+   "Quote Details.Due Date": "Computed as 30 days after the quote date from the printed payment terms.",
+   "Quote Details.Quote Type": "The document title says QUOTATION, so this is a debit quote.",
+   "Seller.Country": "The seller address ends with United States, so the country code is US.",
+   "Seller.Country Code": "Derived from the printed seller country United States.",
+   "Shipping Details.Address": "No ship-to block is present, so the shipping address falls back to the buyer address.",
+   "Shipping Details.City": "No ship-to block is present, so the shipping city falls back to the buyer city.",
+   "Shipping Details.Country": "No ship-to block is present, so the shipping country falls back to the buyer country.",
+   "Shipping Details.Country Code": "No ship-to block is present, so the shipping country code falls back to the buyer country code.",
+   "Shipping Details.Postal Code": "No ship-to block is present, so the shipping postal code falls back to the buyer postal code."
+  },
+  "scored_fields": 65
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "quote",
+ "document_id": "01a167d1-c0a9-735f-be36-f258b1c2660c",
+ "request_id": "cd242c2d-ab52-4bcc-844c-fdb288ce32a7",
+ "ok": true
+}

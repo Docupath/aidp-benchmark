@@ -1,0 +1,669 @@
+{
+ "id": "credit-note-052",
+ "slug": "credit-note",
+ "lane": "pipeline",
+ "ts": "2026-10-24T06:56:33.786Z",
+ "attempts": 1,
+ "classification": {
+  "category": "Credit Note",
+  "ms": 172882,
+  "cache_hit": false
+ },
+ "ocr_text": "# --- | Page 1 | --- #\n\nBEZAHLT\n\nRheinland Logistik GmbH\n\nDocument Transmittal\n\nPlease find the enclosed document. / Anbei das Dokument.\n\n# --- | Page 2 | --- #\n\nRheinland Logistik GmbH                                                     GUTSCHRIFT\nHauptstraße 42, 70173 Stuttgart, Germany\nUSt-IdNr: DE890820040\nReg No: DE-985800\n\nRECHNUNGSADRESSE\n\nRheinland Logistik GmbH                                  Credit Note No         CN-2026-71355\nIndustrieweg 7                                           Rechnungsdatum         20.04.2026\n20095 Hamburg                                            Fällig am              04.05.2026\nGermany                                                  Ihre Referenz          Jürgen Hoffmann\n                                                         Währung                EUR\n\nPos  Artikelnr   Bezeichnung         Spec        Menge  Einheit  Einzelpreis  Betrag\n1    FLT-85814   Filter Cartridge F9 HEPA class     50  set          295,32  14.766,00\n\n                                                         Zwischensumme         14.766,00\n                                                         MwSt 19%               2.805,54\n                                                         GESAMT                17.571,54\n\nZAHLUNGSINFORMATIONEN\n\nBank                 Germany Commercial Bank\nIBAN                 DE32 5255 1589 3792 0812 75\nBIC                  DZBKGB92\nZahlungsbedingungen  Zahlbar innerhalb von 30 Tagen.\n\nVielen Dank für Ihren Auftrag.",
+ "ms": 6208,
+ "extraction": {
+  "Buyer": {
+   "Name": "Rheinland Logistik GmbH",
+   "Address": "Industrieweg 7",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE"
+  },
+  "Seller": {
+   "Name": "Rheinland Logistik GmbH",
+   "Address": "Hauptstraße 42",
+   "City": "Stuttgart",
+   "Postal Code": "70173",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "VAT No": "DE890820040",
+   "Registration No": "DE-985800"
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Industrieweg 7",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "CN-2026-71355",
+   "Compromisso Code": "",
+   "Invoice Date": "20/04/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Zahlbar innerhalb von 30 Tagen.",
+   "GRN No": "",
+   "Due Date": "04/05/2026",
+   "Cost Center": "",
+   "Your Reference": "Jürgen Hoffmann",
+   "Posting Date": "",
+   "Net Amount": "14766.00",
+   "Total Tax": "2805.54",
+   "Total Amount": "17571.54",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "FLT-85814",
+    "Article Name": "Filter Cartridge F9 HEPA class",
+    "Description": "",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "50",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "295.32",
+    "Net Amount": "14766.00",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "Bank Germany Commercial Bank IBAN DE32 5255 1589 3792 0812 75 BIC DZBKGB92 Zahlungsbedingungen Zahlbar innerhalb von 30 Tagen.",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "DE32525515893792081275",
+     "BIC_or_Swift_code": "DZBKGB92",
+     "Method": "IBAN",
+     "Account Number": "DE32525515893792081275",
+     "BIC/Swift Code": "DZBKGB92"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "2805.54",
+   "Tax Rate": "19",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "2805.54",
+     "rate": "19",
+     "exchange_rate": "",
+     "Code": "MwSt",
+     "Amount": "2805.54",
+     "Rate": "19",
+     "Exchange Rate": ""
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": [],
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "corrected_count": 0,
+  "derivations": [
+   {
+    "after": "DE32525515893792081275",
+    "before": "DE32525515893792081275",
+    "field_path": "Payment Details.Payment Methods.0.account_no",
+    "inputs": [
+     "IBAN mod-97"
+    ],
+    "kind": "mismatch",
+    "method": "IBAN mod-97",
+    "reason": "account_no looks like an IBAN but fails the mod-97 check digit (likely an OCR transcription error); left as printed, flagged."
+   }
+  ],
+  "derived_count": 0,
+  "flagged_count": 1,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 47,
+  "evidence_inputs": {
+   "analyze_result": true,
+   "layer_sound_pages": [
+    1,
+    2
+   ],
+   "native_layer": "trusted",
+   "ocr_quality": 1,
+   "ocr_text": true,
+   "summary": true,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Buyer.Address": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"DE\" is the standard ISO 3166-1 alpha-2 country code for \"Germany\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Buyer.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Buyer.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Currency Code": {
+    "c": 0.995,
+    "checks": [
+     "currency_code"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Invoice Details.Due Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"04.05.2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 2,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Invoice Details.Invoice Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"20.04.2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 2,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Invoice Details.Invoice Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Invoice Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Net Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"14.766,00\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Payment Terms": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Total Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"17.571,54\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Total Tax": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.805,54\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Invoice Details.Your Reference": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Item No": {
+    "c": 0.995,
+    "fidelity": 0.97,
+    "justification": "the position of this line in the list (row 1), not a value printed on the page",
+    "layer": "confirmed",
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high"
+   },
+   "Items.0.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"14.766,00\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 2,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.UOM": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"295,32\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 2,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Payment Details.Payment Details Description": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Payment Methods.0.BIC_or_Swift_code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Payment Methods.0.account_no": {
+    "c": 0.3,
+    "fidelity": 0.98,
+    "flags": [
+     "checksum_fail:iban_mod97",
+     "printed_mismatch"
+    ],
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "low",
+    "validity": 0.2
+   },
+   "Payment Details.Payment Methods.0.payment_method": {
+    "c": 0.995,
+    "checks": [
+     "payment_method_is_a_label"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Payment Details.Tax Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.805,54\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax Rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.805,54\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Address": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"DE\" is the standard ISO 3166-1 alpha-2 country code for \"Germany\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Seller.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Seller.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Registration No": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.VAT No": {
+    "c": 0.995,
+    "checks": [
+     "vat_format"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.96
+   },
+   "Shipping Details.Address": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"DE\" is the standard ISO 3166-1 alpha-2 country code for \"Germany\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Shipping Details.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 2,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 1,
+  "mean_confidence": 0.937,
+  "scored_fields": 45,
+  "summary_agreement": {
+   "buyer": "agree",
+   "party_swap_suspect": false,
+   "seller": "agree"
+  }
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "credit-note",
+ "document_id": "01a16cb5-0b96-77c8-9903-4eabc49deebf",
+ "request_id": "dbd4c8c5-8915-4e9a-83a4-8ac8dc06303a",
+ "ok": true
+}

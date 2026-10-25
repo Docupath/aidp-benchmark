@@ -1,0 +1,835 @@
+{
+ "id": "consignment-invoice-002",
+ "slug": "consignment-invoice",
+ "lane": "pipeline",
+ "ts": "2026-10-23T07:54:59.694Z",
+ "attempts": 1,
+ "classification": {
+  "category": "Consignment Invoice",
+  "ms": 26462,
+  "cache_hit": false
+ },
+ "ocr_text": "# --- | Page 1 | --- #\n\nBharat Components Pvt Ltd                         CONSIGNMENT INVOICE\nPlot 14, MIDC Industrial Area, 600001 Chennai, India\nGSTIN: 96AAACG2700A1Z8\n\nBILL TO\n\nBharat Components Pvt Ltd                         Invoice No         CSG-2026-01193\n22 MG Road                                        Invoice Date       15-02-2026\n400001 Mumbai                                     Due Date           01-04-2026\nIndia                                             Salesperson        R. Verma\nGSTIN: 73AAACG5102A1Z1\n\n#  Article ID  Description             Qty  Unit  Price   Amount\n1  FLT-46447   Filter Cartridge F9     26   pcs   418.32  10,876.32 [obscured]\n2  LBL-52311   Label Roll 50x30        15   box   359.16   5,387.40 [obscured]\n3  SNS-32928   Pressure Sensor PS-10   46   set   201.87   9,286.02 [obscured]\n               0-10 bar, 4-20mA\n\n                                              Subtotal   25,549.74\n                                              CGST 9%     2,299.48\n                                              SGST 9%     2,299.48\n                                              TOTAL      30,148.70\n\nPAYMENT DETAILS\n\nBank           India Commercial Bank\nIBAN           IN86 0502 5895 2690 3915 36\nBIC            CSBKDE92\nPayment Terms  Payment due within 30 days.\n\nThank you for your business.\n\n## Barcodes:\n\nBarcode: (01)00219452078264(17)280615(10)LOT610739(21)SN02635971\n\n---\n\nBarcode: (01)00729708736355(17)280515(10)LOT431787(21)SN79021304\n\n---\n\nBarcode: (01)00508475486799(17)280315(10)LOT566645\n\n---",
+ "ms": 10610,
+ "extraction": {
+  "Buyer": {
+   "Name": "Bharat Components Pvt Ltd",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Mumbai",
+   "Postal Code": "400001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "73AAACG5102A1Z1",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Bharat Components Pvt Ltd",
+   "Name 2": "",
+   "Street 1": "Plot 14, MIDC Industrial Area",
+   "Street 2": "",
+   "City": "Chennai",
+   "Postal Code": "600001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "96AAACG2700A1Z8",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Mumbai",
+   "Postal Code": "400001",
+   "Country": "India",
+   "Country Code": "IN",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": "",
+   "Ship To Location Code": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-01193",
+   "Consignment Date": "15/02/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "01/04/2026",
+   "Currency Code": "INR",
+   "Contact Name": ""
+  },
+  "Items": [
+   {
+    "Article ID": "FLT-46447",
+    "Article Name": "Filter Cartridge F9",
+    "Description": "",
+    "Order Number": "",
+    "Quantity": "26",
+    "UOM": "pcs",
+    "Serial Number": "SN02635971",
+    "Lot Number": "LOT610739",
+    "Unit Price": "418.32",
+    "Net Amount": "10876.32",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "LBL-52311",
+    "Article Name": "Label Roll 50x30",
+    "Description": "",
+    "Order Number": "",
+    "Quantity": "15",
+    "UOM": "box",
+    "Serial Number": "SN79021304",
+    "Lot Number": "LOT431787",
+    "Unit Price": "359.16",
+    "Net Amount": "5387.40",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-32928",
+    "Article Name": "Pressure Sensor PS-10 0-10 bar, 4-20mA",
+    "Description": "",
+    "Order Number": "",
+    "Quantity": "46",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "LOT566645",
+    "Unit Price": "201.87",
+    "Net Amount": "9286.02",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN, BANK TRANSFER",
+   "Subtotal": "25549.74",
+   "Tax": [
+    {
+     "tax_code": "CGST",
+     "tax_total": "2299.48",
+     "rate": "9",
+     "exchange_rate": "",
+     "Code": "CGST",
+     "Amount": "2299.48",
+     "Rate": "9",
+     "Exchange Rate": ""
+    },
+    {
+     "tax_code": "SGST",
+     "tax_total": "2299.48",
+     "rate": "9",
+     "exchange_rate": "",
+     "Code": "SGST",
+     "Amount": "2299.48",
+     "Rate": "9",
+     "Exchange Rate": ""
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "30148.70",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": [
+   {
+    "Text": "(01)00219452078264(17)280615(10)LOT610739(21)SN02635971"
+   },
+   {
+    "Text": "(01)00729708736355(17)280515(10)LOT431787(21)SN79021304"
+   },
+   {
+    "Text": "(01)00508475486799(17)280315(10)LOT566645"
+   }
+  ],
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "corrected_count": 1,
+  "derivations": [
+   {
+    "after": "Pressure Sensor PS-10 0-10 bar, 4-20mA",
+    "before": "Pressure Sensor PS-10",
+    "field_path": "Items.2.Article Name",
+    "inputs": [
+     "printed line 1: \"Pressure Sensor PS-10\"",
+     "printed line 2: \"0-10 bar, 4-20mA\"",
+     "column width: 24 characters"
+    ],
+    "kind": "corrected",
+    "method": "wrapped item-name cell rejoined",
+    "reason": "The item's name is printed over two lines because it is wider than its 24-character column (\"Pressure Sensor PS-10\" then \"0-10 bar, 4-20mA\"), and the next word could not have fitted on the first line, so the break is the column's and not the document's. The two lines are one printed cell, so they are joined back into the name and the Description, which held only the second half of that name, is cleared."
+   }
+  ],
+  "derived_count": 0,
+  "flagged_count": 0,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 44,
+  "evidence_inputs": {
+   "analyze_result": true,
+   "layer_sound_pages": [],
+   "native_layer": "trusted",
+   "ocr_quality": 1,
+   "ocr_text": true,
+   "summary": true,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Barcodes.0.Text": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Barcodes.1.Text": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Barcodes.2.Text": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"IN\" is the standard ISO 3166-1 alpha-2 country code for \"India\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Buyer.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Buyer.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Buyer.VAT No": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Consignment Details.Consignment Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"15-02-2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Consignment Details.Consignment Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Consignment Details.Currency Code": {
+    "c": 0.92,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"INR\" is the official currency of India, this document's seller/issuer country, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "confirmed",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "high",
+    "validity": 0.88
+   },
+   "Consignment Details.Payment Due Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"01-04-2026\"; shown here in a standardized date format",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Consignment Details.Payment Terms": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Lot Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"10,876.32\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Serial Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.UOM": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Unit Price": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Article Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Lot Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"5,387.40\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Serial Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.UOM": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Unit Price": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Article ID": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Article Name": {
+    "c": 0.8,
+    "fidelity": 0.8,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "fuzzy",
+    "tier": "medium"
+   },
+   "Items.2.Lot Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"9,286.02\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Quantity": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.UOM": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Unit Price": {
+    "c": 0.995,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Payment Details.Payment Methods": {
+    "c": 0.45,
+    "fidelity": 0.3,
+    "flags": [
+     "unverified_in_source"
+    ],
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "none",
+    "tier": "low"
+   },
+   "Payment Details.Subtotal": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"25,549.74\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.0.tax_total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2,299.48\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.1.rate": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.1.tax_code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Tax.1.tax_total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2,299.48\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payment Details.Total": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"30,148.70\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"IN\" is the standard ISO 3166-1 alpha-2 country code for \"India\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Seller.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.92
+   },
+   "Seller.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Seller.VAT No": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.City": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Country Code": {
+    "c": 0.995,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.97,
+    "justification": "\"IN\" is the standard ISO 3166-1 alpha-2 country code for \"India\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Shipping Details.Postal Code": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Shipping Details.Street 1": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 1,
+  "mean_confidence": 0.939,
+  "model_derivations": {
+   "Consignment Details.Currency Code": "the document is in India and uses CGST and SGST, so the currency is INR",
+   "Items.Lot Number": "lot numbers were taken from the decoded barcodes matched to the item rows",
+   "Items.Serial Number": "serial numbers were taken from the decoded barcodes matched to the item rows",
+   "Shipping Details.City": "no separate ship-to block is printed, so it falls back to the buyer address",
+   "Shipping Details.Country": "no separate ship-to block is printed, so it falls back to the buyer address",
+   "Shipping Details.Country Code": "no separate ship-to block is printed, so it falls back to the buyer address",
+   "Shipping Details.Postal Code": "no separate ship-to block is printed, so it falls back to the buyer address",
+   "Shipping Details.Street 1": "no separate ship-to block is printed, so it falls back to the buyer address"
+  },
+  "scored_fields": 59,
+  "summary_agreement": {
+   "buyer": "agree",
+   "party_swap_suspect": false,
+   "seller": "agree"
+  }
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "consignment-invoice",
+ "document_id": "01a167c1-fb05-76a6-ac2a-41fc5ed872e4",
+ "request_id": "cf58c3b4-bc32-421e-892a-54bd15e491c9",
+ "ok": true
+}

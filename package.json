@@ -1,0 +1,33 @@
+{
+  "name": "aidp-benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AIDP v1.0, the Agentic IDP Accuracy Standard: the specification, the AIDP-2K generator and answer keys, the scoring code and the published evidence.",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Docupath/aidp-benchmark.git"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "//": [
+    "Setup: npm ci, then npx playwright install chromium. The browser is needed only to draw the PDFs (npm run render) and the sample (bench/corpus-sample.mjs without --corpus).",
+    "mupdf is licensed GNU AGPL-3.0-or-later. It is needed only by the three benchmark tools that read PDF pages: the post-run diagnostics (aidp-bench/bench/post-run), the page previews of aidp-bench/bench/corpus-sample.mjs and the optional second-reader lane of aidp-bench/bench/run-das.mjs. Regenerating the dataset and scoring do not use it.",
+    "npm run keys writes the answer keys, page texts, manifest.json and contract.json; npm run render draws the 2,012 PDFs. Both write to aidp-bench/corpus-regenerated unless given --out <dir> (npm run keys -- --out <dir>)."
+  ],
+  "dependencies": {
+    "bwip-js": "4.11.4",
+    "mupdf": "1.28.1",
+    "playwright": "1.63.0"
+  },
+  "scripts": {
+    "keys": "node aidp-bench/corpus-gen/materialize-gt.mjs --out aidp-bench/corpus-regenerated",
+    "render": "node aidp-bench/corpus-gen/generate.mjs --count 200 --seed docupath-corpus-v1 --types invoice,purchase-order,credit-note,receipt,quote,freight-invoice,consignment-order,consignment-invoice,bank-statement,general-contract --out aidp-bench/corpus-regenerated",
+    "rescore": "node aidp-bench/bench/score-run.mjs --corpus aidp-bench/corpus --tag aidp-v1-main --stability-tag aidp-v1-stability --rules-tag aidp-v1-rules --out aidp-bench/results/rescore",
+    "test": "node aidp-bench/bench/test-scoring.mjs && node aidp-bench/bench/test-runner.mjs && node aidp-bench/bench/test-generator.mjs",
+    "verify": "node verify-repo.mjs",
+    "rescore:heldout": "node aidp-bench/bench/score-run.mjs --corpus aidp-bench/corpus-heldout --tag aidp-v1-heldout-main --stability-tag aidp-v1-heldout-stability --out aidp-bench/results/rescore-heldout",
+    "paper-checks": "node aidp-bench/bench/paper-checks.mjs --corpus aidp-bench/corpus --run aidp-bench/results/aidp-v1-main --heldout aidp-bench/results/aidp-v1-heldout-main"
+  }
+}

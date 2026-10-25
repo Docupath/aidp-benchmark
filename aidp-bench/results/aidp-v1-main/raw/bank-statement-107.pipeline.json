@@ -1,0 +1,1941 @@
+{
+ "id": "bank-statement-107",
+ "slug": "bank-statement",
+ "lane": "pipeline",
+ "ts": "2026-10-23T13:38:06.431Z",
+ "attempts": 1,
+ "classification": {
+  "category": "Bank Statement",
+  "ms": 89371,
+  "cache_hit": false
+ },
+ "ocr_text": "# --- | Page 1 | --- #\n\nDistribuciones Ibérica SL                         ACCOUNT STATEMENT\nAvenida Diagonal 220, 28001 Madrid, Spain\nCIF/NIF: ESB43112793\nReg No: ES-318778\n\nFROM                                                     FACTURAR A\nDistribuciones Ibérica SL                                Suministros del Norte SL\nAvenida Diagonal 220                                     Calle Mayor 15\n28001 Madrid                                             28001 Madrid\nSpain                                                    Spain\nVAT: ESB43112793\n\n Account Holder   Suministros del Norte SL\n Account No       0190-368608-20\n IBAN             ES27 5106 9548 8547 4338 63\n Statement Period 01/02/2026 - 28/02/2026\n Opening Balance  37.349,91\n Closing Balance  28.295,80\n\nTransactions\n\nDate        Description      Debit     Credit    Balance\n01/02/2026  Fee              2.917,08            34.432,83\n02/02/2026  Card purchase    1.017,80            33.415,03\n03/02/2026  Fee              166,18              33.248,85\n04/02/2026  SEPA transfer               2.938,98 36.187,83\n05/02/2026  Direct debit     410,33              35.777,50\n06/02/2026  ATM withdrawal   2.863,35            32.914,15\n07/02/2026  Direct debit     2.670,37            30.243,78\n08/02/2026  SEPA transfer               264,06   30.507,84\n09/02/2026  Fee              1.372,98            29.134,86\n10/02/2026  ATM withdrawal   1.828,78            27.306,08\n11/02/2026  Fee                         2.791,27 30.097,35\n12/02/2026  Interest         407,81              29.689,54\n13/02/2026  Salary           470,29              29.219,25\n14/02/2026  Fee                         2.697,75 31.917,00\n15/02/2026  SEPA transfer    3.510,26            28.406,74\n16/02/2026  Interest         604,44              27.802,30\n17/02/2026  Card purchase               3.392,49 31.194,79\n18/02/2026  Card purchase    2.898,99            28.295,80",
+ "ms": 17754,
+ "extraction": {
+  "Statement Header": {
+   "Name": "Distribuciones Ibérica SL",
+   "Branch Name": "",
+   "Address": "Avenida Diagonal 220",
+   "Branch Code / Identifier": "",
+   "SWIFT/BIC Code": "",
+   "IBAN": "ES27510695488547433863",
+   "Japanese Bank Code": "",
+   "Japanese Branch Code": "",
+   "Statement Reference Number": "",
+   "Statement Date": "",
+   "Currency": "EUR"
+  },
+  "Account Holder Information": {
+   "Name": "Suministros del Norte SL",
+   "Address": "Calle Mayor 15",
+   "Account Number": "0190-368608-20",
+   "Account Type": "",
+   "Customer Reference": "",
+   "Tax Identifier": ""
+  },
+  "Statement Period Summary": {
+   "Period Start Date": "01/02/2026",
+   "Period End Date": "28/02/2026",
+   "Number of Days": "",
+   "Opening Balance": "37349.91",
+   "Closing Balance": "28295.80",
+   "Available Balance": ""
+  },
+  "Summary & Totals": {
+   "Total Debits": "",
+   "Total Credits": "",
+   "Total Fees": "",
+   "Total Interest Earned": "",
+   "Average Daily Balance": ""
+  },
+  "Transaction Details": [
+   {
+    "Transaction Date": "01/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Fee",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Fee",
+    "Merchant Name": "",
+    "Payee Name": "Fee",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "2917.08",
+    "Credit Amount": "",
+    "Running Balance": "34432.83",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "02/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Card purchase",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Card purchase",
+    "Merchant Name": "",
+    "Payee Name": "Card purchase",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "1017.80",
+    "Credit Amount": "",
+    "Running Balance": "33415.03",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "03/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Fee",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Fee",
+    "Merchant Name": "",
+    "Payee Name": "Fee",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "166.18",
+    "Credit Amount": "",
+    "Running Balance": "33248.85",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "04/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "SEPA transfer",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "SEPA transfer",
+    "Merchant Name": "",
+    "Payee Name": "",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "",
+    "Credit Amount": "2938.98",
+    "Running Balance": "36187.83",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "05/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Direct debit",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Direct debit",
+    "Merchant Name": "",
+    "Payee Name": "Direct debit",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "410.33",
+    "Credit Amount": "",
+    "Running Balance": "35777.50",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "06/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "ATM withdrawal",
+    "Transaction Method": "ATM",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "ATM withdrawal",
+    "Merchant Name": "",
+    "Payee Name": "ATM withdrawal",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "2863.35",
+    "Credit Amount": "",
+    "Running Balance": "32914.15",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "07/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Direct debit",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Direct debit",
+    "Merchant Name": "",
+    "Payee Name": "Direct debit",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "2670.37",
+    "Credit Amount": "",
+    "Running Balance": "30243.78",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "08/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "SEPA transfer",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "SEPA transfer",
+    "Merchant Name": "",
+    "Payee Name": "",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "",
+    "Credit Amount": "264.06",
+    "Running Balance": "30507.84",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "09/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Fee",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Fee",
+    "Merchant Name": "",
+    "Payee Name": "Fee",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "1372.98",
+    "Credit Amount": "",
+    "Running Balance": "29134.86",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "10/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "ATM withdrawal",
+    "Transaction Method": "ATM",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "ATM withdrawal",
+    "Merchant Name": "",
+    "Payee Name": "ATM withdrawal",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "1828.78",
+    "Credit Amount": "",
+    "Running Balance": "27306.08",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "11/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Fee",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Fee",
+    "Merchant Name": "",
+    "Payee Name": "",
+    "Payer Name": "Fee",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "",
+    "Credit Amount": "2791.27",
+    "Running Balance": "30097.35",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "12/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Interest",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Interest",
+    "Merchant Name": "",
+    "Payee Name": "Interest",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "407.81",
+    "Credit Amount": "",
+    "Running Balance": "29689.54",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "13/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Salary",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Salary",
+    "Merchant Name": "",
+    "Payee Name": "Salary",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "470.29",
+    "Credit Amount": "",
+    "Running Balance": "29219.25",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "14/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Fee",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Fee",
+    "Merchant Name": "",
+    "Payee Name": "",
+    "Payer Name": "Fee",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "",
+    "Credit Amount": "2697.75",
+    "Running Balance": "31917.00",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "15/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "SEPA transfer",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "SEPA transfer",
+    "Merchant Name": "",
+    "Payee Name": "SEPA transfer",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "3510.26",
+    "Credit Amount": "",
+    "Running Balance": "28406.74",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "16/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Interest",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Interest",
+    "Merchant Name": "",
+    "Payee Name": "Interest",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "604.44",
+    "Credit Amount": "",
+    "Running Balance": "27802.30",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "17/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Card purchase",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Card purchase",
+    "Merchant Name": "",
+    "Payee Name": "",
+    "Payer Name": "Card purchase",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "",
+    "Credit Amount": "3392.49",
+    "Running Balance": "31194.79",
+    "Currency": "EUR"
+   },
+   {
+    "Transaction Date": "18/02/2026",
+    "Posting Date": "",
+    "Value Date": "",
+    "Transaction Category": "",
+    "Transaction Type": "Card purchase",
+    "Transaction Method": "",
+    "Transaction Code": "",
+    "Card Type / Brand": "",
+    "Masked Card Number": "",
+    "Description / Memo": "Card purchase",
+    "Merchant Name": "",
+    "Payee Name": "Card purchase",
+    "Payer Name": "",
+    "Counterparty Account": "",
+    "Reference Number": "",
+    "Usage Type / Payment Mode": "",
+    "Original Amount": "",
+    "Original Currency": "",
+    "Conversion Rate": "",
+    "Foreign Transaction Fee": "",
+    "Debit Amount": "2898.99",
+    "Credit Amount": "",
+    "Running Balance": "28295.80",
+    "Currency": "EUR"
+   }
+  ],
+  "Fees & Interest": [],
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "corrected_count": 2,
+  "derivations": [
+   {
+    "after": "Avenida Diagonal 220",
+    "before": "Avenida Diagonal 220, 28001 Madrid, Spain",
+    "field_path": "Statement Header.Address",
+    "inputs": [
+     "summary_json"
+    ],
+    "kind": "corrected",
+    "method": "address locality cleanup",
+    "reason": "the Statement Header Address duplicated the city/postcode/province/country that belong in their own fields; trimmed to the street line(s) per the street-only Address contract"
+   },
+   {
+    "after": "Calle Mayor 15",
+    "before": "Calle Mayor 15, 28001 Madrid, Spain",
+    "field_path": "Account Holder Information.Address",
+    "inputs": [
+     "summary_json"
+    ],
+    "kind": "corrected",
+    "method": "address locality cleanup",
+    "reason": "the Account Holder Information Address duplicated the city/postcode/province/country that belong in their own fields; trimmed to the street line(s) per the street-only Address contract"
+   }
+  ],
+  "derived_count": 0,
+  "flagged_count": 0,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 323,
+  "evidence_inputs": {
+   "analyze_result": true,
+   "layer_sound_pages": [
+    1
+   ],
+   "native_layer": "trusted",
+   "ocr_quality": 1,
+   "ocr_text": true,
+   "summary": false,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Account Holder Information.Account Number": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Account Holder Information.Address": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Account Holder Information.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Statement Header.Address": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Statement Header.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Statement Header.IBAN": {
+    "c": 0.3,
+    "fidelity": 0.98,
+    "flags": [
+     "checksum_fail:iban_mod97"
+    ],
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "low",
+    "validity": 0.2
+   },
+   "Statement Header.Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Statement Period Summary.Closing Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"28.295,80\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Statement Period Summary.Opening Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"37.349,91\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Statement Period Summary.Period End Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Statement Period Summary.Period Start Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.0.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.0.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.917,08\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.0.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.0.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.0.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"34.432,83\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.0.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.0.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.1.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.1.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1.017,80\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.1.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.1.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.1.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"33.415,03\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.1.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.1.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.10.Credit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.791,27\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.10.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.10.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.10.Payer Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.10.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"30.097,35\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.10.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.10.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.11.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.11.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"407,81\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.11.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.11.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.11.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"29.689,54\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.11.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.11.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.12.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.12.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"470,29\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.12.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.12.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.12.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"29.219,25\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.12.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.12.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.13.Credit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.697,75\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.13.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.13.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.13.Payer Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.13.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"31.917,00\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.13.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.13.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.14.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.14.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"3.510,26\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.14.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.14.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.14.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"28.406,74\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.14.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.14.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.15.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.15.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"604,44\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.15.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.15.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.15.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"27.802,30\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.15.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.15.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.16.Credit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"3.392,49\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.16.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.16.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.16.Payer Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.16.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"31.194,79\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.16.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.16.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.17.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.17.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.898,99\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.17.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.17.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.17.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"28.295,80\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.17.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.17.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.2.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.2.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"166,18\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.2.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.2.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.2.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"33.248,85\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.2.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.2.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.3.Credit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.938,98\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.3.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.3.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.3.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"36.187,83\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.3.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.3.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.4.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.4.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"410,33\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.4.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.4.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.4.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"35.777,50\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.4.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.4.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.5.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.5.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.863,35\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.5.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.5.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.5.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"32.914,15\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.5.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.5.Transaction Method": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.5.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.6.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.6.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"2.670,37\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.6.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.6.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.6.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"30.243,78\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.6.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.6.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.7.Credit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"264,06\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.7.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.7.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.7.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"30.507,84\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.7.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.7.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.8.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.8.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1.372,98\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.8.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.8.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.8.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"29.134,86\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.8.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.8.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.9.Currency": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"EUR\" is the official currency of Spain, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "layer": "absent",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Transaction Details.9.Debit Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1.828,78\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.9.Description / Memo": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.9.Payee Name": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.9.Running Balance": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"27.306,08\" (locale form); the value is its canonical dot-decimal form",
+    "layer": "absent",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.9.Transaction Date": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.9.Transaction Method": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Transaction Details.9.Transaction Type": {
+    "c": 0.95,
+    "fidelity": 0.98,
+    "layer": "confirmed",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 1,
+  "mean_confidence": 0.92,
+  "model_derivations": {
+   "Statement Header.Currency": "the statement uses Spanish formatting and an ES IBAN, so the account currency is EUR",
+   "Transaction Details.Currency": "the rows do not print a currency, so they use the account currency EUR"
+  },
+  "scored_fields": 137
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "bank-statement",
+ "document_id": "01a168fd-092f-7297-9e17-f401bf7bfe3d",
+ "request_id": "deba2ea9-0a01-48ab-b99d-7ac10f3187c9",
+ "ok": true
+}

@@ -1,0 +1,518 @@
+{
+ "documents_answered": 524,
+ "spearman_with_noise_grade": {
+  "model_difficulty": 0.1443,
+  "estimate_visual": 0.7809,
+  "estimate_primary": 0.3145
+ },
+ "traps_vs_matched_controls": {
+  "definition": {
+   "trap_documents": "carry the named defect and NO other of the five generator dimensions (anyTrap: at least one of mismatch / missingTotals / stickerMismatch and no cover page or bundle)",
+   "controls": "documents with none of the five dimensions, of the same type, noise grade and size",
+   "statistic": "stratified AUROC (chance a trap document exceeds a matched control; 0.5 = indistinguishable)",
+   "ci": "2000 bootstrap resamples within strata",
+   "p": "2000 within-stratum label permutations, two-sided",
+   "verdict_rule": "indistinguishable = 95% CI contains 0.5 AND Holm-adjusted p >= 0.05"
+  },
+  "mismatch": {
+   "n_with_dimension": 29,
+   "n_excluded_other_dimension": 0,
+   "n_trap_matched": 29,
+   "n_trap_unmatched": 0,
+   "n_controls": 215,
+   "n_strata": 16,
+   "features": {
+    "model_difficulty": {
+     "n_trap": 29,
+     "n_control": 215,
+     "auroc": 0.5117,
+     "ci95": [
+      0.4493,
+      0.5771
+     ],
+     "p_perm": 0.7926,
+     "trap_mean": 2.6552,
+     "matched_control_mean": 2.6202,
+     "p_holm": 1.0,
+     "indistinguishable": true
+    },
+    "model_totals_disagree": {
+     "n_trap": 29,
+     "n_control": 215,
+     "auroc": 0.9542,
+     "ci95": [
+      0.9146,
+      0.9828
+     ],
+     "p_perm": 0.0005,
+     "trap_mean": 0.8964,
+     "matched_control_mean": 0.0012,
+     "p_holm": 0.0035,
+     "indistinguishable": false
+    },
+    "model_totals_missing": {
+     "n_trap": 29,
+     "n_control": 215,
+     "auroc": 0.366,
+     "ci95": [
+      0.3149,
+      0.418
+     ],
+     "p_perm": 0.002,
+     "trap_mean": 0.0003,
+     "matched_control_mean": 0.0006,
+     "p_holm": 0.008,
+     "indistinguishable": false
+    },
+    "model_sticker_disagrees": {
+     "n_trap": 29,
+     "n_control": 215,
+     "auroc": 0.3503,
+     "ci95": [
+      0.2968,
+      0.4062
+     ],
+     "p_perm": 0.001,
+     "trap_mean": 0.0003,
+     "matched_control_mean": 0.0007,
+     "p_holm": 0.005,
+     "indistinguishable": false
+    },
+    "model_any_problem": {
+     "n_trap": 29,
+     "n_control": 215,
+     "auroc": 0.9579,
+     "ci95": [
+      0.9042,
+      1.0
+     ],
+     "p_perm": 0.0005,
+     "trap_mean": 0.8965,
+     "matched_control_mean": 0.0025,
+     "p_holm": 0.0035,
+     "indistinguishable": false
+    },
+    "estimate_primary": {
+     "n_trap": 29,
+     "n_control": 215,
+     "auroc": 0.5169,
+     "ci95": [
+      0.4297,
+      0.6043
+     ],
+     "p_perm": 0.7841,
+     "trap_mean": 0.1664,
+     "matched_control_mean": 0.1595,
+     "p_holm": 1.0,
+     "indistinguishable": true
+    },
+    "estimate_visual": {
+     "n_trap": 29,
+     "n_control": 215,
+     "auroc": 0.5473,
+     "ci95": [
+      0.4644,
+      0.6266
+     ],
+     "p_perm": 0.4303,
+     "trap_mean": 0.1121,
+     "matched_control_mean": 0.0878,
+     "p_holm": 1.0,
+     "indistinguishable": true
+    }
+   },
+   "indistinguishable_on_every_feature": false
+  },
+  "missingTotals": {
+   "n_with_dimension": 30,
+   "n_excluded_other_dimension": 0,
+   "n_trap_matched": 30,
+   "n_trap_unmatched": 0,
+   "n_controls": 201,
+   "n_strata": 12,
+   "features": {
+    "model_difficulty": {
+     "n_trap": 30,
+     "n_control": 201,
+     "auroc": 0.5837,
+     "ci95": [
+      0.5198,
+      0.6495
+     ],
+     "p_perm": 0.054,
+     "trap_mean": 2.2667,
+     "matched_control_mean": 2.0835,
+     "p_holm": 0.1619,
+     "indistinguishable": false
+    },
+    "model_totals_disagree": {
+     "n_trap": 30,
+     "n_control": 201,
+     "auroc": 0.2635,
+     "ci95": [
+      0.1611,
+      0.3601
+     ],
+     "p_perm": 0.0005,
+     "trap_mean": 0.0015,
+     "matched_control_mean": 0.0052,
+     "p_holm": 0.0035,
+     "indistinguishable": false
+    },
+    "model_totals_missing": {
+     "n_trap": 30,
+     "n_control": 201,
+     "auroc": 1.0,
+     "ci95": [
+      1.0,
+      1.0
+     ],
+     "p_perm": 0.0005,
+     "trap_mean": 0.9993,
+     "matched_control_mean": 0.0006,
+     "p_holm": 0.0035,
+     "indistinguishable": false
+    },
+    "model_sticker_disagrees": {
+     "n_trap": 30,
+     "n_control": 201,
+     "auroc": 0.3575,
+     "ci95": [
+      0.2718,
+      0.4403
+     ],
+     "p_perm": 0.0035,
+     "trap_mean": 0.0006,
+     "matched_control_mean": 0.0007,
+     "p_holm": 0.014,
+     "indistinguishable": false
+    },
+    "model_any_problem": {
+     "n_trap": 30,
+     "n_control": 201,
+     "auroc": 0.999,
+     "ci95": [
+      0.9961,
+      1.0
+     ],
+     "p_perm": 0.0005,
+     "trap_mean": 0.9993,
+     "matched_control_mean": 0.0064,
+     "p_holm": 0.0035,
+     "indistinguishable": false
+    },
+    "estimate_primary": {
+     "n_trap": 30,
+     "n_control": 201,
+     "auroc": 0.5104,
+     "ci95": [
+      0.4046,
+      0.6113
+     ],
+     "p_perm": 0.8591,
+     "trap_mean": 0.1347,
+     "matched_control_mean": 0.1354,
+     "p_holm": 0.8591,
+     "indistinguishable": true
+    },
+    "estimate_visual": {
+     "n_trap": 30,
+     "n_control": 201,
+     "auroc": 0.5985,
+     "ci95": [
+      0.5031,
+      0.6906
+     ],
+     "p_perm": 0.09,
+     "trap_mean": 0.0869,
+     "matched_control_mean": 0.0688,
+     "p_holm": 0.1799,
+     "indistinguishable": false
+    }
+   },
+   "indistinguishable_on_every_feature": false
+  },
+  "stickerMismatch": {
+   "n_with_dimension": 22,
+   "n_excluded_other_dimension": 0,
+   "n_trap_matched": 22,
+   "n_trap_unmatched": 0,
+   "n_controls": 120,
+   "n_strata": 8,
+   "features": {
+    "model_difficulty": {
+     "n_trap": 22,
+     "n_control": 120,
+     "auroc": 0.6405,
+     "ci95": [
+      0.5464,
+      0.738
+     ],
+     "p_perm": 0.0205,
+     "trap_mean": 5.6364,
+     "matched_control_mean": 5.1931,
+     "p_holm": 0.1024,
+     "indistinguishable": false
+    },
+    "model_totals_disagree": {
+     "n_trap": 22,
+     "n_control": 120,
+     "auroc": 0.3949,
+     "ci95": [
+      0.3529,
+      0.435
+     ],
+     "p_perm": 0.0325,
+     "trap_mean": 0.001,
+     "matched_control_mean": 0.0019,
+     "p_holm": 0.1299,
+     "indistinguishable": false
+    },
+    "model_totals_missing": {
+     "n_trap": 22,
+     "n_control": 120,
+     "auroc": 0.5027,
+     "ci95": [
+      0.4669,
+      0.5404
+     ],
+     "p_perm": 1.0,
+     "trap_mean": 0.001,
+     "matched_control_mean": 0.0009,
+     "p_holm": 1.0,
+     "indistinguishable": true
+    },
+    "model_sticker_disagrees": {
+     "n_trap": 22,
+     "n_control": 120,
+     "auroc": 1.0,
+     "ci95": [
+      1.0,
+      1.0
+     ],
+     "p_perm": 0.0005,
+     "trap_mean": 0.9986,
+     "matched_control_mean": 0.0086,
+     "p_holm": 0.0035,
+     "indistinguishable": false
+    },
+    "model_any_problem": {
+     "n_trap": 22,
+     "n_control": 120,
+     "auroc": 1.0,
+     "ci95": [
+      1.0,
+      1.0
+     ],
+     "p_perm": 0.0005,
+     "trap_mean": 0.9986,
+     "matched_control_mean": 0.0115,
+     "p_holm": 0.0035,
+     "indistinguishable": false
+    },
+    "estimate_primary": {
+     "n_trap": 22,
+     "n_control": 120,
+     "auroc": 0.5094,
+     "ci95": [
+      0.3945,
+      0.6265
+     ],
+     "p_perm": 0.8896,
+     "trap_mean": 0.1341,
+     "matched_control_mean": 0.1389,
+     "p_holm": 1.0,
+     "indistinguishable": true
+    },
+    "estimate_visual": {
+     "n_trap": 22,
+     "n_control": 120,
+     "auroc": 0.5788,
+     "ci95": [
+      0.4726,
+      0.6868
+     ],
+     "p_perm": 0.2179,
+     "trap_mean": 0.0498,
+     "matched_control_mean": 0.0547,
+     "p_holm": 0.6537,
+     "indistinguishable": true
+    }
+   },
+   "indistinguishable_on_every_feature": false
+  },
+  "coverPage": {
+   "n_with_dimension": 0,
+   "n_excluded_other_dimension": 0,
+   "n_trap_matched": 0,
+   "n_trap_unmatched": 0,
+   "n_controls": 0,
+   "n_strata": 0,
+   "features": {
+    "model_difficulty": {
+     "n_trap": 0
+    },
+    "model_totals_disagree": {
+     "n_trap": 0
+    },
+    "model_totals_missing": {
+     "n_trap": 0
+    },
+    "model_sticker_disagrees": {
+     "n_trap": 0
+    },
+    "model_any_problem": {
+     "n_trap": 0
+    },
+    "estimate_primary": {
+     "n_trap": 0
+    },
+    "estimate_visual": {
+     "n_trap": 0
+    }
+   },
+   "indistinguishable_on_every_feature": true
+  },
+  "bundle": {
+   "n_with_dimension": 0,
+   "n_excluded_other_dimension": 0,
+   "n_trap_matched": 0,
+   "n_trap_unmatched": 0,
+   "n_controls": 0,
+   "n_strata": 0,
+   "features": {
+    "model_difficulty": {
+     "n_trap": 0
+    },
+    "model_totals_disagree": {
+     "n_trap": 0
+    },
+    "model_totals_missing": {
+     "n_trap": 0
+    },
+    "model_sticker_disagrees": {
+     "n_trap": 0
+    },
+    "model_any_problem": {
+     "n_trap": 0
+    },
+    "estimate_primary": {
+     "n_trap": 0
+    },
+    "estimate_visual": {
+     "n_trap": 0
+    }
+   },
+   "indistinguishable_on_every_feature": true
+  },
+  "anyTrap": {
+   "n_with_dimension": 81,
+   "n_excluded_other_dimension": 0,
+   "n_trap_matched": 81,
+   "n_trap_unmatched": 0,
+   "n_controls": 443,
+   "n_strata": 30,
+   "features": {
+    "model_difficulty": {
+     "n_trap": 81,
+     "n_control": 443,
+     "auroc": 0.5734,
+     "ci95": [
+      0.5287,
+      0.6184
+     ],
+     "p_perm": 0.013,
+     "trap_mean": 3.321,
+     "matched_control_mean": 3.1202,
+     "p_holm": 0.065,
+     "indistinguishable": false
+    },
+    "model_totals_disagree": {
+     "n_trap": 81,
+     "n_control": 443,
+     "auroc": 0.5465,
+     "ci95": [
+      0.4858,
+      0.6055
+     ],
+     "p_perm": 0.0965,
+     "trap_mean": 0.3218,
+     "matched_control_mean": 0.0029,
+     "p_holm": 0.2894,
+     "indistinguishable": true
+    },
+    "model_totals_missing": {
+     "n_trap": 81,
+     "n_control": 443,
+     "auroc": 0.638,
+     "ci95": [
+      0.5913,
+      0.684
+     ],
+     "p_perm": 0.0005,
+     "trap_mean": 0.3705,
+     "matched_control_mean": 0.0007,
+     "p_holm": 0.0035,
+     "indistinguishable": false
+    },
+    "model_sticker_disagrees": {
+     "n_trap": 81,
+     "n_control": 443,
+     "auroc": 0.5294,
+     "ci95": [
+      0.4925,
+      0.569
+     ],
+     "p_perm": 0.3518,
+     "trap_mean": 0.2716,
+     "matched_control_mean": 0.0028,
+     "p_holm": 0.7036,
+     "indistinguishable": true
+    },
+    "model_any_problem": {
+     "n_trap": 81,
+     "n_control": 443,
+     "auroc": 0.9846,
+     "ci95": [
+      0.9643,
+      1.0
+     ],
+     "p_perm": 0.0005,
+     "trap_mean": 0.9623,
+     "matched_control_mean": 0.0064,
+     "p_holm": 0.0035,
+     "indistinguishable": false
+    },
+    "estimate_primary": {
+     "n_trap": 81,
+     "n_control": 443,
+     "auroc": 0.5124,
+     "ci95": [
+      0.4488,
+      0.579
+     ],
+     "p_perm": 0.7486,
+     "trap_mean": 0.1459,
+     "matched_control_mean": 0.145,
+     "p_holm": 0.7486,
+     "indistinguishable": true
+    },
+    "estimate_visual": {
+     "n_trap": 81,
+     "n_control": 443,
+     "auroc": 0.5748,
+     "ci95": [
+      0.5183,
+      0.6322
+     ],
+     "p_perm": 0.0385,
+     "trap_mean": 0.0858,
+     "matched_control_mean": 0.0718,
+     "p_holm": 0.1539,
+     "indistinguishable": false
+    }
+   },
+   "indistinguishable_on_every_feature": false
+  }
+ }
+}

@@ -1,0 +1,1061 @@
+{
+ "id": "receipt-069",
+ "slug": "receipt",
+ "lane": "prompt",
+ "ts": "2026-10-23T19:03:27.447Z",
+ "attempts": 2,
+ "ms": 17677,
+ "extraction": {
+  "Customer": {
+   "Name": "Granite & Co Ltd",
+   "VAT No": "GB028083710",
+   "Loyalty/Member ID": "",
+   "Email": ""
+  },
+  "Merchant": {
+   "Name": "Thamesview Logistics Ltd",
+   "Store/Branch Name": "",
+   "Address": "221 Baker Street",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "Phone": "",
+   "Email": "",
+   "Website": "",
+   "Tax/Registration ID": "GB028083710"
+  },
+  "Receipt Details": {
+   "Receipt Number": "R-977719",
+   "Order/Check Number": "",
+   "Control Number / Control Slip No.": "",
+   "Date": "23/03/2026",
+   "Time": "14:33",
+   "Currency Code": "GBP",
+   "Table / Seat / Guests": "",
+   "Order Type": "",
+   "Register/Terminal ID": "",
+   "Cashier/Server": "Oliver Bennett",
+   "Store ID / Location Code": "",
+   "Notes": ""
+  },
+  "Totals": {
+   "Subtotal Net": "44517.33",
+   "Discounts Total": "",
+   "Service Charge": "",
+   "Tip/Gratuity": "",
+   "Rounding Amount": "",
+   "Total Tax": "8903.47",
+   "Total Amount": "53420.80",
+   "Amount Paid": "53425.00",
+   "Change Due": "4.20",
+   "Prices Include Tax (Yes/No)": "No",
+   "Prices Include Tax": "No"
+  },
+  "Items": [
+   {
+    "Line Number": "1",
+    "Article ID": "CBL-22526",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Category Code": "",
+    "Quantity": "37",
+    "UOM": "set",
+    "Unit Price": "441.50",
+    "Net Amount": "16335.50",
+    "Tax ID": "AUTO_TAX_ID_1",
+    "Tax Rate": "20",
+    "Tax Amount": "3267.10",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount (with tax)": "19602.60",
+    "Gross Amount": "19602.60"
+   },
+   {
+    "Line Number": "2",
+    "Article ID": "CHM-35061",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Category Code": "",
+    "Quantity": "29",
+    "UOM": "pcs",
+    "Unit Price": "46.24",
+    "Net Amount": "1340.96",
+    "Tax ID": "AUTO_TAX_ID_1",
+    "Tax Rate": "20",
+    "Tax Amount": "268.19",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount (with tax)": "1609.15",
+    "Gross Amount": "1609.15"
+   },
+   {
+    "Line Number": "3",
+    "Article ID": "VAL-46988",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Category Code": "",
+    "Quantity": "21",
+    "UOM": "",
+    "Unit Price": "432.41",
+    "Net Amount": "9080.61",
+    "Tax ID": "AUTO_TAX_ID_1",
+    "Tax Rate": "20",
+    "Tax Amount": "1816.12",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount (with tax)": "10896.73",
+    "Gross Amount": "10896.73"
+   },
+   {
+    "Line Number": "4",
+    "Article ID": "MTR-89717",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Category Code": "",
+    "Quantity": "14",
+    "UOM": "box",
+    "Unit Price": "324.64",
+    "Net Amount": "4544.96",
+    "Tax ID": "AUTO_TAX_ID_1",
+    "Tax Rate": "20",
+    "Tax Amount": "908.99",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount (with tax)": "5453.95",
+    "Gross Amount": "5453.95"
+   },
+   {
+    "Line Number": "5",
+    "Article ID": "CHM-08974",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Category Code": "",
+    "Quantity": "35",
+    "UOM": "set",
+    "Unit Price": "377.58",
+    "Net Amount": "13215.30",
+    "Tax ID": "AUTO_TAX_ID_1",
+    "Tax Rate": "20",
+    "Tax Amount": "2643.07",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount (with tax)": "15858.37",
+    "Gross Amount": "15858.37"
+   }
+  ],
+  "Payments": [
+   {
+    "Payment Method": "Card",
+    "Amount": "53425.00",
+    "Currency Code": "",
+    "Card Scheme": "VISA",
+    "Masked PAN": "****3036",
+    "Approval/Auth Code": "",
+    "Transaction/Reference ID": "",
+    "Merchant ID": "",
+    "Terminal ID": "",
+    "Entry Mode": "",
+    "AID": "",
+    "Note": ""
+   }
+  ],
+  "Tax Summary": [
+   {
+    "Tax ID": "AUTO_TAX_ID_1",
+    "Tax Type": "VAT",
+    "Code": "",
+    "Rate": "20",
+    "Taxable Amount": "44517.33",
+    "Tax Amount": "8903.47",
+    "Total With Tax": "53420.80"
+   }
+  ],
+  "Barcodes": [],
+  "Footer Notes": {
+   "Notes": "Thank you for your business. — This is not an invoice.This is a Receipt document. Strictly follow the JSON structure and use the exact keys. Do not add any other text or comments."
+  },
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": true,
+  "corrected_count": 0,
+  "derivations": [
+   {
+    "after": "GB028083710",
+    "before": "",
+    "field_path": "Customer.VAT No",
+    "inputs": [
+     "VAT No"
+    ],
+    "kind": "recovered",
+    "method": "targeted re-ask",
+    "reason": "the label \"VAT No\" is printed but the field came back empty; a scoped follow-up found the value, verified against the quoted source line"
+   }
+  ],
+  "derived_count": 0,
+  "flagged_count": 0,
+  "recovered_count": 1
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 42,
+  "evidence_inputs": {
+   "analyze_result": false,
+   "native_layer": "absent",
+   "ocr_quality": null,
+   "ocr_text": true,
+   "summary": false,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Customer.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Customer.VAT No": {
+    "c": 0.95,
+    "checks": [
+     "vat_format"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.96
+   },
+   "Footer Notes.Notes": {
+    "c": 0.45,
+    "fidelity": 0.3,
+    "flags": [
+     "unverified_in_source"
+    ],
+    "placement": "unknown",
+    "source": "none",
+    "tier": "low"
+   },
+   "Items.0.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Gross Amount (with tax)": {
+    "c": 0.7,
+    "justification": "Calculated as net amount plus tax amount for each line.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.0.Line Number": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "justification": "the position of this line in the list (row 1), not a value printed on the page",
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high"
+   },
+   "Items.0.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"16,335.50\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.0.Tax Amount": {
+    "c": 0.7,
+    "justification": "Calculated as 20% of each line net amount, with the last line reconciled to the printed total VAT.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.0.Tax ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Tax Rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.UOM": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.0.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Gross Amount (with tax)": {
+    "c": 0.7,
+    "justification": "Calculated as net amount plus tax amount for each line.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.1.Line Number": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "justification": "the position of this line in the list (row 2), not a value printed on the page",
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high"
+   },
+   "Items.1.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1,340.96\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.1.Tax Amount": {
+    "c": 0.7,
+    "justification": "Calculated as 20% of each line net amount, with the last line reconciled to the printed total VAT.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.1.Tax ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Tax Rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.UOM": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.1.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Gross Amount (with tax)": {
+    "c": 0.7,
+    "justification": "Calculated as net amount plus tax amount for each line.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.2.Line Number": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "justification": "the position of this line in the list (row 3), not a value printed on the page",
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high"
+   },
+   "Items.2.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"9,080.61\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.2.Tax Amount": {
+    "c": 0.7,
+    "justification": "Calculated as 20% of each line net amount, with the last line reconciled to the printed total VAT.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.2.Tax ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Tax Rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.2.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.3.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.3.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.3.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.3.Gross Amount (with tax)": {
+    "c": 0.7,
+    "justification": "Calculated as net amount plus tax amount for each line.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.3.Line Number": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "justification": "the position of this line in the list (row 4), not a value printed on the page",
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high"
+   },
+   "Items.3.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"4,544.96\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.3.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.3.Tax Amount": {
+    "c": 0.7,
+    "justification": "Calculated as 20% of each line net amount, with the last line reconciled to the printed total VAT.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.3.Tax ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.3.Tax Rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.3.UOM": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.3.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.4.Article ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.4.Article Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.4.Description": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.4.Gross Amount (with tax)": {
+    "c": 0.7,
+    "justification": "Calculated as net amount plus tax amount for each line.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.4.Line Number": {
+    "c": 0.95,
+    "fidelity": 0.92,
+    "justification": "the position of this line in the list (row 5), not a value printed on the page",
+    "placement": "unknown",
+    "source": "derived",
+    "tier": "high"
+   },
+   "Items.4.Net Amount": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"13,215.30\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.4.Quantity": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Items.4.Tax Amount": {
+    "c": 0.7,
+    "justification": "Calculated as 20% of each line net amount, with the last line reconciled to the printed total VAT.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Items.4.Tax ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.4.Tax Rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.4.UOM": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Items.4.Unit Price": {
+    "c": 0.98,
+    "checks": [
+     "line_arithmetic"
+    ],
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high",
+    "validity": 0.95
+   },
+   "Merchant.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Merchant.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Merchant.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Merchant.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"GB\" is the standard ISO 3166-1 alpha-2 country code for \"United Kingdom\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Merchant.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Merchant.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Merchant.Tax/Registration ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payments.0.Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"53,425.00\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payments.0.Card Scheme": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payments.0.Masked PAN": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Payments.0.Payment Method": {
+    "c": 0.75,
+    "checks": [
+     "payment_method_is_a_label"
+    ],
+    "justification": "The payment line shows VISA, which is a card payment.",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Receipt Details.Cashier/Server": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Receipt Details.Currency Code": {
+    "c": 0.87,
+    "checks": [
+     "currency_code",
+     "judgment_corroborated"
+    ],
+    "justification": "the currency code is not printed on the page; \"GBP\" is the official currency of United Kingdom, a country this document names, so the AI most likely derived it from the country - please verify it if this document could be in a different currency",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.88
+   },
+   "Receipt Details.Date": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Receipt Details.Receipt Number": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Receipt Details.Time": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Rate": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Tax Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"8,903.47\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Tax ID": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"1\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Tax Type": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Taxable Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"44,517.33\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Tax Summary.0.Total With Tax": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"53,420.80\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Totals.Amount Paid": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"53,425.00\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Totals.Change Due": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Totals.Prices Include Tax (Yes/No)": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Totals.Subtotal Net": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"44,517.33\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Totals.Total Amount": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"53,420.80\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Totals.Total Tax": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "justification": "printed on the page as \"8,903.47\" (locale form); the value is its canonical dot-decimal form",
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 1,
+  "mean_confidence": 0.888,
+  "model_derivations": {
+   "Items.Gross Amount (with tax)": "Calculated as net amount plus tax amount for each line.",
+   "Items.Tax Amount": "Calculated as 20% of each line net amount, with the last line reconciled to the printed total VAT.",
+   "Items.Tax ID": "Each item uses the only tax bucket on the receipt.",
+   "Items.Tax Rate": "The receipt shows a single VAT 20% rate, so it applies to all items.",
+   "Merchant.Country": "The merchant address ends with United Kingdom, so the country is United Kingdom.",
+   "Merchant.Country Code": "The merchant country is United Kingdom, so the ISO country code is GB.",
+   "Payments.Payment Method": "The payment line shows VISA, which is a card payment.",
+   "Receipt Details.Currency Code": "The merchant is in the United Kingdom and the document shows no other currency, so the currency is GBP.",
+   "Tax Summary.Code": "No tax bucket letter is printed, so it is left empty.",
+   "Tax Summary.Tax ID": "Auto-generated for the single tax bucket.",
+   "Tax Summary.Taxable Amount": "Taken from the printed Subtotal as the net taxable base.",
+   "Tax Summary.Total With Tax": "Computed as taxable amount plus tax amount and matches the printed TOTAL.",
+   "Totals.Prices Include Tax (Yes/No)": "The receipt shows Subtotal plus VAT 20% equals TOTAL, so prices are tax-exclusive."
+  },
+  "scored_fields": 90
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "receipt",
+ "document_id": "01a16a25-89f4-7000-b90f-e110c28b5945",
+ "request_id": "60b8041b-2fc6-4395-a2de-7d97886ef031",
+ "ok": true
+}

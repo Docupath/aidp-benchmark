@@ -1,0 +1,1437 @@
+{
+ "title": "AIDP v1.0 reference run: post-run diagnostics",
+ "status": "Computed after the run from its kept outputs, the corpus and exported database fields. Not part of the AIDP Score; diagnostics under spec section 7.6, published beside the result. No output of the run was changed beyond the publication changes listed in Annex B of the specification, none of which changes a score.",
+ "computed_at_ist": "2026-10-25T04:38:29.021+05:30",
+ "run": {
+  "tag": "aidp-v1-main",
+  "platform_git_sha": "5bd21304cc7f8cbb0fb8ac851457a6cdabbd0b97",
+  "run_started_ist": "2026-10-23T13:19:39.022+05:30",
+  "run_finished_ist": "2026-10-24T01:31:20.024+05:30"
+ },
+ "corpus": {
+  "seed": "docupath-corpus-v1",
+  "documents": 2000,
+  "manifest_sha256": "23dcd78070cc7ee6de290aaa0654d79dfc80d09e1b6013f488c3a6b2fe0001f5",
+  "matches_run_manifest": true
+ },
+ "database_fields": {
+  "exported_at_ist": "2026-10-24T01:32:41.365+05:30",
+  "database": "aidp_v1",
+  "files": {
+   "annotations.jsonl": "c3155e8cd36b20363adc3876064b51a8a66a8510ff498188f51f3d159d43aca6",
+   "classification-runs.jsonl": "d846d48bc3b8c819f99cd318393ad322210f214898997b9bd5d5da3f752419ea",
+   "main-pipeline-submissions.jsonl": "b5feae08e0a74df7e19b70b8354f2460a433a0449863301c1cec5799f7dc5a5b",
+   "main-prompt-submissions.jsonl": "0c27363564faf4b28a58bf86a903262df99762e2611e4748b978f8da2579a668",
+   "stability-submissions.jsonl": "7711daddcf8d4a48468bc66f43258f6d08b3f7314f5d5c67a3c6371e1e395c78"
+  }
+ },
+ "figures": [
+  {
+   "id": "intake",
+   "capability": "Intake (Read layer)",
+   "unit": "pages, attachments",
+   "numerator": 3468,
+   "denominator": 3490,
+   "rate": 0.9936962750716333,
+   "breakdown": {
+    "main_file_pages": {
+     "read": 3456,
+     "of": 3478,
+     "rate": 0.9936745255894192
+    },
+    "attachment_pages": {
+     "read": 12,
+     "of": 12,
+     "rate": 1
+    },
+    "attachments_read_in_full": {
+     "read": 12,
+     "of": 12
+    },
+    "documents_with_every_page_read": {
+     "count": 1978,
+     "of": 2000
+    },
+    "unread_pages": 22,
+    "unread_pages_that_are_the_last_page_of_their_file": 22,
+    "unread_pages_with_a_text_layer_holding_only_the_closing_line": 19,
+    "unread_pages_with_a_text_layer_holding_anything_else": 0,
+    "unread_pages_without_a_text_layer": 3,
+    "unread_pages_without_a_text_layer_whose_ink_is_one_short_line_at_the_top": 3,
+    "answer_key_values_found_on_unread_pages": 0,
+    "documents_whose_closing_line_is_an_answer_key_value": 0,
+    "reading_markers_beyond_the_pdf_page_count": 0
+   },
+   "unread_pages": [
+    {
+     "id": "consignment-invoice-042",
+     "page": 2,
+     "of": 2,
+     "text": [
+      "Thank you for your business."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "consignment-invoice-196",
+     "page": 8,
+     "of": 8,
+     "text": null,
+     "ink_bands": [
+      {
+       "top_pt": 40.5,
+       "bottom_pt": 47,
+       "height_pt": 6.8,
+       "dark_px_at_288dpi": 1269
+      }
+     ],
+     "holds_only_closing_line": null,
+     "closing_line": "毎度ありがとうございます。",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": "by-eye/intake-consignment-invoice-196-page-8.png"
+    },
+    {
+     "id": "consignment-order-029",
+     "page": 4,
+     "of": 4,
+     "text": [
+      "Thank you for your business."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "consignment-order-052",
+     "page": 2,
+     "of": 2,
+     "text": [
+      "Thank you for your business."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "consignment-order-117",
+     "page": 2,
+     "of": 2,
+     "text": null,
+     "ink_bands": [
+      {
+       "top_pt": 40.5,
+       "bottom_pt": 45.3,
+       "height_pt": 5,
+       "dark_px_at_288dpi": 1253
+      }
+     ],
+     "holds_only_closing_line": null,
+     "closing_line": "Merci de votre confiance.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": "by-eye/intake-consignment-order-117-page-2.png"
+    },
+    {
+     "id": "consignment-order-154",
+     "page": 2,
+     "of": 2,
+     "text": [
+      "Thank you for your business."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "consignment-order-183",
+     "page": 2,
+     "of": 2,
+     "text": [
+      "Obrigado pela preferência."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Obrigado pela preferência.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "credit-note-073",
+     "page": 4,
+     "of": 4,
+     "text": [
+      ".شكر ًا لتعاملكم معنا"
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "شكراً لتعاملكم معنا.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "credit-note-098",
+     "page": 2,
+     "of": 2,
+     "text": [
+      "Thank you for your business."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "credit-note-149",
+     "page": 5,
+     "of": 5,
+     "text": [
+      "Tack för din beställning."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Tack för din beställning.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "invoice-058",
+     "page": 11,
+     "of": 11,
+     "text": [
+      "Tack för din beställning."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Tack för din beställning.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "invoice-123",
+     "page": 2,
+     "of": 2,
+     "text": [
+      "Thank you for your business."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "purchase-order-099",
+     "page": 2,
+     "of": 2,
+     "text": [
+      ".شكر ًا لتعاملكم معنا"
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "شكراً لتعاملكم معنا.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "purchase-order-161",
+     "page": 2,
+     "of": 2,
+     "text": [
+      ".شكر ًا لتعاملكم معنا"
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "شكراً لتعاملكم معنا.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "purchase-order-185",
+     "page": 2,
+     "of": 2,
+     "text": null,
+     "ink_bands": [
+      {
+       "top_pt": 40.5,
+       "bottom_pt": 46.3,
+       "height_pt": 6,
+       "dark_px_at_288dpi": 853
+      }
+     ],
+     "holds_only_closing_line": null,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": "by-eye/intake-purchase-order-185-page-2.png"
+    },
+    {
+     "id": "quote-017",
+     "page": 4,
+     "of": 4,
+     "text": [
+      "Thank you for your business."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "quote-055",
+     "page": 2,
+     "of": 2,
+     "text": [
+      "Thank you for your business."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "quote-076",
+     "page": 2,
+     "of": 2,
+     "text": [
+      "Thank you for your business."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "quote-122",
+     "page": 6,
+     "of": 6,
+     "text": [
+      "Thank you for your business."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "quote-130",
+     "page": 2,
+     "of": 2,
+     "text": [
+      "Thank you for your business."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Thank you for your business.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "quote-167",
+     "page": 2,
+     "of": 2,
+     "text": [
+      "Obrigado pela preferência."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Obrigado pela preferência.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    },
+    {
+     "id": "quote-186",
+     "page": 2,
+     "of": 2,
+     "text": [
+      "Merci de votre confiance."
+     ],
+     "ink_bands": null,
+     "holds_only_closing_line": true,
+     "closing_line": "Merci de votre confiance.",
+     "reading_contains_closing_line": false,
+     "by_eye_crop": null
+    }
+   ],
+   "by_eye": {
+    "what": "The three unread pages that have no text layer (rasterised heavy-noise pages), rendered from the PDFs into the crops listed.",
+    "pages": [
+     {
+      "id": "consignment-invoice-196",
+      "page": 8,
+      "crop": "by-eye/intake-consignment-invoice-196-page-8.png",
+      "seen": "the closing line \"毎度ありがとうございます。\", its top cut by the page break, a page crease and the footer's rule; nothing else"
+     },
+     {
+      "id": "consignment-order-117",
+      "page": 2,
+      "crop": "by-eye/intake-consignment-order-117-page-2.png",
+      "seen": "the closing line \"Merci de votre confiance.\", its top cut by the page break, a crease and the footer's rule; nothing else"
+     },
+     {
+      "id": "purchase-order-185",
+      "page": 2,
+      "crop": "by-eye/intake-purchase-order-185-page-2.png",
+      "seen": "the closing line \"Thank you for your business.\", its top cut by the page break, a crease and the footer's rule; nothing else"
+     }
+    ],
+    "verdict": "None of the three is blank: each holds only the document's closing line, which no answer-key field holds. With the 19 text-layer pages, all 22 unread pages hold the closing line and nothing else."
+   },
+   "definition": "Pages read: real PDF pages (mupdf page count of every file the full lane submitted: each main file and each attachment) whose page marker (\"# --- | Page N | --- #\", numbered per file) is present in the platform's page-lane reading, in that file's part, followed by any content. Pages: every page of those files.",
+   "caveats": [
+    "Computed after the run from kept outputs; not part of the AIDP Score; a diagnostic under spec section 7.6.",
+    "A page counts as read when the reading carries content under its marker; whether that content is right is Printed text's question, not this one.",
+    "The 302 heavy-noise PDFs are rasterised (the whole page is one image, no text layer), so for an unread page among them what it holds is established from where its ink lies and by eye, not from text.",
+    "22 of the 22 unread pages are the last page of their file, where the PDF renderer put the document's closing line (the footer note) alone on an extra page; 0 documents' answer keys hold their closing line as a value."
+   ]
+  },
+  {
+   "id": "stamps",
+   "capability": "Handwriting and stamps (Read layer), the stamp only",
+   "unit": "documents",
+   "numerator": 437,
+   "denominator": 448,
+   "rate": 0.9754464285714286,
+   "false_alarms": {
+    "numerator": 0,
+    "denominator": 1552,
+    "rate": 0
+   },
+   "breakdown": {
+    "stamped_documents": 448,
+    "unstamped_documents": 1552,
+    "generator_draw_agrees_with_pdf": {
+     "documents": 2000,
+     "of": 2000
+    },
+    "confirmed_by_text_layer": {
+     "documents": 1698,
+     "stamped": 356,
+     "unstamped_with_a_stamp_line": 0
+    },
+    "confirmed_by_pixels_on_rasterised_pdfs": {
+     "documents": 302,
+     "stamped": 92,
+     "of_stamped": 92,
+     "unstamped_with_stamp_pixels": 0
+    },
+    "pixel_detector_agrees_with_text_layer_on_page_1": {
+     "documents": 1698,
+     "of": 1698
+    },
+    "stamp_on_page_1": 445,
+    "stamp_on_a_later_page": [
+     {
+      "id": "invoice-097",
+      "page": 2,
+      "pages": 13
+     },
+     {
+      "id": "invoice-124",
+      "page": 2,
+      "pages": 12
+     },
+     {
+      "id": "purchase-order-001",
+      "page": 2,
+      "pages": 12
+     }
+    ],
+    "noted_among_page_1_stamps": {
+     "numerator": 437,
+     "denominator": 445
+    },
+    "stamp_reported_as_a_seal_instead": [
+     {
+      "id": "invoice-098",
+      "seals": [
+       "triangular outline seal/stamp near top right, text partly legible: \"PAID\""
+      ]
+     }
+    ],
+    "noted_as_stamp_or_seal": {
+     "numerator": 438,
+     "denominator": 448
+    },
+    "not_noted": [
+     {
+      "id": "consignment-invoice-045",
+      "noise": "medium",
+      "locale": "en-IN",
+      "stamp_page": 1,
+      "annotations": null
+     },
+     {
+      "id": "consignment-order-034",
+      "noise": "light",
+      "locale": "ar-AE",
+      "stamp_page": 1,
+      "annotations": null
+     },
+     {
+      "id": "consignment-order-160",
+      "noise": "medium",
+      "locale": "de-CH",
+      "stamp_page": 1,
+      "annotations": null
+     },
+     {
+      "id": "credit-note-083",
+      "noise": "light",
+      "locale": "ar-AE",
+      "stamp_page": 1,
+      "annotations": null
+     },
+     {
+      "id": "credit-note-169",
+      "noise": "heavy",
+      "locale": "nl-NL",
+      "stamp_page": 1,
+      "annotations": null
+     },
+     {
+      "id": "credit-note-186",
+      "noise": "heavy",
+      "locale": "en-GB",
+      "stamp_page": 1,
+      "annotations": null
+     },
+     {
+      "id": "general-contract-136",
+      "noise": "heavy",
+      "locale": "ja-JP",
+      "stamp_page": 1,
+      "annotations": null
+     },
+     {
+      "id": "invoice-097",
+      "noise": "light",
+      "locale": "ja-JP",
+      "stamp_page": 2,
+      "annotations": null
+     },
+     {
+      "id": "invoice-098",
+      "noise": "medium",
+      "locale": "de-DE",
+      "stamp_page": 1,
+      "annotations": {
+       "seals": [
+        "triangular outline seal/stamp near top right, text partly legible: \"PAID\""
+       ],
+       "handwritten_notes": []
+      }
+     },
+     {
+      "id": "invoice-124",
+      "noise": "medium",
+      "locale": "de-CH",
+      "stamp_page": 2,
+      "annotations": null
+     },
+     {
+      "id": "purchase-order-001",
+      "noise": "light",
+      "locale": "ar-AE",
+      "stamp_page": 2,
+      "annotations": null
+     }
+    ],
+    "noted_with_the_stamp_word_in_the_description": {
+     "numerator": 391,
+     "denominator": 437
+    },
+    "unstamped_with_any_annotation": [],
+    "stamp_word_transcribed_in_the_reading": {
+     "stamped": 179,
+     "of_stamped": 448,
+     "unstamped": 0,
+     "of_unstamped": 1552
+    },
+    "stored_reading_equals_the_kept_reading": {
+     "documents": 1996,
+     "of": 2000
+    }
+   },
+   "definition": "Stamp noted: the stored reading of the document's main file (classification_v2_ocr.annotations, exported) lists at least one entry under \"stamps\" on any annotated page. Stamped: the generator's seeded draw (generate.mjs lines 39 to 42) gives the document a stamp, confirmed on its PDF. Numerator: stamped documents with a stamp noted. Denominator: stamped documents. The false-alarm line counts unstamped documents with a stamp noted.",
+   "caveats": [
+    "Computed after the run from kept outputs and exported database fields; not part of the AIDP Score; a diagnostic under spec section 7.6.",
+    "The platform describes stamps on page 1 only, its default, which the run's configuration left unchanged, and no stored description covers any later page (0 documents have one). Because the stamp is positioned against the whole (transformed) document body, 3 long documents print it on page 2, where it could not be seen.",
+    "0 stamps were reported as a \"seal\" whose stored text is \"[object Object]\": the platform stored an object instead of its description, so what it said is lost.",
+    "Only the stamp is measured. The corpus prints no handwriting, ticks or signatures, so the rest of the capability has no positives to find here.",
+    "This is the classification step's side output; the stamp has no field in any contract, so it cannot affect the AIDP Score whichever way it goes."
+   ]
+  },
+  {
+   "id": "reading-order",
+   "capability": "Reading order (Read layer), table rows",
+   "unit": "rows",
+   "numerator": 65731,
+   "denominator": 66616,
+   "rate": 0.9867149033265281,
+   "relaxed": {
+    "numerator": 65926,
+    "denominator": 66616,
+    "rate": 0.9896421280172931,
+    "definition": "As the headline, except that whole cells may also stand on the row's next two lines (before the next row's line), in reading order by column, the row's first cell on its first line."
+   },
+   "breakdown": {
+    "rows_printed": 69930,
+    "printed_rows_checked_against_correct_text": {
+     "rows": 69930,
+     "missing_from_correct_text": 0
+    },
+    "excluded_documents": 69,
+    "rows_in_excluded_documents": 3314,
+    "cells_covered_by_stickers_excluded": 5252,
+    "rows_excluded_with_fewer_than_two_cells_left": 0,
+    "judged_rows": 66616,
+    "not_passing_by_reason": {
+     "cell text not in the reading": 250,
+     "cells moved to the row's next line (passes relaxed)": 195,
+     "a wrapped cell's rest under another column": 136,
+     "cells not in the row's lines (not traceable)": 105,
+     "out of order": 78,
+     "row not found": 5,
+     "cells on another line": 116
+    },
+    "not_passing_note": "Reasons are a best attribution, not a second measure: \"cell text not in the reading\" means a judged cell could not be found as written anywhere in the reading (misread, dropped or marked unreadable), which Printed text already counts; \"out of order\", \"cells on another line\", \"two rows on one line\" and \"cells moved to the row's next line\" are order and row-structure faults; \"a wrapped cell's rest under another column\" means the row stands only if a wrapped cell's second part may sit under a neighbouring column; \"not traceable\" means a missing cell is too short, or printed in several rows, to say where it went.",
+    "passes_with_a_wrapped_cell_continued_below": 17383,
+    "passes_with_a_cells_words_in_display_order": 670,
+    "out_of_order_among_rows_with_every_cell_on_its_line": {
+     "out_of_order": 78,
+     "of": 65809,
+     "rate_in_order": 0.9988147517816712
+    },
+    "by_table": {
+     "Charges": {
+      "judged": 800,
+      "passed": 798,
+      "rate": 0.9975,
+      "passed_relaxed": 800,
+      "rate_relaxed": 1
+     },
+     "Transactions": {
+      "judged": 2988,
+      "passed": 2986,
+      "rate": 0.999330655957162,
+      "passed_relaxed": 2986,
+      "rate_relaxed": 0.999330655957162
+     },
+     "attachment": {
+      "judged": 63,
+      "passed": 63,
+      "rate": 1,
+      "passed_relaxed": 63,
+      "rate_relaxed": 1
+     },
+     "items": {
+      "judged": 62765,
+      "passed": 61884,
+      "rate": 0.9859635146976818,
+      "passed_relaxed": 62077,
+      "rate_relaxed": 0.9890384768581215
+     }
+    },
+    "by_type": {
+     "bank-statement": {
+      "judged": 2988,
+      "passed": 2986,
+      "rate": 0.999330655957162,
+      "passed_relaxed": 2986,
+      "rate_relaxed": 0.999330655957162
+     },
+     "consignment-invoice": {
+      "judged": 6425,
+      "passed": 6068,
+      "rate": 0.9444357976653697,
+      "passed_relaxed": 6132,
+      "rate_relaxed": 0.9543968871595331
+     },
+     "consignment-order": {
+      "judged": 9360,
+      "passed": 9098,
+      "rate": 0.972008547008547,
+      "passed_relaxed": 9123,
+      "rate_relaxed": 0.9746794871794872
+     },
+     "credit-note": {
+      "judged": 10094,
+      "passed": 10044,
+      "rate": 0.995046562314246,
+      "passed_relaxed": 10078,
+      "rate_relaxed": 0.9984148999405588
+     },
+     "freight-invoice": {
+      "judged": 800,
+      "passed": 798,
+      "rate": 0.9975,
+      "passed_relaxed": 800,
+      "rate_relaxed": 1
+     },
+     "general-contract": {
+      "judged": 0,
+      "passed": 0,
+      "rate": null,
+      "passed_relaxed": 0,
+      "rate_relaxed": null
+     },
+     "invoice": {
+      "judged": 12550,
+      "passed": 12489,
+      "rate": 0.9951394422310756,
+      "passed_relaxed": 12502,
+      "rate_relaxed": 0.9961752988047808
+     },
+     "purchase-order": {
+      "judged": 13872,
+      "passed": 13831,
+      "rate": 0.9970444059976932,
+      "passed_relaxed": 13859,
+      "rate_relaxed": 0.999062860438293
+     },
+     "quote": {
+      "judged": 9395,
+      "passed": 9287,
+      "rate": 0.98850452368281,
+      "passed_relaxed": 9314,
+      "rate_relaxed": 0.9913783927621075
+     },
+     "receipt": {
+      "judged": 1132,
+      "passed": 1130,
+      "rate": 0.9982332155477032,
+      "passed_relaxed": 1132,
+      "rate_relaxed": 1
+     }
+    },
+    "by_locale": {
+     "ar-AE": {
+      "judged": 5081,
+      "passed": 4961,
+      "rate": 0.9763826018500296,
+      "passed_relaxed": 5031,
+      "rate_relaxed": 0.9901594174375123
+     },
+     "de-CH": {
+      "judged": 4918,
+      "passed": 4857,
+      "rate": 0.9875965839772265,
+      "passed_relaxed": 4883,
+      "rate_relaxed": 0.9928832858885726
+     },
+     "de-DE": {
+      "judged": 4051,
+      "passed": 4016,
+      "rate": 0.9913601579856826,
+      "passed_relaxed": 4016,
+      "rate_relaxed": 0.9913601579856826
+     },
+     "en-GB": {
+      "judged": 7822,
+      "passed": 7731,
+      "rate": 0.9883661467655331,
+      "passed_relaxed": 7755,
+      "rate_relaxed": 0.9914344157504474
+     },
+     "en-IN": {
+      "judged": 3768,
+      "passed": 3717,
+      "rate": 0.9864649681528662,
+      "passed_relaxed": 3723,
+      "rate_relaxed": 0.9880573248407644
+     },
+     "en-US": {
+      "judged": 8463,
+      "passed": 8301,
+      "rate": 0.9808578518255937,
+      "passed_relaxed": 8331,
+      "rate_relaxed": 0.9844026940801134
+     },
+     "es-ES": {
+      "judged": 3192,
+      "passed": 3138,
+      "rate": 0.9830827067669173,
+      "passed_relaxed": 3140,
+      "rate_relaxed": 0.9837092731829574
+     },
+     "fr-FR": {
+      "judged": 3307,
+      "passed": 3261,
+      "rate": 0.9860901118838826,
+      "passed_relaxed": 3263,
+      "rate_relaxed": 0.9866948896280617
+     },
+     "ja-JP": {
+      "judged": 4994,
+      "passed": 4966,
+      "rate": 0.9943932719263116,
+      "passed_relaxed": 4966,
+      "rate_relaxed": 0.9943932719263116
+     },
+     "nl-NL": {
+      "judged": 6116,
+      "passed": 6051,
+      "rate": 0.9893721386527142,
+      "passed_relaxed": 6056,
+      "rate_relaxed": 0.9901896664486592
+     },
+     "pt-PT": {
+      "judged": 8308,
+      "passed": 8189,
+      "rate": 0.9856764564275398,
+      "passed_relaxed": 8204,
+      "rate_relaxed": 0.9874819451131439
+     },
+     "sv-SE": {
+      "judged": 6596,
+      "passed": 6543,
+      "rate": 0.9919648271679806,
+      "passed_relaxed": 6558,
+      "rate_relaxed": 0.9942389326864767
+     }
+    },
+    "by_noise": {
+     "heavy": {
+      "judged": 7611,
+      "passed": 7463,
+      "rate": 0.9805544606490606,
+      "passed_relaxed": 7485,
+      "rate_relaxed": 0.9834450137958218
+     },
+     "light": {
+      "judged": 24570,
+      "passed": 24393,
+      "rate": 0.9927960927960928,
+      "passed_relaxed": 24476,
+      "rate_relaxed": 0.9961741961741962
+     },
+     "medium": {
+      "judged": 16378,
+      "passed": 16167,
+      "rate": 0.987116864085969,
+      "passed_relaxed": 16218,
+      "rate_relaxed": 0.9902307974111613
+     },
+     "none": {
+      "judged": 18057,
+      "passed": 17708,
+      "rate": 0.9806723154455336,
+      "passed_relaxed": 17747,
+      "rate_relaxed": 0.9828321426593565
+     }
+    },
+    "by_stickers": {
+     "documents with stickers (excluded cells removed)": {
+      "judged": 15785,
+      "passed": 15166,
+      "rate": 0.9607855559075071,
+      "passed_relaxed": 15255,
+      "rate_relaxed": 0.9664238200823567
+     },
+     "documents without stickers": {
+      "judged": 50831,
+      "passed": 50565,
+      "rate": 0.994766972910232,
+      "passed_relaxed": 50671,
+      "rate_relaxed": 0.9968523145324704
+     }
+    },
+    "right_to_left_passes_by_direction": {
+     "as displayed (first column last)": 4016,
+     "logical": 945
+    }
+   },
+   "by_eye": {
+    "sticker_geometry": [
+     {
+      "page": "consignment-order-164 page 1",
+      "crop": "by-eye/check-consignment-order-164-p1.png",
+      "seen": "the first sticker covers the header row only; row 1 is whole. Testing the corners of each character's box would mark row 1's quantity, unit and price as covered, because the box reaches above the ink; the test uses points inside the ink, which leaves row 1 judged, as the page shows."
+     },
+     {
+      "page": "consignment-invoice-093 page 4 (right to left)",
+      "crop": "by-eye/check-consignment-invoice-093-p4.png",
+      "seen": "two stickers over rows 99 to 104; the computed covered cells match the page row by row (99: quantity, unit, price; 100: spec to price; 101: spec, lot, serial, the serial losing its top to the sticker's edge; 102: unit and price; 103: spec to price; 104: spec). Row 104's lot loses only the very top of its characters, is still legible and is judged."
+     },
+     {
+      "page": "consignment-invoice-004 page 1",
+      "crop": "by-eye/check-consignment-invoice-004-p1.png",
+      "seen": "covered cells computed for rows 3, 4, 7, 8 and 9 (price and amount; lot to amount; serial; article to lot; article to spec) match the stickers on the page; rows 1, 2, 5, 6 and 10 are whole."
+     }
+    ],
+    "sample": "The reading-order verdicts themselves are the scripts' own and were not checked by eye here. node aidp-bench/bench/post-run/by-eye.mjs --corpus <AIDP-2K folder> prints a seeded sample of them, each row beside the reading's lines, for anyone who wants to."
+   },
+   "definition": "A row passes when one line of the page-lane reading holds every judged cell of the printed row, starting in reading order with no overlap: logical (first column first) on left-to-right pages; on right-to-left (ar-AE) pages logical or as displayed (first column last), one direction for the whole row. A cell is found as whole tokens, spacing ignored; a cell the page itself wraps may continue on the next three lines, under the column it starts in; on right-to-left pages a cell's words and a negative number's minus sign may stand in display order. Two rows on one line both fail. Numerator: rows that pass. Denominator: judged rows (every row of every printed repeating table, less the excluded).",
+   "caveats": [
+    "Computed after the run from kept outputs and the corpus PDFs; not part of the AIDP Score; a diagnostic under spec section 7.6.",
+    "Cells physically covered by a barcode sticker are excluded (5252 cells), located from each PDF's geometry (any of nine sample points of a character's ink under the sticker's box); the 69 heavy-noise consignment documents, whose PDFs keep no text layer, are excluded whole (3314 rows). The geometry was checked by eye on three pages (by-eye/check-*.png).",
+    "A row also fails when a judged cell is misread or dropped (a content fault Printed text already counts); the reasons separate those from order faults, and \"out_of_order_among_rows_with_every_cell_on_its_line\" gives order alone.",
+    "Right-to-left rows are accepted in either direction because the platform writes them both ways, sometimes within one document (4016 passing right-to-left rows as displayed, 945 logical); a row that mixes the two fails.",
+    "The population is every row of every repeating table the corpus prints (line items, bank transactions, freight charges, attachment breakdowns), taken from the generator and verified row for row against each document's correct text."
+   ]
+  },
+  {
+   "id": "legibility",
+   "capability": "Legibility (Read layer)",
+   "unit": "marks (tags written into the reading)",
+   "numerator": 1746,
+   "denominator": null,
+   "rate": null,
+   "documents_with_a_legibility_tag": {
+    "numerator": 244,
+    "denominator": 2000,
+    "rate": 0.122
+   },
+   "breakdown": {
+    "legibility_tags": {
+     "obscured": 1714,
+     "illegible": 26,
+     "cut off": 6
+    },
+    "documents_with_stickers": {
+     "documents": 400,
+     "with_a_tag": 221,
+     "tags": 1714
+    },
+    "documents_without_stickers": {
+     "documents": 1600,
+     "with_a_tag": 23,
+     "tags": 32
+    },
+    "tag_text_in_extracted_values": {
+     "main_run_values_checked": 1480836,
+     "main_run_documents": 2000,
+     "repeatability_runs": 600,
+     "repeatability_values_checked": 496645,
+     "leaks": 0,
+     "examples": []
+    },
+    "pen_mark_tags_on_a_corpus_without_pen_marks": {
+     "tags": 177,
+     "documents": 164,
+     "by_tag": {
+      "circled": 143,
+      "struck": 28,
+      "highlighted": 6
+     },
+     "on_documents_with_the_paid_stamp": 171,
+     "on_documents_without_it": 6,
+     "without_stamp_by_tag": {
+      "struck": 3,
+      "highlighted": 3
+     },
+     "note": "The reading writes the stamp's word with a pen-mark tag after it (\"PAID [circled]\", \"BEZAHLT [circled]\"): the stamp's rectangular border read as a circle, a strike or a highlight."
+    },
+    "hidden_cells_secondary": {
+     "rows": 1334,
+     "rows_with_a_legibility_tag": 695,
+     "cells": 4617,
+     "by_what": {
+      "part of the printed value": 535,
+      "a legibility tag": 2207,
+      "the printed value": 318,
+      "the sticker's own text": 333,
+      "another value": 994,
+      "nothing": 230
+     },
+     "note": "Rows of the reading-order measure that pass it (every visible cell on one line, in order) and in which a sticker hides at least one cell (any of nine sample points of a character's ink under the sticker). The hidden cells between two visible ones sit in the gap between those cells on the line, so what the reading wrote there can be read off: a legibility tag (reported), nothing, the printed value or part of it (the cell is only partly hidden, so this can be a correct reading), the sticker's own printed lot, serial or GTIN taken for the hidden value, or another value (a guess or a misreading). The reading writes \" [obscured]\" at the END of a partly covered row, so a row can be reported while the gap itself holds a guess; rows_with_a_legibility_tag counts rows tagged anywhere on the line. An estimate on the rows where the gap can be located, not a score."
+    }
+   },
+   "definition": "Marks: occurrences of \"[obscured]\", \"[illegible]\" or \"[cut off]\" in the page-lane reading of each of the 2,000 documents (the platform's reading-tag vocabulary). Split by whether the document carries barcode stickers (the 400 consignment orders and invoices). Leak check: no tag text inside any value of the extraction returned for the same document (and for the 600 repeatability extractions).",
+   "caveats": [
+    "Computed after the run from kept outputs; not part of the AIDP Score; a diagnostic under spec section 7.6.",
+    "A count of marks, not a rate: the corpus has no answer key for what is unreadable, so the count cannot say how many of the marks were warranted or how many unreadable spots went unmarked. The secondary hidden-cell estimate is the closest the corpus gets to that question.",
+    "The corpus prints no pen marks (no strikes, ticks, circles, highlights or checkboxes), so every pen-mark tag is unfounded; almost all sit on the PAID stamp, whose border the reading takes for a circle, a strike or a highlight (see pen_mark_tags_on_a_corpus_without_pen_marks)."
+   ]
+  },
+  {
+   "id": "parsing",
+   "capability": "Parsing (Understand layer), values printed together",
+   "unit": "parts (fields of a printed compound)",
+   "numerator": 7155,
+   "denominator": 7200,
+   "rate": 0.99375,
+   "breakdown": {
+    "parts": 7200,
+    "own_field": 7155,
+    "merged_into_a_neighbouring_field": 1,
+    "in_a_neighbouring_field_alone": 1,
+    "other_wrong_or_missing": 43,
+    "other_by_how": {
+     "own field holds something else": 21,
+     "own field empty": 19,
+     "own field holds it plus other text": 3
+    },
+    "merged": [
+     {
+      "id": "invoice-127",
+      "part": "Seller.Postal Code",
+      "key": "00000",
+      "returned_in": "Seller.Address",
+      "value": "المنطقة الصناعية، بناية 00000"
+     }
+    ],
+    "in_a_neighbouring_field_alone_examples": [
+     {
+      "id": "consignment-invoice-164",
+      "part": "Seller.street",
+      "key": "Unit 7, Riverside Estate",
+      "in_field": "Seller.Address"
+     }
+    ],
+    "by_part": {
+     "Seller.street": {
+      "parts": 1200,
+      "own field": 1185,
+      "merged": 0,
+      "neighbour": 1,
+      "other": 14
+     },
+     "Seller.Postal Code": {
+      "parts": 1200,
+      "own field": 1195,
+      "merged": 1,
+      "neighbour": 0,
+      "other": 4
+     },
+     "Seller.City": {
+      "parts": 1200,
+      "own field": 1188,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 12
+     },
+     "Seller.Country": {
+      "parts": 1200,
+      "own field": 1197,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 3
+     },
+     "Buyer.Postal Code": {
+      "parts": 1200,
+      "own field": 1199,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 1
+     },
+     "Buyer.City": {
+      "parts": 1200,
+      "own field": 1191,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 9
+     }
+    },
+    "by_type": {
+     "consignment-invoice": {
+      "parts": 1200,
+      "own field": 1196,
+      "merged": 0,
+      "neighbour": 1,
+      "other": 3
+     },
+     "consignment-order": {
+      "parts": 1200,
+      "own field": 1188,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 12
+     },
+     "credit-note": {
+      "parts": 1200,
+      "own field": 1197,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 3
+     },
+     "freight-invoice": {
+      "parts": 1200,
+      "own field": 1200,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 0
+     },
+     "invoice": {
+      "parts": 1200,
+      "own field": 1194,
+      "merged": 1,
+      "neighbour": 0,
+      "other": 5
+     },
+     "purchase-order": {
+      "parts": 1200,
+      "own field": 1180,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 20
+     }
+    },
+    "by_locale": {
+     "de-CH": {
+      "parts": 516,
+      "own field": 516,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 0
+     },
+     "en-IN": {
+      "parts": 510,
+      "own field": 509,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 1
+     },
+     "en-US": {
+      "parts": 978,
+      "own field": 975,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 3
+     },
+     "nl-NL": {
+      "parts": 492,
+      "own field": 484,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 8
+     },
+     "de-DE": {
+      "parts": 414,
+      "own field": 414,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 0
+     },
+     "es-ES": {
+      "parts": 474,
+      "own field": 474,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 0
+     },
+     "sv-SE": {
+      "parts": 558,
+      "own field": 558,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 0
+     },
+     "ar-AE": {
+      "parts": 516,
+      "own field": 485,
+      "merged": 1,
+      "neighbour": 0,
+      "other": 30
+     },
+     "en-GB": {
+      "parts": 1098,
+      "own field": 1097,
+      "merged": 0,
+      "neighbour": 1,
+      "other": 0
+     },
+     "pt-PT": {
+      "parts": 660,
+      "own field": 660,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 0
+     },
+     "fr-FR": {
+      "parts": 498,
+      "own field": 498,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 0
+     },
+     "ja-JP": {
+      "parts": 486,
+      "own field": 485,
+      "merged": 0,
+      "neighbour": 0,
+      "other": 1
+     }
+    },
+    "text_lane": {
+     "parts": 7200,
+     "own_field": 7139,
+     "merged": 1,
+     "neighbour": 4,
+     "other": 56,
+     "rate_own_field": 0.9915277777777778,
+     "note": "The same parts from the text lane (the document's correct text, no reading): parsing without reading errors."
+    }
+   },
+   "definition": "Parts: the six key fields of the two printed compounds (Seller street, Postal Code, City and Country, printed as one line; Buyer Postal Code and City, printed on one line), on the 1,200 field-key documents, where the key value is non-empty. Numerator: parts returned correctly in their own field by the scorer's comparison. Merged: own field lacks the part and another field of the same party block holds it together with other text.",
+   "caveats": [
+    "Computed after the run from kept outputs; not part of the AIDP Score; a diagnostic under spec section 7.6.",
+    "Only a merge into another field of the same party block (Seller or Buyer) counts as merged; a part found in another section, or inside its own field together with a neighbour's text (\"own field holds it plus other text\", the mirror image of a merge), is counted under other.",
+    "Freight invoices also print the seller's address as a block in the \"From\" box (street, \"postal code city\" and country on their own lines), so on those 200 documents the seller's street and country are not only printed inside the one-line compound.",
+    "A part counted under \"other\" is wrong or missing in its own field for reasons that include misreading (a different city) as well as failed separation; Fidelity and Completeness already charge those values."
+   ]
+  },
+  {
+   "id": "duplicates",
+   "capability": "Duplicate detection (Trust layer, Anomaly detection)",
+   "unit": "submissions",
+   "numerator": 158,
+   "denominator": 160,
+   "rate": 0.9875,
+   "false_alarms": {
+    "numerator": 0,
+    "denominator": 80,
+    "rate": 0
+   },
+   "headline": "Submissions of the repeatability run that the matching engine judged when an earlier copy of the same document had already been processed, flagged by its duplicate exception; beside it, those judged when no earlier copy had been processed (false alarms).",
+   "breakdown": {
+    "matching_engine": {
+     "documents_judged": 80,
+     "of_documents": 200,
+     "documents_with_all_three_submissions_judged": 80,
+     "why_not_200": "The matching engine judges only documents the system typed as a matching anchor (invoice, credit note, freight invoice, consignment invoice). The repeatability sample holds 20 of each of those four types (80) and 120 documents of six other types; no document of another type was judged, making 80. The other 120 documents get no matching verdict at all.",
+     "documents_judged_by_type": {
+      "consignment-invoice typed consignment-invoice": 20,
+      "credit-note typed credit-note": 20,
+      "freight-invoice typed freight-invoice": 20,
+      "invoice typed invoice": 19,
+      "invoice typed customer-specific-invoice": 1
+     },
+     "by_runner_order": {
+      "first": {
+       "flagged": 0,
+       "of": 80
+      },
+      "second": {
+       "flagged": 79,
+       "of": 80
+      },
+      "third": {
+       "flagged": 79,
+       "of": 80
+      }
+     },
+     "by_platform_order": {
+      "first": {
+       "flagged": 0,
+       "of": 80
+      },
+      "second": {
+       "flagged": 79,
+       "of": 80
+      },
+      "third": {
+       "flagged": 79,
+       "of": 80
+      }
+     },
+     "flagged_when_an_earlier_copy_had_been_processed": {
+      "flagged": 158,
+      "of": 160,
+      "not_flagged": [
+       {
+        "submission": "consignment-invoice-038--r1",
+        "number_captured": "",
+        "verdict_computed_ist": "2026-10-23T22:56:33.784551+05:30",
+        "siblings_processed_before": [
+         "consignment-invoice-038--r0"
+        ]
+       },
+       {
+        "submission": "consignment-invoice-038--r2",
+        "number_captured": "",
+        "verdict_computed_ist": "2026-10-23T22:56:41.932920+05:30",
+        "siblings_processed_before": [
+         "consignment-invoice-038--r0",
+         "consignment-invoice-038--r1"
+        ]
+       }
+      ]
+     },
+     "flagged_when_no_earlier_copy_had_been_processed": {
+      "flagged": 0,
+      "of": 80
+     },
+     "first_submissions_flagged": [],
+     "repeat_submissions_not_flagged": [
+      {
+       "submission": "consignment-invoice-038--r1",
+       "number_captured": "",
+       "siblings_processed_before_verdict": [
+        "consignment-invoice-038--r0"
+       ]
+      },
+      {
+       "submission": "consignment-invoice-038--r2",
+       "number_captured": "",
+       "siblings_processed_before_verdict": [
+        "consignment-invoice-038--r0",
+        "consignment-invoice-038--r1"
+       ]
+      }
+     ]
+    },
+    "content_flag": {
+     "submissions": 600,
+     "by_runner_order": {
+      "first": {
+       "flagged": 0,
+       "of": 200
+      },
+      "second": {
+       "flagged": 198,
+       "of": 200
+      },
+      "third": {
+       "flagged": 198,
+       "of": 200
+      }
+     },
+     "by_platform_order": {
+      "first": {
+       "flagged": 0,
+       "of": 200
+      },
+      "second": {
+       "flagged": 198,
+       "of": 200
+      },
+      "third": {
+       "flagged": 198,
+       "of": 200
+      }
+     },
+     "note": "extraction_v2_runs.duplicate on the submission's kept run (its last successful extraction). A submission whose request was retried under the same external id is a reprocess to the platform, so a retried repeat loses the flag."
+    },
+    "main_run": {
+     "full_lane": {
+      "submissions": 2000,
+      "with_a_match_run": 799,
+      "duplicate_exceptions": 0,
+      "kept_runs_with_content_duplicate_flag": 0
+     },
+     "text_lane": {
+      "submissions": 2000,
+      "with_a_match_run": 799,
+      "duplicate_exceptions": 0,
+      "kept_runs_with_content_duplicate_flag": 0
+     },
+     "corpus_true_duplicates": 0,
+     "corpus_numbers_shared_by_two_documents_of_one_type": [
+      {
+       "type": "credit-note",
+       "number": "CN-2026-95871",
+       "documents": [
+        {
+         "id": "credit-note-046",
+         "seller": "Northwind Trading Inc"
+        },
+        {
+         "id": "credit-note-193",
+         "seller": "Alpina Medical SA"
+        }
+       ]
+      }
+     ],
+     "note": "No two documents of the same type in AIDP-2K share both a document number and a seller, so a correct system flags nothing in the main run; the one shared number belongs to two different sellers."
+    }
+   },
+   "definition": "Flagged: the matching engine's stored verdict for the submission (v2_match_runs, its latest computation, exported) carries a \"duplicate_invoice\" exception. Earlier copy: another submission of the same document whose extraction the platform had completed before that verdict was computed (extraction_v2_runs, exported). Numerator: submissions with an earlier copy that are flagged. Denominator: submissions the engine judged with an earlier copy. False alarms: submissions judged with no earlier copy that are flagged. The same counts by submission order (the runner's, and the platform's) are in the breakdown.",
+   "caveats": [
+    "Computed after the run from database fields exported to db-export/ (the kept outputs hold no duplicate verdict); not part of the AIDP Score; a diagnostic under spec section 7.6.",
+    "v2_match_runs keeps one row per submission, its latest computation; a verdict is computed when that submission is indexed and again when it is re-run, not when a later copy arrives. A first copy whose extraction was re-run after its siblings were indexed is therefore stored as a duplicate of them.",
+    "The duplicate check needs the document number the system captured and compares the seller it captured; a submission with no number captured is never checked.",
+    "The repeatability run resubmits the identical PDF, so this measures exact resubmission, not a re-scanned or re-issued copy."
+   ]
+  }
+ ],
+ "by_eye": {
+  "note": "Written by hand after looking at the pages named here; the scripts read this file and carry it into summary.json. Both checks look at the corpus PDFs themselves, so they hold for any run on AIDP-2K.",
+  "intake": {
+   "what": "The three unread pages that have no text layer (rasterised heavy-noise pages), rendered from the PDFs into the crops listed.",
+   "pages": [
+    {
+     "id": "consignment-invoice-196",
+     "page": 8,
+     "crop": "by-eye/intake-consignment-invoice-196-page-8.png",
+     "seen": "the closing line \"毎度ありがとうございます。\", its top cut by the page break, a page crease and the footer's rule; nothing else"
+    },
+    {
+     "id": "consignment-order-117",
+     "page": 2,
+     "crop": "by-eye/intake-consignment-order-117-page-2.png",
+     "seen": "the closing line \"Merci de votre confiance.\", its top cut by the page break, a crease and the footer's rule; nothing else"
+    },
+    {
+     "id": "purchase-order-185",
+     "page": 2,
+     "crop": "by-eye/intake-purchase-order-185-page-2.png",
+     "seen": "the closing line \"Thank you for your business.\", its top cut by the page break, a crease and the footer's rule; nothing else"
+    }
+   ],
+   "verdict": "None of the three is blank: each holds only the document's closing line, which no answer-key field holds. With the 19 text-layer pages, all 22 unread pages hold the closing line and nothing else."
+  },
+  "reading_order": {
+   "sticker_geometry": [
+    {
+     "page": "consignment-order-164 page 1",
+     "crop": "by-eye/check-consignment-order-164-p1.png",
+     "seen": "the first sticker covers the header row only; row 1 is whole. Testing the corners of each character's box would mark row 1's quantity, unit and price as covered, because the box reaches above the ink; the test uses points inside the ink, which leaves row 1 judged, as the page shows."
+    },
+    {
+     "page": "consignment-invoice-093 page 4 (right to left)",
+     "crop": "by-eye/check-consignment-invoice-093-p4.png",
+     "seen": "two stickers over rows 99 to 104; the computed covered cells match the page row by row (99: quantity, unit, price; 100: spec to price; 101: spec, lot, serial, the serial losing its top to the sticker's edge; 102: unit and price; 103: spec to price; 104: spec). Row 104's lot loses only the very top of its characters, is still legible and is judged."
+    },
+    {
+     "page": "consignment-invoice-004 page 1",
+     "crop": "by-eye/check-consignment-invoice-004-p1.png",
+     "seen": "covered cells computed for rows 3, 4, 7, 8 and 9 (price and amount; lot to amount; serial; article to lot; article to spec) match the stickers on the page; rows 1, 2, 5, 6 and 10 are whole."
+    }
+   ],
+   "sample": "The reading-order verdicts themselves are the scripts' own and were not checked by eye here. node aidp-bench/bench/post-run/by-eye.mjs --corpus <AIDP-2K folder> prints a seeded sample of them, each row beside the reading's lines, for anyone who wants to."
+  },
+  "stamps": {
+   "verdict": "Not checked by eye: the generator's draw was confirmed on every PDF by two independent machine checks (the stamp's rotated text in the 1,698 PDFs with a text layer; the stamp's colour in solid areas on every page of the 302 rasterised PDFs), and the colour detector agreed with the text layer on page 1 of all 1,698."
+  }
+ },
+ "reproduce": [
+  "node aidp-bench/bench/post-run/index.mjs --corpus <AIDP-2K dir>   (from the published files, db-export/ included)",
+  "node aidp-bench/bench/post-run/index.mjs --corpus <AIDP-2K dir> --export-db   (refresh db-export/ from the run's database first)",
+  "node aidp-bench/bench/post-run/by-eye.mjs --corpus <AIDP-2K dir>   (draw the seeded reading-order sample checked by eye)"
+ ],
+ "scripts_sha256": {
+  "by-eye.mjs": "f60cfbb9e6831cf9ad1a8725f18b81423129b4e277d3afebe3d8bc0d207b3fc0",
+  "duplicates.mjs": "4ce3c60d32dd118b2628661fe29750877d5625c10b7962814880538bd9168135",
+  "export-db.mjs": "e0c94794693787b949c45d0899a48d721820f4dd4ca07ab901fe0930404c2660",
+  "index.mjs": "6da6d650aa4b60df53a4aa2b34b10ba703218ed97d5c71c9f8986a4e5fd9b5de",
+  "intake.mjs": "483ed33fa790057e0056a9d64708d8bee2914605622b07262fb84683c26cc7d5",
+  "legibility.mjs": "873f7cfc2ca9a08b32683b0f966adeec572d7929b11370717c5e6fd8cf6fd9f4",
+  "lib.mjs": "4bfb8d7c25f17c12291231b28e440e9641c43a28b01dadd001b1c86e3f534653",
+  "parsing.mjs": "66a0785154f19e8f0ac652b4aa92c8bc031dad0090be9f11354558059b12766c",
+  "reading-order.mjs": "03fb09a66b956bfd4408bb78cdec3c554cef8433f4ea15c3a8117ac6af033e3e",
+  "stamps.mjs": "dcf9f24e0674bdcebd9ad58aa1af92d2a907494b3228686530ce49500ba1941e"
+ },
+ "evidence_sha256": {
+  "duplicates.jsonl": "7d1ab5beefa1c60c61fb5763c9175cde7a5375a50f2ce41a904e74978c5b1bed",
+  "intake.jsonl": "cc4bd425cf3d1dcea1cbbb3af7dfc6a17c58cbb646723112ee7af6facc74a9b2",
+  "legibility.jsonl": "01658e6777b3c7970379d348ab5321265061919c2fcbc526debe3d26167d30ae",
+  "parsing.jsonl": "b9137a796515a0fd5211e4052b0170ae4f678a6e6a1d9cdc548a2df2f653b083",
+  "reading-order.jsonl": "1f7a70abe4615a9ea18337f57f565f7d03ff8649a2d890c0451530d57bc27460",
+  "stamps.jsonl": "56f2854c69a858410ee3dbe52f53303f2a99bea1a9a06524e774549f97b156be"
+ },
+ "elapsed_s": 227
+}

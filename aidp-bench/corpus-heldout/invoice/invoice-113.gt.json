@@ -1,0 +1,195 @@
+{
+ "id": "invoice-113",
+ "slug": "invoice",
+ "category": "Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "es-ES",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "bundle": false,
+  "missingTotals": false,
+  "mismatch": true,
+  "stickerMismatch": false
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Talleres Mediterráneo SA",
+   "Address": "Avenida Diagonal 220",
+   "City": "Barcelona",
+   "Postal Code": "08001",
+   "Country": "Spain",
+   "Country Code": "ES"
+  },
+  "Seller": {
+   "Name": "Distribuciones Ibérica SL",
+   "Address": "Calle Mayor 15",
+   "City": "Madrid",
+   "Postal Code": "28001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB69338686",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Avenida Diagonal 220",
+   "City": "Barcelona",
+   "Postal Code": "08001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Debit",
+   "Invoice Number": "INV-2026-20360",
+   "Compromisso Code": "",
+   "Invoice Date": "23/01/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "22/02/2026",
+   "Cost Center": "",
+   "Your Reference": "Carlos García",
+   "Posting Date": "",
+   "Net Amount": "1116.54",
+   "Total Tax": "292.53",
+   "Total Amount": "1419.07",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "CHM-03541",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "2",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "18.12",
+    "Net Amount": "36.24",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "BRK-42952",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "15",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "72.02",
+    "Net Amount": "1080.30",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "ES49 3016 2808 8090 1405 24",
+     "BIC_or_Swift_code": "EQBKDE80"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "234.47",
+     "rate": "21"
+    },
+    {
+     "tax_code": "RE",
+     "tax_total": "58.06",
+     "rate": "5.2"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Barcodes": []
+ },
+ "facts": [
+  {
+   "label": "Document Number",
+   "value": "INV-2026-20360"
+  },
+  {
+   "label": "Date",
+   "value": "23/01/2026",
+   "soft": true
+  },
+  {
+   "label": "Buyer Name",
+   "value": "Talleres Mediterráneo SA"
+  },
+  {
+   "label": "Seller Name",
+   "value": "Distribuciones Ibérica SL"
+  },
+  {
+   "label": "Total",
+   "value": "1419.07"
+  }
+ ],
+ "expected_flags": [
+  {
+   "path": "Total Amount",
+   "kind": "mismatch"
+  }
+ ],
+ "expected_derived": [],
+ "expected_flags_future": []
+}

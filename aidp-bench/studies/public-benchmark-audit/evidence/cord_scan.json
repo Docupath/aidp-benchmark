@@ -1,0 +1,150 @@
+{
+ "files": [
+  "samples/cord/hf-naver-clova-ix-cord-v2/test.jsonl",
+  "samples/cord/hf-naver-clova-ix-cord-v2/validation.jsonl"
+ ],
+ "docs": 200,
+ "top_level_keys": {
+  "gt_parse": 200,
+  "meta": 200,
+  "valid_line": 200,
+  "roi": 200,
+  "repeating_symbol": 200,
+  "dontcare": 200
+ },
+ "meta_keys": {
+  "version": 200,
+  "split": 200,
+  "image_id": 200,
+  "image_size": 200
+ },
+ "valid_line_keys": {
+  "words": 2528,
+  "category": 2528,
+  "group_id": 2528,
+  "sub_group_id": 2528
+ },
+ "word_keys": {
+  "quad": 4542,
+  "is_key": 4542,
+  "row_id": 4542,
+  "text": 4542
+ },
+ "gt_parse_value_types": {
+  "str": 2520
+ },
+ "gt_parse_leaf_paths": {
+  "menu[].nm": 386,
+  "menu[].price": 382,
+  "menu[].cnt": 357,
+  "total.total_price": 193,
+  "sub_total.subtotal_price": 131,
+  "total.cashprice": 129,
+  "total.changeprice": 120,
+  "menu[].unitprice": 90,
+  "sub_total.tax_price": 89,
+  "menu.nm": 85,
+  "menu.price": 84,
+  "menu.cnt": 73,
+  "total.menuqty_cnt": 55,
+  "menu.sub[].nm": 45,
+  "total.creditcardprice": 29,
+  "menu.unitprice": 27,
+  "menu.sub[].cnt": 25,
+  "sub_total.service_price": 25,
+  "menu[].sub[].nm": 19,
+  "menu[].sub[].cnt": 15,
+  "menu.sub[].price": 14,
+  "sub_total.discount_price": 12,
+  "menu[].num": 12,
+  "sub_total.etc[]": 12,
+  "menu.sub.nm": 11,
+  "menu.sub.price": 11,
+  "total.menutype_cnt": 10,
+  "menu[].sub.nm": 10,
+  "menu[].discountprice": 9,
+  "total.total_etc": 7,
+  "menu.sub.cnt": 7,
+  "menu[].sub[].price": 6,
+  "menu[].itemsubtotal": 5,
+  "total.emoneyprice": 5,
+  "total.cashprice[]": 4,
+  "menu.num": 3,
+  "sub_total.etc": 3,
+  "menu[].etc": 3,
+  "menu[].sub.price": 3,
+  "sub_total.subtotal_price[]": 2,
+  "sub_total.tax_price[]": 2,
+  "menu.discountprice": 2,
+  "total.creditcardprice[]": 2,
+  "menu[].nm[]": 2,
+  "menu[].sub.cnt": 2,
+  "menu.itemsubtotal": 1,
+  "menu.vatyn": 1
+ },
+ "empty_string_values": 0,
+ "numeric_like_values": 1772,
+ "values_with_dot_as_thousands_separator_like_60.000": 324,
+ "values_with_comma_thousands": 799,
+ "docs_with_menu": 200,
+ "menu_items_total": 472,
+ "docs_with_more_than_one_menu_item": 115,
+ "valid_line_categories": {
+  "menu.nm": 473,
+  "menu.price": 466,
+  "menu.cnt": 430,
+  "total.total_price": 194,
+  "sub_total.subtotal_price": 133,
+  "total.cashprice": 133,
+  "total.changeprice": 120,
+  "menu.unitprice": 117,
+  "sub_total.tax_price": 92,
+  "menu.sub.nm": 85,
+  "total.menuqty_cnt": 55,
+  "menu.sub.cnt": 49,
+  "menu.sub.price": 34,
+  "total.creditcardprice": 32,
+  "sub_total.service_price": 25,
+  "menu.num": 15,
+  "sub_total.etc": 15,
+  "menu.discountprice": 14,
+  "sub_total.discount_price": 13,
+  "total.menutype_cnt": 10,
+  "total.total_etc": 7,
+  "menu.itemsubtotal": 6,
+  "total.emoneyprice": 6,
+  "menu.etc": 3,
+  "menu.vatyn": 1
+ },
+ "words_total": 4542,
+ "words_with_quad": 4542,
+ "raw_substring_hits_docs": {
+  "qr": 1
+ },
+ "test_row0": {
+  "row_idx": 0,
+  "gt_parse": {
+   "menu": {
+    "nm": "-TICKET CP",
+    "num": "901016",
+    "cnt": "2",
+    "price": "60.000",
+    "itemsubtotal": "60.000"
+   },
+   "sub_total": {
+    "subtotal_price": "60.000",
+    "discount_price": "-60.000",
+    "tax_price": "5.455"
+   },
+   "total": {
+    "total_price": "60.000",
+    "creditcardprice": "60.000",
+    "menuqty_cnt": "2.00"
+   }
+  },
+  "raw_contains_60000": false,
+  "raw_contains_60000.00": false,
+  "occurrences_of_60.000_in_raw": 12,
+  "raw_length_chars": 5411
+ }
+}

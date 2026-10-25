@@ -1,0 +1,86 @@
+{
+ "frozen": {
+  "raster_dpi": 100,
+  "max_pages_rasterised": 3,
+  "work_pixels": 1000000,
+  "blur_sharp_vl": 1000.0,
+  "blur_blurry_vl": 100.0,
+  "contrast_good": 0.8,
+  "contrast_poor": 0.3,
+  "skew_max_deg": 5.0,
+  "skew_search_deg": 10.0,
+  "skew_coarse_step": 0.25,
+  "skew_fine_halfwidth": 0.3,
+  "skew_fine_step": 0.02,
+  "skew_min_ink_pixels": 300,
+  "skew_max_points": 200000,
+  "pages_max": 32,
+  "density_low": 50.0,
+  "density_high": 1000.0,
+  "script_difficulty": {
+   "latin": 0.0,
+   "greek": 0.5,
+   "cyrillic": 0.5,
+   "cjk": 1.0,
+   "arabic": 1.0,
+   "hebrew": 1.0,
+   "indic": 1.0,
+   "thai": 1.0,
+   "other": 1.0
+  },
+  "script_nonlatin_share": 0.15,
+  "script_min_letters": 20,
+  "weights_primary": {
+   "blur": 0.16666666666666666,
+   "contrast": 0.16666666666666666,
+   "skew": 0.16666666666666666,
+   "pages": 0.16666666666666666,
+   "density": 0.16666666666666666,
+   "script": 0.16666666666666666
+  },
+  "weights_visual": {
+   "blur": 0.3333333333333333,
+   "contrast": 0.3333333333333333,
+   "skew": 0.3333333333333333
+  },
+  "analysis": {
+   "seed": 20261022,
+   "bootstrap_resamples": 2000,
+   "permutations": 2000,
+   "subsample_n": 16,
+   "subsample_draws": 10000,
+   "noise_ordinal": {
+    "none": 0,
+    "light": 1,
+    "medium": 2,
+    "heavy": 3
+   },
+   "applied_rotation_deg": {
+    "none": 0.0,
+    "light": 0.4,
+    "medium": 1.1,
+    "heavy": 2.2
+   },
+   "trap_dims": [
+    "mismatch",
+    "missingTotals",
+    "stickerMismatch"
+   ],
+   "structural_dims": [
+    "coverPage",
+    "bundle"
+   ],
+   "match_on": [
+    "slug",
+    "noise",
+    "scale"
+   ],
+   "near_constant_sd": 0.02,
+   "single_component_r2": 0.9,
+   "alpha": 0.05
+  }
+ },
+ "frozen_block_sha256": "4d3c185117dd6a7c48c687411abc7cf62e25591fa99bcb94b517d4daa8f7bd2c",
+ "written_ist": "2026-10-22 01:42:18 IST",
+ "note": "Written before any feature was computed on any document and before any outcome was examined."
+}

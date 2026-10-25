@@ -1,0 +1,153 @@
+{
+ "id": "consignment-invoice-085",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "bundle": false,
+  "missingTotals": false,
+  "mismatch": false,
+  "stickerMismatch": true
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Summit Medical Devices Inc",
+   "Name 2": "",
+   "Street 1": "1200 Industrial Parkway",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US28-5600397",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Northwind Trading Inc",
+   "Name 2": "",
+   "Street 1": "450 Madison Avenue",
+   "Street 2": "",
+   "City": "Cleveland",
+   "Postal Code": "44101",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US86-0048248",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "1200 Industrial Parkway",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-09429",
+   "Consignment Date": "16/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "30/05/2026",
+   "Currency Code": "USD",
+   "Contact Name": "Maria Lopez"
+  },
+  "Items": [
+   {
+    "Article ID": "GSK-23084",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "",
+    "Quantity": "3",
+    "UOM": "kg",
+    "Serial Number": "SN13008496",
+    "Lot Number": "LOT363905",
+    "Unit Price": "195.16",
+    "Net Amount": "585.48",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-23934",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "33",
+    "UOM": "pcs",
+    "Serial Number": "SN90882108",
+    "Lot Number": "LOT264175",
+    "Unit Price": "81.14",
+    "Net Amount": "2677.62",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "3263.10",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "277.36",
+     "rate": "8.5"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "3540.46",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "facts": [
+  {
+   "label": "Document Number",
+   "value": "CSG-2026-09429"
+  },
+  {
+   "label": "Date",
+   "value": "16/05/2026",
+   "soft": true
+  },
+  {
+   "label": "Buyer Name",
+   "value": "Summit Medical Devices Inc"
+  },
+  {
+   "label": "Seller Name",
+   "value": "Northwind Trading Inc"
+  },
+  {
+   "label": "Total",
+   "value": "3540.46"
+  }
+ ],
+ "expected_flags": [],
+ "expected_derived": [],
+ "expected_flags_future": [
+  {
+   "field": "Items.0.Lot Number",
+   "kind": "barcode-mismatch",
+   "printed": "LOT363905",
+   "sticker": "LOT136287"
+  }
+ ]
+}

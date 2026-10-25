@@ -1,0 +1,50 @@
+{
+ "note": "Written by hand after looking at the pages named here; the scripts read this file and carry it into summary.json. Both checks look at the corpus PDFs themselves, so they hold for any run on AIDP-2K.",
+ "intake": {
+  "what": "The three unread pages that have no text layer (rasterised heavy-noise pages), rendered from the PDFs into the crops listed.",
+  "pages": [
+   {
+    "id": "consignment-invoice-196",
+    "page": 8,
+    "crop": "by-eye/intake-consignment-invoice-196-page-8.png",
+    "seen": "the closing line \"毎度ありがとうございます。\", its top cut by the page break, a page crease and the footer's rule; nothing else"
+   },
+   {
+    "id": "consignment-order-117",
+    "page": 2,
+    "crop": "by-eye/intake-consignment-order-117-page-2.png",
+    "seen": "the closing line \"Merci de votre confiance.\", its top cut by the page break, a crease and the footer's rule; nothing else"
+   },
+   {
+    "id": "purchase-order-185",
+    "page": 2,
+    "crop": "by-eye/intake-purchase-order-185-page-2.png",
+    "seen": "the closing line \"Thank you for your business.\", its top cut by the page break, a crease and the footer's rule; nothing else"
+   }
+  ],
+  "verdict": "None of the three is blank: each holds only the document's closing line, which no answer-key field holds. With the 19 text-layer pages, all 22 unread pages hold the closing line and nothing else."
+ },
+ "reading_order": {
+  "sticker_geometry": [
+   {
+    "page": "consignment-order-164 page 1",
+    "crop": "by-eye/check-consignment-order-164-p1.png",
+    "seen": "the first sticker covers the header row only; row 1 is whole. Testing the corners of each character's box would mark row 1's quantity, unit and price as covered, because the box reaches above the ink; the test uses points inside the ink, which leaves row 1 judged, as the page shows."
+   },
+   {
+    "page": "consignment-invoice-093 page 4 (right to left)",
+    "crop": "by-eye/check-consignment-invoice-093-p4.png",
+    "seen": "two stickers over rows 99 to 104; the computed covered cells match the page row by row (99: quantity, unit, price; 100: spec to price; 101: spec, lot, serial, the serial losing its top to the sticker's edge; 102: unit and price; 103: spec to price; 104: spec). Row 104's lot loses only the very top of its characters, is still legible and is judged."
+   },
+   {
+    "page": "consignment-invoice-004 page 1",
+    "crop": "by-eye/check-consignment-invoice-004-p1.png",
+    "seen": "covered cells computed for rows 3, 4, 7, 8 and 9 (price and amount; lot to amount; serial; article to lot; article to spec) match the stickers on the page; rows 1, 2, 5, 6 and 10 are whole."
+   }
+  ],
+  "sample": "The reading-order verdicts themselves are the scripts' own and were not checked by eye here. node aidp-bench/bench/post-run/by-eye.mjs --corpus <AIDP-2K folder> prints a seeded sample of them, each row beside the reading's lines, for anyone who wants to."
+ },
+ "stamps": {
+  "verdict": "Not checked by eye: the generator's draw was confirmed on every PDF by two independent machine checks (the stamp's rotated text in the 1,698 PDFs with a text layer; the stamp's colour in solid areas on every page of the 302 rasterised PDFs), and the colour detector agreed with the text layer on page 1 of all 1,698."
+ }
+}

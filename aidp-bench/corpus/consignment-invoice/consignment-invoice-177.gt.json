@@ -1,0 +1,136 @@
+{
+ "id": "consignment-invoice-177",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "pt-PT",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "bundle": false,
+  "missingTotals": false,
+  "mismatch": false,
+  "stickerMismatch": true
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Lusitana Ferramentas Lda",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 50",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT771980782",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Lusitana Ferramentas Lda",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 50",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT653585908",
+   "Registration No": "PT-368622",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 50",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-77361",
+   "Consignment Date": "16/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "30/03/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Inês Costa"
+  },
+  "Items": [
+   {
+    "Article ID": "GSK-25965",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "",
+    "Quantity": "29",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "LOT793904",
+    "Unit Price": "23.27",
+    "Net Amount": "674.83",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "674.83",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "155.21",
+     "rate": "23"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "830.04",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "facts": [
+  {
+   "label": "Document Number",
+   "value": "CSG-2026-77361"
+  },
+  {
+   "label": "Date",
+   "value": "16/03/2026",
+   "soft": true
+  },
+  {
+   "label": "Buyer Name",
+   "value": "Lusitana Ferramentas Lda"
+  },
+  {
+   "label": "Seller Name",
+   "value": "Lusitana Ferramentas Lda"
+  },
+  {
+   "label": "Total",
+   "value": "830.04"
+  }
+ ],
+ "expected_flags": [],
+ "expected_derived": [],
+ "expected_flags_future": [
+  {
+   "field": "Items.0.Lot Number",
+   "kind": "barcode-mismatch",
+   "printed": "LOT793904",
+   "sticker": "LOT563500"
+  }
+ ]
+}

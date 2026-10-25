@@ -1,0 +1,170 @@
+{
+ "id": "consignment-invoice-141",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "sv-SE",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "bundle": false,
+  "missingTotals": false,
+  "mismatch": false,
+  "stickerMismatch": true
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Mälardalen Kemi AB",
+   "Name 2": "",
+   "Street 1": "Industrivägen 3",
+   "Street 2": "",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "VAT No": "SE491758404801",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Mälardalen Kemi AB",
+   "Name 2": "",
+   "Street 1": "Kungsgatan 8",
+   "Street 2": "",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "VAT No": "SE584283450901",
+   "Registration No": "SE-262940",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industrivägen 3",
+   "Street 2": "",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-53828",
+   "Consignment Date": "15/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "01/03/2026",
+   "Currency Code": "SEK",
+   "Contact Name": "Erik Lindqvist"
+  },
+  "Items": [
+   {
+    "Article ID": "FRT-11386",
+    "Article Name": "Freight & Handling",
+    "Description": "Road transport",
+    "Order Number": "",
+    "Quantity": "7",
+    "UOM": "pcs",
+    "Serial Number": "SN95846209",
+    "Lot Number": "LOT412536",
+    "Unit Price": "197.18",
+    "Net Amount": "1380.26",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "TRN-20911",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Quantity": "14",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "LOT466773",
+    "Unit Price": "448.10",
+    "Net Amount": "6273.40",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CONS-23891",
+    "Article Name": "Consulting Services",
+    "Description": "Senior consultant",
+    "Order Number": "",
+    "Quantity": "14",
+    "UOM": "pcs",
+    "Serial Number": "SN19117683",
+    "Lot Number": "LOT424781",
+    "Unit Price": "233.23",
+    "Net Amount": "3265.22",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "10918.88",
+   "Tax": [
+    {
+     "tax_code": "Moms",
+     "tax_total": "2729.72",
+     "rate": "25"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "13648.60",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "facts": [
+  {
+   "label": "Document Number",
+   "value": "CSG-2026-53828"
+  },
+  {
+   "label": "Date",
+   "value": "15/01/2026",
+   "soft": true
+  },
+  {
+   "label": "Buyer Name",
+   "value": "Mälardalen Kemi AB"
+  },
+  {
+   "label": "Seller Name",
+   "value": "Mälardalen Kemi AB"
+  },
+  {
+   "label": "Total",
+   "value": "13648.60"
+  }
+ ],
+ "expected_flags": [],
+ "expected_derived": [],
+ "expected_flags_future": [
+  {
+   "field": "Items.0.Lot Number",
+   "kind": "barcode-mismatch",
+   "printed": "LOT412536",
+   "sticker": "LOT541445"
+  }
+ ]
+}

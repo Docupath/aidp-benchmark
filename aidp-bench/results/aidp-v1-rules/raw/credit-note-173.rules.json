@@ -1,0 +1,713 @@
+{
+ "id": "credit-note-173",
+ "slug": "credit-note",
+ "lane": "rules",
+ "ts": "2026-10-23T17:22:19.072Z",
+ "attempts": 1,
+ "packs": [
+  {
+   "id": "iso-dates",
+   "instruction": "Write every date in the format YYYY-MM-DD.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Société Lumière SARL",
+     "Address": "12 Rue de la République",
+     "City": "Marseille",
+     "Postal Code": "13001",
+     "Country": "France",
+     "Country Code": "FR"
+    },
+    "Seller": {
+     "Name": "Atelier Provence SAS",
+     "Address": "12 Rue de la République",
+     "City": "Marseille",
+     "Postal Code": "13001",
+     "Country": "France",
+     "Country Code": "FR",
+     "VAT No": "FR97 897100886",
+     "Registration No": ""
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "12 Rue de la République",
+     "City": "Marseille",
+     "Postal Code": "13001",
+     "Country": "France",
+     "Country Code": "FR",
+     "Shipping Method": "",
+     "Tracking Number": ""
+    },
+    "Invoice Details": {
+     "Invoice Type": "Credit",
+     "Invoice Number": "CN-2026-55937",
+     "Compromisso Code": "",
+     "Invoice Date": "2026-01-04",
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "GRN No": "",
+     "Due Date": "2026-02-18",
+     "Cost Center": "",
+     "Your Reference": "Pierre Martin",
+     "Posting Date": "",
+     "Net Amount": "-6014.17",
+     "Total Tax": "0.00",
+     "Total Amount": "-6014.17",
+     "Rounding Amount": "",
+     "Currency Code": "EUR",
+     "Purchase Order Number": ""
+    },
+    "Items": [
+     {
+      "Item No": "1",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "SNS-45121",
+      "Article Name": "Pressure Sensor PS-10",
+      "Description": "0-10 bar, 4-20mA",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "1",
+      "UOM": "kg",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "119.71",
+      "Net Amount": "-119.71",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "2",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "CBL-64886",
+      "Article Name": "Cable Assembly 3m",
+      "Description": "Shielded, 3 meter",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "13",
+      "UOM": "set",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "284.02",
+      "Net Amount": "-3692.26",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "3",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "LBL-37737",
+      "Article Name": "Label Roll 50x30",
+      "Description": "Thermal, 1000/roll",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "44",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "50.05",
+      "Net Amount": "-2202.20",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "Coordonnées bancaires Bank France Commercial Bank IBAN FR90 8995 1308 1962 7314 08 BIC GZBKSE91 Payment Terms Payment due within 30 days.",
+     "Payment Methods": [
+      {
+       "payment_method": "IBAN",
+       "account_no": "FR90899513081962731408",
+       "BIC_or_Swift_code": "GZBKSE91",
+       "Method": "IBAN",
+       "Account Number": "FR90899513081962731408",
+       "BIC/Swift Code": "GZBKSE91"
+      }
+     ],
+     "Invoice Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "0.00",
+     "Tax Rate": "",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 0,
+    "changes": [],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "category": "dates",
+      "changed_count": 0,
+      "coverage": {
+       "applied": 2,
+       "computed": true,
+       "expected": 2,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "credit-note",
+      "engine": "code",
+      "expected_targets": [
+       "Invoice Details.Invoice Date",
+       "Invoice Details.Due Date"
+      ],
+      "fields_changed": [],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "YYYY-MM-DD",
+      "scope": "category",
+      "status": "applied",
+      "text": "Write every date in the format YYYY-MM-DD.",
+      "transform": "date_format"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    }
+   },
+   "expect": {
+    "id": "iso-dates",
+    "expect": {
+     "Invoice Details.Invoice Date": "2026-01-04",
+     "Invoice Details.Due Date": "2026-02-18"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  },
+  {
+   "id": "upper-seller-name",
+   "instruction": "Write the Seller's name in capital letters.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Société Lumière SARL",
+     "Address": "12 Rue de la République",
+     "City": "Marseille",
+     "Postal Code": "13001",
+     "Country": "France",
+     "Country Code": "FR"
+    },
+    "Seller": {
+     "Name": "ATELIER PROVENCE SAS",
+     "Address": "12 Rue de la République",
+     "City": "Marseille",
+     "Postal Code": "13001",
+     "Country": "France",
+     "Country Code": "FR",
+     "VAT No": "FR97 897100886",
+     "Registration No": ""
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "12 Rue de la République",
+     "City": "Marseille",
+     "Postal Code": "13001",
+     "Country": "France",
+     "Country Code": "FR",
+     "Shipping Method": "",
+     "Tracking Number": ""
+    },
+    "Invoice Details": {
+     "Invoice Type": "Credit",
+     "Invoice Number": "CN-2026-55937",
+     "Compromisso Code": "",
+     "Invoice Date": "04/01/2026",
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "GRN No": "",
+     "Due Date": "18/02/2026",
+     "Cost Center": "",
+     "Your Reference": "Pierre Martin",
+     "Posting Date": "",
+     "Net Amount": "-6014.17",
+     "Total Tax": "0.00",
+     "Total Amount": "-6014.17",
+     "Rounding Amount": "",
+     "Currency Code": "EUR",
+     "Purchase Order Number": ""
+    },
+    "Items": [
+     {
+      "Item No": "1",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "SNS-45121",
+      "Article Name": "Pressure Sensor PS-10",
+      "Description": "0-10 bar, 4-20mA",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "1",
+      "UOM": "kg",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "119.71",
+      "Net Amount": "-119.71",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "2",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "CBL-64886",
+      "Article Name": "Cable Assembly 3m",
+      "Description": "Shielded, 3 meter",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "13",
+      "UOM": "set",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "284.02",
+      "Net Amount": "-3692.26",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "3",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "LBL-37737",
+      "Article Name": "Label Roll 50x30",
+      "Description": "Thermal, 1000/roll",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "44",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "50.05",
+      "Net Amount": "-2202.20",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "Coordonnées bancaires Bank France Commercial Bank IBAN FR90 8995 1308 1962 7314 08 BIC GZBKSE91 Payment Terms Payment due within 30 days.",
+     "Payment Methods": [
+      {
+       "payment_method": "IBAN",
+       "account_no": "FR90899513081962731408",
+       "BIC_or_Swift_code": "GZBKSE91",
+       "Method": "IBAN",
+       "Account Number": "FR90899513081962731408",
+       "BIC/Swift Code": "GZBKSE91"
+      }
+     ],
+     "Invoice Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "0.00",
+     "Tax Rate": "",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 1,
+    "changes": [
+     {
+      "after": "ATELIER PROVENCE SAS",
+      "attributed": true,
+      "before": "Atelier Provence SAS",
+      "change_type": "reformatted",
+      "field_path": "Seller.Name",
+      "in_scope": true,
+      "instruction_id": 1,
+      "reason": "The model applied instruction #1's mechanical transform (case -> upper), verified deterministically (re-applying the transform to the before value reproduces the change exactly): \"Write the Seller's name in capital letters.\""
+     }
+    ],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "changed_count": 1,
+      "coverage": {
+       "applied": 1,
+       "computed": true,
+       "expected": 1,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "credit-note",
+      "engine": "code",
+      "expected_targets": [
+       "Seller.Name"
+      ],
+      "fields_changed": [
+       "Seller.Name"
+      ],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "upper",
+      "scope": "field",
+      "section": "Seller",
+      "status": "applied",
+      "targets": [
+       "Name"
+      ],
+      "text": "Write the Seller's name in capital letters.",
+      "transform": "case"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    },
+    "summary": "1 field(s) changed by the custom instructions: 1 attributed deterministically to their instruction."
+   },
+   "expect": {
+    "id": "upper-seller-name",
+    "expect": {
+     "Seller.Name": "ATELIER PROVENCE SAS"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  },
+  {
+   "id": "prefix-document-number",
+   "instruction": "Put the prefix REF- in front of the document number.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Société Lumière SARL",
+     "Address": "12 Rue de la République",
+     "City": "Marseille",
+     "Postal Code": "13001",
+     "Country": "France",
+     "Country Code": "FR"
+    },
+    "Seller": {
+     "Name": "Atelier Provence SAS",
+     "Address": "12 Rue de la République",
+     "City": "Marseille",
+     "Postal Code": "13001",
+     "Country": "France",
+     "Country Code": "FR",
+     "VAT No": "FR97 897100886",
+     "Registration No": ""
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "12 Rue de la République",
+     "City": "Marseille",
+     "Postal Code": "13001",
+     "Country": "France",
+     "Country Code": "FR",
+     "Shipping Method": "",
+     "Tracking Number": ""
+    },
+    "Invoice Details": {
+     "Invoice Type": "Credit",
+     "Invoice Number": "REF-CN-2026-55937",
+     "Compromisso Code": "",
+     "Invoice Date": "04/01/2026",
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "GRN No": "",
+     "Due Date": "18/02/2026",
+     "Cost Center": "",
+     "Your Reference": "Pierre Martin",
+     "Posting Date": "",
+     "Net Amount": "-6014.17",
+     "Total Tax": "0.00",
+     "Total Amount": "-6014.17",
+     "Rounding Amount": "",
+     "Currency Code": "EUR",
+     "Purchase Order Number": ""
+    },
+    "Items": [
+     {
+      "Item No": "1",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "SNS-45121",
+      "Article Name": "Pressure Sensor PS-10",
+      "Description": "0-10 bar, 4-20mA",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "1",
+      "UOM": "kg",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "119.71",
+      "Net Amount": "-119.71",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "2",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "CBL-64886",
+      "Article Name": "Cable Assembly 3m",
+      "Description": "Shielded, 3 meter",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "13",
+      "UOM": "set",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "284.02",
+      "Net Amount": "-3692.26",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "3",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "LBL-37737",
+      "Article Name": "Label Roll 50x30",
+      "Description": "Thermal, 1000/roll",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "44",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "50.05",
+      "Net Amount": "-2202.20",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "Coordonnées bancaires Bank France Commercial Bank IBAN FR90 8995 1308 1962 7314 08 BIC GZBKSE91 Payment Terms Payment due within 30 days.",
+     "Payment Methods": [
+      {
+       "payment_method": "IBAN",
+       "account_no": "FR90899513081962731408",
+       "BIC_or_Swift_code": "GZBKSE91",
+       "Method": "IBAN",
+       "Account Number": "FR90899513081962731408",
+       "BIC/Swift Code": "GZBKSE91"
+      }
+     ],
+     "Invoice Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "0.00",
+     "Tax Rate": "",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 1,
+    "changes": [
+     {
+      "after": "REF-CN-2026-55937",
+      "attributed": true,
+      "before": "CN-2026-55937",
+      "change_type": "modified",
+      "field_path": "Invoice Details.Invoice Number",
+      "in_scope": true,
+      "instruction_id": 1,
+      "reason": "Within the scope of instruction #1 (field/other): \"Put the prefix REF- in front of the document number.\""
+     }
+    ],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "model",
+      "changed_count": 1,
+      "coverage": {
+       "applied": 1,
+       "computed": true,
+       "expected": 1,
+       "missed": []
+      },
+      "deterministic": false,
+      "doc_type": "credit-note",
+      "engine": "model",
+      "expected_targets": [
+       "Invoice Details.Invoice Number"
+      ],
+      "fields_changed": [
+       "Invoice Details.Invoice Number"
+      ],
+      "id": 1,
+      "origin_scope": "global",
+      "routing": {
+       "compile_confidence": 0.72,
+       "fallback_reason": "low_confidence",
+       "min_confidence": 0.75
+      },
+      "scope": "field",
+      "section": "Invoice Details",
+      "status": "applied",
+      "targets": [
+       "Invoice Number"
+      ],
+      "text": "Put the prefix REF- in front of the document number.",
+      "transform": "other"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    },
+    "summary": "1 field(s) changed by the custom instructions: 1 attributed deterministically to their instruction."
+   },
+   "expect": {
+    "id": "prefix-document-number",
+    "expect": {
+     "Invoice Details.Invoice Number": "REF-CN-2026-55937"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  }
+ ],
+ "ok": true
+}

@@ -1,0 +1,657 @@
+{
+ "id": "credit-note-170",
+ "slug": "credit-note",
+ "lane": "rules",
+ "ts": "2026-10-23T17:22:01.886Z",
+ "attempts": 1,
+ "packs": [
+  {
+   "id": "iso-dates",
+   "instruction": "Write every date in the format YYYY-MM-DD.",
+   "extraction": {
+    "Buyer": {
+     "Name": "株式会社山田製作所",
+     "Address": "港区芝浦1-2-3",
+     "City": "東京都",
+     "Postal Code": "104-0061",
+     "Country": "Japan",
+     "Country Code": "JP"
+    },
+    "Seller": {
+     "Name": "大阪商事株式会社",
+     "Address": "港区芝浦1-2-3",
+     "City": "大阪市",
+     "Postal Code": "530-0001",
+     "Country": "Japan",
+     "Country Code": "JP",
+     "VAT No": "",
+     "Registration No": "T0885979657184"
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "港区芝浦1-2-3",
+     "City": "東京都",
+     "Postal Code": "104-0061",
+     "Country": "Japan",
+     "Country Code": "JP",
+     "Shipping Method": "",
+     "Tracking Number": ""
+    },
+    "Invoice Details": {
+     "Invoice Type": "Credit",
+     "Invoice Number": "CN-2026-07348",
+     "Compromisso Code": "",
+     "Invoice Date": "2026-05-07",
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "お支払いは30日以内にお願いします。",
+     "GRN No": "",
+     "Due Date": "2026-05-21",
+     "Cost Center": "",
+     "Your Reference": "田中太郎",
+     "Posting Date": "",
+     "Net Amount": "-46781",
+     "Total Tax": "-4678",
+     "Total Amount": "-51459",
+     "Rounding Amount": "",
+     "Currency Code": "JPY",
+     "Purchase Order Number": ""
+    },
+    "Items": [
+     {
+      "Item No": "1",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "CBL-27349",
+      "Article Name": "Cable Assembly 3m",
+      "Description": "Shielded, 3 meter",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "41",
+      "UOM": "pcs",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "1141",
+      "Net Amount": "-46781",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "お振込先 銀行 Japan Commercial Bank IBAN DE47 2737 5531 1269 3649 75 BIC GZBKDE24 支払条件 お支払いは30日以内にお願いします。",
+     "Payment Methods": [
+      {
+       "payment_method": "IBAN",
+       "account_no": "DE47273755311269364975",
+       "BIC_or_Swift_code": "GZBKDE24",
+       "Method": "IBAN",
+       "Account Number": "DE47273755311269364975",
+       "BIC/Swift Code": "GZBKDE24"
+      }
+     ],
+     "Invoice Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "-4678",
+     "Tax Rate": "10",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [
+      {
+       "tax_code": "消費税",
+       "tax_total": "-4678",
+       "rate": "10",
+       "exchange_rate": "",
+       "Code": "消費税",
+       "Amount": "-4678",
+       "Rate": "10",
+       "Exchange Rate": ""
+      }
+     ],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [
+     {
+      "Text": "BCD"
+     },
+     {
+      "Text": "002"
+     },
+     {
+      "Text": "1"
+     },
+     {
+      "Text": "SCT"
+     },
+     {
+      "Text": "GZBKDE24"
+     },
+     {
+      "Text": "大阪商事株式会社"
+     },
+     {
+      "Text": "DE47273755311269364975"
+     },
+     {
+      "Text": "JPY51459.10"
+     }
+    ],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 0,
+    "changes": [],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "category": "dates",
+      "changed_count": 0,
+      "coverage": {
+       "applied": 2,
+       "computed": true,
+       "expected": 2,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "credit-note",
+      "engine": "code",
+      "expected_targets": [
+       "Invoice Details.Invoice Date",
+       "Invoice Details.Due Date"
+      ],
+      "fields_changed": [],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "YYYY-MM-DD",
+      "scope": "category",
+      "status": "applied",
+      "text": "Write every date in the format YYYY-MM-DD.",
+      "transform": "date_format"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    }
+   },
+   "expect": {
+    "id": "iso-dates",
+    "expect": {
+     "Invoice Details.Invoice Date": "2026-05-07",
+     "Invoice Details.Due Date": "2026-05-21"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  },
+  {
+   "id": "upper-seller-name",
+   "instruction": "Write the Seller's name in capital letters.",
+   "extraction": {
+    "Buyer": {
+     "Name": "株式会社山田製作所",
+     "Address": "港区芝浦1-2-3",
+     "City": "東京都",
+     "Postal Code": "104-0061",
+     "Country": "Japan",
+     "Country Code": "JP"
+    },
+    "Seller": {
+     "Name": "大阪商事株式会社",
+     "Address": "港区芝浦1-2-3",
+     "City": "大阪市",
+     "Postal Code": "530-0001",
+     "Country": "Japan",
+     "Country Code": "JP",
+     "VAT No": "",
+     "Registration No": "T0885979657184"
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "港区芝浦1-2-3",
+     "City": "東京都",
+     "Postal Code": "104-0061",
+     "Country": "Japan",
+     "Country Code": "JP",
+     "Shipping Method": "",
+     "Tracking Number": ""
+    },
+    "Invoice Details": {
+     "Invoice Type": "Credit",
+     "Invoice Number": "CN-2026-07348",
+     "Compromisso Code": "",
+     "Invoice Date": "07/05/2026",
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "お支払いは30日以内にお願いします。",
+     "GRN No": "",
+     "Due Date": "21/05/2026",
+     "Cost Center": "",
+     "Your Reference": "田中太郎",
+     "Posting Date": "",
+     "Net Amount": "-46781",
+     "Total Tax": "-4678",
+     "Total Amount": "-51459",
+     "Rounding Amount": "",
+     "Currency Code": "JPY",
+     "Purchase Order Number": ""
+    },
+    "Items": [
+     {
+      "Item No": "1",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "CBL-27349",
+      "Article Name": "Cable Assembly 3m",
+      "Description": "Shielded, 3 meter",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "41",
+      "UOM": "pcs",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "1141",
+      "Net Amount": "-46781",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "お振込先 銀行 Japan Commercial Bank IBAN DE47 2737 5531 1269 3649 75 BIC GZBKDE24 支払条件 お支払いは30日以内にお願いします。",
+     "Payment Methods": [
+      {
+       "payment_method": "IBAN",
+       "account_no": "DE47273755311269364975",
+       "BIC_or_Swift_code": "GZBKDE24",
+       "Method": "IBAN",
+       "Account Number": "DE47273755311269364975",
+       "BIC/Swift Code": "GZBKDE24"
+      }
+     ],
+     "Invoice Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "-4678",
+     "Tax Rate": "10",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [
+      {
+       "tax_code": "消費税",
+       "tax_total": "-4678",
+       "rate": "10",
+       "exchange_rate": "",
+       "Code": "消費税",
+       "Amount": "-4678",
+       "Rate": "10",
+       "Exchange Rate": ""
+      }
+     ],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [
+     {
+      "Text": "BCD"
+     },
+     {
+      "Text": "002"
+     },
+     {
+      "Text": "1"
+     },
+     {
+      "Text": "SCT"
+     },
+     {
+      "Text": "GZBKDE24"
+     },
+     {
+      "Text": "大阪商事株式会社"
+     },
+     {
+      "Text": "DE47273755311269364975"
+     },
+     {
+      "Text": "JPY51459.10"
+     }
+    ],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 0,
+    "changes": [],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "changed_count": 0,
+      "coverage": {
+       "applied": 1,
+       "computed": true,
+       "expected": 1,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "credit-note",
+      "engine": "code",
+      "expected_targets": [
+       "Seller.Name"
+      ],
+      "fields_changed": [],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "upper",
+      "scope": "field",
+      "section": "Seller",
+      "status": "applied",
+      "targets": [
+       "Name"
+      ],
+      "text": "Write the Seller's name in capital letters.",
+      "transform": "case"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    }
+   },
+   "expect": {
+    "id": "upper-seller-name",
+    "expect": {
+     "Seller.Name": "大阪商事株式会社"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  },
+  {
+   "id": "prefix-document-number",
+   "instruction": "Put the prefix REF- in front of the document number.",
+   "extraction": {
+    "Buyer": {
+     "Name": "株式会社山田製作所",
+     "Address": "港区芝浦1-2-3",
+     "City": "東京都",
+     "Postal Code": "104-0061",
+     "Country": "Japan",
+     "Country Code": "JP"
+    },
+    "Seller": {
+     "Name": "大阪商事株式会社",
+     "Address": "港区芝浦1-2-3",
+     "City": "大阪市",
+     "Postal Code": "530-0001",
+     "Country": "Japan",
+     "Country Code": "JP",
+     "VAT No": "",
+     "Registration No": "T0885979657184"
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "港区芝浦1-2-3",
+     "City": "東京都",
+     "Postal Code": "104-0061",
+     "Country": "Japan",
+     "Country Code": "JP",
+     "Shipping Method": "",
+     "Tracking Number": ""
+    },
+    "Invoice Details": {
+     "Invoice Type": "Credit",
+     "Invoice Number": "REF-CN-2026-07348",
+     "Compromisso Code": "",
+     "Invoice Date": "07/05/2026",
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "お支払いは30日以内にお願いします。",
+     "GRN No": "",
+     "Due Date": "21/05/2026",
+     "Cost Center": "",
+     "Your Reference": "田中太郎",
+     "Posting Date": "",
+     "Net Amount": "-46781",
+     "Total Tax": "-4678",
+     "Total Amount": "-51459",
+     "Rounding Amount": "",
+     "Currency Code": "JPY",
+     "Purchase Order Number": ""
+    },
+    "Items": [
+     {
+      "Item No": "1",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "CBL-27349",
+      "Article Name": "Cable Assembly 3m",
+      "Description": "Shielded, 3 meter",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "41",
+      "UOM": "pcs",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "1141",
+      "Net Amount": "-46781",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "お振込先 銀行 Japan Commercial Bank IBAN DE47 2737 5531 1269 3649 75 BIC GZBKDE24 支払条件 お支払いは30日以内にお願いします。",
+     "Payment Methods": [
+      {
+       "payment_method": "IBAN",
+       "account_no": "DE47273755311269364975",
+       "BIC_or_Swift_code": "GZBKDE24",
+       "Method": "IBAN",
+       "Account Number": "DE47273755311269364975",
+       "BIC/Swift Code": "GZBKDE24"
+      }
+     ],
+     "Invoice Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "-4678",
+     "Tax Rate": "10",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [
+      {
+       "tax_code": "消費税",
+       "tax_total": "-4678",
+       "rate": "10",
+       "exchange_rate": "",
+       "Code": "消費税",
+       "Amount": "-4678",
+       "Rate": "10",
+       "Exchange Rate": ""
+      }
+     ],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [
+     {
+      "Text": "BCD"
+     },
+     {
+      "Text": "002"
+     },
+     {
+      "Text": "1"
+     },
+     {
+      "Text": "SCT"
+     },
+     {
+      "Text": "GZBKDE24"
+     },
+     {
+      "Text": "大阪商事株式会社"
+     },
+     {
+      "Text": "DE47273755311269364975"
+     },
+     {
+      "Text": "JPY51459.10"
+     }
+    ],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 1,
+    "changes": [
+     {
+      "after": "REF-CN-2026-07348",
+      "attributed": true,
+      "before": "CN-2026-07348",
+      "change_type": "modified",
+      "field_path": "Invoice Details.Invoice Number",
+      "in_scope": true,
+      "instruction_id": 1,
+      "reason": "Within the scope of instruction #1 (field/other): \"Put the prefix REF- in front of the document number.\""
+     }
+    ],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "model",
+      "changed_count": 1,
+      "coverage": {
+       "applied": 1,
+       "computed": true,
+       "expected": 1,
+       "missed": []
+      },
+      "deterministic": false,
+      "doc_type": "credit-note",
+      "engine": "model",
+      "expected_targets": [
+       "Invoice Details.Invoice Number"
+      ],
+      "fields_changed": [
+       "Invoice Details.Invoice Number"
+      ],
+      "id": 1,
+      "origin_scope": "global",
+      "routing": {
+       "compile_confidence": 0.72,
+       "fallback_reason": "low_confidence",
+       "min_confidence": 0.75
+      },
+      "scope": "field",
+      "section": "Invoice Details",
+      "status": "applied",
+      "targets": [
+       "Invoice Number"
+      ],
+      "text": "Put the prefix REF- in front of the document number.",
+      "transform": "other"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    },
+    "summary": "1 field(s) changed by the custom instructions: 1 attributed deterministically to their instruction."
+   },
+   "expect": {
+    "id": "prefix-document-number",
+    "expect": {
+     "Invoice Details.Invoice Number": "REF-CN-2026-07348"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  }
+ ],
+ "ok": true
+}

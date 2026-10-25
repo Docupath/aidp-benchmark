@@ -1,0 +1,706 @@
+{
+ "id": "purchase-order-132",
+ "slug": "purchase-order",
+ "lane": "rules",
+ "ts": "2026-10-23T18:29:07.806Z",
+ "attempts": 1,
+ "packs": [
+  {
+   "id": "iso-dates",
+   "instruction": "Write every date in the format YYYY-MM-DD.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Crestview Supplies LLC",
+     "Name 2": "",
+     "Street 1": "1200 Industrial Parkway",
+     "Street 2": "",
+     "City": "Springfield",
+     "Postal Code": "62701",
+     "Country": "United States",
+     "Country Code": "US",
+     "VAT No": "US26-7297026"
+    },
+    "Seller": {
+     "Name": "Northwind Trading Inc",
+     "Name 2": "",
+     "Street 1": "742 Evergreen Terrace",
+     "Street 2": "",
+     "City": "Cleveland",
+     "Postal Code": "44101",
+     "Country": "United States",
+     "Country Code": "US"
+    },
+    "Remit To": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "1200 Industrial Parkway",
+     "Street 2": "",
+     "City": "Springfield",
+     "Postal Code": "62701",
+     "Country": "United States",
+     "Country Code": "US",
+     "ShipTo": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Ship To Location Code": ""
+    },
+    "Order Details": {
+     "PO Number": "PO-2026-60950",
+     "Compromisso Code": "",
+     "PO Date": "2026-02-12",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "Due Date": "2026-02-26",
+     "Cost Center": "",
+     "Your Reference": "David Kim",
+     "Posting Date": "",
+     "Net Amount": "200.69",
+     "Total Amount": "217.75",
+     "Rounding Amount": "",
+     "Currency Code": "USD",
+     "Contact Name": "David Kim"
+    },
+    "Items": [
+     {
+      "Article ID": "SNS-28285",
+      "Article Name": "Pressure Sensor PS-10",
+      "Description": "0-10 bar, 4-20mA",
+      "Order Number": "1",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "7",
+      "UOM": "set",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "28.67",
+      "Net Amount": "200.69",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "Bank United Commercial Bank IBAN US81 9106 2970 6137 8563 02 BIC CXBKDE58",
+     "Subtotal": "",
+     "Tax Rate": "8.5",
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Tax": [
+      {
+       "tax_code": "Sales Tax",
+       "tax_total": "17.06",
+       "rate": "8.5",
+       "exchange_rate": "",
+       "Code": "Sales Tax",
+       "Amount": "17.06",
+       "Rate": "8.5",
+       "Exchange Rate": ""
+      }
+     ],
+     "Total": "",
+     "Amount Due": "",
+     "Payment Reference": "",
+     "UUID": "",
+     "Payment Methods": [
+      {
+       "Payment Method": "IBAN",
+       "Account Number": "US81910629706137856302",
+       "BIC/SWIFT Code": "CXBKDE58",
+       "Method": "IBAN",
+       "BIC/Swift Code": "CXBKDE58"
+      }
+     ]
+    },
+    "Payment Methods": [
+     {
+      "Payment Method": "IBAN",
+      "Account Number": "US81910629706137856302",
+      "BIC/SWIFT Code": "CXBKDE58",
+      "Method": "IBAN",
+      "BIC/Swift Code": "CXBKDE58"
+     }
+    ],
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 0,
+    "changes": [],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "category": "dates",
+      "changed_count": 0,
+      "coverage": {
+       "applied": 2,
+       "computed": true,
+       "expected": 2,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "purchase-order",
+      "engine": "code",
+      "expected_targets": [
+       "Order Details.PO Date",
+       "Order Details.Due Date"
+      ],
+      "fields_changed": [],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "YYYY-MM-DD",
+      "scope": "category",
+      "status": "applied",
+      "text": "Write every date in the format YYYY-MM-DD.",
+      "transform": "date_format"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    }
+   },
+   "expect": {
+    "id": "iso-dates",
+    "expect": {
+     "Order Details.PO Date": "2026-02-12",
+     "Order Details.Due Date": "2026-02-26"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  },
+  {
+   "id": "upper-seller-name",
+   "instruction": "Write the Seller's name in capital letters.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Crestview Supplies LLC",
+     "Name 2": "",
+     "Street 1": "1200 Industrial Parkway",
+     "Street 2": "",
+     "City": "Springfield",
+     "Postal Code": "62701",
+     "Country": "United States",
+     "Country Code": "US",
+     "VAT No": "US26-7297026"
+    },
+    "Seller": {
+     "Name": "NORTHWIND TRADING INC",
+     "Name 2": "",
+     "Street 1": "742 Evergreen Terrace",
+     "Street 2": "",
+     "City": "Cleveland",
+     "Postal Code": "44101",
+     "Country": "United States",
+     "Country Code": "US"
+    },
+    "Remit To": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "1200 Industrial Parkway",
+     "Street 2": "",
+     "City": "Springfield",
+     "Postal Code": "62701",
+     "Country": "United States",
+     "Country Code": "US",
+     "ShipTo": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Ship To Location Code": ""
+    },
+    "Order Details": {
+     "PO Number": "PO-2026-60950",
+     "Compromisso Code": "",
+     "PO Date": "12/02/2026",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "Due Date": "26/02/2026",
+     "Cost Center": "",
+     "Your Reference": "David Kim",
+     "Posting Date": "",
+     "Net Amount": "200.69",
+     "Total Amount": "217.75",
+     "Rounding Amount": "",
+     "Currency Code": "USD",
+     "Contact Name": "David Kim"
+    },
+    "Items": [
+     {
+      "Article ID": "SNS-28285",
+      "Article Name": "Pressure Sensor PS-10",
+      "Description": "0-10 bar, 4-20mA",
+      "Order Number": "1",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "7",
+      "UOM": "set",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "28.67",
+      "Net Amount": "200.69",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "Bank United Commercial Bank IBAN US81 9106 2970 6137 8563 02 BIC CXBKDE58",
+     "Subtotal": "",
+     "Tax Rate": "8.5",
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Tax": [
+      {
+       "tax_code": "Sales Tax",
+       "tax_total": "17.06",
+       "rate": "8.5",
+       "exchange_rate": "",
+       "Code": "Sales Tax",
+       "Amount": "17.06",
+       "Rate": "8.5",
+       "Exchange Rate": ""
+      }
+     ],
+     "Total": "",
+     "Amount Due": "",
+     "Payment Reference": "",
+     "UUID": "",
+     "Payment Methods": [
+      {
+       "Payment Method": "IBAN",
+       "Account Number": "US81910629706137856302",
+       "BIC/SWIFT Code": "CXBKDE58",
+       "Method": "IBAN",
+       "BIC/Swift Code": "CXBKDE58"
+      }
+     ]
+    },
+    "Payment Methods": [
+     {
+      "Payment Method": "IBAN",
+      "Account Number": "US81910629706137856302",
+      "BIC/SWIFT Code": "CXBKDE58",
+      "Method": "IBAN",
+      "BIC/Swift Code": "CXBKDE58"
+     }
+    ],
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 1,
+    "changes": [
+     {
+      "after": "NORTHWIND TRADING INC",
+      "attributed": true,
+      "before": "Northwind Trading Inc",
+      "change_type": "reformatted",
+      "field_path": "Seller.Name",
+      "in_scope": true,
+      "instruction_id": 1,
+      "reason": "The model applied instruction #1's mechanical transform (case -> upper), verified deterministically (re-applying the transform to the before value reproduces the change exactly): \"Write the Seller's name in capital letters.\""
+     }
+    ],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "changed_count": 1,
+      "coverage": {
+       "applied": 1,
+       "computed": true,
+       "expected": 1,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "purchase-order",
+      "engine": "code",
+      "expected_targets": [
+       "Seller.Name"
+      ],
+      "fields_changed": [
+       "Seller.Name"
+      ],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "upper",
+      "scope": "field",
+      "section": "Seller",
+      "status": "applied",
+      "targets": [
+       "Name"
+      ],
+      "text": "Write the Seller's name in capital letters.",
+      "transform": "case"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    },
+    "summary": "1 field(s) changed by the custom instructions: 1 attributed deterministically to their instruction."
+   },
+   "expect": {
+    "id": "upper-seller-name",
+    "expect": {
+     "Seller.Name": "NORTHWIND TRADING INC"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  },
+  {
+   "id": "prefix-document-number",
+   "instruction": "Put the prefix REF- in front of the document number.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Crestview Supplies LLC",
+     "Name 2": "",
+     "Street 1": "1200 Industrial Parkway",
+     "Street 2": "",
+     "City": "Springfield",
+     "Postal Code": "62701",
+     "Country": "United States",
+     "Country Code": "US",
+     "VAT No": "US26-7297026"
+    },
+    "Seller": {
+     "Name": "Northwind Trading Inc",
+     "Name 2": "",
+     "Street 1": "742 Evergreen Terrace",
+     "Street 2": "",
+     "City": "Cleveland",
+     "Postal Code": "44101",
+     "Country": "United States",
+     "Country Code": "US"
+    },
+    "Remit To": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "1200 Industrial Parkway",
+     "Street 2": "",
+     "City": "Springfield",
+     "Postal Code": "62701",
+     "Country": "United States",
+     "Country Code": "US",
+     "ShipTo": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Ship To Location Code": ""
+    },
+    "Order Details": {
+     "PO Number": "REF-PO-2026-60950",
+     "Compromisso Code": "",
+     "PO Date": "12/02/2026",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "Due Date": "26/02/2026",
+     "Cost Center": "",
+     "Your Reference": "David Kim",
+     "Posting Date": "",
+     "Net Amount": "200.69",
+     "Total Amount": "217.75",
+     "Rounding Amount": "",
+     "Currency Code": "USD",
+     "Contact Name": "David Kim"
+    },
+    "Items": [
+     {
+      "Article ID": "SNS-28285",
+      "Article Name": "Pressure Sensor PS-10",
+      "Description": "0-10 bar, 4-20mA",
+      "Order Number": "1",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "7",
+      "UOM": "set",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "28.67",
+      "Net Amount": "200.69",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "Bank United Commercial Bank IBAN US81 9106 2970 6137 8563 02 BIC CXBKDE58",
+     "Subtotal": "",
+     "Tax Rate": "8.5",
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Tax": [
+      {
+       "tax_code": "Sales Tax",
+       "tax_total": "17.06",
+       "rate": "8.5",
+       "exchange_rate": "",
+       "Code": "Sales Tax",
+       "Amount": "17.06",
+       "Rate": "8.5",
+       "Exchange Rate": ""
+      }
+     ],
+     "Total": "",
+     "Amount Due": "",
+     "Payment Reference": "",
+     "UUID": "",
+     "Payment Methods": [
+      {
+       "Payment Method": "IBAN",
+       "Account Number": "US81910629706137856302",
+       "BIC/SWIFT Code": "CXBKDE58",
+       "Method": "IBAN",
+       "BIC/Swift Code": "CXBKDE58"
+      }
+     ]
+    },
+    "Payment Methods": [
+     {
+      "Payment Method": "IBAN",
+      "Account Number": "US81910629706137856302",
+      "BIC/SWIFT Code": "CXBKDE58",
+      "Method": "IBAN",
+      "BIC/Swift Code": "CXBKDE58"
+     }
+    ],
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 1,
+    "changes": [
+     {
+      "after": "REF-PO-2026-60950",
+      "attributed": true,
+      "before": "PO-2026-60950",
+      "change_type": "modified",
+      "field_path": "Order Details.PO Number",
+      "in_scope": true,
+      "instruction_id": null,
+      "reason": "This changed because the instruction \"Put the prefix REF- in front of the document number\" added the prefix \"REF-\" to the PO number, changing \"PO-2026-60950\" to \"REF-PO-2026-60950\"."
+     }
+    ],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "model",
+      "changed_count": 0,
+      "coverage": {
+       "applied": 0,
+       "computed": true,
+       "expected": 0,
+       "missed": []
+      },
+      "deterministic": false,
+      "doc_type": "purchase-order",
+      "engine": "model",
+      "expected_targets": [],
+      "fields_changed": [],
+      "id": 1,
+      "origin_scope": "global",
+      "routing": {
+       "fallback_reason": "not_expressible"
+      },
+      "schema_issue": {
+       "available_fields": [
+        "Name",
+        "Name 2",
+        "Street 1",
+        "Street 2",
+        "City",
+        "Postal Code",
+        "Country",
+        "Country Code",
+        "VAT No",
+        "Name",
+        "Name 2",
+        "Street 1",
+        "Street 2",
+        "City",
+        "Postal Code",
+        "Country",
+        "Country Code",
+        "Name",
+        "Name 2",
+        "Street 1",
+        "Street 2",
+        "City",
+        "Province",
+        "Postal Code",
+        "Country",
+        "Country Code",
+        "Name",
+        "Name 2",
+        "Street 1",
+        "Street 2",
+        "City",
+        "Postal Code",
+        "Country",
+        "Country Code",
+        "ShipTo",
+        "Shipping Method",
+        "Tracking Number",
+        "PO Number",
+        "Compromisso Code",
+        "PO Date",
+        "Delivery Date",
+        "Delivery Note No",
+        "Payment Terms",
+        "Due Date",
+        "Cost Center",
+        "Your Reference",
+        "Posting Date",
+        "Net Amount",
+        "Total Amount",
+        "Rounding Amount",
+        "Currency Code",
+        "Contact Name",
+        "Article ID",
+        "Article Name",
+        "Description",
+        "Order Number",
+        "Size",
+        "Color",
+        "Your Reference Number",
+        "Quantity",
+        "UOM",
+        "Serial Number",
+        "Lot Number",
+        "Unit Price",
+        "Net Amount",
+        "Tax Rate",
+        "Tax Amount",
+        "Note Number",
+        "Buyer Article ID",
+        "Discount Amount",
+        "Discount %",
+        "Gross Amount",
+        "Payment Details Description",
+        "Subtotal",
+        "Tax Rate",
+        "Exchange Rate",
+        "Tax Amount Difference",
+        "Tax",
+        "Total",
+        "Amount Due",
+        "Payment Reference",
+        "UUID",
+        "Payment Method",
+        "Account Number",
+        "BIC/SWIFT Code",
+        "Payment Notes",
+        "Text"
+       ],
+       "hint": "the purchase-order schema declares: Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, VAT No, Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, Name, Name 2, Street 1, Street 2, City, Province, Postal Code, Country, Country Code, Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, ShipTo, Shipping Method, Tracking Number, PO Number, Compromisso Code, PO Date, Delivery Date, Delivery Note No, Payment Terms, Due Date, Cost Center, Your Reference, Posting Date, Net Amount, Total Amount, Rounding Amount, Currency Code, Contact Name, Article ID, Article Name, Description, Order Number, Size, Color, Your Reference Number, Quantity, UOM, Serial Number, Lot Number, Unit Price, Net Amount, Tax Rate, Tax Amount, Note Number, Buyer Article ID, Discount Amount, Discount %, Gross Amount, Payment Details Description, Subtotal, Tax Rate, Exchange Rate, Tax Amount Difference, Tax, Total, Amount Due, Payment Reference, UUID, Payment Method, Account Number, BIC/SWIFT Code, Payment Notes, Text. The instruction was still given to the model and nothing was applied. To use this field, request it via extra_fields_array or rephrase to an existing field.",
+       "missing_fields": [
+        "document number"
+       ],
+       "section": null
+      },
+      "scope": "field",
+      "status": "target_not_in_schema",
+      "targets": [
+       "document number"
+      ],
+      "text": "Put the prefix REF- in front of the document number.",
+      "transform": "other"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    },
+    "summary": "The only change was directly caused by the instruction to prefix the document number with \"REF-\", which was applied to the PO number.",
+    "warnings": [
+     "Instruction #1 (\"Put the prefix REF- in front of the document number.\") targets \"document number\", which the purchase-order schema does not declare. Nothing was applied. Available: Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, VAT No, Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, Name, Name 2, Street 1, Street 2, City, Province, Postal Code, Country, Country Code, Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, ShipTo, Shipping Method, Tracking Number, PO Number, Compromisso Code, PO Date, Delivery Date, Delivery Note No, Payment Terms, Due Date, Cost Center, Your Reference, Posting Date, Net Amount, Total Amount, Rounding Amount, Currency Code, Contact Name, Article ID, Article Name, Description, Order Number, Size, Color, Your Reference Number, Quantity, UOM, Serial Number, Lot Number, Unit Price, Net Amount, Tax Rate, Tax Amount, Note Number, Buyer Article ID, Discount Amount, Discount %, Gross Amount, Payment Details Description, Subtotal, Tax Rate, Exchange Rate, Tax Amount Difference, Tax, Total, Amount Due, Payment Reference, UUID, Payment Method, Account Number, BIC/SWIFT Code, Payment Notes, Text."
+    ]
+   },
+   "expect": {
+    "id": "prefix-document-number",
+    "expect": {
+     "Order Details.PO Number": "REF-PO-2026-60950"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  }
+ ],
+ "ok": true
+}

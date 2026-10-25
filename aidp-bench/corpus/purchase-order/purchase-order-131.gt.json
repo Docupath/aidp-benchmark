@@ -1,0 +1,165 @@
+{
+ "id": "purchase-order-131",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "ja-JP",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "bundle": true,
+  "missingTotals": false,
+  "mismatch": true,
+  "stickerMismatch": false
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "株式会社山田製作所",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "大阪市",
+   "Postal Code": "530-0001",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "VAT No": ""
+  },
+  "Seller": {
+   "Name": "東京精密機器株式会社",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "東京都",
+   "Postal Code": "104-0061",
+   "Country": "Japan",
+   "Country Code": "JP"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "大阪市",
+   "Postal Code": "530-0001",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-79654",
+   "Compromisso Code": "",
+   "PO Date": "14/01/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "お支払いは30日以内にお願いします。",
+   "Due Date": "13/02/2026",
+   "Cost Center": "",
+   "Your Reference": "佐藤健一",
+   "Posting Date": "",
+   "Net Amount": "3500",
+   "Total Amount": "3851",
+   "Rounding Amount": "",
+   "Currency Code": "JPY",
+   "Contact Name": "佐藤健一"
+  },
+  "Items": [
+   {
+    "Article ID": "BRK-59398",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "1",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "3500",
+    "Net Amount": "3500",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "10",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "消費税",
+     "tax_total": "350",
+     "rate": "10"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "DE28 9064 0908 8432 5874 51",
+    "BIC/SWIFT Code": "CYBKSE74"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "facts": [
+  {
+   "label": "Document Number",
+   "value": "PO-2026-79654"
+  },
+  {
+   "label": "Date",
+   "value": "14/01/2026",
+   "soft": true
+  },
+  {
+   "label": "Buyer Name",
+   "value": "株式会社山田製作所"
+  },
+  {
+   "label": "Seller Name",
+   "value": "東京精密機器株式会社"
+  },
+  {
+   "label": "Total",
+   "value": "3851"
+  }
+ ],
+ "expected_flags": [
+  {
+   "path": "Total Amount",
+   "kind": "mismatch"
+  }
+ ],
+ "expected_derived": [],
+ "expected_flags_future": []
+}

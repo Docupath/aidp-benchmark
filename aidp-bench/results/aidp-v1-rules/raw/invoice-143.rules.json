@@ -1,0 +1,766 @@
+{
+ "id": "invoice-143",
+ "slug": "invoice",
+ "lane": "rules",
+ "ts": "2026-10-23T17:33:36.134Z",
+ "attempts": 1,
+ "packs": [
+  {
+   "id": "iso-dates",
+   "instruction": "Write every date in the format YYYY-MM-DD.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Société Lumière SARL",
+     "Address": "45 Avenue Victor Hugo",
+     "City": "Lyon",
+     "Postal Code": "69001",
+     "Country": "France",
+     "Country Code": "FR"
+    },
+    "Seller": {
+     "Name": "Atelier Provence SAS",
+     "Address": "45 Avenue Victor Hugo",
+     "City": "Lyon",
+     "Postal Code": "69001",
+     "Country": "France",
+     "Country Code": "FR",
+     "VAT No": "FR94044832393",
+     "Registration No": ""
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "45 Avenue Victor Hugo",
+     "City": "Lyon",
+     "Postal Code": "69001",
+     "Country": "France",
+     "Country Code": "FR",
+     "Shipping Method": "",
+     "Tracking Number": ""
+    },
+    "Invoice Details": {
+     "Invoice Type": "Debit",
+     "Invoice Number": "INV-2026-99920",
+     "Compromisso Code": "",
+     "Invoice Date": "2026-01-18",
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "GRN No": "",
+     "Due Date": "2026-02-17",
+     "Cost Center": "",
+     "Your Reference": "Sophie Bernard",
+     "Posting Date": "",
+     "Net Amount": "27848.16",
+     "Total Tax": "5569.63",
+     "Total Amount": "33417.79",
+     "Rounding Amount": "",
+     "Currency Code": "EUR",
+     "Purchase Order Number": ""
+    },
+    "Items": [
+     {
+      "Item No": "1",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "BRG-09258",
+      "Article Name": "Ball Bearing 6204",
+      "Description": "Sealed, C3 clearance",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "29",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "428.61",
+      "Net Amount": "12429.69",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "2",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "VAL-73711",
+      "Article Name": "Control Valve DN50",
+      "Description": "Brass body",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "33",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "439.04",
+      "Net Amount": "14488.32",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "3",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "MTR-67254",
+      "Article Name": "Servo Motor SM-400",
+      "Description": "400W, with encoder",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "27",
+      "UOM": "pcs",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "34.45",
+      "Net Amount": "930.15",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "Coordonnées bancaires Bank France Commercial Bank IBAN FR66 1894 3464 8481 5850 83 BIC CYBKCH59 Payment Terms Payment due within 30 days.",
+     "Payment Methods": [
+      {
+       "payment_method": "IBAN",
+       "account_no": "FR66189434648481585083",
+       "BIC_or_Swift_code": "CYBKCH59",
+       "Method": "IBAN",
+       "Account Number": "FR66189434648481585083",
+       "BIC/Swift Code": "CYBKCH59"
+      }
+     ],
+     "Invoice Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "5569.63",
+     "Tax Rate": "",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [
+      {
+       "tax_code": "TVA",
+       "tax_total": "5569.63",
+       "rate": "20",
+       "exchange_rate": "",
+       "Code": "TVA",
+       "Amount": "5569.63",
+       "Rate": "20",
+       "Exchange Rate": ""
+      }
+     ],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Barcodes": [],
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 0,
+    "changes": [],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "category": "dates",
+      "changed_count": 0,
+      "coverage": {
+       "applied": 2,
+       "computed": true,
+       "expected": 2,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "invoice",
+      "engine": "code",
+      "expected_targets": [
+       "Invoice Details.Invoice Date",
+       "Invoice Details.Due Date"
+      ],
+      "fields_changed": [],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "YYYY-MM-DD",
+      "scope": "category",
+      "status": "applied",
+      "text": "Write every date in the format YYYY-MM-DD.",
+      "transform": "date_format"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    }
+   },
+   "expect": {
+    "id": "iso-dates",
+    "expect": {
+     "Invoice Details.Invoice Date": "2026-01-18",
+     "Invoice Details.Due Date": "2026-02-17"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  },
+  {
+   "id": "upper-seller-name",
+   "instruction": "Write the Seller's name in capital letters.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Société Lumière SARL",
+     "Address": "45 Avenue Victor Hugo",
+     "City": "Lyon",
+     "Postal Code": "69001",
+     "Country": "France",
+     "Country Code": "FR"
+    },
+    "Seller": {
+     "Name": "ATELIER PROVENCE SAS",
+     "Address": "45 Avenue Victor Hugo",
+     "City": "Lyon",
+     "Postal Code": "69001",
+     "Country": "France",
+     "Country Code": "FR",
+     "VAT No": "FR94044832393",
+     "Registration No": ""
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "45 Avenue Victor Hugo",
+     "City": "Lyon",
+     "Postal Code": "69001",
+     "Country": "France",
+     "Country Code": "FR",
+     "Shipping Method": "",
+     "Tracking Number": ""
+    },
+    "Invoice Details": {
+     "Invoice Type": "Debit",
+     "Invoice Number": "INV-2026-99920",
+     "Compromisso Code": "",
+     "Invoice Date": "18/01/2026",
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "GRN No": "",
+     "Due Date": "17/02/2026",
+     "Cost Center": "",
+     "Your Reference": "Sophie Bernard",
+     "Posting Date": "",
+     "Net Amount": "27848.16",
+     "Total Tax": "5569.63",
+     "Total Amount": "33417.79",
+     "Rounding Amount": "",
+     "Currency Code": "EUR",
+     "Purchase Order Number": ""
+    },
+    "Items": [
+     {
+      "Item No": "1",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "BRG-09258",
+      "Article Name": "Ball Bearing 6204",
+      "Description": "Sealed, C3 clearance",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "29",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "428.61",
+      "Net Amount": "12429.69",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "2",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "VAL-73711",
+      "Article Name": "Control Valve DN50",
+      "Description": "Brass body",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "33",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "439.04",
+      "Net Amount": "14488.32",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "3",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "MTR-67254",
+      "Article Name": "Servo Motor SM-400",
+      "Description": "400W, with encoder",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "27",
+      "UOM": "pcs",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "34.45",
+      "Net Amount": "930.15",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "Coordonnées bancaires Bank France Commercial Bank IBAN FR66 1894 3464 8481 5850 83 BIC CYBKCH59 Payment Terms Payment due within 30 days.",
+     "Payment Methods": [
+      {
+       "payment_method": "IBAN",
+       "account_no": "FR66189434648481585083",
+       "BIC_or_Swift_code": "CYBKCH59",
+       "Method": "IBAN",
+       "Account Number": "FR66189434648481585083",
+       "BIC/Swift Code": "CYBKCH59"
+      }
+     ],
+     "Invoice Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "5569.63",
+     "Tax Rate": "",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [
+      {
+       "tax_code": "TVA",
+       "tax_total": "5569.63",
+       "rate": "20",
+       "exchange_rate": "",
+       "Code": "TVA",
+       "Amount": "5569.63",
+       "Rate": "20",
+       "Exchange Rate": ""
+      }
+     ],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Barcodes": [],
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 1,
+    "changes": [
+     {
+      "after": "ATELIER PROVENCE SAS",
+      "attributed": true,
+      "before": "Atelier Provence SAS",
+      "change_type": "reformatted",
+      "field_path": "Seller.Name",
+      "in_scope": true,
+      "instruction_id": 1,
+      "reason": "The model applied instruction #1's mechanical transform (case -> upper), verified deterministically (re-applying the transform to the before value reproduces the change exactly): \"Write the Seller's name in capital letters.\""
+     }
+    ],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "changed_count": 1,
+      "coverage": {
+       "applied": 1,
+       "computed": true,
+       "expected": 1,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "invoice",
+      "engine": "code",
+      "expected_targets": [
+       "Seller.Name"
+      ],
+      "fields_changed": [
+       "Seller.Name"
+      ],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "upper",
+      "scope": "field",
+      "section": "Seller",
+      "status": "applied",
+      "targets": [
+       "Name"
+      ],
+      "text": "Write the Seller's name in capital letters.",
+      "transform": "case"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    },
+    "summary": "1 field(s) changed by the custom instructions: 1 attributed deterministically to their instruction."
+   },
+   "expect": {
+    "id": "upper-seller-name",
+    "expect": {
+     "Seller.Name": "ATELIER PROVENCE SAS"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  },
+  {
+   "id": "prefix-document-number",
+   "instruction": "Put the prefix REF- in front of the document number.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Société Lumière SARL",
+     "Address": "45 Avenue Victor Hugo",
+     "City": "Lyon",
+     "Postal Code": "69001",
+     "Country": "France",
+     "Country Code": "FR"
+    },
+    "Seller": {
+     "Name": "Atelier Provence SAS",
+     "Address": "45 Avenue Victor Hugo",
+     "City": "Lyon",
+     "Postal Code": "69001",
+     "Country": "France",
+     "Country Code": "FR",
+     "VAT No": "FR94044832393",
+     "Registration No": ""
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "45 Avenue Victor Hugo",
+     "City": "Lyon",
+     "Postal Code": "69001",
+     "Country": "France",
+     "Country Code": "FR",
+     "Shipping Method": "",
+     "Tracking Number": ""
+    },
+    "Invoice Details": {
+     "Invoice Type": "Debit",
+     "Invoice Number": "REF-INV-2026-99920",
+     "Compromisso Code": "",
+     "Invoice Date": "18/01/2026",
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "GRN No": "",
+     "Due Date": "17/02/2026",
+     "Cost Center": "",
+     "Your Reference": "Sophie Bernard",
+     "Posting Date": "",
+     "Net Amount": "27848.16",
+     "Total Tax": "5569.63",
+     "Total Amount": "33417.79",
+     "Rounding Amount": "",
+     "Currency Code": "EUR",
+     "Purchase Order Number": ""
+    },
+    "Items": [
+     {
+      "Item No": "1",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "BRG-09258",
+      "Article Name": "Ball Bearing 6204",
+      "Description": "Sealed, C3 clearance",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "29",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "428.61",
+      "Net Amount": "12429.69",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "2",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "VAL-73711",
+      "Article Name": "Control Valve DN50",
+      "Description": "Brass body",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "33",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "439.04",
+      "Net Amount": "14488.32",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Item No": "3",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "MTR-67254",
+      "Article Name": "Servo Motor SM-400",
+      "Description": "400W, with encoder",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "27",
+      "UOM": "pcs",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "34.45",
+      "Net Amount": "930.15",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "Coordonnées bancaires Bank France Commercial Bank IBAN FR66 1894 3464 8481 5850 83 BIC CYBKCH59 Payment Terms Payment due within 30 days.",
+     "Payment Methods": [
+      {
+       "payment_method": "IBAN",
+       "account_no": "FR66189434648481585083",
+       "BIC_or_Swift_code": "CYBKCH59",
+       "Method": "IBAN",
+       "Account Number": "FR66189434648481585083",
+       "BIC/Swift Code": "CYBKCH59"
+      }
+     ],
+     "Invoice Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "5569.63",
+     "Tax Rate": "",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [
+      {
+       "tax_code": "TVA",
+       "tax_total": "5569.63",
+       "rate": "20",
+       "exchange_rate": "",
+       "Code": "TVA",
+       "Amount": "5569.63",
+       "Rate": "20",
+       "Exchange Rate": ""
+      }
+     ],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Barcodes": [],
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 0,
+    "changes": [],
+    "computed": false,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "changed_count": 1,
+      "compiled_rule": {
+       "approval_check": false,
+       "id": "ci1-1",
+       "name": "prefix invoice number with REF-",
+       "origin_scope": "global",
+       "then": [
+        {
+         "action": "concat",
+         "parts": [
+          {
+           "value": "REF-"
+          },
+          {
+           "field": "Invoice Number"
+          }
+         ],
+         "separator": "",
+         "to": "Invoice Number"
+        }
+       ]
+      },
+      "coverage": {
+       "applied": 1,
+       "computed": true,
+       "expected": 1,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "invoice",
+      "engine": "rule_engine",
+      "expected_targets": [],
+      "fields_changed": [
+       "Invoice Details.Invoice Number"
+      ],
+      "id": 1,
+      "origin_scope": "global",
+      "routing": {
+       "compile_confidence": 0.98
+      },
+      "rule_trace": {
+       "actions": [
+        {
+         "action": "concat",
+         "after": "REF-INV-2026-99920",
+         "before": "INV-2026-99920",
+         "detail": "\"REF-\" + Invoice Number=\"INV-2026-99920\"",
+         "field": "Invoice Details.Invoice Number"
+        }
+       ],
+       "id": "ci1-1",
+       "matched": true,
+       "name": "prefix invoice number with REF-",
+       "origin_scope": "global"
+      },
+      "scope": "field",
+      "section": "Invoice Details",
+      "status": "applied",
+      "targets": [
+       "Invoice Number"
+      ],
+      "text": "Put the prefix REF- in front of the document number.",
+      "transform": "other"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    }
+   },
+   "expect": {
+    "id": "prefix-document-number",
+    "expect": {
+     "Invoice Details.Invoice Number": "REF-INV-2026-99920"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  }
+ ],
+ "ok": true
+}

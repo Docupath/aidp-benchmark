@@ -1,0 +1,26 @@
+{
+ "exported_at_ist": "2026-10-24T01:32:41.365+05:30",
+ "database": "aidp_v1",
+ "read_only": "every query ran with default_transaction_read_only=on",
+ "tenants": {
+  "mainCls": "aidpbench-aidp-v1-main-pipeline",
+  "mainPipeline": "aidpbench-aidp-v1-main-pipeline",
+  "mainPrompt": "aidpbench-aidp-v1-main-prompt",
+  "stabCls": "aidpbench-aidp-v1-stability-stability",
+  "stab": "aidpbench-aidp-v1-stability-stability"
+ },
+ "files": {
+  "annotations.jsonl": "classification_v2_ocr rows of aidpbench-aidp-v1-main-pipeline, one per corpus file (main file or attachment), joined by doc_bytes_hash = sha256 of the file's bytes; 2008 of 2012 files have a stored reading; 0 stored rows match no corpus file",
+  "stability-submissions.jsonl": "one row per submission of the repeatability run (600): every extraction run (status, duplicate flag, time), the matching engine's latest computation for it (v2_match_runs: status, duplicate_invoice exceptions) and what the matching index compared (number, seller, type)",
+  "main-pipeline-submissions.jsonl": "the same for every document of the main run's full lane (2000)",
+  "main-prompt-submissions.jsonl": "the same for every document of the main run's text lane (2000)",
+  "classification-runs.jsonl": "every classification run of the main and repeatability runs, with its duplicate column, cache hit and category"
+ },
+ "sha256": {
+  "annotations.jsonl": "c3155e8cd36b20363adc3876064b51a8a66a8510ff498188f51f3d159d43aca6",
+  "classification-runs.jsonl": "d846d48bc3b8c819f99cd318393ad322210f214898997b9bd5d5da3f752419ea",
+  "main-pipeline-submissions.jsonl": "b5feae08e0a74df7e19b70b8354f2460a433a0449863301c1cec5799f7dc5a5b",
+  "main-prompt-submissions.jsonl": "0c27363564faf4b28a58bf86a903262df99762e2611e4748b978f8da2579a668",
+  "stability-submissions.jsonl": "7711daddcf8d4a48468bc66f43258f6d08b3f7314f5d5c67a3c6371e1e395c78"
+ }
+}

@@ -1,0 +1,403 @@
+{
+ "id": "general-contract-001",
+ "slug": "general-contract",
+ "lane": "prompt",
+ "ts": "2026-10-23T07:52:10.677Z",
+ "attempts": 1,
+ "ms": 11084,
+ "extraction": {
+  "Party A": {
+   "Name": "Thamesview Logistics Ltd",
+   "Role": "Party A",
+   "Organization": "Thamesview Logistics Ltd",
+   "Email": "",
+   "Phone": "",
+   "Address": "221 Baker Street",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB"
+  },
+  "Party B": {
+   "Name": "Westbrook Pharma Ltd",
+   "Role": "Party B",
+   "Organization": "Westbrook Pharma Ltd",
+   "Email": "",
+   "Phone": "",
+   "Address": "221 Baker Street",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB"
+  },
+  "Contract Details": {
+   "Contract Title": "MASTER SERVICES AGREEMENT",
+   "Contract Type": "master services agreement",
+   "Contract Number": "",
+   "Effective Date": "21/04/2026",
+   "Execution Date": "21/04/2026",
+   "Expiration Date": "21/04/2028",
+   "Termination Date": "",
+   "Renewal Terms": "",
+   "Governing Law": "the laws of England and Wales",
+   "Jurisdiction": "",
+   "Confidentiality Clause": "Each party shall keep confidential all non-public information received from the other party and shall use it solely for the purposes of this Agreement.",
+   "Dispute Resolution": "",
+   "Auto-Renew": "",
+   "Notice Period": ""
+  },
+  "Financial Terms": {
+   "Payment Terms": "",
+   "Payment Method": "",
+   "Currency": "",
+   "Total Contract Value": "",
+   "Installment Structure": "",
+   "Penalties or Late Fees": ""
+  },
+  "Obligations": {
+   "Party A Obligations": "Each party shall keep confidential all non-public information received from the other party and shall use it solely for the purposes of this Agreement.",
+   "Party B Obligations": "Each party shall keep confidential all non-public information received from the other party and shall use it solely for the purposes of this Agreement.",
+   "Delivery Schedule": ""
+  },
+  "Signatures": {
+   "Signed By Party A": "Oliver Bennett",
+   "Signed By Party B": "Amelia Clarke",
+   "Date Signed by Party A": "21/04/2026",
+   "Date Signed by Party B": "21/04/2026",
+   "Signing Method": ""
+  },
+  "Attachments": {
+   "Appendix List": "",
+   "Referenced Documents": "Section 7"
+  },
+  "Metadata": {
+   "Contract Status": "",
+   "Contract Template": "General Contract",
+   "Tags": "",
+   "Template Group": "",
+   "Revision History": "",
+   "Last Modified Date": ""
+  },
+  "Audit Trail": {
+   "Document Created": "",
+   "Sent Date": "",
+   "Viewed By": "",
+   "View Timestamp": "",
+   "Edited By": "",
+   "Edited Date": ""
+  },
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": false,
+  "derivations": [],
+  "derived_count": 0,
+  "flagged_count": 0,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 31,
+  "evidence_inputs": {
+   "analyze_result": false,
+   "native_layer": "absent",
+   "ocr_quality": null,
+   "ocr_text": true,
+   "summary": false,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Attachments.Referenced Documents": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Confidentiality Clause": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Contract Title": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Contract Type": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Effective Date": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Execution Date": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Expiration Date": {
+    "c": 0.7,
+    "justification": "the term is 24 months from the effective date of 21/04/2026, so it ends on 21/04/2028",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Contract Details.Governing Law": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Metadata.Contract Template": {
+    "c": 0.45,
+    "fidelity": 0.3,
+    "flags": [
+     "unverified_in_source"
+    ],
+    "placement": "unknown",
+    "source": "none",
+    "tier": "low"
+   },
+   "Obligations.Party A Obligations": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Obligations.Party B Obligations": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"GB\" is the standard ISO 3166-1 alpha-2 country code for \"United Kingdom\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Party A.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Organization": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Role": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"GB\" is the standard ISO 3166-1 alpha-2 country code for \"United Kingdom\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Party B.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Organization": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Role": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Signatures.Date Signed by Party A": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Signatures.Date Signed by Party B": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Signatures.Signed By Party A": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Signatures.Signed By Party B": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 1,
+  "mean_confidence": 0.884,
+  "model_derivations": {
+   "Contract Details.Contract Type": "the title and opening sentence identify it as a master services agreement",
+   "Contract Details.Execution Date": "the agreement is entered into as of 21/04/2026 and the signature block shows the same date",
+   "Contract Details.Expiration Date": "the term is 24 months from the effective date of 21/04/2026, so it ends on 21/04/2028",
+   "Obligations.Party A Obligations": "the confidentiality clause applies to each party, so it creates an obligation for Party A",
+   "Obligations.Party B Obligations": "the confidentiality clause applies to each party, so it creates an obligation for Party B",
+   "Party A.Country": "the address ends with United Kingdom",
+   "Party A.Country Code": "United Kingdom corresponds to ISO code GB",
+   "Party A.Organization": "the party name is the company named for Party A",
+   "Party A.Role": "the agreement text explicitly labels Thamesview Logistics Ltd as Party A",
+   "Party B.Country": "the bill-to address ends with United Kingdom",
+   "Party B.Country Code": "United Kingdom corresponds to ISO code GB",
+   "Party B.Organization": "the party name is the company named for Party B",
+   "Party B.Role": "the agreement text explicitly labels Westbrook Pharma Ltd as Party B"
+  },
+  "scored_fields": 31
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "general-contract",
+ "document_id": "01a167be-f9b9-7596-a3d0-2a6f80b64ef9",
+ "request_id": "c917f569-238c-4dfd-82b0-1e8c6ee33a02",
+ "ok": true
+}

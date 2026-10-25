@@ -1,0 +1,136 @@
+{
+ "id": "consignment-invoice-072",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-DE",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "bundle": false,
+  "missingTotals": false,
+  "mismatch": false,
+  "stickerMismatch": true
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Müller Industrietechnik GmbH",
+   "Name 2": "",
+   "Street 1": "Hauptstraße 42",
+   "Street 2": "",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "VAT No": "DE314577724",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Müller Industrietechnik GmbH",
+   "Name 2": "",
+   "Street 1": "Hauptstraße 42",
+   "Street 2": "",
+   "City": "Köln",
+   "Postal Code": "50667",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "VAT No": "DE827884537",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Hauptstraße 42",
+   "Street 2": "",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-95646",
+   "Consignment Date": "25/04/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Zahlbar innerhalb von 30 Tagen.",
+   "Payment Due Date": "25/05/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Anna Weber"
+  },
+  "Items": [
+   {
+    "Article ID": "WGT-61016",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "48",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "LOT691836",
+    "Unit Price": "259.26",
+    "Net Amount": "12444.48",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "12444.48",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "2364.45",
+     "rate": "19"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "14808.93",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "facts": [
+  {
+   "label": "Document Number",
+   "value": "CSG-2026-95646"
+  },
+  {
+   "label": "Date",
+   "value": "25/04/2026",
+   "soft": true
+  },
+  {
+   "label": "Buyer Name",
+   "value": "Müller Industrietechnik GmbH"
+  },
+  {
+   "label": "Seller Name",
+   "value": "Müller Industrietechnik GmbH"
+  },
+  {
+   "label": "Total",
+   "value": "14808.93"
+  }
+ ],
+ "expected_flags": [],
+ "expected_derived": [],
+ "expected_flags_future": [
+  {
+   "field": "Items.0.Lot Number",
+   "kind": "barcode-mismatch",
+   "printed": "LOT691836",
+   "sticker": "LOT043526"
+  }
+ ]
+}

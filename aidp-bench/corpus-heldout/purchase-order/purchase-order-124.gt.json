@@ -1,0 +1,165 @@
+{
+ "id": "purchase-order-124",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-CH",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "bundle": false,
+  "missingTotals": false,
+  "mismatch": true,
+  "stickerMismatch": false
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Alpina Medical SA",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 55",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "VAT No": "CHE-630.977.087 MWST"
+  },
+  "Seller": {
+   "Name": "Zürichsee Handels AG",
+   "Name 2": "",
+   "Street 1": "Bahnhofstrasse 12",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 55",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-96158",
+   "Compromisso Code": "",
+   "PO Date": "13/02/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "15/03/2026",
+   "Cost Center": "",
+   "Your Reference": "Marc Dubois",
+   "Posting Date": "",
+   "Net Amount": "5188.70",
+   "Total Amount": "5601.48",
+   "Rounding Amount": "",
+   "Currency Code": "CHF",
+   "Contact Name": "Marc Dubois"
+  },
+  "Items": [
+   {
+    "Article ID": "CONS-25999",
+    "Article Name": "Consulting Services",
+    "Description": "Senior consultant",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "22",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "235.85",
+    "Net Amount": "5188.70",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "8.1",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "420.28",
+     "rate": "8.1"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "CH16 4823 0301 8868 0742 26",
+    "BIC/SWIFT Code": "CZBKDE11"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "facts": [
+  {
+   "label": "Document Number",
+   "value": "PO-2026-96158"
+  },
+  {
+   "label": "Date",
+   "value": "13/02/2026",
+   "soft": true
+  },
+  {
+   "label": "Buyer Name",
+   "value": "Alpina Medical SA"
+  },
+  {
+   "label": "Seller Name",
+   "value": "Zürichsee Handels AG"
+  },
+  {
+   "label": "Total",
+   "value": "5601.48"
+  }
+ ],
+ "expected_flags": [
+  {
+   "path": "Total Amount",
+   "kind": "mismatch"
+  }
+ ],
+ "expected_derived": [],
+ "expected_flags_future": []
+}

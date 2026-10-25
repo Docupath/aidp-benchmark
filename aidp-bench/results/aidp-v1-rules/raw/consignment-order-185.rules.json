@@ -1,0 +1,369 @@
+{
+ "id": "consignment-order-185",
+ "slug": "consignment-order",
+ "lane": "rules",
+ "ts": "2026-10-23T17:17:08.670Z",
+ "attempts": 1,
+ "packs": [
+  {
+   "id": "iso-dates",
+   "instruction": "Write every date in the format YYYY-MM-DD.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Lusitana Ferramentas Lda",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "VAT No": "PT172454907",
+     "Contact Name": ""
+    },
+    "Seller": {
+     "Name": "Docupath Solutions Lda",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "VAT No": "PT099166484",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "ShipTo": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Ship To Location Code": ""
+    },
+    "Consignment Details": {
+     "Consignment Number": "CSG-2026-22728",
+     "Consignment Date": "2026-01-22",
+     "Delivery Date": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "Payment Due Date": "2026-02-05",
+     "Currency Code": "EUR",
+     "Contact Name": "João Silva"
+    },
+    "Items": [
+     {
+      "Article ID": "LBL-76161",
+      "Article Name": "Label Roll 50x30",
+      "Description": "Thermal, 1000/roll",
+      "Order Number": "",
+      "Quantity": "39",
+      "UOM": "set",
+      "Serial Number": "",
+      "Lot Number": "LOT424949",
+      "Unit Price": "295.74",
+      "Net Amount": "11533.86",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "LBL-39885",
+      "Article Name": "Label Roll 50x30",
+      "Description": "Thermal, 1000/roll",
+      "Order Number": "",
+      "Quantity": "42",
+      "UOM": "box",
+      "Serial Number": "",
+      "Lot Number": "LOT603626",
+      "Unit Price": "11.85",
+      "Net Amount": "497.70",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Methods": "IBAN",
+     "Subtotal": "12031.56",
+     "Tax": [
+      {
+       "tax_code": "IVA",
+       "tax_total": "2767.26",
+       "rate": "23",
+       "exchange_rate": "",
+       "Code": "IVA",
+       "Amount": "2767.26",
+       "Rate": "23",
+       "Exchange Rate": ""
+      }
+     ],
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Total": "14798.82",
+     "Amount Due": "",
+     "Payment Reference": ""
+    },
+    "Barcodes": [
+     {
+      "Text": "(01)00625140634986(17)281215(10)LOT424949"
+     },
+     {
+      "Text": "(01)00742619280984(17)281215(10)LOT603626"
+     }
+    ],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 0,
+    "changes": [],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "category": "dates",
+      "changed_count": 0,
+      "coverage": {
+       "applied": 2,
+       "computed": true,
+       "expected": 2,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "consignment-order",
+      "engine": "code",
+      "expected_targets": [
+       "Consignment Details.Consignment Date",
+       "Consignment Details.Payment Due Date"
+      ],
+      "fields_changed": [],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "YYYY-MM-DD",
+      "scope": "category",
+      "status": "applied",
+      "text": "Write every date in the format YYYY-MM-DD.",
+      "transform": "date_format"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    }
+   },
+   "expect": {
+    "id": "iso-dates",
+    "expect": {
+     "Consignment Details.Consignment Date": "2026-01-22",
+     "Consignment Details.Payment Due Date": "2026-02-05"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  },
+  {
+   "id": "upper-seller-name",
+   "instruction": "Write the Seller's name in capital letters.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Lusitana Ferramentas Lda",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "VAT No": "PT172454907",
+     "Contact Name": ""
+    },
+    "Seller": {
+     "Name": "DOCUPATH SOLUTIONS LDA",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "VAT No": "PT099166484",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "ShipTo": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Ship To Location Code": ""
+    },
+    "Consignment Details": {
+     "Consignment Number": "CSG-2026-22728",
+     "Consignment Date": "22/01/2026",
+     "Delivery Date": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "Payment Due Date": "05/02/2026",
+     "Currency Code": "EUR",
+     "Contact Name": "João Silva"
+    },
+    "Items": [
+     {
+      "Article ID": "LBL-76161",
+      "Article Name": "Label Roll 50x30",
+      "Description": "Thermal, 1000/roll",
+      "Order Number": "",
+      "Quantity": "39",
+      "UOM": "set",
+      "Serial Number": "",
+      "Lot Number": "LOT424949",
+      "Unit Price": "295.74",
+      "Net Amount": "11533.86",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "LBL-39885",
+      "Article Name": "Label Roll 50x30",
+      "Description": "Thermal, 1000/roll",
+      "Order Number": "",
+      "Quantity": "42",
+      "UOM": "box",
+      "Serial Number": "",
+      "Lot Number": "LOT603626",
+      "Unit Price": "11.85",
+      "Net Amount": "497.70",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Methods": "IBAN",
+     "Subtotal": "12031.56",
+     "Tax": [
+      {
+       "tax_code": "IVA",
+       "tax_total": "2767.26",
+       "rate": "23",
+       "exchange_rate": "",
+       "Code": "IVA",
+       "Amount": "2767.26",
+       "Rate": "23",
+       "Exchange Rate": ""
+      }
+     ],
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Total": "14798.82",
+     "Amount Due": "",
+     "Payment Reference": ""
+    },
+    "Barcodes": [
+     {
+      "Text": "(01)00625140634986(17)281215(10)LOT424949"
+     },
+     {
+      "Text": "(01)00742619280984(17)281215(10)LOT603626"
+     }
+    ],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 1,
+    "changes": [
+     {
+      "after": "DOCUPATH SOLUTIONS LDA",
+      "attributed": true,
+      "before": "Docupath Solutions Lda",
+      "change_type": "reformatted",
+      "field_path": "Seller.Name",
+      "in_scope": true,
+      "instruction_id": 1,
+      "reason": "The model applied instruction #1's mechanical transform (case -> upper), verified deterministically (re-applying the transform to the before value reproduces the change exactly): \"Write the Seller's name in capital letters.\""
+     }
+    ],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "changed_count": 1,
+      "coverage": {
+       "applied": 1,
+       "computed": true,
+       "expected": 1,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "consignment-order",
+      "engine": "code",
+      "expected_targets": [
+       "Seller.Name"
+      ],
+      "fields_changed": [
+       "Seller.Name"
+      ],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "upper",
+      "scope": "field",
+      "section": "Seller",
+      "status": "applied",
+      "targets": [
+       "Name"
+      ],
+      "text": "Write the Seller's name in capital letters.",
+      "transform": "case"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    },
+    "summary": "1 field(s) changed by the custom instructions: 1 attributed deterministically to their instruction."
+   },
+   "expect": {
+    "id": "upper-seller-name",
+    "expect": {
+     "Seller.Name": "DOCUPATH SOLUTIONS LDA"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  }
+ ],
+ "ok": true
+}

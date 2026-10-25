@@ -1,0 +1,419 @@
+{
+ "id": "general-contract-160",
+ "slug": "general-contract",
+ "lane": "prompt",
+ "ts": "2026-10-23T15:26:28.621Z",
+ "attempts": 1,
+ "ms": 16483,
+ "extraction": {
+  "Party A": {
+   "Name": "Randstad Componenten BV",
+   "Role": "Party A",
+   "Organization": "Randstad Componenten BV",
+   "Email": "",
+   "Phone": "",
+   "Address": "Industrieweg 88",
+   "City": "Rotterdam",
+   "Postal Code": "3011 AA",
+   "Country": "Netherlands",
+   "Country Code": "NL"
+  },
+  "Party B": {
+   "Name": "Van Dijk Handel BV",
+   "Role": "Party B",
+   "Organization": "Van Dijk Handel BV",
+   "Email": "",
+   "Phone": "",
+   "Address": "Industrieweg 88",
+   "City": "Rotterdam",
+   "Postal Code": "3011 AA",
+   "Country": "Netherlands",
+   "Country Code": "NL"
+  },
+  "Contract Details": {
+   "Contract Title": "MASTER SERVICES AGREEMENT",
+   "Contract Type": "master services agreement",
+   "Contract Number": "",
+   "Effective Date": "23/01/2026",
+   "Execution Date": "23/01/2026",
+   "Expiration Date": "23/01/2029",
+   "Termination Date": "",
+   "Renewal Terms": "",
+   "Governing Law": "the laws of England and Wales",
+   "Jurisdiction": "",
+   "Confidentiality Clause": "Each party shall keep confidential all non-public information received from the other party and shall use it solely for the purposes of this Agreement.",
+   "Dispute Resolution": "",
+   "Auto-Renew": "",
+   "Notice Period": ""
+  },
+  "Financial Terms": {
+   "Payment Terms": "",
+   "Payment Method": "",
+   "Currency": "",
+   "Total Contract Value": "",
+   "Installment Structure": "",
+   "Penalties or Late Fees": ""
+  },
+  "Obligations": {
+   "Party A Obligations": "Each party shall keep confidential all non-public information received from the other party and shall use it solely for the purposes of this Agreement.",
+   "Party B Obligations": "Each party shall keep confidential all non-public information received from the other party and shall use it solely for the purposes of this Agreement.",
+   "Delivery Schedule": ""
+  },
+  "Signatures": {
+   "Signed By Party A": "Emma Bakker",
+   "Signed By Party B": "Jan de Vries",
+   "Date Signed by Party A": "23/01/2026",
+   "Date Signed by Party B": "23/01/2026",
+   "Signing Method": ""
+  },
+  "Attachments": {
+   "Appendix List": "",
+   "Referenced Documents": "Section 7"
+  },
+  "Metadata": {
+   "Contract Status": "",
+   "Contract Template": "",
+   "Tags": "",
+   "Template Group": "",
+   "Revision History": "",
+   "Last Modified Date": ""
+  },
+  "Audit Trail": {
+   "Document Created": "",
+   "Sent Date": "",
+   "Viewed By": "",
+   "View Timestamp": "",
+   "Edited By": "",
+   "Edited Date": ""
+  },
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": false,
+  "derivations": [],
+  "derived_count": 0,
+  "flagged_count": 0,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 32,
+  "evidence_inputs": {
+   "analyze_result": false,
+   "native_layer": "absent",
+   "ocr_quality": null,
+   "ocr_text": true,
+   "summary": false,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Attachments.Referenced Documents": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Confidentiality Clause": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Contract Title": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Contract Type": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Effective Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"23-01-2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Contract Details.Execution Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"23-01-2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Contract Details.Expiration Date": {
+    "c": 0.7,
+    "justification": "the term is 36 months from the effective date 23/01/2026, which ends on 23/01/2029",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Contract Details.Governing Law": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Obligations.Party A Obligations": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Obligations.Party B Obligations": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"NL\" is the standard ISO 3166-1 alpha-2 country code for \"Netherlands\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Party A.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Organization": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Role": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"NL\" is the standard ISO 3166-1 alpha-2 country code for \"Netherlands\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Party B.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Organization": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Role": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Signatures.Date Signed by Party A": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"23-01-2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Signatures.Date Signed by Party B": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"23-01-2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Signatures.Signed By Party A": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Signatures.Signed By Party B": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 0,
+  "mean_confidence": 0.898,
+  "model_derivations": {
+   "Attachments.Referenced Documents": "the term clause refers to Section 7 for earlier termination",
+   "Contract Details.Contract Type": "the title and opening sentence identify it as a master services agreement",
+   "Contract Details.Execution Date": "the document is dated and signed on 23-01-2026, so that is the execution date",
+   "Contract Details.Expiration Date": "the term is 36 months from the effective date 23/01/2026, which ends on 23/01/2029",
+   "Obligations.Party A Obligations": "the confidentiality clause states duties that apply to each party, so it applies to Party A",
+   "Obligations.Party B Obligations": "the confidentiality clause states duties that apply to each party, so it applies to Party B",
+   "Party A.City": "the address line shows postal code 3011 AA and Rotterdam",
+   "Party A.Country": "the address block ends with Netherlands",
+   "Party A.Country Code": "Netherlands corresponds to ISO code NL",
+   "Party A.Organization": "the party name is the organization named for Party A",
+   "Party A.Postal Code": "the address line shows 3011 AA Rotterdam",
+   "Party A.Role": "the agreement text explicitly labels Randstad Componenten BV as Party A",
+   "Party B.Address": "the invoice address for Van Dijk Handel BV provides the street address",
+   "Party B.City": "the invoice address shows postal code 3011 AA and Rotterdam",
+   "Party B.Country": "the invoice address ends with Netherlands",
+   "Party B.Country Code": "Netherlands corresponds to ISO code NL",
+   "Party B.Organization": "the party name is the organization named for Party B",
+   "Party B.Postal Code": "the invoice address shows 3011 AA Rotterdam",
+   "Party B.Role": "the agreement text explicitly labels Van Dijk Handel BV as Party B",
+   "Signatures.Date Signed by Party A": "the signature block gives one date for both parties",
+   "Signatures.Date Signed by Party B": "the signature block gives one date for both parties",
+   "Signatures.Signed By Party A": "the signature table lists Randstad Componenten BV / Emma Bakker for Party A",
+   "Signatures.Signed By Party B": "the signature table lists Van Dijk Handel BV / Jan de Vries for Party B"
+  },
+  "scored_fields": 30
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "general-contract",
+ "document_id": "01a1695e-e326-74be-a7e7-357fac86cf9f",
+ "request_id": "a76d7b42-bd22-4ee7-8b40-7766d94339a5",
+ "ok": true
+}

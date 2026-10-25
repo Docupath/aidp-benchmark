@@ -1,0 +1,7 @@
+You are reviewing a business document before its data is used. Read every page of the attached PDF carefully, including any attached pages, and answer five questions.
+1. difficulty: how hard is it to extract every value on this document correctly, from 1 (trivial) to 10 (extremely hard)? Consider image quality, layout, length, language and anything confusing.
+2. totals_disagree: do the printed totals (subtotal, tax and total) disagree with the line items, or with each other? Check the arithmetic. Give the probability from 0 to 1 and say where.
+3. totals_missing: is the totals block that a document of this kind would normally print missing? Give the probability from 0 to 1.
+4. sticker_disagrees: does any barcode sticker or label show a lot or batch number that disagrees with the lot or batch printed in the document itself? Give the probability from 0 to 1 and say where.
+5. any_problem_probability: the probability from 0 to 1 that at least one of questions 2 to 4 applies.
+Return only the JSON object.

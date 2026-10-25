@@ -1,0 +1,19 @@
+node_modules
+.DS_Store
+__pycache__/
+*.pyc
+*.log
+
+# The answer keys, page texts, manifest and contract of AIDP-2K are committed under aidp-bench/corpus/. The 2,012
+# rendered PDFs (about 883 MB) are published as an asset of the v1.0 release instead, and
+# aidp-bench/corpus/PDF-SHA256SUMS fingerprints every one of them, so a download can be checked against the files that
+# were run. Unpack the asset into aidp-bench/corpus/ and the PDFs sit beside their answer keys, ignored here.
+aidp-bench/corpus/**/*.pdf
+# The held-out check's 302 PDFs are the release asset aidp-heldout-v1-pdfs.tar.gz, fingerprinted by
+# aidp-bench/corpus-heldout/PDF-SHA256SUMS in the same way.
+aidp-bench/corpus-heldout/**/*.pdf
+
+# Scratch output of a local regeneration (npm run keys, npm run render) and of a local re-scoring (npm run rescore).
+aidp-bench/corpus-regenerated/
+aidp-bench/results/rescore/
+aidp-bench/results/rescore-heldout/

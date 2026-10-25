@@ -1,0 +1,463 @@
+{
+ "id": "consignment-invoice-063",
+ "slug": "consignment-invoice",
+ "lane": "rules",
+ "ts": "2026-10-23T17:13:17.798Z",
+ "attempts": 1,
+ "packs": [
+  {
+   "id": "iso-dates",
+   "instruction": "Write every date in the format YYYY-MM-DD.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Distribuciones Ibérica SL",
+     "Name 2": "",
+     "Street 1": "Avenida Diagonal 220",
+     "Street 2": "",
+     "City": "Madrid",
+     "Postal Code": "28001",
+     "Country": "Spain",
+     "Country Code": "ES",
+     "VAT No": "ESB71725080",
+     "Contact Name": "Carlos García"
+    },
+    "Seller": {
+     "Name": "Talleres Mediterráneo SA",
+     "Name 2": "",
+     "Street 1": "Calle Mayor 15",
+     "Street 2": "",
+     "City": "Barcelona",
+     "Postal Code": "08001",
+     "Country": "Spain",
+     "Country Code": "ES",
+     "VAT No": "",
+     "Registration No": "ESB17922464",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "Avenida Diagonal 220",
+     "Street 2": "",
+     "City": "Madrid",
+     "Postal Code": "28001",
+     "Country": "Spain",
+     "Country Code": "ES",
+     "ShipTo": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Ship To Location Code": ""
+    },
+    "Consignment Details": {
+     "Consignment Number": "CSG-2026-96745",
+     "Consignment Date": "2026-05-15",
+     "Delivery Date": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "Payment Due Date": "2026-06-29",
+     "Currency Code": "EUR",
+     "Contact Name": "Carlos García"
+    },
+    "Items": [
+     {
+      "Article ID": "SNS-67595",
+      "Article Name": "Pressure Sensor PS-10",
+      "Description": "0-10 bar, 4-20mA",
+      "Order Number": "",
+      "Quantity": "37",
+      "UOM": "box",
+      "Serial Number": "",
+      "Lot Number": "LOT170511",
+      "Unit Price": "161.29",
+      "Net Amount": "5967.73",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "CBL-42836",
+      "Article Name": "Cable Assembly 3m",
+      "Description": "Shielded, 3 meter",
+      "Order Number": "",
+      "Quantity": "31",
+      "UOM": "box",
+      "Serial Number": "SN81741554",
+      "Lot Number": "LOT814732",
+      "Unit Price": "83.98",
+      "Net Amount": "2603.38",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "BRG-20512",
+      "Article Name": "Ball Bearing 6204",
+      "Description": "Sealed, C3 clearance",
+      "Order Number": "",
+      "Quantity": "35",
+      "UOM": "kg",
+      "Serial Number": "",
+      "Lot Number": "LOT833573",
+      "Unit Price": "366.00",
+      "Net Amount": "12810.00",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "VAL-31481",
+      "Article Name": "Control Valve DN50",
+      "Description": "Brass body",
+      "Order Number": "",
+      "Quantity": "42",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "LOT319529",
+      "Unit Price": "4.23",
+      "Net Amount": "177.66",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Methods": "IBAN",
+     "Subtotal": "21558.77",
+     "Tax": [
+      {
+       "tax_code": "IVA",
+       "tax_total": "4527.34",
+       "rate": "21",
+       "exchange_rate": "",
+       "Code": "IVA",
+       "Amount": "4527.34",
+       "Rate": "21",
+       "Exchange Rate": ""
+      },
+      {
+       "tax_code": "RE",
+       "tax_total": "1121.06",
+       "rate": "5.2",
+       "exchange_rate": "",
+       "Code": "RE",
+       "Amount": "1121.06",
+       "Rate": "5.2",
+       "Exchange Rate": ""
+      }
+     ],
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Total": "27207.17",
+     "Amount Due": "",
+     "Payment Reference": ""
+    },
+    "Barcodes": [
+     {
+      "Text": "(01)00386879839058(17)280915(10)LOT170511"
+     },
+     {
+      "Text": "(01)00944525338937(17)280515(10)LOT814732(21)SN81741554"
+     },
+     {
+      "Text": "(01)00570903222644(17)280615(10)LOT833573"
+     }
+    ],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 0,
+    "changes": [],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "category": "dates",
+      "changed_count": 0,
+      "coverage": {
+       "applied": 2,
+       "computed": true,
+       "expected": 2,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "consignment-invoice",
+      "engine": "code",
+      "expected_targets": [
+       "Consignment Details.Consignment Date",
+       "Consignment Details.Payment Due Date"
+      ],
+      "fields_changed": [],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "YYYY-MM-DD",
+      "scope": "category",
+      "status": "applied",
+      "text": "Write every date in the format YYYY-MM-DD.",
+      "transform": "date_format"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    }
+   },
+   "expect": {
+    "id": "iso-dates",
+    "expect": {
+     "Consignment Details.Consignment Date": "2026-05-15",
+     "Consignment Details.Payment Due Date": "2026-06-29"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  },
+  {
+   "id": "upper-seller-name",
+   "instruction": "Write the Seller's name in capital letters.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Distribuciones Ibérica SL",
+     "Name 2": "",
+     "Street 1": "Avenida Diagonal 220",
+     "Street 2": "",
+     "City": "Madrid",
+     "Postal Code": "28001",
+     "Country": "Spain",
+     "Country Code": "ES",
+     "VAT No": "ESB71725080",
+     "Contact Name": "Carlos García"
+    },
+    "Seller": {
+     "Name": "TALLERES MEDITERRÁNEO SA",
+     "Name 2": "",
+     "Street 1": "Calle Mayor 15",
+     "Street 2": "",
+     "City": "Barcelona",
+     "Postal Code": "08001",
+     "Country": "Spain",
+     "Country Code": "ES",
+     "VAT No": "",
+     "Registration No": "ESB17922464",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "Avenida Diagonal 220",
+     "Street 2": "",
+     "City": "Madrid",
+     "Postal Code": "28001",
+     "Country": "Spain",
+     "Country Code": "ES",
+     "ShipTo": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Ship To Location Code": ""
+    },
+    "Consignment Details": {
+     "Consignment Number": "CSG-2026-96745",
+     "Consignment Date": "15/05/2026",
+     "Delivery Date": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "Payment Due Date": "29/06/2026",
+     "Currency Code": "EUR",
+     "Contact Name": "Carlos García"
+    },
+    "Items": [
+     {
+      "Article ID": "SNS-67595",
+      "Article Name": "Pressure Sensor PS-10",
+      "Description": "0-10 bar, 4-20mA",
+      "Order Number": "",
+      "Quantity": "37",
+      "UOM": "box",
+      "Serial Number": "",
+      "Lot Number": "LOT170511",
+      "Unit Price": "161.29",
+      "Net Amount": "5967.73",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "CBL-42836",
+      "Article Name": "Cable Assembly 3m",
+      "Description": "Shielded, 3 meter",
+      "Order Number": "",
+      "Quantity": "31",
+      "UOM": "box",
+      "Serial Number": "SN81741554",
+      "Lot Number": "LOT814732",
+      "Unit Price": "83.98",
+      "Net Amount": "2603.38",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "BRG-20512",
+      "Article Name": "Ball Bearing 6204",
+      "Description": "Sealed, C3 clearance",
+      "Order Number": "",
+      "Quantity": "35",
+      "UOM": "kg",
+      "Serial Number": "",
+      "Lot Number": "LOT833573",
+      "Unit Price": "366.00",
+      "Net Amount": "12810.00",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "VAL-31481",
+      "Article Name": "Control Valve DN50",
+      "Description": "Brass body",
+      "Order Number": "",
+      "Quantity": "42",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "LOT319529",
+      "Unit Price": "4.23",
+      "Net Amount": "177.66",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Methods": "IBAN",
+     "Subtotal": "21558.77",
+     "Tax": [
+      {
+       "tax_code": "IVA",
+       "tax_total": "4527.34",
+       "rate": "21",
+       "exchange_rate": "",
+       "Code": "IVA",
+       "Amount": "4527.34",
+       "Rate": "21",
+       "Exchange Rate": ""
+      },
+      {
+       "tax_code": "RE",
+       "tax_total": "1121.06",
+       "rate": "5.2",
+       "exchange_rate": "",
+       "Code": "RE",
+       "Amount": "1121.06",
+       "Rate": "5.2",
+       "Exchange Rate": ""
+      }
+     ],
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Total": "27207.17",
+     "Amount Due": "",
+     "Payment Reference": ""
+    },
+    "Barcodes": [
+     {
+      "Text": "(01)00386879839058(17)280915(10)LOT170511"
+     },
+     {
+      "Text": "(01)00944525338937(17)280515(10)LOT814732(21)SN81741554"
+     },
+     {
+      "Text": "(01)00570903222644(17)280615(10)LOT833573"
+     }
+    ],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 1,
+    "changes": [
+     {
+      "after": "TALLERES MEDITERRÁNEO SA",
+      "attributed": true,
+      "before": "Talleres Mediterráneo SA",
+      "change_type": "reformatted",
+      "field_path": "Seller.Name",
+      "in_scope": true,
+      "instruction_id": 1,
+      "reason": "The model applied instruction #1's mechanical transform (case -> upper), verified deterministically (re-applying the transform to the before value reproduces the change exactly): \"Write the Seller's name in capital letters.\""
+     }
+    ],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "changed_count": 1,
+      "coverage": {
+       "applied": 1,
+       "computed": true,
+       "expected": 1,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "consignment-invoice",
+      "engine": "code",
+      "expected_targets": [
+       "Seller.Name"
+      ],
+      "fields_changed": [
+       "Seller.Name"
+      ],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "upper",
+      "scope": "field",
+      "section": "Seller",
+      "status": "applied",
+      "targets": [
+       "Name"
+      ],
+      "text": "Write the Seller's name in capital letters.",
+      "transform": "case"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    },
+    "summary": "1 field(s) changed by the custom instructions: 1 attributed deterministically to their instruction."
+   },
+   "expect": {
+    "id": "upper-seller-name",
+    "expect": {
+     "Seller.Name": "TALLERES MEDITERRÁNEO SA"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  }
+ ],
+ "ok": true
+}

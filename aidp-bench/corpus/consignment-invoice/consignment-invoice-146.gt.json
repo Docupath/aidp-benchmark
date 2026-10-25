@@ -1,0 +1,187 @@
+{
+ "id": "consignment-invoice-146",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "bundle": false,
+  "missingTotals": false,
+  "mismatch": false,
+  "stickerMismatch": true
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Westbrook Pharma Ltd",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB678870677",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Albion Components Ltd",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB619717441",
+   "Registration No": "GB-977757",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-81299",
+   "Consignment Date": "14/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "28/01/2026",
+   "Currency Code": "GBP",
+   "Contact Name": "Oliver Bennett"
+  },
+  "Items": [
+   {
+    "Article ID": "MAINT-08501",
+    "Article Name": "Maintenance Contract",
+    "Description": "Quarterly service",
+    "Order Number": "",
+    "Quantity": "2",
+    "UOM": "set",
+    "Serial Number": "SN49676304",
+    "Lot Number": "LOT709868",
+    "Unit Price": "184.36",
+    "Net Amount": "368.72",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "FRT-16703",
+    "Article Name": "Freight & Handling",
+    "Description": "Road transport",
+    "Order Number": "",
+    "Quantity": "40",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "LOT531286",
+    "Unit Price": "246.79",
+    "Net Amount": "9871.60",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "MAINT-84982",
+    "Article Name": "Maintenance Contract",
+    "Description": "Quarterly service",
+    "Order Number": "",
+    "Quantity": "36",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "LOT657092",
+    "Unit Price": "9.85",
+    "Net Amount": "354.60",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "TRN-34815",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Quantity": "3",
+    "UOM": "EA",
+    "Serial Number": "SN21043130",
+    "Lot Number": "LOT777691",
+    "Unit Price": "434.90",
+    "Net Amount": "1304.70",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "11899.62",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "2379.92",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "14279.54",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "facts": [
+  {
+   "label": "Document Number",
+   "value": "CSG-2026-81299"
+  },
+  {
+   "label": "Date",
+   "value": "14/01/2026",
+   "soft": true
+  },
+  {
+   "label": "Buyer Name",
+   "value": "Westbrook Pharma Ltd"
+  },
+  {
+   "label": "Seller Name",
+   "value": "Albion Components Ltd"
+  },
+  {
+   "label": "Total",
+   "value": "14279.54"
+  }
+ ],
+ "expected_flags": [],
+ "expected_derived": [],
+ "expected_flags_future": [
+  {
+   "field": "Items.0.Lot Number",
+   "kind": "barcode-mismatch",
+   "printed": "LOT709868",
+   "sticker": "LOT991080"
+  }
+ ]
+}

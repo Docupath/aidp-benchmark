@@ -1,0 +1,409 @@
+{
+ "id": "consignment-invoice-092",
+ "slug": "consignment-invoice",
+ "lane": "rules",
+ "ts": "2026-10-23T17:13:20.573Z",
+ "attempts": 1,
+ "packs": [
+  {
+   "id": "iso-dates",
+   "instruction": "Write every date in the format YYYY-MM-DD.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Docupath Solutions Lda",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "VAT No": "PT434740499",
+     "Contact Name": "João Silva"
+    },
+    "Seller": {
+     "Name": "Atlântico Distribuição SA",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "VAT No": "PT450174945",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "ShipTo": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Ship To Location Code": ""
+    },
+    "Consignment Details": {
+     "Consignment Number": "CSG-2026-44378",
+     "Consignment Date": "2026-02-15",
+     "Delivery Date": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "Payment Due Date": "2026-04-01",
+     "Currency Code": "EUR",
+     "Contact Name": "João Silva"
+    },
+    "Items": [
+     {
+      "Article ID": "WGT-32296",
+      "Article Name": "Widget Pro 2000",
+      "Description": "Precision widget, anodized",
+      "Order Number": "",
+      "Quantity": "4",
+      "UOM": "EA",
+      "Serial Number": "SN03051363",
+      "Lot Number": "LOT091822",
+      "Unit Price": "82.41",
+      "Net Amount": "329.64",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "CBL-51883",
+      "Article Name": "Cable Assembly 3m",
+      "Description": "Shielded, 3 meter",
+      "Order Number": "",
+      "Quantity": "22",
+      "UOM": "box",
+      "Serial Number": "SN13233453",
+      "Lot Number": "LOT855632",
+      "Unit Price": "60.69",
+      "Net Amount": "1335.18",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "FLT-74502",
+      "Article Name": "Filter Cartridge F9",
+      "Description": "HEPA class",
+      "Order Number": "",
+      "Quantity": "50",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "LOT997373",
+      "Unit Price": "300.39",
+      "Net Amount": "15019.50",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Methods": "IBAN",
+     "Subtotal": "16684.32",
+     "Tax": [
+      {
+       "tax_code": "IVA",
+       "tax_total": "3837.39",
+       "rate": "23",
+       "exchange_rate": "",
+       "Code": "IVA",
+       "Amount": "3837.39",
+       "Rate": "23",
+       "Exchange Rate": ""
+      }
+     ],
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Total": "20521.71",
+     "Amount Due": "",
+     "Payment Reference": ""
+    },
+    "Barcodes": [
+     {
+      "Text": "(01)00602724582260(17)280615(10)LOT091822(21)SN03051363"
+     },
+     {
+      "Text": "(01)00777952731992(17)280415(10)LOT855632(21)SN13233453"
+     },
+     {
+      "Text": "(01)00932472010419(17)280415(10)LOT997373"
+     }
+    ],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 0,
+    "changes": [],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "category": "dates",
+      "changed_count": 0,
+      "coverage": {
+       "applied": 2,
+       "computed": true,
+       "expected": 2,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "consignment-invoice",
+      "engine": "code",
+      "expected_targets": [
+       "Consignment Details.Consignment Date",
+       "Consignment Details.Payment Due Date"
+      ],
+      "fields_changed": [],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "YYYY-MM-DD",
+      "scope": "category",
+      "status": "applied",
+      "text": "Write every date in the format YYYY-MM-DD.",
+      "transform": "date_format"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    }
+   },
+   "expect": {
+    "id": "iso-dates",
+    "expect": {
+     "Consignment Details.Consignment Date": "2026-02-15",
+     "Consignment Details.Payment Due Date": "2026-04-01"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  },
+  {
+   "id": "upper-seller-name",
+   "instruction": "Write the Seller's name in capital letters.",
+   "extraction": {
+    "Buyer": {
+     "Name": "Docupath Solutions Lda",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "VAT No": "PT434740499",
+     "Contact Name": "João Silva"
+    },
+    "Seller": {
+     "Name": "ATLÂNTICO DISTRIBUIÇÃO SA",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "VAT No": "PT450174945",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "Rua Augusta 100",
+     "Street 2": "",
+     "City": "Porto",
+     "Postal Code": "4000-322",
+     "Country": "Portugal",
+     "Country Code": "PT",
+     "ShipTo": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Ship To Location Code": ""
+    },
+    "Consignment Details": {
+     "Consignment Number": "CSG-2026-44378",
+     "Consignment Date": "15/02/2026",
+     "Delivery Date": "",
+     "Payment Terms": "Payment due within 30 days.",
+     "Payment Due Date": "01/04/2026",
+     "Currency Code": "EUR",
+     "Contact Name": "João Silva"
+    },
+    "Items": [
+     {
+      "Article ID": "WGT-32296",
+      "Article Name": "Widget Pro 2000",
+      "Description": "Precision widget, anodized",
+      "Order Number": "",
+      "Quantity": "4",
+      "UOM": "EA",
+      "Serial Number": "SN03051363",
+      "Lot Number": "LOT091822",
+      "Unit Price": "82.41",
+      "Net Amount": "329.64",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "CBL-51883",
+      "Article Name": "Cable Assembly 3m",
+      "Description": "Shielded, 3 meter",
+      "Order Number": "",
+      "Quantity": "22",
+      "UOM": "box",
+      "Serial Number": "SN13233453",
+      "Lot Number": "LOT855632",
+      "Unit Price": "60.69",
+      "Net Amount": "1335.18",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     },
+     {
+      "Article ID": "FLT-74502",
+      "Article Name": "Filter Cartridge F9",
+      "Description": "HEPA class",
+      "Order Number": "",
+      "Quantity": "50",
+      "UOM": "EA",
+      "Serial Number": "",
+      "Lot Number": "LOT997373",
+      "Unit Price": "300.39",
+      "Net Amount": "15019.50",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Methods": "IBAN",
+     "Subtotal": "16684.32",
+     "Tax": [
+      {
+       "tax_code": "IVA",
+       "tax_total": "3837.39",
+       "rate": "23",
+       "exchange_rate": "",
+       "Code": "IVA",
+       "Amount": "3837.39",
+       "Rate": "23",
+       "Exchange Rate": ""
+      }
+     ],
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Total": "20521.71",
+     "Amount Due": "",
+     "Payment Reference": ""
+    },
+    "Barcodes": [
+     {
+      "Text": "(01)00602724582260(17)280615(10)LOT091822(21)SN03051363"
+     },
+     {
+      "Text": "(01)00777952731992(17)280415(10)LOT855632(21)SN13233453"
+     },
+     {
+      "Text": "(01)00932472010419(17)280415(10)LOT997373"
+     }
+    ],
+    "Flags": []
+   },
+   "impact": {
+    "applied": true,
+    "changed_fields": 1,
+    "changes": [
+     {
+      "after": "ATLÂNTICO DISTRIBUIÇÃO SA",
+      "attributed": true,
+      "before": "Atlântico Distribuição SA",
+      "change_type": "reformatted",
+      "field_path": "Seller.Name",
+      "in_scope": true,
+      "instruction_id": 1,
+      "reason": "The model applied instruction #1's mechanical transform (case -> upper), verified deterministically (re-applying the transform to the before value reproduces the change exactly): \"Write the Seller's name in capital letters.\""
+     }
+    ],
+    "computed": true,
+    "instructions": [
+     {
+      "applied_by": "code",
+      "changed_count": 1,
+      "coverage": {
+       "applied": 1,
+       "computed": true,
+       "expected": 1,
+       "missed": []
+      },
+      "deterministic": true,
+      "doc_type": "consignment-invoice",
+      "engine": "code",
+      "expected_targets": [
+       "Seller.Name"
+      ],
+      "fields_changed": [
+       "Seller.Name"
+      ],
+      "id": 1,
+      "origin_scope": "global",
+      "param": "upper",
+      "scope": "field",
+      "section": "Seller",
+      "status": "applied",
+      "targets": [
+       "Name"
+      ],
+      "text": "Write the Seller's name in capital letters.",
+      "transform": "case"
+     }
+    ],
+    "parse_coverage": {
+     "accounted": 1,
+     "computed": true,
+     "gap": false,
+     "input_units": 1,
+     "unaccounted": 0
+    },
+    "summary": "1 field(s) changed by the custom instructions: 1 attributed deterministically to their instruction."
+   },
+   "expect": {
+    "id": "upper-seller-name",
+    "expect": {
+     "Seller.Name": "ATLÂNTICO DISTRIBUIÇÃO SA"
+    },
+    "may_also_change": []
+   },
+   "cache_hit": false,
+   "ok": true
+  }
+ ],
+ "ok": true
+}

@@ -1,0 +1,11 @@
+{
+ "purpose": "Held-out check. The reference run's frozen release is run on newly generated documents that did not exist when the release was frozen, so its result cannot come from having seen them.",
+ "release_under_test": "5bd21304cc7f8cbb0fb8ac851457a6cdabbd0b97, the reference run's release (frozen 23 October 2026), on the reference run's dedicated instance with the same flags file (sha256 c6947904d75b552f07822d009ad064987741487027971f258a1d0cbaded8a041)",
+ "seed_rule": "The seed is the text 'aidp-heldout-v1:' followed by the randomness of drand round 6579746 on the League of Entropy mainnet chain 8990e7a9aaed2ffed73dbd7092123d6f289930540d7651336225dc172e51b2ce, the round published at 2026-10-24 12:00:00 IST. Anyone can read that round at https://api.drand.sh/public/6579746 and check it against the chain's signature.",
+ "corpus": "corpus-gen/generate.mjs at this commit, unchanged since 908e4b6, which regenerates AIDP-2K byte for byte from the seed docupath-corpus-v1: --count 200 over the ten AIDP-2K types (invoice, purchase-order, credit-note, receipt, quote, freight-invoice, consignment-order, consignment-invoice, bank-statement, general-contract) with the seed above.",
+ "sample": "For each type, the 200 ids sorted by the SHA-256 hex digest of seed + ':' + id, ascending, and the first 30 taken: 300 documents.",
+ "repeat_sample": "For each of the six field-key types (invoice, purchase-order, credit-note, freight-invoice, consignment-order, consignment-invoice), the first 10 of that type's sample in the same order: 60 documents, three full-lane runs each with the extraction cache bypassed.",
+ "lanes": "Full lane only (pipeline): the rendered PDF submitted as a customer submits it. The text lane is not run, because no measure in the AIDP Score uses it.",
+ "account": "A new, clean tenant (tag aidp-v1-heldout-main, and aidp-v1-heldout-stability for the repeats), so nothing the reference run's account built up is available to it.",
+ "scoring": "bench/ at this commit; no scoring rule has changed since e431a6d. The AIDP Score over the same sixteen measures, Repeatability from the repeat sample, and the same bootstrap (2,000 resamples within each type) for the 95% range."
+}

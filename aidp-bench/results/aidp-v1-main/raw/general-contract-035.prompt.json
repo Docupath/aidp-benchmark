@@ -1,0 +1,399 @@
+{
+ "id": "general-contract-035",
+ "slug": "general-contract",
+ "lane": "prompt",
+ "ts": "2026-10-23T09:02:17.958Z",
+ "attempts": 1,
+ "ms": 9491,
+ "extraction": {
+  "Party A": {
+   "Name": "Zürichsee Handels AG",
+   "Role": "Party A",
+   "Organization": "Zürichsee Handels AG",
+   "Email": "",
+   "Phone": "",
+   "Address": "Bahnhofstrasse 12",
+   "City": "Genève",
+   "Postal Code": "",
+   "Country": "Switzerland",
+   "Country Code": "CH"
+  },
+  "Party B": {
+   "Name": "Alpina Medical SA",
+   "Role": "Party B",
+   "Organization": "Alpina Medical SA",
+   "Email": "",
+   "Phone": "",
+   "Address": "Industriestrasse 55",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH"
+  },
+  "Contract Details": {
+   "Contract Title": "MASTER SERVICES AGREEMENT",
+   "Contract Type": "master services agreement",
+   "Contract Number": "",
+   "Effective Date": "25/03/2026",
+   "Execution Date": "25/03/2026",
+   "Expiration Date": "25/03/2029",
+   "Termination Date": "",
+   "Renewal Terms": "",
+   "Governing Law": "Swedish law",
+   "Jurisdiction": "",
+   "Confidentiality Clause": "Each party shall keep confidential all non-public information received from the other party and shall use it solely for the purposes of this Agreement.",
+   "Dispute Resolution": "",
+   "Auto-Renew": "",
+   "Notice Period": ""
+  },
+  "Financial Terms": {
+   "Payment Terms": "",
+   "Payment Method": "",
+   "Currency": "",
+   "Total Contract Value": "",
+   "Installment Structure": "",
+   "Penalties or Late Fees": ""
+  },
+  "Obligations": {
+   "Party A Obligations": "Each party shall keep confidential all non-public information received from the other party and shall use it solely for the purposes of this Agreement.",
+   "Party B Obligations": "Each party shall keep confidential all non-public information received from the other party and shall use it solely for the purposes of this Agreement.",
+   "Delivery Schedule": ""
+  },
+  "Signatures": {
+   "Signed By Party A": "Marc Dubois",
+   "Signed By Party B": "Beat Steiner",
+   "Date Signed by Party A": "25/03/2026",
+   "Date Signed by Party B": "25/03/2026",
+   "Signing Method": ""
+  },
+  "Attachments": {
+   "Appendix List": "",
+   "Referenced Documents": "Section 7"
+  },
+  "Metadata": {
+   "Contract Status": "",
+   "Contract Template": "",
+   "Tags": "",
+   "Template Group": "",
+   "Revision History": "",
+   "Last Modified Date": ""
+  },
+  "Audit Trail": {
+   "Document Created": "",
+   "Sent Date": "",
+   "Viewed By": "",
+   "View Timestamp": "",
+   "Edited By": "",
+   "Edited Date": ""
+  },
+  "Flags": []
+ },
+ "derived_fields": {
+  "applied": false,
+  "derivations": [],
+  "derived_count": 0,
+  "flagged_count": 0,
+  "recovered_count": 0
+ },
+ "field_confidence": {
+  "applied": true,
+  "empty_fields": 33,
+  "evidence_inputs": {
+   "analyze_result": false,
+   "native_layer": "absent",
+   "ocr_quality": null,
+   "ocr_text": true,
+   "summary": false,
+   "unaccounted_dates": []
+  },
+  "fields": {
+   "Attachments.Referenced Documents": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Confidentiality Clause": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Contract Title": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Contract Type": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Contract Details.Effective Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"25.03.2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Contract Details.Execution Date": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"25.03.2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Contract Details.Expiration Date": {
+    "c": 0.7,
+    "justification": "the term is 36 months from the effective date 25.03.2026, so it expires on 25/03/2029",
+    "placement": "unknown",
+    "source": "inferred",
+    "tier": "medium",
+    "validity": 0.7
+   },
+   "Contract Details.Governing Law": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Obligations.Party A Obligations": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Obligations.Party B Obligations": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"CH\" is the standard ISO 3166-1 alpha-2 country code for \"Switzerland\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Party A.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Organization": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party A.Role": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Address": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.City": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Country": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Country Code": {
+    "c": 0.97,
+    "checks": [
+     "country_code",
+     "derived_from_sibling"
+    ],
+    "fidelity": 0.92,
+    "justification": "\"CH\" is the standard ISO 3166-1 alpha-2 country code for \"Switzerland\", this section's Country, so it was filled in from that country name via the ISO 3166 standard rather than read as text off the page",
+    "page": 1,
+    "placement": "unknown",
+    "source": "normalized",
+    "tier": "high",
+    "validity": 0.9
+   },
+   "Party B.Name": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Organization": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Postal Code": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Party B.Role": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "unknown",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Signatures.Date Signed by Party A": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"25.03.2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Signatures.Date Signed by Party B": {
+    "c": 0.9,
+    "checks": [
+     "normalized_match"
+    ],
+    "fidelity": 0.88,
+    "justification": "printed on the page as \"25.03.2026\"; shown here in a standardized date format",
+    "page": 1,
+    "placement": "confirmed",
+    "source": "normalized",
+    "tier": "high"
+   },
+   "Signatures.Signed By Party A": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   },
+   "Signatures.Signed By Party B": {
+    "c": 0.9,
+    "fidelity": 0.93,
+    "page": 1,
+    "placement": "confirmed",
+    "source": "exact",
+    "tier": "high"
+   }
+  },
+  "low_confidence_count": 0,
+  "mean_confidence": 0.898,
+  "model_derivations": {
+   "Contract Details.Effective Date": "converted from the printed date 25.03.2026 to DD/MM/YYYY format",
+   "Contract Details.Execution Date": "the agreement is entered into as of 25.03.2026 and the signature date is also 25.03.2026, so that is the execution date",
+   "Contract Details.Expiration Date": "the term is 36 months from the effective date 25.03.2026, so it expires on 25/03/2029",
+   "Party A.Country": "the address line ends with Switzerland, so the country is Switzerland",
+   "Party A.Country Code": "the country is Switzerland, so the ISO alpha-2 code is CH",
+   "Party B.Country": "the address line ends with Switzerland, so the country is Switzerland",
+   "Party B.Country Code": "the country is Switzerland, so the ISO alpha-2 code is CH",
+   "Signatures.Date Signed by Party A": "converted from the printed signature date 25.03.2026 to DD/MM/YYYY format",
+   "Signatures.Date Signed by Party B": "converted from the printed signature date 25.03.2026 to DD/MM/YYYY format",
+   "Signatures.Signed By Party A": "taken from the signature block entry Zürichsee Handels AG / Marc Dubois",
+   "Signatures.Signed By Party B": "taken from the signature block entry Alpina Medical SA / Beat Steiner"
+  },
+  "scored_fields": 29
+ },
+ "impact": {
+  "applied": false,
+  "changed_fields": 0,
+  "changes": [],
+  "computed": false
+ },
+ "cache_hit": false,
+ "doc_type": "general-contract",
+ "document_id": "01a167ff-298a-76e7-850a-7dbaeab1afca",
+ "request_id": "27485b95-11b7-405f-947a-60357c99d66d",
+ "ok": true
+}

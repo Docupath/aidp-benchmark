@@ -1,0 +1,2341 @@
+{
+ "about": "Field data the AIDP-2K generator reads, frozen for the v1.0 corpus. Data only. It covers the ten AIDP-2K document types.",
+ "fields_version": "1.0",
+ "registry": [
+  {
+   "slug": "invoice",
+   "display": "Invoice"
+  },
+  {
+   "slug": "purchase-order",
+   "display": "Purchase Order"
+  },
+  {
+   "slug": "credit-note",
+   "display": "Credit Note"
+  },
+  {
+   "slug": "freight-invoice",
+   "display": "Freight Invoice"
+  },
+  {
+   "slug": "consignment-invoice",
+   "display": "Consignment Invoice"
+  },
+  {
+   "slug": "consignment-order",
+   "display": "Consignment Order"
+  },
+  {
+   "slug": "quote",
+   "display": "Quote"
+  },
+  {
+   "slug": "receipt",
+   "display": "Receipt"
+  },
+  {
+   "slug": "bank-statement",
+   "display": "Bank Statement"
+  },
+  {
+   "slug": "general-contract",
+   "display": "General Contract"
+  }
+ ],
+ "types": {
+  "invoice": {
+   "schemaFieldList": "Buyer: Name, Address, City, Postal Code, Country, Country Code\nSeller: Name, Address, City, Postal Code, Country, Country Code, VAT No, Registration No\nRemit To: Name, Street, Street 2, City, Province, Postal Code, Country, Country Code\nShipping Details: Ship To Name, Address, City, Postal Code, Country, Country Code, Shipping Method, Tracking Number\nInvoice Details: Invoice Type, Invoice Number, Compromisso Code, Invoice Date, Period Start Date, Period End Date, Delivery Date, Delivery Note No, Payment Terms, GRN No, Due Date, Cost Center, Your Reference, Posting Date, Net Amount, Total Tax, Total Amount, Rounding Amount, Currency Code, Purchase Order Number\nItems: Item No, Period Start Date, Period End Date, Article ID, Article Name, Description, Order Number, Size, Color, Your Reference Number, Quantity, UOM, Serial Number, Lot Number, Unit Price, Net Amount, Tax Rate, Tax Amount, Note Number, Buyer Article ID, Discount Amount, Discount %, Gross Amount\nPayment Details: Payment Details Description, Payment Methods, Invoice Amount, Rounding Amount, Tax Amount, Tax Rate, Exchange Rate, Tax Amount Diff, Tax, Payment Reference, UUID, Total, Amount Due\nBarcodes: Text",
+   "structureView": {
+    "Buyer": {
+     "Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Legal Registration No": "",
+     "Electronic Address": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "VAT No": "",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Seller": {
+     "Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "VAT No": "",
+     "Registration No": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Electronic Address": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "Tax Registration No": "",
+     "Additional Legal Information": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Identifier": "",
+     "Legal Registration No": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Location Identifier": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": ""
+    },
+    "Invoice Details": {
+     "Invoice Type": "",
+     "Invoice Number": "",
+     "Compromisso Code": "",
+     "Invoice Date": "",
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "",
+     "GRN No": "",
+     "Due Date": "",
+     "Cost Center": "",
+     "Your Reference": "",
+     "Posting Date": "",
+     "Net Amount": "",
+     "Total Tax": "",
+     "Total Amount": "",
+     "Rounding Amount": "",
+     "Currency Code": "",
+     "Purchase Order Number": "",
+     "Buyer Reference": "",
+     "VAT Accounting Currency Code": "",
+     "Tax Point Date": "",
+     "Tax Point Date Code": "",
+     "Buyer Accounting Reference": "",
+     "Total Allowances Amount": "",
+     "Total Charges Amount": "",
+     "Total Tax In Accounting Currency": "",
+     "Paid Amount": ""
+    },
+    "Items": [
+     {
+      "Item No": "",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "",
+      "Article Name": "",
+      "Description": "",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "",
+      "UOM": "",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "",
+      "Net Amount": "",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": "",
+      "Line Identifier": "",
+      "Line Object Identifier": "",
+      "PO Line Reference": "",
+      "Buyer Accounting Reference": "",
+      "Price Discount": "",
+      "Price Base Quantity": "",
+      "Price Base Quantity UOM": "",
+      "Tax Category Code": "",
+      "Standard Identifier": "",
+      "Classification Identifier": "",
+      "Country Of Origin": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "",
+     "Payment Methods": [
+      {
+       "Method": "",
+       "payment_method": "Method",
+       "Account Number": "",
+       "account_no": "Account Number",
+       "BIC/Swift Code": "",
+       "BIC_or_Swift_code": "BIC/Swift Code",
+       "Method Text": "",
+       "Account Name": "",
+       "Card Account Number": "",
+       "Card Holder Name": ""
+      }
+     ],
+     "Invoice Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "",
+     "Tax Rate": "",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [
+      {
+       "Code": "",
+       "tax_code": "Code",
+       "Amount": "",
+       "tax_total": "Amount",
+       "Rate": "",
+       "rate": "Rate",
+       "Exchange Rate": "",
+       "exchange_rate": "Exchange Rate",
+       "Taxable Amount": "",
+       "Exemption Reason": "",
+       "Exemption Reason Code": ""
+      }
+     ],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [
+     {
+      "Text": ""
+     }
+    ],
+    "Process Control": {
+     "Business Process Type": "",
+     "Specification Identifier": ""
+    },
+    "Document References": {
+     "Project Reference": "",
+     "Contract Reference": "",
+     "Sales Order Reference": "",
+     "Receiving Advice Reference": "",
+     "Despatch Advice Reference": "",
+     "Tender Or Lot Reference": "",
+     "Invoiced Object Identifier": ""
+    },
+    "Supporting Documents": [
+     {
+      "Reference": "",
+      "Description": "",
+      "External Location": "",
+      "Attachment": ""
+     }
+    ],
+    "Preceding Invoices": [
+     {
+      "Invoice Number": "",
+      "Issue Date": ""
+     }
+    ],
+    "Tax Representative": {
+     "Name": "",
+     "VAT No": "",
+     "Address Line 1": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "City": "",
+     "Postal Code": "",
+     "Country Subdivision": "",
+     "Country Code": ""
+    },
+    "Document Allowances": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Document Charges": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Flags": [
+     {
+      "Flag_Name": "",
+      "Label": "Flag_Name",
+      "Flag Name": "Flag_Name"
+     }
+    ]
+   }
+  },
+  "purchase-order": {
+   "schemaFieldList": "Buyer: Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, VAT No\nSeller: Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code\nRemit To: Name, Name 2, Street 1, Street 2, City, Province, Postal Code, Country, Country Code\nShipping Details: Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, ShipTo, Shipping Method, Tracking Number\nOrder Details: PO Number, Compromisso Code, PO Date, Delivery Date, Delivery Note No, Payment Terms, Due Date, Cost Center, Your Reference, Posting Date, Net Amount, Total Amount, Rounding Amount, Currency Code, Contact Name\nItems: Article ID, Article Name, Description, Order Number, Size, Color, Your Reference Number, Quantity, UOM, Serial Number, Lot Number, Unit Price, Net Amount, Tax Rate, Tax Amount, Note Number, Buyer Article ID, Discount Amount, Discount %, Gross Amount\nPayment Details: Payment Details Description, Subtotal, Tax Rate, Exchange Rate, Tax Amount Difference, Tax, Total, Amount Due, Payment Reference, UUID\nPayment Methods: Payment Method, Account Number, BIC/SWIFT Code\nAdditional Fields: Payment Notes\nBarcodes: Text",
+   "structureView": {
+    "Buyer": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "VAT No": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Legal Registration No": "",
+     "Electronic Address": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Seller": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Legal Registration No": "",
+     "Electronic Address": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "Tax Registration No": "",
+     "Additional Legal Information": "",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Remit To": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Identifier": "",
+     "Legal Registration No": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "ShipTo": "",
+     "Ship To Location Code": "ShipTo",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Address Line 3": "",
+     "Country Subdivision": ""
+    },
+    "Order Details": {
+     "PO Number": "",
+     "Compromisso Code": "",
+     "PO Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "",
+     "Due Date": "",
+     "Cost Center": "",
+     "Your Reference": "",
+     "Posting Date": "",
+     "Net Amount": "",
+     "Total Amount": "",
+     "Rounding Amount": "",
+     "Currency Code": "",
+     "Contact Name": "",
+     "Buyer Reference": "",
+     "VAT Accounting Currency Code": "",
+     "Tax Point Date": "",
+     "Tax Point Date Code": "",
+     "Buyer Accounting Reference": "",
+     "Total Allowances Amount": "",
+     "Total Charges Amount": "",
+     "Total Tax In Accounting Currency": "",
+     "Paid Amount": "",
+     "Period Start Date": "",
+     "Period End Date": ""
+    },
+    "Items": [
+     {
+      "Article ID": "",
+      "Article Name": "",
+      "Description": "",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "",
+      "UOM": "",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "",
+      "Net Amount": "",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": "",
+      "Line Identifier": "",
+      "Line Object Identifier": "",
+      "PO Line Reference": "",
+      "Buyer Accounting Reference": "",
+      "Price Discount": "",
+      "Price Base Quantity": "",
+      "Price Base Quantity UOM": "",
+      "Tax Category Code": "",
+      "Standard Identifier": "",
+      "Classification Identifier": "",
+      "Country Of Origin": "",
+      "Period Start Date": "",
+      "Period End Date": ""
+     }
+    ],
+    "Payment Methods": [
+     {
+      "Method": "",
+      "Payment Method": "Method",
+      "Account Number": "",
+      "BIC/Swift Code": "",
+      "BIC/SWIFT Code": "BIC/Swift Code",
+      "Method Text": "",
+      "Account Name": "",
+      "Card Account Number": "",
+      "Card Holder Name": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "",
+     "Subtotal": "",
+     "Tax Rate": "",
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Tax": [
+      {
+       "Code": "",
+       "tax_code": "Code",
+       "Amount": "",
+       "tax_total": "Amount",
+       "Rate": "",
+       "rate": "Rate",
+       "Exchange Rate": "",
+       "exchange_rate": "Exchange Rate",
+       "Taxable Amount": "",
+       "Exemption Reason": "",
+       "Exemption Reason Code": ""
+      }
+     ],
+     "Total": "",
+     "Amount Due": "",
+     "Payment Reference": "",
+     "UUID": "",
+     "Payment Methods": [
+      {
+       "Method": "",
+       "Payment Method": "Method",
+       "Account Number": "",
+       "BIC/Swift Code": "",
+       "BIC/SWIFT Code": "BIC/Swift Code",
+       "Method Text": "",
+       "Account Name": "",
+       "Card Account Number": "",
+       "Card Holder Name": ""
+      }
+     ]
+    },
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [
+     {
+      "Text": ""
+     }
+    ],
+    "Process Control": {
+     "Business Process Type": "",
+     "Specification Identifier": ""
+    },
+    "Document References": {
+     "Project Reference": "",
+     "Contract Reference": "",
+     "Sales Order Reference": "",
+     "Receiving Advice Reference": "",
+     "Despatch Advice Reference": "",
+     "Tender Or Lot Reference": "",
+     "Invoiced Object Identifier": ""
+    },
+    "Supporting Documents": [
+     {
+      "Reference": "",
+      "Description": "",
+      "External Location": "",
+      "Attachment": ""
+     }
+    ],
+    "Preceding Invoices": [
+     {
+      "Invoice Number": "",
+      "Issue Date": ""
+     }
+    ],
+    "Tax Representative": {
+     "Name": "",
+     "VAT No": "",
+     "Address Line 1": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "City": "",
+     "Postal Code": "",
+     "Country Subdivision": "",
+     "Country Code": ""
+    },
+    "Document Allowances": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Document Charges": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Flags": [
+     {
+      "Flag_Name": "",
+      "Label": "Flag_Name",
+      "Flag Name": "Flag_Name"
+     }
+    ]
+   }
+  },
+  "credit-note": {
+   "schemaFieldList": "Buyer: Name, Address, City, Postal Code, Country, Country Code\nSeller: Name, Address, City, Postal Code, Country, Country Code, VAT No, Registration No\nRemit To: Name, Street, Street 2, City, Province, Postal Code, Country, Country Code\nShipping Details: Ship To Name, Address, City, Postal Code, Country, Country Code, Shipping Method, Tracking Number\nInvoice Details: Invoice Type, Invoice Number, Compromisso Code, Invoice Date, Period Start Date, Period End Date, Delivery Date, Delivery Note No, Payment Terms, GRN No, Due Date, Cost Center, Your Reference, Posting Date, Net Amount, Total Tax, Total Amount, Rounding Amount, Currency Code, Purchase Order Number\nItems: Item No, Period Start Date, Period End Date, Article ID, Article Name, Description, Order Number, Size, Color, Your Reference Number, Quantity, UOM, Serial Number, Lot Number, Unit Price, Net Amount, Tax Rate, Tax Amount, Note Number, Buyer Article ID, Discount Amount, Discount %, Gross Amount\nPayment Details: Payment Details Description, Payment Methods, Invoice Amount, Rounding Amount, Tax Amount, Tax Rate, Exchange Rate, Tax Amount Diff, Tax, Payment Reference, UUID, Total, Amount Due\nAdditional Fields: Payment Notes\nBarcodes: Text",
+   "structureView": {
+    "Buyer": {
+     "Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Legal Registration No": "",
+     "Electronic Address": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "VAT No": "",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Seller": {
+     "Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "VAT No": "",
+     "Registration No": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Electronic Address": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "Tax Registration No": "",
+     "Additional Legal Information": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Identifier": "",
+     "Legal Registration No": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Location Identifier": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": ""
+    },
+    "Invoice Details": {
+     "Invoice Type": "",
+     "Invoice Number": "",
+     "Compromisso Code": "",
+     "Invoice Date": "",
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Delivery Date": "",
+     "Delivery Note No": "",
+     "Payment Terms": "",
+     "GRN No": "",
+     "Due Date": "",
+     "Cost Center": "",
+     "Your Reference": "",
+     "Posting Date": "",
+     "Net Amount": "",
+     "Total Tax": "",
+     "Total Amount": "",
+     "Rounding Amount": "",
+     "Currency Code": "",
+     "Purchase Order Number": "",
+     "Buyer Reference": "",
+     "VAT Accounting Currency Code": "",
+     "Tax Point Date": "",
+     "Tax Point Date Code": "",
+     "Buyer Accounting Reference": "",
+     "Total Allowances Amount": "",
+     "Total Charges Amount": "",
+     "Total Tax In Accounting Currency": "",
+     "Paid Amount": ""
+    },
+    "Items": [
+     {
+      "Item No": "",
+      "Period Start Date": "",
+      "Period End Date": "",
+      "Article ID": "",
+      "Article Name": "",
+      "Description": "",
+      "Order Number": "",
+      "Size": "",
+      "Color": "",
+      "Your Reference Number": "",
+      "Quantity": "",
+      "UOM": "",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "",
+      "Net Amount": "",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": "",
+      "Line Identifier": "",
+      "Line Object Identifier": "",
+      "PO Line Reference": "",
+      "Buyer Accounting Reference": "",
+      "Price Discount": "",
+      "Price Base Quantity": "",
+      "Price Base Quantity UOM": "",
+      "Tax Category Code": "",
+      "Standard Identifier": "",
+      "Classification Identifier": "",
+      "Country Of Origin": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "",
+     "Payment Methods": [
+      {
+       "Method": "",
+       "payment_method": "Method",
+       "Account Number": "",
+       "account_no": "Account Number",
+       "BIC/Swift Code": "",
+       "BIC_or_Swift_code": "BIC/Swift Code",
+       "Method Text": "",
+       "Account Name": "",
+       "Card Account Number": "",
+       "Card Holder Name": ""
+      }
+     ],
+     "Invoice Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "",
+     "Tax Rate": "",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [
+      {
+       "Code": "",
+       "tax_code": "Code",
+       "Amount": "",
+       "tax_total": "Amount",
+       "Rate": "",
+       "rate": "Rate",
+       "Exchange Rate": "",
+       "exchange_rate": "Exchange Rate",
+       "Taxable Amount": "",
+       "Exemption Reason": "",
+       "Exemption Reason Code": ""
+      }
+     ],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [
+     {
+      "Text": ""
+     }
+    ],
+    "Process Control": {
+     "Business Process Type": "",
+     "Specification Identifier": ""
+    },
+    "Document References": {
+     "Project Reference": "",
+     "Contract Reference": "",
+     "Sales Order Reference": "",
+     "Receiving Advice Reference": "",
+     "Despatch Advice Reference": "",
+     "Tender Or Lot Reference": "",
+     "Invoiced Object Identifier": ""
+    },
+    "Supporting Documents": [
+     {
+      "Reference": "",
+      "Description": "",
+      "External Location": "",
+      "Attachment": ""
+     }
+    ],
+    "Preceding Invoices": [
+     {
+      "Invoice Number": "",
+      "Issue Date": ""
+     }
+    ],
+    "Tax Representative": {
+     "Name": "",
+     "VAT No": "",
+     "Address Line 1": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "City": "",
+     "Postal Code": "",
+     "Country Subdivision": "",
+     "Country Code": ""
+    },
+    "Document Allowances": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Document Charges": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Flags": [
+     {
+      "Flag_Name": "",
+      "Label": "Flag_Name",
+      "Flag Name": "Flag_Name"
+     }
+    ]
+   }
+  },
+  "freight-invoice": {
+   "schemaFieldList": "Buyer: Name, Address, City, Postal Code, Country, Country Code\nSeller: Name, Address, City, Postal Code, Country, Country Code, VAT No, Registration No\nInvoice Details: Invoice Number, Invoice Date, Due Date, Payment Terms, Currency Code, Net Amount, Total Tax, Total Amount\nPayment Details: Payment Details Description\nFreight Shipments: Shipment Reference, Job Number, Mode Of Transport, Service Level, Carrier Name, Carrier Code, Booking Number, Master Bill Of Lading, House Bill Of Lading, Vessel Name, Voyage Number, Ship From, Ship To, Origin Location, Departure Location, Origin Country Code, Departure Date, Destination Location, Arrival Location, Destination Country Code, Arrival Date, Incoterms, Customer Reference, Shipper Reference, Customs Reference, Packages, Weight, Chargeable Weight, Volume, Equipment Type, Containers, Shipment Total, Line Charges\nContainers: Container ID, Equipment Type\nCharges: Charge Group, Charge Code, Description, Shipment Reference, Job Number, Currency, Amount, Rate, VAT Rate, VAT Amount, PrepaidOrCollect\nPayment Methods: payment_method, account_no, BIC_or_Swift_code, Payment Reference\nTax: tax_code, tax_total, rate\nLine Charges (nested): Charge Group, Charge Code, Description, Currency, Amount, Rate, VAT Rate, VAT Amount, PrepaidOrCollect\nShip From (nested): Company Name, Street Address, Postal Code, City, Country\nShip To (nested): Company Name, Street Address, Postal Code, City, Country\nDeparture Location (nested): Postal Code, City, IATA Code, UNLOC Code\nArrival Location (nested): Postal Code, City, IATA Code, UNLOC Code\n\"Invoice Charges\" in the returned document = the table \"Charges\" here; use \"Charges\" as the items name\n\"Invoice Containers\" in the returned document = the table \"Containers\" here; use \"Containers\" as the items name\n\"Line Containers\" in the returned document = the table \"Freight Shipments.Containers\" here; use \"Freight Shipments.Containers\" as the items name",
+   "structureView": {
+    "Buyer": {
+     "Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Legal Registration No": "",
+     "Electronic Address": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "VAT No": "",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Seller": {
+     "Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "VAT No": "",
+     "Registration No": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Electronic Address": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "Tax Registration No": "",
+     "Additional Legal Information": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Invoice Details": {
+     "Invoice Number": "",
+     "Invoice Date": "",
+     "Due Date": "",
+     "Payment Terms": "",
+     "Currency Code": "",
+     "Net Amount": "",
+     "Total Tax": "",
+     "Total Amount": "",
+     "Buyer Reference": "",
+     "VAT Accounting Currency Code": "",
+     "Tax Point Date": "",
+     "Tax Point Date Code": "",
+     "Buyer Accounting Reference": "",
+     "Total Allowances Amount": "",
+     "Total Charges Amount": "",
+     "Total Tax In Accounting Currency": "",
+     "Paid Amount": "",
+     "Period Start Date": "",
+     "Period End Date": ""
+    },
+    "Payment Methods": [
+     {
+      "payment_method": "",
+      "Method": "payment_method",
+      "Payment Method": "payment_method",
+      "account_no": "",
+      "Account Number": "account_no",
+      "Account No": "account_no",
+      "BIC_or_Swift_code": "",
+      "BIC/Swift Code": "BIC_or_Swift_code",
+      "BIC Or Swift Code": "BIC_or_Swift_code",
+      "Payment Reference": "",
+      "Method Text": "",
+      "Account Name": "",
+      "Card Account Number": "",
+      "Card Holder Name": ""
+     }
+    ],
+    "Tax": [
+     {
+      "tax_code": "",
+      "Code": "tax_code",
+      "Tax Code": "tax_code",
+      "tax_total": "",
+      "Amount": "tax_total",
+      "Tax Total": "tax_total",
+      "rate": "",
+      "Rate": "rate",
+      "Exchange Rate": "",
+      "Taxable Amount": "",
+      "Exemption Reason": "",
+      "Exemption Reason Code": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "",
+     "Payment Methods": [
+      {
+       "payment_method": "",
+       "Method": "payment_method",
+       "Payment Method": "payment_method",
+       "account_no": "",
+       "Account Number": "account_no",
+       "Account No": "account_no",
+       "BIC_or_Swift_code": "",
+       "BIC/Swift Code": "BIC_or_Swift_code",
+       "BIC Or Swift Code": "BIC_or_Swift_code",
+       "Payment Reference": "",
+       "Method Text": "",
+       "Account Name": "",
+       "Card Account Number": "",
+       "Card Holder Name": ""
+      }
+     ],
+     "Tax": [
+      {
+       "tax_code": "",
+       "Code": "tax_code",
+       "Tax Code": "tax_code",
+       "tax_total": "",
+       "Amount": "tax_total",
+       "Tax Total": "tax_total",
+       "rate": "",
+       "Rate": "rate",
+       "Exchange Rate": "",
+       "Taxable Amount": "",
+       "Exemption Reason": "",
+       "Exemption Reason Code": ""
+      }
+     ]
+    },
+    "Freight Shipments": [
+     {
+      "Shipment Reference": "",
+      "Job Number": "",
+      "Mode Of Transport": "",
+      "Service Level": "",
+      "Carrier Name": "",
+      "Carrier Code": "",
+      "Booking Number": "",
+      "Master Bill Of Lading": "",
+      "House Bill Of Lading": "",
+      "Vessel Name": "",
+      "Voyage Number": "",
+      "Ship From": "",
+      "Ship To": "",
+      "Origin Location": "",
+      "Departure Location": "",
+      "Origin Country Code": "",
+      "Departure Date": "",
+      "Destination Location": "",
+      "Arrival Location": "",
+      "Destination Country Code": "",
+      "Arrival Date": "",
+      "Incoterms": "",
+      "Customer Reference": "",
+      "Shipper Reference": "",
+      "Customs Reference": "",
+      "Packages": "",
+      "Weight": "",
+      "Chargeable Weight": "",
+      "Volume": "",
+      "Equipment Type": "",
+      "Containers": "",
+      "Shipment Total": "",
+      "Line Charges": ""
+     }
+    ],
+    "Ship From": [
+     {
+      "ID": "",
+      "Company Name": "",
+      "Street Address": "",
+      "Postal Code": "",
+      "City": "",
+      "Country": ""
+     }
+    ],
+    "Ship To": [
+     {
+      "ID": "",
+      "Company Name": "",
+      "Street Address": "",
+      "Postal Code": "",
+      "City": "",
+      "Country": ""
+     }
+    ],
+    "Departure Location": [
+     {
+      "ID": "",
+      "Postal Code": "",
+      "City": "",
+      "IATA Code": "",
+      "UNLOC Code": ""
+     }
+    ],
+    "Arrival Location": [
+     {
+      "ID": "",
+      "Postal Code": "",
+      "City": "",
+      "IATA Code": "",
+      "UNLOC Code": ""
+     }
+    ],
+    "Line Containers": [
+     {
+      "ID": "",
+      "Container ID": "",
+      "Equipment Type": ""
+     }
+    ],
+    "Line Charges": [
+     {
+      "Charge ID": "",
+      "Charge Group": "",
+      "Charge Code": "",
+      "Description": "",
+      "Currency": "",
+      "Amount": "",
+      "Rate": "",
+      "VAT Rate": "",
+      "VAT Amount": "",
+      "PrepaidOrCollect": "",
+      "Charge Payment Term": "PrepaidOrCollect"
+     }
+    ],
+    "Invoice Containers": [
+     {
+      "Container ID": "",
+      "Equipment Type": ""
+     }
+    ],
+    "Invoice Charges": [
+     {
+      "Charge Group": "",
+      "Charge Code": "",
+      "Description": "",
+      "Shipment Reference": "",
+      "Job Number": "",
+      "Currency": "",
+      "Amount": "",
+      "Rate": "",
+      "VAT Rate": "",
+      "VAT Amount": "",
+      "PrepaidOrCollect": "",
+      "Charge Payment Term": "PrepaidOrCollect"
+     }
+    ],
+    "Barcodes": [
+     {
+      "Text": ""
+     }
+    ],
+    "Process Control": {
+     "Business Process Type": "",
+     "Specification Identifier": ""
+    },
+    "Document References": {
+     "Project Reference": "",
+     "Contract Reference": "",
+     "Sales Order Reference": "",
+     "Receiving Advice Reference": "",
+     "Despatch Advice Reference": "",
+     "Tender Or Lot Reference": "",
+     "Invoiced Object Identifier": ""
+    },
+    "Supporting Documents": [
+     {
+      "Reference": "",
+      "Description": "",
+      "External Location": "",
+      "Attachment": ""
+     }
+    ],
+    "Preceding Invoices": [
+     {
+      "Invoice Number": "",
+      "Issue Date": ""
+     }
+    ],
+    "Payee": {
+     "Name": "",
+     "Identifier": "",
+     "Legal Registration No": ""
+    },
+    "Tax Representative": {
+     "Name": "",
+     "VAT No": "",
+     "Address Line 1": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "City": "",
+     "Postal Code": "",
+     "Country Subdivision": "",
+     "Country Code": ""
+    },
+    "Delivery": {
+     "Party Name": "",
+     "Location Identifier": "",
+     "Address Line 1": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "City": "",
+     "Postal Code": "",
+     "Country Subdivision": "",
+     "Country Code": ""
+    },
+    "Document Allowances": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Document Charges": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Flags": [
+     {
+      "Flag_Name": "",
+      "Label": "Flag_Name",
+      "Flag Name": "Flag_Name"
+     }
+    ]
+   }
+  },
+  "consignment-invoice": {
+   "schemaFieldList": "Buyer: Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, VAT No, Contact Name\nSeller: Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, VAT No, Registration No, GLN No, Email\nShipping Details: Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, ShipTo, Shipping Method, Tracking Number\nConsignment Details: Consignment Number, Consignment Date, Delivery Date, Payment Terms, Payment Due Date, Currency Code, Contact Name\nItems: Article ID, Article Name, Description, Order Number, Quantity, UOM, Serial Number, Lot Number, Unit Price, Net Amount, Tax Rate, Tax Amount, Discount Amount, Discount %, Gross Amount\nPayment Details: Payment Methods, Subtotal, Tax, Exchange Rate, Tax Amount Difference, Total, Amount Due, Payment Reference\nBarcodes: Text",
+   "structureView": {
+    "Buyer": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "VAT No": "",
+     "Contact Name": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Legal Registration No": "",
+     "Electronic Address": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Seller": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "VAT No": "",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Electronic Address": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Tax Registration No": "",
+     "Additional Legal Information": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "ShipTo": "",
+     "Ship To Location Code": "ShipTo",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Address Line 3": "",
+     "Country Subdivision": ""
+    },
+    "Consignment Details": {
+     "Consignment Number": "",
+     "Consignment Date": "",
+     "Delivery Date": "",
+     "Payment Terms": "",
+     "Payment Due Date": "",
+     "Currency Code": "",
+     "Contact Name": "",
+     "Buyer Reference": "",
+     "VAT Accounting Currency Code": "",
+     "Tax Point Date": "",
+     "Tax Point Date Code": "",
+     "Buyer Accounting Reference": "",
+     "Total Allowances Amount": "",
+     "Total Charges Amount": "",
+     "Total Tax In Accounting Currency": "",
+     "Paid Amount": "",
+     "Period Start Date": "",
+     "Period End Date": ""
+    },
+    "Items": [
+     {
+      "Article ID": "",
+      "Article Name": "",
+      "Description": "",
+      "Order Number": "",
+      "Quantity": "",
+      "UOM": "",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "",
+      "Net Amount": "",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": "",
+      "Line Identifier": "",
+      "Line Object Identifier": "",
+      "PO Line Reference": "",
+      "Buyer Accounting Reference": "",
+      "Price Discount": "",
+      "Price Base Quantity": "",
+      "Price Base Quantity UOM": "",
+      "Tax Category Code": "",
+      "Standard Identifier": "",
+      "Classification Identifier": "",
+      "Country Of Origin": "",
+      "Period Start Date": "",
+      "Period End Date": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Methods": "",
+     "Subtotal": "",
+     "Tax": [
+      {
+       "Code": "",
+       "tax_code": "Code",
+       "Amount": "",
+       "tax_total": "Amount",
+       "Rate": "",
+       "rate": "Rate",
+       "Exchange Rate": "",
+       "exchange_rate": "Exchange Rate",
+       "Taxable Amount": "",
+       "Exemption Reason": "",
+       "Exemption Reason Code": ""
+      }
+     ],
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Total": "",
+     "Amount Due": "",
+     "Payment Reference": ""
+    },
+    "Barcodes": [
+     {
+      "Text": ""
+     }
+    ],
+    "Process Control": {
+     "Business Process Type": "",
+     "Specification Identifier": ""
+    },
+    "Document References": {
+     "Project Reference": "",
+     "Contract Reference": "",
+     "Sales Order Reference": "",
+     "Receiving Advice Reference": "",
+     "Despatch Advice Reference": "",
+     "Tender Or Lot Reference": "",
+     "Invoiced Object Identifier": ""
+    },
+    "Supporting Documents": [
+     {
+      "Reference": "",
+      "Description": "",
+      "External Location": "",
+      "Attachment": ""
+     }
+    ],
+    "Preceding Invoices": [
+     {
+      "Invoice Number": "",
+      "Issue Date": ""
+     }
+    ],
+    "Payee": {
+     "Name": "",
+     "Identifier": "",
+     "Legal Registration No": ""
+    },
+    "Tax Representative": {
+     "Name": "",
+     "VAT No": "",
+     "Address Line 1": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "City": "",
+     "Postal Code": "",
+     "Country Subdivision": "",
+     "Country Code": ""
+    },
+    "Document Allowances": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Document Charges": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Flags": [
+     {
+      "Flag_Name": "",
+      "Label": "Flag_Name",
+      "Flag Name": "Flag_Name"
+     }
+    ]
+   }
+  },
+  "consignment-order": {
+   "schemaFieldList": "Buyer: Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, VAT No, Contact Name\nSeller: Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, VAT No, Registration No, GLN No, Email\nShipping Details: Name, Name 2, Street 1, Street 2, City, Postal Code, Country, Country Code, ShipTo, Shipping Method, Tracking Number\nConsignment Details: Consignment Number, Consignment Date, Delivery Date, Payment Terms, Payment Due Date, Currency Code, Contact Name\nItems: Article ID, Article Name, Description, Order Number, Quantity, UOM, Serial Number, Lot Number, Unit Price, Net Amount, Tax Rate, Tax Amount, Discount Amount, Discount %, Gross Amount\nPayment Details: Payment Methods, Subtotal, Tax, Exchange Rate, Tax Amount Difference, Total, Amount Due, Payment Reference\nBarcodes: Text",
+   "structureView": {
+    "Buyer": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "VAT No": "",
+     "Contact Name": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Legal Registration No": "",
+     "Electronic Address": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Seller": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "VAT No": "",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Electronic Address": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Tax Registration No": "",
+     "Additional Legal Information": ""
+    },
+    "Shipping Details": {
+     "Name": "",
+     "Name 2": "",
+     "Street 1": "",
+     "Street 2": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "ShipTo": "",
+     "Ship To Location Code": "ShipTo",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Address Line 3": "",
+     "Country Subdivision": ""
+    },
+    "Consignment Details": {
+     "Consignment Number": "",
+     "Consignment Date": "",
+     "Delivery Date": "",
+     "Payment Terms": "",
+     "Payment Due Date": "",
+     "Currency Code": "",
+     "Contact Name": "",
+     "Buyer Reference": "",
+     "VAT Accounting Currency Code": "",
+     "Tax Point Date": "",
+     "Tax Point Date Code": "",
+     "Buyer Accounting Reference": "",
+     "Total Allowances Amount": "",
+     "Total Charges Amount": "",
+     "Total Tax In Accounting Currency": "",
+     "Paid Amount": "",
+     "Period Start Date": "",
+     "Period End Date": ""
+    },
+    "Items": [
+     {
+      "Article ID": "",
+      "Article Name": "",
+      "Description": "",
+      "Order Number": "",
+      "Quantity": "",
+      "UOM": "",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "",
+      "Net Amount": "",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount": "",
+      "Line Identifier": "",
+      "Line Object Identifier": "",
+      "PO Line Reference": "",
+      "Buyer Accounting Reference": "",
+      "Price Discount": "",
+      "Price Base Quantity": "",
+      "Price Base Quantity UOM": "",
+      "Tax Category Code": "",
+      "Standard Identifier": "",
+      "Classification Identifier": "",
+      "Country Of Origin": "",
+      "Period Start Date": "",
+      "Period End Date": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Methods": "",
+     "Subtotal": "",
+     "Tax": [
+      {
+       "Code": "",
+       "tax_code": "Code",
+       "Amount": "",
+       "tax_total": "Amount",
+       "Rate": "",
+       "rate": "Rate",
+       "Exchange Rate": "",
+       "exchange_rate": "Exchange Rate",
+       "Taxable Amount": "",
+       "Exemption Reason": "",
+       "Exemption Reason Code": ""
+      }
+     ],
+     "Exchange Rate": "",
+     "Tax Amount Difference": "",
+     "Total": "",
+     "Amount Due": "",
+     "Payment Reference": ""
+    },
+    "Barcodes": [
+     {
+      "Text": ""
+     }
+    ],
+    "Process Control": {
+     "Business Process Type": "",
+     "Specification Identifier": ""
+    },
+    "Document References": {
+     "Project Reference": "",
+     "Contract Reference": "",
+     "Sales Order Reference": "",
+     "Receiving Advice Reference": "",
+     "Despatch Advice Reference": "",
+     "Tender Or Lot Reference": "",
+     "Invoiced Object Identifier": ""
+    },
+    "Supporting Documents": [
+     {
+      "Reference": "",
+      "Description": "",
+      "External Location": "",
+      "Attachment": ""
+     }
+    ],
+    "Preceding Invoices": [
+     {
+      "Invoice Number": "",
+      "Issue Date": ""
+     }
+    ],
+    "Payee": {
+     "Name": "",
+     "Identifier": "",
+     "Legal Registration No": ""
+    },
+    "Tax Representative": {
+     "Name": "",
+     "VAT No": "",
+     "Address Line 1": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "City": "",
+     "Postal Code": "",
+     "Country Subdivision": "",
+     "Country Code": ""
+    },
+    "Document Allowances": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Document Charges": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Flags": [
+     {
+      "Flag_Name": "",
+      "Label": "Flag_Name",
+      "Flag Name": "Flag_Name"
+     }
+    ]
+   }
+  },
+  "quote": {
+   "schemaFieldList": "Buyer: Name, Address, City, Postal Code, Country, Country Code\nSeller: Name, Address, City, Postal Code, Country, Country Code, VAT No, Registration No\nRemit To: Name, Street, Street 2, City, Province, Postal Code, Country, Country Code\nShipping Details: Ship To Name, Address, City, Postal Code, Country, Country Code, Shipping Method, Tracking Number\nQuote Details: Quote Type, Quote Number, Quote Date, Delivery Date, Delivery Note No, Payment Terms, GRN No, Due Date, Ref/Cost Center, Posting Date, Net Amount, Total Tax, Total Amount, Rounding Amount, Currency Code, Purchase Order Number\nItems: Article ID, Article Name, Description, Order Number, Your Reference Number, Quantity, UOM, Serial Number, Lot Number, Unit Price, Net Amount, Tax Rate, Tax Amount, Note Number, Buyer Article ID, Discount, Gross Amount\nPayment Details: Payment Details Description, Payment Methods, Quote Amount, Rounding Amount, Tax Amount, Tax Rate, Exchange Rate, Tax Amount Diff, Tax, Payment Reference, UUID, Total, Amount Due\nAdditional Fields: Payment Notes\nBarcodes: Text",
+   "structureView": {
+    "Buyer": {
+     "Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Legal Registration No": "",
+     "Electronic Address": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "VAT No": "",
+     "Registration No": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Seller": {
+     "Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "VAT No": "",
+     "Registration No": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Electronic Address": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Contact Email": "",
+     "Tax Registration No": "",
+     "Additional Legal Information": "",
+     "GLN No": "",
+     "Email": ""
+    },
+    "Remit To": {
+     "Name": "",
+     "Street": "",
+     "Street 2": "",
+     "City": "",
+     "Province": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Identifier": "",
+     "Legal Registration No": ""
+    },
+    "Shipping Details": {
+     "Ship To Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Shipping Method": "",
+     "Tracking Number": "",
+     "Location Identifier": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": ""
+    },
+    "Quote Details": {
+     "Quote Type": "",
+     "Quote Type(Credit/Debit)": "Quote Type",
+     "Quote Number": "",
+     "Quote Date": "",
+     "Quote Date(DD/MM/YYYY)": "Quote Date",
+     "Delivery Date": "",
+     "Delivery Date(DD/MM/YYYY)": "Delivery Date",
+     "Delivery Note No": "",
+     "Payment Terms": "",
+     "GRN No": "",
+     "Due Date": "",
+     "Due Date(DD/MM/YYYY)": "Due Date",
+     "Ref/Cost Center": "",
+     "Posting Date": "",
+     "Posting Date(DD/MM/YYYY)": "Posting Date",
+     "Net Amount": "",
+     "Total Tax": "",
+     "Total Amount": "",
+     "Rounding Amount": "",
+     "Currency Code": "",
+     "Purchase Order Number": "",
+     "Buyer Reference": "",
+     "VAT Accounting Currency Code": "",
+     "Tax Point Date": "",
+     "Tax Point Date Code": "",
+     "Buyer Accounting Reference": "",
+     "Total Allowances Amount": "",
+     "Total Charges Amount": "",
+     "Total Tax In Accounting Currency": "",
+     "Paid Amount": "",
+     "Period Start Date": "",
+     "Period End Date": ""
+    },
+    "Items": [
+     {
+      "Article ID": "",
+      "Article Name": "",
+      "Description": "",
+      "Order Number": "",
+      "Your Reference Number": "",
+      "Quantity": "",
+      "UOM": "",
+      "Serial Number": "",
+      "Lot Number": "",
+      "Unit Price": "",
+      "Net Amount": "",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Note Number": "",
+      "Buyer Article ID": "",
+      "Discount": "",
+      "Gross Amount": "",
+      "Line Identifier": "",
+      "Line Object Identifier": "",
+      "PO Line Reference": "",
+      "Buyer Accounting Reference": "",
+      "Price Discount": "",
+      "Price Base Quantity": "",
+      "Price Base Quantity UOM": "",
+      "Tax Category Code": "",
+      "Standard Identifier": "",
+      "Classification Identifier": "",
+      "Country Of Origin": "",
+      "Period Start Date": "",
+      "Period End Date": ""
+     }
+    ],
+    "Payment Details": {
+     "Payment Details Description": "",
+     "Payment Methods": [
+      {
+       "Method": "",
+       "payment_method": "Method",
+       "Account Number": "",
+       "account_no": "Account Number",
+       "BIC/Swift Code": "",
+       "BIC_or_Swift_code": "BIC/Swift Code",
+       "Method Text": "",
+       "Account Name": "",
+       "Card Account Number": "",
+       "Card Holder Name": ""
+      }
+     ],
+     "Quote Amount": "",
+     "Rounding Amount": "",
+     "Tax Amount": "",
+     "Tax Rate": "",
+     "Exchange Rate": "",
+     "Tax Amount Diff": "",
+     "Tax": [
+      {
+       "Code": "",
+       "tax_code": "Code",
+       "Amount": "",
+       "tax_total": "Amount",
+       "Rate": "",
+       "rate": "Rate",
+       "Exchange Rate": "",
+       "exchange_rate": "Exchange Rate",
+       "Taxable Amount": "",
+       "Exemption Reason": "",
+       "Exemption Reason Code": ""
+      }
+     ],
+     "Payment Reference": "",
+     "UUID": "",
+     "Total": "",
+     "Amount Due": ""
+    },
+    "Additional Fields": {
+     "Payment Notes": ""
+    },
+    "Barcodes": [
+     {
+      "Text": ""
+     }
+    ],
+    "Process Control": {
+     "Business Process Type": "",
+     "Specification Identifier": ""
+    },
+    "Document References": {
+     "Project Reference": "",
+     "Contract Reference": "",
+     "Sales Order Reference": "",
+     "Receiving Advice Reference": "",
+     "Despatch Advice Reference": "",
+     "Tender Or Lot Reference": "",
+     "Invoiced Object Identifier": ""
+    },
+    "Supporting Documents": [
+     {
+      "Reference": "",
+      "Description": "",
+      "External Location": "",
+      "Attachment": ""
+     }
+    ],
+    "Preceding Invoices": [
+     {
+      "Invoice Number": "",
+      "Issue Date": ""
+     }
+    ],
+    "Tax Representative": {
+     "Name": "",
+     "VAT No": "",
+     "Address Line 1": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "City": "",
+     "Postal Code": "",
+     "Country Subdivision": "",
+     "Country Code": ""
+    },
+    "Document Allowances": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Document Charges": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Flags": [
+     {
+      "Flag_Name": "",
+      "Label": "Flag_Name",
+      "Flag Name": "Flag_Name"
+     }
+    ]
+   }
+  },
+  "receipt": {
+   "schemaFieldList": "Customer: Name, VAT No, Loyalty/Member ID, Email\nMerchant: Name, Store/Branch Name, Address, City, Postal Code, Country, Country Code, Phone, Email, Website, Tax/Registration ID\nReceipt Details: Receipt Number, Order/Check Number, Control Number / Control Slip No., Date, Time, Currency Code, Table / Seat / Guests, Order Type, Register/Terminal ID, Cashier/Server, Store ID / Location Code, Notes\nTotals: Subtotal Net, Discounts Total, Service Charge, Tip/Gratuity, Rounding Amount, Total Tax, Total Amount, Amount Paid, Change Due, Prices Include Tax (Yes/No)\nItems: Line Number, Article ID, Article Name, Description, Category Code, Quantity, UOM, Unit Price, Net Amount, Tax ID, Tax Rate, Tax Amount, Discount Amount, Discount %, Gross Amount (with tax)\nPayments: Payment Method, Amount, Currency Code, Card Scheme, Masked PAN, Approval/Auth Code, Transaction/Reference ID, Merchant ID, Terminal ID, Entry Mode, AID, Note\nTax Summary: Tax ID, Tax Type, Code, Rate, Taxable Amount, Tax Amount, Total With Tax\nBarcodes: Text\nFooter Notes: Notes",
+   "structureView": {
+    "Customer": {
+     "Name": "",
+     "VAT No": "",
+     "Loyalty/Member ID": "",
+     "Email": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Legal Registration No": "",
+     "Electronic Address": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Contact Phone": "",
+     "Registration No": "",
+     "GLN No": ""
+    },
+    "Merchant": {
+     "Name": "",
+     "Store/Branch Name": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": "",
+     "Phone": "",
+     "Email": "",
+     "Website": "",
+     "Tax/Registration ID": "",
+     "Trading Name": "",
+     "Identifier": "",
+     "Electronic Address": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "Country Subdivision": "",
+     "Contact Name": "",
+     "Additional Legal Information": "",
+     "VAT No": "",
+     "Registration No": "",
+     "GLN No": ""
+    },
+    "Receipt Details": {
+     "Receipt Number": "",
+     "Order/Check Number": "",
+     "Control Number / Control Slip No.": "",
+     "Date": "",
+     "Time": "",
+     "Currency Code": "",
+     "Table / Seat / Guests": "",
+     "Order Type": "",
+     "Register/Terminal ID": "",
+     "Cashier/Server": "",
+     "Store ID / Location Code": "",
+     "Notes": ""
+    },
+    "Totals": {
+     "Subtotal Net": "",
+     "Discounts Total": "",
+     "Service Charge": "",
+     "Tip/Gratuity": "",
+     "Rounding Amount": "",
+     "Total Tax": "",
+     "Total Amount": "",
+     "Amount Paid": "",
+     "Change Due": "",
+     "Prices Include Tax (Yes/No)": "",
+     "Prices Include Tax": "Prices Include Tax (Yes/No)",
+     "Buyer Reference": "",
+     "VAT Accounting Currency Code": "",
+     "Tax Point Date": "",
+     "Tax Point Date Code": "",
+     "Buyer Accounting Reference": "",
+     "Total Allowances Amount": "",
+     "Total Charges Amount": "",
+     "Total Tax In Accounting Currency": "",
+     "Period Start Date": "",
+     "Period End Date": ""
+    },
+    "Items": [
+     {
+      "Line Number": "",
+      "Article ID": "",
+      "Article Name": "",
+      "Description": "",
+      "Category Code": "",
+      "Quantity": "",
+      "UOM": "",
+      "Unit Price": "",
+      "Net Amount (before tax/discount)": "",
+      "Net Amount": "Net Amount (before tax/discount)",
+      "Tax ID": "",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount Amount": "",
+      "Discount %": "",
+      "Gross Amount (with tax)": "",
+      "Gross Amount": "Gross Amount (with tax)",
+      "Line Object Identifier": "",
+      "PO Line Reference": "",
+      "Buyer Accounting Reference": "",
+      "Price Discount": "",
+      "Price Base Quantity": "",
+      "Price Base Quantity UOM": "",
+      "Tax Category Code": "",
+      "Standard Identifier": "",
+      "Classification Identifier": "",
+      "Country Of Origin": "",
+      "Period Start Date": "",
+      "Period End Date": ""
+     }
+    ],
+    "Payments": [
+     {
+      "Payment Method": "",
+      "Amount": "",
+      "Currency Code": "",
+      "Card Scheme": "",
+      "Masked PAN": "",
+      "Approval/Auth Code": "",
+      "Transaction/Reference ID": "",
+      "Merchant ID": "",
+      "Terminal ID": "",
+      "Entry Mode": "",
+      "AID": "",
+      "Note": "",
+      "Method Text": "",
+      "Account Name": "",
+      "Card Holder Name": ""
+     }
+    ],
+    "Tax Summary": [
+     {
+      "Tax ID": "",
+      "Tax Type": "",
+      "Code": "",
+      "Rate": "",
+      "Taxable Amount": "",
+      "Tax Amount": "",
+      "Total With Tax": "",
+      "Exchange Rate": "",
+      "Exemption Reason": "",
+      "Exemption Reason Code": ""
+     }
+    ],
+    "Barcodes": [
+     {
+      "Text": ""
+     }
+    ],
+    "Footer Notes": {
+     "Notes": ""
+    },
+    "Process Control": {
+     "Business Process Type": "",
+     "Specification Identifier": ""
+    },
+    "Document References": {
+     "Project Reference": "",
+     "Contract Reference": "",
+     "Sales Order Reference": "",
+     "Receiving Advice Reference": "",
+     "Despatch Advice Reference": "",
+     "Tender Or Lot Reference": "",
+     "Invoiced Object Identifier": ""
+    },
+    "Supporting Documents": [
+     {
+      "Reference": "",
+      "Description": "",
+      "External Location": "",
+      "Attachment": ""
+     }
+    ],
+    "Preceding Invoices": [
+     {
+      "Invoice Number": "",
+      "Issue Date": ""
+     }
+    ],
+    "Payee": {
+     "Name": "",
+     "Identifier": "",
+     "Legal Registration No": ""
+    },
+    "Tax Representative": {
+     "Name": "",
+     "VAT No": "",
+     "Address Line 1": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "City": "",
+     "Postal Code": "",
+     "Country Subdivision": "",
+     "Country Code": ""
+    },
+    "Delivery": {
+     "Party Name": "",
+     "Location Identifier": "",
+     "Address Line 1": "",
+     "Address Line 2": "",
+     "Address Line 3": "",
+     "City": "",
+     "Postal Code": "",
+     "Country Subdivision": "",
+     "Country Code": ""
+    },
+    "Document Allowances": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Document Charges": [
+     {
+      "Amount": "",
+      "Base Amount": "",
+      "Percentage": "",
+      "Tax Category Code": "",
+      "Tax Rate": "",
+      "Reason": "",
+      "Reason Code": ""
+     }
+    ],
+    "Flags": [
+     {
+      "Flag_Name": "",
+      "Label": "Flag_Name",
+      "Flag Name": "Flag_Name"
+     }
+    ]
+   }
+  },
+  "bank-statement": {
+   "schemaFieldList": "Statement Header: Name, Branch Name, Address, Branch Code / Identifier, SWIFT/BIC Code, IBAN, Japanese Bank Code, Japanese Branch Code, Statement Reference Number, Statement Date, Currency\nAccount Holder Information: Name, Address, Account Number, Account Type, Customer Reference, Tax Identifier\nStatement Period Summary: Period Start Date, Period End Date, Number of Days, Opening Balance, Closing Balance, Available Balance\nSummary & Totals: Total Debits, Total Credits, Total Fees, Total Interest Earned, Average Daily Balance\nTransaction Details: Transaction Date, Posting Date, Value Date, Transaction Category, Transaction Type, Transaction Method, Transaction Code, Card Type / Brand, Masked Card Number, Description / Memo, Merchant Name, Payee Name, Payer Name, Counterparty Account, Reference Number, Usage Type / Payment Mode, Original Amount, Original Currency, Conversion Rate, Foreign Transaction Fee, Debit Amount, Credit Amount, Running Balance, Currency\nFees & Interest: Fee Type, Fee Date, Fee Amount, Interest Rate, Interest Period, Interest Amount, Unit Price, Net Amount, Tax Rate, Tax Amount, Discount, Gross Amount",
+   "structureView": {
+    "Statement Header": {
+     "Name": "",
+     "Branch Name": "",
+     "Address": "",
+     "Branch Code / Identifier": "",
+     "SWIFT/BIC Code": "",
+     "IBAN": "",
+     "Japanese Bank Code": "",
+     "Japanese Branch Code": "",
+     "Statement Reference Number": "",
+     "Statement Date": "",
+     "Currency": ""
+    },
+    "Account Holder Information": {
+     "Name": "",
+     "Address": "",
+     "Account Number": "",
+     "Account Type": "",
+     "Customer Reference": "",
+     "Tax Identifier": ""
+    },
+    "Statement Period Summary": {
+     "Period Start Date": "",
+     "Period End Date": "",
+     "Number of Days": "",
+     "Opening Balance": "",
+     "Closing Balance": "",
+     "Available Balance": ""
+    },
+    "Summary & Totals": {
+     "Total Debits": "",
+     "Total Credits": "",
+     "Total Fees": "",
+     "Total Interest Earned": "",
+     "Average Daily Balance": ""
+    },
+    "Transaction Details": [
+     {
+      "Transaction Date": "",
+      "Posting Date": "",
+      "Value Date": "",
+      "Transaction Category": "",
+      "Transaction Type": "",
+      "Transaction Method": "",
+      "Transaction Code": "",
+      "Card Type / Brand": "",
+      "Masked Card Number": "",
+      "Description / Memo": "",
+      "Merchant Name": "",
+      "Payee Name": "",
+      "Payer Name": "",
+      "Counterparty Account": "",
+      "Reference Number": "",
+      "Usage Type / Payment Mode": "",
+      "Original Amount": "",
+      "Original Currency": "",
+      "Conversion Rate": "",
+      "Foreign Transaction Fee": "",
+      "Debit Amount": "",
+      "Credit Amount": "",
+      "Running Balance": "",
+      "Currency": ""
+     }
+    ],
+    "Fees & Interest": [
+     {
+      "Fee Type": "",
+      "Fee Date": "",
+      "Fee Amount": "",
+      "Interest Rate": "",
+      "Interest Period": "",
+      "Interest Amount": "",
+      "Unit Price": "",
+      "Net Amount": "",
+      "Tax Rate": "",
+      "Tax Amount": "",
+      "Discount": "",
+      "Gross Amount": ""
+     }
+    ],
+    "Flags": [
+     {
+      "Flag_Name": "",
+      "Label": "Flag_Name",
+      "Flag Name": "Flag_Name"
+     }
+    ]
+   }
+  },
+  "general-contract": {
+   "schemaFieldList": "Party A: Name, Role, Organization, Email, Phone, Address, City, Postal Code, Country, Country Code\nParty B: Name, Role, Organization, Email, Phone, Address, City, Postal Code, Country, Country Code\nContract Details: Contract Title, Contract Type, Contract Number, Effective Date, Execution Date, Expiration Date, Termination Date, Renewal Terms, Governing Law, Jurisdiction, Confidentiality Clause, Dispute Resolution, Auto-Renew, Notice Period\nFinancial Terms: Payment Terms, Payment Method, Currency, Total Contract Value, Installment Structure, Penalties or Late Fees\nObligations: Party A Obligations, Party B Obligations, Delivery Schedule\nSignatures: Signed By Party A, Signed By Party B, Date Signed by Party A, Date Signed by Party B, Signing Method\nAttachments: Appendix List, Referenced Documents\nMetadata: Contract Status, Contract Template, Tags, Template Group, Revision History, Last Modified Date\nAudit Trail: Document Created, Sent Date, Viewed By, View Timestamp, Edited By, Edited Date",
+   "structureView": {
+    "Party A": {
+     "Name": "",
+     "Role": "",
+     "Organization": "",
+     "Email": "",
+     "Phone": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Party B": {
+     "Name": "",
+     "Role": "",
+     "Organization": "",
+     "Email": "",
+     "Phone": "",
+     "Address": "",
+     "City": "",
+     "Postal Code": "",
+     "Country": "",
+     "Country Code": ""
+    },
+    "Contract Details": {
+     "Contract Title": "",
+     "Contract Type": "",
+     "Contract Number": "",
+     "Effective Date": "",
+     "Effective Date (DD/MM/YYYY)": "Effective Date",
+     "Execution Date": "",
+     "Execution Date (DD/MM/YYYY)": "Execution Date",
+     "Expiration Date": "",
+     "Expiration Date (DD/MM/YYYY)": "Expiration Date",
+     "Termination Date": "",
+     "Termination Date (DD/MM/YYYY)": "Termination Date",
+     "Renewal Terms": "",
+     "Governing Law": "",
+     "Jurisdiction": "",
+     "Confidentiality Clause": "",
+     "Confidentiality Clause (Yes/No)": "Confidentiality Clause",
+     "Dispute Resolution": "",
+     "Auto-Renew": "",
+     "Auto-Renew (Yes/No)": "Auto-Renew",
+     "Notice Period": ""
+    },
+    "Financial Terms": {
+     "Payment Terms": "",
+     "Payment Method": "",
+     "Currency": "",
+     "Total Contract Value": "",
+     "Installment Structure": "",
+     "Installment Structure (if applicable)": "Installment Structure",
+     "Penalties or Late Fees": ""
+    },
+    "Obligations": {
+     "PartyAObligations": "",
+     "Party A Obligations": "PartyAObligations",
+     "Party A Obligations (describe)": "PartyAObligations",
+     "PartyBObligations": "",
+     "Party B Obligations": "PartyBObligations",
+     "Party B Obligations (describe)": "PartyBObligations",
+     "DeliverySchedule": "",
+     "Delivery Schedule": "DeliverySchedule"
+    },
+    "Signatures": {
+     "Signed By Party A": "",
+     "Signed By Party A (Name)": "Signed By Party A",
+     "Signed By Party B": "",
+     "Signed By Party B (Name)": "Signed By Party B",
+     "Date Signed by Party A": "",
+     "Date Signed by Party A (DD/MM/YYYY)": "Date Signed by Party A",
+     "Date Signed by Party B": "",
+     "Date Signed by Party B (DD/MM/YYYY)": "Date Signed by Party B",
+     "Signing Method": "",
+     "Signing Method (e.g., Electronic, Handwritten)": "Signing Method"
+    },
+    "Attachments": {
+     "Appendix List": "",
+     "Appendix List (if applicable)": "Appendix List",
+     "Referenced Documents": ""
+    },
+    "Metadata": {
+     "Contract Status": "",
+     "Contract Status (Draft, Sent, Signed, Terminated)": "Contract Status",
+     "Contract Template": "",
+     "Contract Template (if derived from one)": "Contract Template",
+     "Tags": "",
+     "Template Group": "",
+     "Revision History": "",
+     "Last Modified Date": "",
+     "Last Modified Date (DD/MM/YYYY)": "Last Modified Date"
+    },
+    "Audit Trail": {
+     "Document Created": "",
+     "Document Created (DD/MM/YYYY)": "Document Created",
+     "Sent Date": "",
+     "Viewed By": "",
+     "View Timestamp": "",
+     "Edited By": "",
+     "Edited Date": ""
+    },
+    "Flags": [
+     {
+      "Flag_Name": "",
+      "Label": "Flag_Name",
+      "Flag Name": "Flag_Name"
+     }
+    ]
+   }
+  }
+ }
+}
