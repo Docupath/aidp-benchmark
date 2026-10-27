@@ -7,8 +7,8 @@ document carries).
 
 - **They were computed after the run.** Nothing was run again. No model, no API and no service was
   called. No output of the run was changed.
-- **They are not part of the AIDP Score.** None of them enters any of the sixteen score-bearing
-  measures, and the score does not move because of them.
+- **They are not part of the AIDP Score.** None of them enters any score-bearing
+  measure, and the score does not move because of them.
 - **They are diagnostics under spec section 7.6:** figures the harness publishes beside the result to
   show where errors are, not to grade.
 

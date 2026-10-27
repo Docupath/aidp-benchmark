@@ -1,0 +1,179 @@
+{
+ "id": "cap-credit-note-101",
+ "slug": "credit-note",
+ "category": "Credit Note",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "nl-NL",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "B",
+ "case": {
+  "kind": "bank-list",
+  "role": "anomaly"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Hollandse Precisie BV",
+   "Address": "Industrieweg 88",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL"
+  },
+  "Seller": {
+   "Name": "Delftse Elektronica NV",
+   "Address": "Kerkstraat 100",
+   "City": "Rotterdam",
+   "Postal Code": "3011 AA",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL630440597B01",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Industrieweg 88",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "CN-2026-88044",
+   "Compromisso Code": "",
+   "Invoice Date": "16/04/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "16/05/2026",
+   "Cost Center": "",
+   "Your Reference": "Jan de Vries",
+   "Posting Date": "",
+   "Net Amount": "7971.60",
+   "Total Tax": "1674.04",
+   "Total Amount": "9645.64",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "MTR-09959",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "21",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "379.60",
+    "Net Amount": "7971.60",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "NL83 ZIZZ 6825 9022 95",
+     "BIC_or_Swift_code": "EHTFNLG9"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "21",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "BTW",
+     "tax_total": "1674.04",
+     "rate": "21"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-35590",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "NL83 ZIZZ 6825 9022 95",
+   "approved": "NL17 FQSD 1326 6099 40",
+   "usual": "NL17 FQSD 1326 6099 40"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

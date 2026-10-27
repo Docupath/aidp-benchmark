@@ -1,0 +1,217 @@
+{
+ "id": "cap-consignment-invoice-031",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "ar-AE",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "الإمارات للمعدات الطبية ش.م.ح",
+   "Name 2": "",
+   "Street 1": "المنطقة الصناعية الثانية",
+   "Street 2": "",
+   "City": "دبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE",
+   "VAT No": "169572048813126",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "القمة للتجارة",
+   "Name 2": "",
+   "Street 1": "شارع الشيخ زايد 209",
+   "Street 2": "",
+   "City": "أبوظبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE",
+   "VAT No": "169646952239961",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "المنطقة الصناعية الثانية",
+   "Street 2": "",
+   "City": "دبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-26051",
+   "Consignment Date": "06/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "",
+   "Currency Code": "AED",
+   "Contact Name": "فاطمة الزهراء"
+  },
+  "Items": [
+   {
+    "Article ID": "WGT-55559",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "31",
+    "UOM": "kg",
+    "Serial Number": "SN11806102",
+    "Lot Number": "LOT722741",
+    "Unit Price": "398.43",
+    "Net Amount": "12351.33",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "BRG-52976",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Quantity": "27",
+    "UOM": "EA",
+    "Serial Number": "SN10129564",
+    "Lot Number": "LOT189719",
+    "Unit Price": "206.69",
+    "Net Amount": "5580.63",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "17931.96",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "896.60",
+     "rate": "5"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": false
+  },
+  "bank": {
+   "printed": "AE31 1991 8978 6874 3963 389",
+   "approved": null,
+   "usual": "AE31 1991 8978 6874 3963 389"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Consignment Details.Payment Due Date",
+    "value": "05/02/2026",
+    "method": "document date plus the 30 days of the printed payment terms",
+    "inputs": [
+     "Consignment Details.Consignment Date",
+     "Consignment Details.Payment Terms"
+    ]
+   },
+   {
+    "path": "Payment Details.Total",
+    "value": "18828.56",
+    "method": "net plus tax",
+    "inputs": [
+     "Payment Details.Subtotal"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00694634650139(17)290719(10)LOT722741(21)SN11806102",
+    "gtin": "0694634650139",
+    "expiry": "290719",
+    "lot": "LOT722741",
+    "serial": "SN11806102",
+    "label_only": false,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00757027485722(17)270519(10)LOT189719(21)SN10129564",
+    "gtin": "0757027485722",
+    "expiry": "270519",
+    "lot": "LOT189719",
+    "serial": "SN10129564",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00694634650139(17)290719(10)LOT722741(21)SN11806102",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00757027485722(17)270519(10)LOT189719(21)SN10129564",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

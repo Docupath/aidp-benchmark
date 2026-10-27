@@ -1,0 +1,214 @@
+{
+ "id": "cap-consignment-invoice-151",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "nl-NL",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": 1
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Hollandse Precisie BV",
+   "Name 2": "",
+   "Street 1": "Keizersgracht 12",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL100200634B01",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Delftse Chemie",
+   "Name 2": "",
+   "Street 1": "Havenstraat 4",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL585606913B01",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Keizersgracht 12",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-59973",
+   "Consignment Date": "08/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "07/02/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Emma Bakker"
+  },
+  "Items": [
+   {
+    "Article ID": "FRT-72494",
+    "Article Name": "Freight & Handling",
+    "Description": "Road transport",
+    "Order Number": "",
+    "Quantity": "29",
+    "UOM": "EA",
+    "Serial Number": "SN62903700",
+    "Lot Number": "LOT311676",
+    "Unit Price": "257.46",
+    "Net Amount": "7466.34",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "TRN-91141",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Quantity": "22",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "LOT339387",
+    "Unit Price": "200.70",
+    "Net Amount": "4415.40",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "DEV-90072",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Quantity": "34",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "LOT182701",
+    "Unit Price": "227.91",
+    "Net Amount": "7748.94",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "TRN-64032",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Quantity": "48",
+    "UOM": "set",
+    "Serial Number": "SN61469032",
+    "Lot Number": "LOT601394",
+    "Unit Price": "187.92",
+    "Net Amount": "9020.16",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "28650.84",
+   "Tax": [
+    {
+     "tax_code": "BTW",
+     "tax_total": "6016.68",
+     "rate": "21"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "34667.52",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": false
+  },
+  "bank": {
+   "printed": "NL46 ASXO 5808 2156 37",
+   "approved": null,
+   "usual": "NL46 ASXO 5808 2156 37"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00737081990530(17)291015(10)LOT311676(21)SN62903700",
+    "gtin": "0737081990530",
+    "expiry": "291015",
+    "lot": "LOT311676",
+    "serial": "SN62903700",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00737081990530(17)291015(10)LOT311676(21)SN62903700",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

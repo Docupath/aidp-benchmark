@@ -1,0 +1,201 @@
+{
+ "id": "cap-invoice-017",
+ "slug": "invoice",
+ "category": "Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "fr-FR",
+ "dims": {
+  "scale": "large",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "B",
+ "case": {
+  "kind": "po-variance",
+  "role": "control"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Groupe Horizon SA",
+   "Address": "45 Avenue Victor Hugo",
+   "City": "Marseille",
+   "Postal Code": "13001",
+   "Country": "France",
+   "Country Code": "FR"
+  },
+  "Seller": {
+   "Name": "Normandie Distribution",
+   "Address": "206 Avenue Victor Hugo",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR28 652198540",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "45 Avenue Victor Hugo",
+   "City": "Marseille",
+   "Postal Code": "13001",
+   "Country": "France",
+   "Country Code": "FR",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Debit",
+   "Invoice Number": "INV-2026-93480",
+   "Compromisso Code": "",
+   "Invoice Date": "16/04/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "16/05/2026",
+   "Cost Center": "",
+   "Your Reference": "Sophie Bernard",
+   "Posting Date": "",
+   "Net Amount": "36367.34",
+   "Total Tax": "7273.47",
+   "Total Amount": "43640.81",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Purchase Order Number": "PO-2026-18237"
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "BRK-82155",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "46",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "403.11",
+    "Net Amount": "18543.06",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "BRG-48073",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "47",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "379.24",
+    "Net Amount": "17824.28",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "FR67 9535 9213 2469 7274 9829 304",
+     "BIC_or_Swift_code": "XNRFFRR7"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "20",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "TVA",
+     "tax_total": "7273.47",
+     "rate": "20"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-87343",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "FR67 9535 9213 2469 7274 9829 304",
+   "approved": null,
+   "usual": "FR67 9535 9213 2469 7274 9829 304"
+  },
+  "po_number": "PO-2026-18237",
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

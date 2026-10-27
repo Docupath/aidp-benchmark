@@ -131,8 +131,8 @@ const pct = (x, d = 2) => (x == null ? 'n/a' : x >= 1 ? 'no failure observed' : 
 const n = (x) => Number(x ?? 0).toLocaleString('en-US');
 let md = `# AIDP-Bench scoreboard: ${board.tag}\n\nAgentic IDP Accuracy Standard (AIDP) v${AIDP_VERSION}. Corpus seed \`${corpus.manifest.seed}\`${corpus.manifest.generator_settings ? ` (generator settings: ${Object.keys(corpus.manifest.generator_settings).join(', ')})` : ''}, ${n(records.length)} of ${n(corpus.manifest.docs.length)} documents scored (population: ${population.mode}${population.planned != null ? `, ${n(population.planned)} planned` : ''}).\n`;
 if (scores) {
-  md += `\n## The AIDP Score\n\n**${noRoundUp(scores['type-equal'].score)}**\n\n`;
-  md += `Equal-weight geometric mean of ${MEASURES.length} score-bearing measures, each of the six field-key document types counting equally, as each does in the corpus. Layer scores recombine to the score exactly, weighted by their measure counts.\n\n`;
+  md += `\n## The AIDP-2K board\n\n**${noRoundUp(scores['type-equal'].score)}**\n\n`;
+  md += `Equal-weight geometric mean of the ${MEASURES.length} AIDP-2K measures this board counts, each of the six field-key document types counting equally, as each does in the corpus. Layer scores recombine to the board's figure exactly, weighted by their measure counts. The AIDP Score keeps thirteen of these measures, reports Decoding, Contract and Traceability beside the score, and adds AIDP-CAP's eighteen (\`bench/score-cap.mjs\`).\n\n`;
   md += `### Layers\n\n`;
   for (let i = 0; i < LAYERS.length; i++) {
     const e = scores['type-equal'].layers[i];
@@ -145,7 +145,7 @@ if (scores) {
     md += `- ${e.label} (${e.unit}): ${pct(e.value)}\n`;
   }
 } else {
-  md += `\n## The AIDP Score\n\nNot computable on this run: ${scoreError}\n`;
+  md += `\n## The AIDP-2K board\n\nNot computable on this run: ${scoreError}\n`;
 }
 const D = board.decisions;
 if (D) {

@@ -1,0 +1,186 @@
+{
+ "id": "cap-credit-note-010",
+ "slug": "credit-note",
+ "category": "Credit Note",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-DE",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "B",
+ "case": {
+  "kind": "bank-history",
+  "role": "anomaly"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Schwarzwald Medizintechnik AG",
+   "Address": "Berliner Allee 19",
+   "City": "Stuttgart",
+   "Postal Code": "70173",
+   "Country": "Germany",
+   "Country Code": "DE"
+  },
+  "Seller": {
+   "Name": "Odenwald Handel",
+   "Address": "Am Hafen 31",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "VAT No": "",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Berliner Allee 19",
+   "City": "Stuttgart",
+   "Postal Code": "70173",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "CN-2026-44899",
+   "Compromisso Code": "",
+   "Invoice Date": "28/01/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Zahlbar innerhalb von 30 Tagen.",
+   "GRN No": "",
+   "Due Date": "27/02/2026",
+   "Cost Center": "",
+   "Your Reference": "Jürgen Hoffmann",
+   "Posting Date": "",
+   "Net Amount": "-3545.60",
+   "Total Tax": "-673.66",
+   "Total Amount": "-4219.26",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "CBL-61657",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "16",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "221.60",
+    "Net Amount": "-3545.60",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "DE61 8325 9482 4781 1955 50",
+     "BIC_or_Swift_code": "UHUJDEZ4"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "19",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "-673.66",
+     "rate": "19"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-91621",
+   "kind": "no-form",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "DE61 8325 9482 4781 1955 50",
+   "approved": null,
+   "usual": "DE46 9011 1294 0194 2282 35"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Details.Payment Methods.0.account_no",
+     "Payment Details.Payment Methods.0.BIC_or_Swift_code"
+    ]
+   }
+  ]
+ }
+}

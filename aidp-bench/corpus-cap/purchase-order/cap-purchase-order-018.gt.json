@@ -1,0 +1,213 @@
+{
+ "id": "cap-purchase-order-018",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "sv-SE",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": true,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": {
+  "kind": "po-variance",
+  "role": "reference"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Nordiska Verktyg AB",
+   "Name 2": "",
+   "Street 1": "Industrivägen 3",
+   "Street 2": "",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "VAT No": "SE695601202301"
+  },
+  "Seller": {
+   "Name": "Göta Industri",
+   "Name 2": "",
+   "Street 1": "Järnvägsgatan 224",
+   "Street 2": "",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industrivägen 3",
+   "Street 2": "",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-98758",
+   "Compromisso Code": "",
+   "PO Date": "05/01/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "04/02/2026",
+   "Cost Center": "",
+   "Your Reference": "Erik Lindqvist",
+   "Posting Date": "",
+   "Net Amount": "3747.56",
+   "Total Amount": "4684.45",
+   "Rounding Amount": "",
+   "Currency Code": "SEK",
+   "Contact Name": "Erik Lindqvist"
+  },
+  "Items": [
+   {
+    "Article ID": "PMP-39186",
+    "Article Name": "Dosing Pump DP-12",
+    "Description": "12 l/h, PVDF head",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "3",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "33.61",
+    "Net Amount": "100.83",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "LBL-30797",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "47",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "77.59",
+    "Net Amount": "3646.73",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "25",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "Moms",
+     "tax_total": "936.89",
+     "rate": "25"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "SE04 1290 7356 4744 4998 2268",
+    "BIC/SWIFT Code": "OLOVSEI9"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-02976",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "SE04 1290 7356 4744 4998 2268",
+   "approved": "SE04 1290 7356 4744 4998 2268",
+   "usual": "SE04 1290 7356 4744 4998 2268"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Varor returnerade 19.09",
+    "page": 2,
+    "place": "end"
+   },
+   {
+    "id": "M2",
+    "kind": "signature",
+    "text": "Erik Lindqvist",
+    "page": 2,
+    "place": "end"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

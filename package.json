@@ -13,7 +13,7 @@
   },
   "//": [
     "Setup: npm ci, then npx playwright install chromium. The browser is needed only to draw the PDFs (npm run render) and the sample (bench/corpus-sample.mjs without --corpus).",
-    "mupdf is licensed GNU AGPL-3.0-or-later. It is needed only by the three benchmark tools that read PDF pages: the post-run diagnostics (aidp-bench/bench/post-run), the page previews of aidp-bench/bench/corpus-sample.mjs and the optional second-reader lane of aidp-bench/bench/run-das.mjs. Regenerating the dataset and scoring do not use it.",
+    "mupdf is licensed GNU AGPL-3.0-or-later. It is needed by the AIDP-CAP generator (aidp-bench/corpus-gen/cap), which reads its drawn pages back and turns, rescans and joins PDFs with it, and by the benchmark tools that read PDF pages: the post-run diagnostics (aidp-bench/bench/post-run), the page previews of aidp-bench/bench/corpus-sample.mjs and the optional second-reader lane of aidp-bench/bench/run-das.mjs. Regenerating AIDP-2K and scoring do not use it.",
     "npm run keys writes the answer keys, page texts, manifest.json and contract.json; npm run render draws the 2,012 PDFs. Both write to aidp-bench/corpus-regenerated unless given --out <dir> (npm run keys -- --out <dir>)."
   ],
   "dependencies": {
@@ -28,6 +28,10 @@
     "test": "node aidp-bench/bench/test-scoring.mjs && node aidp-bench/bench/test-runner.mjs && node aidp-bench/bench/test-generator.mjs",
     "verify": "node verify-repo.mjs",
     "rescore:heldout": "node aidp-bench/bench/score-run.mjs --corpus aidp-bench/corpus-heldout --tag aidp-v1-heldout-main --stability-tag aidp-v1-heldout-stability --out aidp-bench/results/rescore-heldout",
-    "paper-checks": "node aidp-bench/bench/paper-checks.mjs --corpus aidp-bench/corpus --run aidp-bench/results/aidp-v1-main --heldout aidp-bench/results/aidp-v1-heldout-main"
+    "paper-checks": "node aidp-bench/bench/paper-checks.mjs --corpus aidp-bench/corpus --run aidp-bench/results/aidp-v1-main --heldout aidp-bench/results/aidp-v1-heldout-main",
+    "cap": "node aidp-bench/bench/make-cap.mjs --round aidp-bench/bench/samples/cap-v1-evidence/drand-round.json --out aidp-bench/corpus-cap",
+    "test:cap": "node aidp-bench/bench/test-score-cap.mjs --corpus aidp-bench/corpus-cap",
+    "rescore:cap": "node aidp-bench/bench/score-cap.mjs --corpus aidp-bench/corpus-cap --main aidp-bench/results/aidp-v1-cap-main --split aidp-bench/results/aidp-v1-cap-split --contract aidp-bench/results/aidp-v1-cap-contract --rules aidp-bench/results/aidp-v1-cap-rules --board aidp-bench/results/aidp-v1-main/scoreboard.json --out aidp-bench/results/rescore-cap --resamples 2000",
+    "thirteen": "node aidp-bench/bench/thirteen.mjs"
   }
 }

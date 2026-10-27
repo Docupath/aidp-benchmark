@@ -63,13 +63,14 @@ and text (see `../CORPUS.md`).
 The generator and the scorer published here have changed since the registration: in their comments and file names, in
 two generator settings that are off by default, and in how evidence without review decisions is read (specification,
 Annex B, "Decided after the run"). Their outputs have not: these answer keys and page texts regenerate byte for byte,
-and the held-out evidence re-scores to its published AIDP Score of 99.00.
+and the held-out evidence re-scores to its published board, 99.00 over sixteen AIDP-2K measures.
 
 ## The results
 
 The same release ran under a new, clean account with the same settings, every document in the full lane and the 60
-repeat documents three times each, and was scored by the same rules: an AIDP Score of 99.00 (95% range 98.66 to 99.28),
-against 99.15 on AIDP-2K. The evidence is in [`../results/aidp-v1-heldout-main/`](../results/aidp-v1-heldout-main/)
+repeat documents three times each, and was scored by the same rules: its board reads 99.00 (95% range 98.66 to 99.28) over sixteen
+AIDP-2K measures, against 99.15 on AIDP-2K, and on the thirteen of them that enter the AIDP Score it scored 98.77 (95%
+range 98.30 to 99.13), against 98.97. The evidence is in [`../results/aidp-v1-heldout-main/`](../results/aidp-v1-heldout-main/)
 and [`../results/aidp-v1-heldout-stability/`](../results/aidp-v1-heldout-stability/).
 
 Consignment documents scored lowest on Fidelity here, as on AIDP-2K: 84.10% for consignment invoices and 87.80% for

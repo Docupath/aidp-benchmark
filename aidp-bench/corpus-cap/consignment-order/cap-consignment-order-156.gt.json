@@ -1,0 +1,199 @@
+{
+ "id": "cap-consignment-order-156",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": true,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Bluepeak Industries Inc",
+   "Name 2": "",
+   "Street 1": "88 Commerce Drive",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US57-7340572",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Westfield Trading LLC",
+   "Name 2": "",
+   "Street 1": "86 Harbor Road",
+   "Street 2": "",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US38-3663283",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "88 Commerce Drive",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-29270",
+   "Consignment Date": "18/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "17/04/2026",
+   "Currency Code": "USD",
+   "Contact Name": "Maria Lopez"
+  },
+  "Items": [
+   {
+    "Article ID": "CONS-22807",
+    "Article Name": "Consulting Services",
+    "Description": "Senior consultant",
+    "Order Number": "",
+    "Quantity": "2",
+    "UOM": "box",
+    "Serial Number": "SN24873693",
+    "Lot Number": "LOT388333",
+    "Unit Price": "62.62",
+    "Net Amount": "125.24",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "MAINT-04605",
+    "Article Name": "Maintenance Contract",
+    "Description": "Quarterly service",
+    "Order Number": "",
+    "Quantity": "36",
+    "UOM": "pcs",
+    "Serial Number": "SN64474429",
+    "Lot Number": "LOT231580",
+    "Unit Price": "171.91",
+    "Net Amount": "6188.76",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "6314.00",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "536.69",
+     "rate": "8.5"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "6850.69",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-46807",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "688161105839",
+   "approved": "688161105839",
+   "usual": "688161105839"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00221462217366(17)281023(10)LOT388333(21)SN24873693",
+    "gtin": "0221462217366",
+    "expiry": "281023",
+    "lot": "LOT388333",
+    "serial": "SN24873693",
+    "label_only": true,
+    "page": 2
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00061523092392(17)280411(10)LOT231580(21)SN64474429",
+    "gtin": "0061523092392",
+    "expiry": "280411",
+    "lot": "LOT231580",
+    "serial": "SN64474429",
+    "label_only": true,
+    "page": 2
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00221462217366(17)281023(10)LOT388333(21)SN24873693",
+    "row": 0,
+    "page": 2
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00061523092392(17)280411(10)LOT231580(21)SN64474429",
+    "row": 1,
+    "page": 2
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

@@ -1,7 +1,7 @@
 # AIDP-Bench
 
 The open benchmark of the **Agentic IDP Accuracy Standard (AIDP) v1.0**: twenty-five capabilities in five layers, one
-score built from sixteen measures, and a safety panel that any claim of processing without review publishes beside
+score built from thirty-one measures, and a safety panel that any claim of processing without review publishes beside
 the score.
 
 Most published accuracy figures in document processing measure one thing: whether the values a system attempted to
@@ -12,34 +12,46 @@ person, how many documents arrive wrong with nobody warned.
 
 - **Specification:** [`../spec/aidp-v1.0.md`](../spec/aidp-v1.0.md)
 - **Methodology:** [`METHODOLOGY.md`](METHODOLOGY.md)
-- **The dataset:** [`CORPUS.md`](CORPUS.md), and [`corpus-sample/`](corpus-sample/) for sixteen documents beside their answer keys
+- **The datasets:** [`CORPUS.md`](CORPUS.md), and [`corpus-sample/`](corpus-sample/) for sixteen documents beside their answer keys; AIDP-CAP in [`corpus-cap/README.md`](corpus-cap/README.md)
 - **Findings and limits:** [`FINDINGS.md`](FINDINGS.md)
 - **Adding your own system:** [`ADAPTERS.md`](ADAPTERS.md)
 
-## The v1.0 reference run
+## The v1.0 runs
 
-All 2,000 documents of AIDP-2K, each in both lanes, against the Docupath platform at release `5bd21304`, on 23 and
-24 October 2026 (IST). The full lane submits the PDF as a customer would; the text lane submits the document's
-correct text and type, which takes reading out of the measurement.
+The reference run processed all 2,000 documents of AIDP-2K, each in both lanes, against the Docupath platform at
+release `5bd21304`, on 23 and 24 October 2026 (IST). The full lane submits the PDF as a customer would; the text lane
+submits the document's correct text and type, which takes reading out of the measurement. The capability run
+processed all 960 documents of AIDP-CAP against the same release on 27 October 2026 (IST), under a customer's setup,
+registered in this public repository before its documents existed ([`corpus-cap/README.md`](corpus-cap/README.md)).
 
-**AIDP Score: 99.15** (95% range 99.03 to 99.27).
+**AIDP Score: 82.90** (95% range 79.57 to 84.67), over thirty-one measures: thirteen from the reference run and
+eighteen from the capability run.
 
 | Layer | Measures | Score | 95% range |
 |---|---|---|---|
-| 1. Read | 2 | 98.16 | 98.04 to 98.28 |
-| 2. Capture | 6 | 98.61 | 98.35 to 98.86 |
-| 3. Understand | 5 | 99.94 | 99.90 to 99.97 |
-| 4. Reason | 1 | 99.97 | 99.95 to 99.98 |
-| 5. Trust | 2 | 99.43 | 98.89 to 99.80 |
+| 1. Read | 7 | 97.01 | 96.41 to 97.55 |
+| 2. Capture | 7 | 97.56 | 96.81 to 98.20 |
+| 3. Understand | 8 | 55.93 | 47.56 to 60.66 |
+| 4. Reason | 4 | 95.73 | 95.40 to 95.99 |
+| 5. Trust | 5 | 88.57 | 87.34 to 89.67 |
 
-The same release, frozen on 23 October, scored 99.00 (95% range 98.66 to 99.28) on 300 documents generated on
-24 October from a public random value that did not exist when it was frozen: the held-out check, registered in
+After the capability run, six places where the scoring code did not do what the specification says were corrected;
+the specification's Annex B lists each with what it moves, and the board as registered, an AIDP Score of 82.75 (95%
+range 79.43 to 84.53), is published beside the corrected one in [`results/aidp-v1-cap/`](results/aidp-v1-cap/).
+
+The same release, frozen on 23 October, was also run on 300 documents generated on 24 October from a public random
+value that did not exist when it was frozen: the held-out check, registered in
 [`bench/samples/heldout-v1.json`](bench/samples/heldout-v1.json) and committed to Docupath's private development
-repository before its seed existed, with its documents in
-[`corpus-heldout/`](corpus-heldout/) and its evidence in [`results/aidp-v1-heldout-main/`](results/aidp-v1-heldout-main/).
+repository before its seed existed, with its documents in [`corpus-heldout/`](corpus-heldout/) and its evidence in
+[`results/aidp-v1-heldout-main/`](results/aidp-v1-heldout-main/). On the thirteen AIDP-2K measures in the score it
+scored 98.77 (95% range 98.30 to 99.13), against 98.97 on AIDP-2K.
 
-Every measure, by layer, is in [`results/aidp-v1-main/report.md`](results/aidp-v1-main/report.md), and by document
-type, difficulty, table size and locale in its `scoreboard.json`; what failed, and why, is in
+The reference run's own board counts sixteen AIDP-2K measures, among them Decoding, Contract and Traceability, which
+test their capabilities only in part there and are reported beside the AIDP Score; it reads 99.15 (95% range 99.03 to
+99.27), and the held-out check's 99.00 (95% range 98.66 to 99.28). Every AIDP-2K measure, by layer, is in
+[`results/aidp-v1-main/report.md`](results/aidp-v1-main/report.md), and by document type, difficulty, table size and
+locale in its `scoreboard.json`; every AIDP-CAP measure, by document type and by document, is in
+[`results/aidp-v1-cap/scoreboard-cap.json`](results/aidp-v1-cap/scoreboard-cap.json); what failed, and why, is in
 [`FINDINGS.md`](FINDINGS.md).
 
 ## The five layers
@@ -64,19 +76,18 @@ that order by inspection.
 | Reason | Resolution, Instructions, Contract |
 | Trust | Repeatability, Traceability, Calibration, Anomaly detection, Escalation |
 
-Each capability is one question with one thing it counts. Twelve carry score-bearing measures, six are reported beside
-the score (Escalation's safety panel only for a result that claims documents can proceed without a person), and
-seven are declared and not yet scored, each with the question it would answer and the unit it would count; six of
-those seven have a figure computed from the run's published outputs, and Segmentation has none. The register in the
-specification says which is which.
+Each capability is one question with one thing it counts. Twenty-four carry score-bearing measures, measured on
+AIDP-2K, on AIDP-CAP or, for Consistency, on both; Escalation is the safety panel, published beside the score only for
+a result that claims documents can proceed without a person. The register in the specification says which dataset
+measures each.
 
 ## One score, pinned
 
-The standard defines exactly one number, the AIDP Score: the equal-weight geometric mean of sixteen score-bearing
-measures (Read 2, Capture 6, Understand 5, Reason 1, Trust 2), each capped at one, nothing excluded. The geometric mean
-is deliberate: a collapse in any one measure drags the score down in a way an arithmetic mean would hide. The five layer
-scores recombine to the score exactly, weighted by their measure counts, and `bench/aidp-score.mjs` refuses to publish
-a layer score that does not.
+The standard defines exactly one number, the AIDP Score: the equal-weight geometric mean of thirty-one score-bearing
+measures (Read 7, Capture 7, Understand 8, Reason 4, Trust 5), each capped at one, nothing excluded. The geometric
+mean is deliberate: a collapse in any one measure drags the score down in a way an arithmetic mean would hide. The
+five layer scores recombine to the score exactly, weighted by their measure counts. `bench/score-cap.mjs` computes
+it, taking AIDP-2K's thirteen measures from the reference run's board, which `bench/aidp-score.mjs` computes.
 
 The score has one weighting, read from the dataset itself: each of the six document types with full answer keys counts
 equally, exactly as each does in AIDP-2K (200 documents of every type). Nothing outside the published dataset enters
@@ -140,10 +151,15 @@ node bench/bootstrap.mjs   --board results/aidp-v1-main/scoreboard.json     # 95
 node bench/calibration.mjs --corpus corpus --run results/aidp-v1-main         # calibration error, discrimination, high-tier share
 ```
 
-The re-score reproduces the published board: an AIDP Score of 99.15. `npm run rescore:heldout` re-scores the held-out
-check (99.00). Change a scoring rule in `bench/` and run it again to see what the rule moves.
+The re-score reproduces the reference run's published board, 99.15 over its sixteen measures, and
+`npm run rescore:heldout` the held-out check's, 99.00. `npm run rescore:cap` re-scores the capability run from its
+evidence in `results/aidp-v1-cap-*/`, the corpus in `corpus-cap/` and the reference run's board, and reproduces the
+AIDP Score of 82.90 with its 95% range; it needs no PDF. `npm run thirteen` prints AIDP-2K's thirteen measures in the
+score on the reference run (98.97) and on the held-out check (98.77, 95% range 98.30 to 99.13). Change a scoring rule
+in `bench/` and run it again to see what the rule moves.
 
-**Checks.** `node bench/test-scoring.mjs` runs the unit checks of every scoring rule on hand-made cases;
+**Checks.** `npm run test:cap` runs the checks of AIDP-CAP's scoring rules, on hand-made cases and on a perfect and a
+failed answer for every document of `corpus-cap/`. `node bench/test-scoring.mjs` runs the unit checks of every scoring rule on hand-made cases;
 `node bench/test-runner.mjs` drives the runner against a stand-in API to check retries, re-queueing, resumption and the
 cache bypass; `node bench/test-generator.mjs` checks the generator's two settings over all 2,000 documents, bank
 account numbers with valid check digits (`--valid-accounts`) and due dates that follow the payment terms
@@ -197,6 +213,13 @@ bench/
   paper-checks.mjs     the figures the white paper quotes that no scoreboard prints
   cell-counts.mjs      the count behind every cell of the paper's results tables, in the form each is printed
   make-heldout.mjs     draws the held-out check's 300 documents from its registered seed
+  make-cap.mjs         draws AIDP-CAP from its registered seed, with the generator in corpus-gen/cap/
+  run-cap.mjs          the capability run's runner: its lanes and phases
+  cap-customer.mjs     the customer's setup and contract for the capability run
+  rule-packs-cap.mjs   AIDP-CAP's seven written instructions
+  score-cap.mjs        AIDP-CAP's eighteen measures, and the AIDP Score over all thirty-one
+  thirteen.mjs         AIDP-2K's thirteen measures in the score, on the reference run and the held-out check
+  test-score-cap.mjs   checks of AIDP-CAP's scoring rules
   run-das.mjs          the runner
   make-samples.mjs     writes the pre-declared samples
   samples/             the repeatability, instruction and held-out samples, each fixed before its run
@@ -209,6 +232,7 @@ bench/
   test-generator.mjs   checks of the generator's settings
 corpus/                the answer keys, page texts, manifest, contract and PDF fingerprints of AIDP-2K
 corpus-heldout/        the 300 documents of the held-out check, with their keys and PDF fingerprints
+corpus-cap/            AIDP-CAP: answer keys, page texts, maps, the customer's lists, PDF fingerprints
 corpus-gen/            the generator: answer key first, then the drawn page
 corpus-sample/         sixteen documents beside their answer keys
 corpus-contract.json   each type's contracted output schema, which Contract is checked against (also corpus/contract.json)
@@ -222,6 +246,13 @@ results/
   aidp-v1-rules/       the written-instruction runs: 60 documents
   aidp-v1-heldout-main/       the held-out check: 300 newly generated documents, full lane
   aidp-v1-heldout-stability/  its repeatability runs: 60 documents, three runs each
+  aidp-cap-pilot/      the capability run's pilot and pre-registration review, on a throwaway seed
+  aidp-v1-cap-main/    the capability run's full lane: 960 documents and 30 copies
+  aidp-v1-cap-split/   its 200 files sent to the splitting step
+  aidp-v1-cap-rules/   its 60 documents under seven written instructions
+  aidp-v1-cap-contract/  its 120 documents under the customer's contract
+  aidp-v1-cap/         its scoreboard as corrected and as registered, the documents its own setup touched, and the
+                       two machines' readings compared
 studies/
   public-benchmark-audit/  what the answer keys of ten public benchmarks hold, property by property
   difficulty/              whether a document's difficulty can be read from its image, and what a frontier model

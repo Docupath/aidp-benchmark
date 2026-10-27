@@ -67,3 +67,13 @@ substitutes others, so pages can break and look differently, while the answer ke
 
 To change the corpus, edit the builders (`data.mjs`), the locales (`lex.mjs`) or the degradation (`render.mjs`), and
 publish the result under a new seed or version: AIDP-2K v1.0 is the output of this folder as committed.
+
+## AIDP-CAP, the capability set
+
+[`cap/`](cap/) draws AIDP-CAP with the builders above: each document is drawn by AIDP-2K's own builders from its own
+seeded stream, then carries the conditions of the capabilities AIDP-2K does not measure (`cap/composition.mjs`). The
+page is drawn twice: once as the system receives it, and once as a map in which every value, mark and label is
+coloured by itself, so its position on the page can be read back exactly (with mupdf, which also turns, rescans and
+joins the PDFs). Pages and handwriting are drawn only with the openly licensed typefaces in `cap/fonts/`, never with the
+drawing machine's own fonts. [`../corpus-cap/README.md`](../corpus-cap/README.md) describes the set and how it was
+registered before its seed existed.

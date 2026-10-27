@@ -1,0 +1,207 @@
+{
+ "id": "cap-purchase-order-073",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-IN",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Bharat Components Pvt Ltd",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Chennai",
+   "Postal Code": "600001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "93AAACG6735A1Z9"
+  },
+  "Seller": {
+   "Name": "Kalinga Tools Limited",
+   "Name 2": "",
+   "Street 1": "Plot 43, MIDC Industrial Area",
+   "Street 2": "",
+   "City": "Chennai",
+   "Postal Code": "600001",
+   "Country": "India",
+   "Country Code": "IN"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Chennai",
+   "Postal Code": "600001",
+   "Country": "India",
+   "Country Code": "IN",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-68648",
+   "Compromisso Code": "",
+   "PO Date": "07/03/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "06/04/2026",
+   "Cost Center": "",
+   "Your Reference": "Rahul Verma",
+   "Posting Date": "",
+   "Net Amount": "26555.82",
+   "Total Amount": "31335.86",
+   "Rounding Amount": "",
+   "Currency Code": "INR",
+   "Contact Name": "Rahul Verma"
+  },
+  "Items": [
+   {
+    "Article ID": "WGT-99428",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "36",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "278.80",
+    "Net Amount": "10036.80",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "VAL-86477",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "42",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "393.31",
+    "Net Amount": "16519.02",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "CGST",
+     "tax_total": "2390.02",
+     "rate": "9"
+    },
+    {
+     "tax_code": "SGST",
+     "tax_total": "2390.02",
+     "rate": "9"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "",
+    "Account Number": "02611118365254",
+    "BIC/SWIFT Code": "CCHGINF2"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-22611",
+   "kind": "punct",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "02611118365254",
+   "approved": "02611118365254",
+   "usual": "02611118365254"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Methods.0.Account Number",
+     "Payment Methods.0.BIC/SWIFT Code"
+    ]
+   }
+  ]
+ }
+}

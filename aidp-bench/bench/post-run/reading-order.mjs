@@ -13,8 +13,9 @@
  *
  * A row PASSES when there is one line of the platform's page-lane reading (its main line) that holds
  * every judged cell of the row, in reading order, without the cells overlapping:
- *   - a cell is found as a run of whole tokens whose letters and digits, spacing ignored, are the
- *     cell's ("1 234,56" and "1234,56" are one cell);
+ *   - a cell is found as a run of whole tokens whose characters, spacing ignored, are the cell's
+ *     ("1 234,56" and "1234,56" are one cell); punctuation counts, so a cell read with a decimal
+ *     separator or a thousands mark changed or dropped ("4,304,97" for "4,304.97") is a misread;
  *   - a cell the page itself wraps onto a second printed line may be found as its first part on the
  *     main line and the rest on one of the next three lines, starting within six characters of the
  *     column the first part starts in ("LBL-" with "33557" under it), because every cell of a row
@@ -372,7 +373,7 @@ function hiddenCells({ cellsText, judged, assign, toks, dir, stickerWords }) {
   return { row_tagged: toks.some((x) => LEGIBILITY_TAG.test(x.t)), gaps: out };
 }
 
-function judgeDocument({ doc, gen, tables, reading, coverage, rtl }) {
+export function judgeDocument({ doc, gen, tables, reading, coverage, rtl }) {
   // what each sticker prints under its bars: the GTIN, lot and serial of its GS1 payload
   const stickerWords = (gen.content.stickers ?? []).flatMap((st) => String(st.text).toLowerCase().split(/\(\d{2}\)/).filter((w) => w.length >= 6));
   const lines = String(reading ?? '').split('\n');

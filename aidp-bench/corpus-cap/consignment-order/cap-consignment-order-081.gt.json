@@ -1,0 +1,253 @@
+{
+ "id": "cap-consignment-order-081",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-DE",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Bayerische Werkzeuge GmbH & Co. KG",
+   "Name 2": "",
+   "Street 1": "Berliner Allee 19",
+   "Street 2": "",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "VAT No": "DE521641387",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "ODENWALD HANDEL GMBH",
+   "Name 2": "",
+   "Street 1": "Am Hafen 62",
+   "Street 2": "",
+   "City": "Köln",
+   "Postal Code": "50667",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "VAT No": "DE011352697",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Berliner Allee 19",
+   "Street 2": "",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-05441",
+   "Consignment Date": "22/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Zahlbar innerhalb von 30 Tagen.",
+   "Payment Due Date": "21/06/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Jürgen Hoffmann"
+  },
+  "Items": [
+   {
+    "Article ID": "WGT-16719",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "43",
+    "UOM": "EA",
+    "Serial Number": "SN92909619",
+    "Lot Number": "LOT421417",
+    "Unit Price": "393.85",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "BRG-97026",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Quantity": "10",
+    "UOM": "box",
+    "Serial Number": "SN96995631",
+    "Lot Number": "LOT195872",
+    "Unit Price": "449.32",
+    "Net Amount": "4493.20",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-88373",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "36",
+    "UOM": "box",
+    "Serial Number": "SN29341703",
+    "Lot Number": "LOT455747",
+    "Unit Price": "360.15",
+    "Net Amount": "12965.40",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "34394.15",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "6534.89",
+     "rate": "19"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-67443",
+   "kind": "upper",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "DE57 5466 8858 4721 4561 69",
+   "approved": null,
+   "usual": "DE57 5466 8858 4721 4561 69"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Payment Details.Total",
+    "value": "40929.04",
+    "method": "net plus tax",
+    "inputs": [
+     "Payment Details.Subtotal"
+    ]
+   },
+   {
+    "path": "Items.0.Net Amount",
+    "value": "16935.55",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.0.Quantity",
+     "Items.0.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00803400949890(17)270813(10)LOT421417(21)SN92909619",
+    "gtin": "0803400949890",
+    "expiry": "270813",
+    "lot": "LOT421417",
+    "serial": "SN92909619",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00739791670580(17)290918(10)LOT195872(21)SN96995631",
+    "gtin": "0739791670580",
+    "expiry": "290918",
+    "lot": "LOT195872",
+    "serial": "SN96995631",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L3",
+    "row": 2,
+    "symbology": "gs1-128",
+    "payload": "(01)00169945697086(17)290609(10)LOT455747(21)SN29341703",
+    "gtin": "0169945697086",
+    "expiry": "290609",
+    "lot": "LOT455747",
+    "serial": "SN29341703",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00803400949890(17)270813(10)LOT421417(21)SN92909619",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00739791670580(17)290918(10)LOT195872(21)SN96995631",
+    "row": 1,
+    "page": 1
+   },
+   {
+    "id": "L3",
+    "symbology": "gs1-128",
+    "payload": "(01)00169945697086(17)290609(10)LOT455747(21)SN29341703",
+    "row": 2,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

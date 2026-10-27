@@ -1,0 +1,219 @@
+{
+ "id": "cap-consignment-order-020",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Albion Components Ltd",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB908895478",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Bramley Pharma LLP",
+   "Name 2": "",
+   "Street 1": "72 Riverside Way",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB669254466",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-11637",
+   "Consignment Date": "11/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "10/02/2026",
+   "Currency Code": "GBP",
+   "Contact Name": "Amelia Clarke"
+  },
+  "Items": [
+   {
+    "Article ID": "DEV-22160",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Quantity": "6",
+    "UOM": "EA",
+    "Serial Number": "SN17514593",
+    "Lot Number": "LOT859426",
+    "Unit Price": "83.15",
+    "Net Amount": "498.90",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "TRN-38528",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Quantity": "33",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "LOT404401",
+    "Unit Price": "373.46",
+    "Net Amount": "11137.17",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "FRT-96421",
+    "Article Name": "Freight & Handling",
+    "Description": "Road transport",
+    "Order Number": "",
+    "Quantity": "2",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "LOT217924",
+    "Unit Price": "359.74",
+    "Net Amount": "719.48",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "12355.55",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "2471.11",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "14826.66",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-69206",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "GB38 VTFY 5512 5481 9451 81",
+   "approved": "GB38 VTFY 5512 5481 9451 81",
+   "usual": "GB38 VTFY 5512 5481 9451 81"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": {
+   "kind": "line",
+   "row": 1
+  },
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00374053198008(17)291113(10)LOT859426(21)SN17514593",
+    "gtin": "0374053198008",
+    "expiry": "291113",
+    "lot": "LOT859426",
+    "serial": "SN17514593",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 2,
+    "symbology": "gs1-128",
+    "payload": "(01)00616428159499(17)280813(10)LOT217924",
+    "gtin": "0616428159499",
+    "expiry": "280813",
+    "lot": "LOT217924",
+    "serial": "",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00374053198008(17)291113(10)LOT859426(21)SN17514593",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00616428159499(17)280813(10)LOT217924",
+    "row": 2,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

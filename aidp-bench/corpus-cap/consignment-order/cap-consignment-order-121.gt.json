@@ -1,0 +1,229 @@
+{
+ "id": "cap-consignment-order-121",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "es-ES",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": true,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Suministros del Norte SL",
+   "Name 2": "",
+   "Street 1": "Calle Mayor 15",
+   "Street 2": "",
+   "City": "Madrid",
+   "Postal Code": "28001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB43334355",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Electrónica Tajo",
+   "Name 2": "",
+   "Street 1": "Calle Mayor 125",
+   "Street 2": "",
+   "City": "Valencia",
+   "Postal Code": "46001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB91679828",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Calle Mayor 15",
+   "Street 2": "",
+   "City": "Madrid",
+   "Postal Code": "28001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-47218",
+   "Consignment Date": "01/04/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "01/05/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Lucía Fernández"
+  },
+  "Items": [
+   {
+    "Article ID": "CBL-60812",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Quantity": "31",
+    "UOM": "box",
+    "Serial Number": "SN86698804",
+    "Lot Number": "LOT831692",
+    "Unit Price": "2.37",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-24309",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "21",
+    "UOM": "box",
+    "Serial Number": "SN83352605",
+    "Lot Number": "LOT800230",
+    "Unit Price": "297.07",
+    "Net Amount": "6238.47",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "BRG-02032",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Quantity": "2",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "LOT816106",
+    "Unit Price": "358.02",
+    "Net Amount": "716.04",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "7027.98",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "1475.88",
+     "rate": "21"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "8503.86",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-35339",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "ES85 1698 1189 5845 9759 4063",
+   "approved": null,
+   "usual": "ES85 1698 1189 5845 9759 4063"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "signature",
+    "text": "Lucía Fernández",
+    "page": 2,
+    "place": "end"
+   },
+   {
+    "id": "M2",
+    "kind": "note",
+    "text": "Mercancía devuelta 21.10",
+    "page": 2,
+    "place": "end"
+   },
+   {
+    "id": "M3",
+    "kind": "stamp",
+    "text": "APPROVED MK",
+    "page": 2,
+    "place": "top"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Items.0.Net Amount",
+    "value": "73.47",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.0.Quantity",
+     "Items.0.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00293715551497(17)270415(10)LOT831692(21)SN86698804",
+    "gtin": "0293715551497",
+    "expiry": "270415",
+    "lot": "LOT831692",
+    "serial": "SN86698804",
+    "label_only": false,
+    "page": 2
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00293715551497(17)270415(10)LOT831692(21)SN86698804",
+    "row": 0,
+    "page": 2
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

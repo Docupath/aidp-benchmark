@@ -1,0 +1,197 @@
+{
+ "id": "cap-consignment-order-125",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "nl-NL",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Van Dijk Handel BV",
+   "Name 2": "",
+   "Street 1": "Keizersgracht 12",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL260681835B01",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Van Dijk Componenten",
+   "Name 2": "",
+   "Street 1": "Stationsweg 120",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL397870829B01",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Keizersgracht 12",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-47779",
+   "Consignment Date": "12/04/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "12/05/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Jan de Vries"
+  },
+  "Items": [
+   {
+    "Article ID": "LBL-42870",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "",
+    "Quantity": "41",
+    "UOM": "set",
+    "Serial Number": "SN62155610",
+    "Lot Number": "LOT966677",
+    "Unit Price": "412.61",
+    "Net Amount": "16917.01",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "BRG-64705",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Quantity": "9",
+    "UOM": "pcs",
+    "Serial Number": "SN00690706",
+    "Lot Number": "LOT979416",
+    "Unit Price": "184.62",
+    "Net Amount": "1661.58",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "LBL-57788",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "",
+    "Quantity": "1",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "LOT841008",
+    "Unit Price": "418.37",
+    "Net Amount": "418.37",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "18996.96",
+   "Tax": [
+    {
+     "tax_code": "BTW",
+     "tax_total": "3989.36",
+     "rate": "21"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "22986.32",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-16623",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "NL07 WIMU 4204 5841 16",
+   "approved": "NL07 WIMU 4204 5841 16",
+   "usual": "NL07 WIMU 4204 5841 16"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 2,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00710120597419(17)280606(10)LOT841008",
+    "gtin": "0710120597419",
+    "expiry": "280606",
+    "lot": "LOT841008",
+    "serial": "",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00710120597419(17)280606(10)LOT841008",
+    "row": 2,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

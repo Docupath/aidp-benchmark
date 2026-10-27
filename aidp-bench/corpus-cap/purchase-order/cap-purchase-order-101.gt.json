@@ -1,0 +1,197 @@
+{
+ "id": "cap-purchase-order-101",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "es-ES",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": 1
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Suministros del Norte SL",
+   "Name 2": "",
+   "Street 1": "Calle Mayor 15",
+   "Street 2": "",
+   "City": "Madrid",
+   "Postal Code": "28001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB49524863"
+  },
+  "Seller": {
+   "Name": "Logística Navarra SL",
+   "Name 2": "",
+   "Street 1": "Avenida Diagonal 37",
+   "Street 2": "",
+   "City": "Madrid",
+   "Postal Code": "28001",
+   "Country": "Spain",
+   "Country Code": "ES"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Calle Mayor 15",
+   "Street 2": "",
+   "City": "Madrid",
+   "Postal Code": "28001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-86021",
+   "Compromisso Code": "",
+   "PO Date": "26/02/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "28/03/2026",
+   "Cost Center": "",
+   "Your Reference": "Lucía Fernández",
+   "Posting Date": "",
+   "Net Amount": "2325.09",
+   "Total Amount": "2813.36",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Contact Name": "Lucía Fernández"
+  },
+  "Items": [
+   {
+    "Article ID": "MTR-92106",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "26",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "99.16",
+    "Net Amount": "2578.16",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "21",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "488.27",
+     "rate": "21"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "ES30 8157 9067 7706 0794 8401",
+    "BIC/SWIFT Code": "FRILEST1"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-39071",
+   "kind": "punct",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "ES30 8157 9067 7706 0794 8401",
+   "approved": null,
+   "usual": "ES30 8157 9067 7706 0794 8401"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "stamp",
+    "text": "COPY",
+    "page": 1,
+    "place": "top"
+   },
+   {
+    "id": "M2",
+    "kind": "note",
+    "text": "Recibido 16.02 - faltan 11 cajas",
+    "page": 1,
+    "place": "end"
+   },
+   {
+    "id": "M3",
+    "kind": "note",
+    "text": "Línea 1 dañada",
+    "page": 1,
+    "place": "end"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": {
+   "kind": "subtotal"
+  },
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

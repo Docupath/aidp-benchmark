@@ -1,0 +1,205 @@
+{
+ "id": "cap-purchase-order-037",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "pt-PT",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": {
+  "kind": "po-variance",
+  "role": "reference"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Atlântico Distribuição SA",
+   "Name 2": "",
+   "Street 1": "Rua Augusta 100",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT898049649"
+  },
+  "Seller": {
+   "Name": "Indústria Algarve Lda",
+   "Name 2": "",
+   "Street 1": "Rua do Porto 25",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Rua Augusta 100",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-81991",
+   "Compromisso Code": "",
+   "PO Date": "20/05/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "19/06/2026",
+   "Cost Center": "",
+   "Your Reference": "João Silva",
+   "Posting Date": "",
+   "Net Amount": "7454.23",
+   "Total Amount": "9168.70",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Contact Name": "João Silva"
+  },
+  "Items": [
+   {
+    "Article ID": "BRG-95912",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "33",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "212.46",
+    "Net Amount": "7011.18",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "FLT-88567",
+    "Article Name": "Filter Cartridge F9",
+    "Description": "HEPA class",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "5",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "88.61",
+    "Net Amount": "443.05",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "23",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "1714.47",
+     "rate": "23"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "PT09 3876 8512 8003 1030 5442 2",
+    "BIC/SWIFT Code": "UPUIPTC6"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-20887",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "PT09 3876 8512 8003 1030 5442 2",
+   "approved": null,
+   "usual": "PT09 3876 8512 8003 1030 5442 2"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [
+   {
+    "id": "C1",
+    "symbology": "code128",
+    "payload": "PO-2026-81991",
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

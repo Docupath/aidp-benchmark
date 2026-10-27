@@ -1,0 +1,199 @@
+{
+ "id": "cap-consignment-invoice-113",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Summit Medical Devices Inc",
+   "Name 2": "",
+   "Street 1": "450 Madison Avenue",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US78-9691594",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Westfield Trading",
+   "Name 2": "",
+   "Street 1": "86 Harbor Road",
+   "Street 2": "",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US38-3663283",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "450 Madison Avenue",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-20727",
+   "Consignment Date": "11/02/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "13/03/2026",
+   "Currency Code": "USD",
+   "Contact Name": "Maria Lopez"
+  },
+  "Items": [
+   {
+    "Article ID": "BRK-99750",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "",
+    "Quantity": "26",
+    "UOM": "kg",
+    "Serial Number": "SN91801901",
+    "Lot Number": "LOT194045",
+    "Unit Price": "376.60",
+    "Net Amount": "9791.60",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CBL-84032",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Quantity": "26",
+    "UOM": "box",
+    "Serial Number": "SN00798877",
+    "Lot Number": "LOT757467",
+    "Unit Price": "365.52",
+    "Net Amount": "9503.52",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "19295.12",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "1640.09",
+     "rate": "8.5"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "20935.21",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-46807",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "688161105839",
+   "approved": "688161105839",
+   "usual": "688161105839"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00787432929276(17)270322(10)LOT194045(21)SN91801901",
+    "gtin": "0787432929276",
+    "expiry": "270322",
+    "lot": "LOT194045",
+    "serial": "SN91801901",
+    "label_only": false,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00135181626241(17)290224(10)LOT757467(21)SN00798877",
+    "gtin": "0135181626241",
+    "expiry": "290224",
+    "lot": "LOT757467",
+    "serial": "SN00798877",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00787432929276(17)270322(10)LOT194045(21)SN91801901",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00135181626241(17)290224(10)LOT757467(21)SN00798877",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

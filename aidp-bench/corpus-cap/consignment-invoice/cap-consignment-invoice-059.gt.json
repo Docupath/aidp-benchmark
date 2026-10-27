@@ -1,0 +1,253 @@
+{
+ "id": "cap-consignment-invoice-059",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-CH",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Zürichsee Handels AG",
+   "Name 2": "",
+   "Street 1": "Bahnhofstrasse 12",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "VAT No": "CHE-320.454.494 MWST",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "SEELAND ELEKTRO GMBH",
+   "Name 2": "",
+   "Street 1": "Bahnhofstrasse 96",
+   "Street 2": "",
+   "City": "Basel",
+   "Postal Code": "4051",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "VAT No": "CHE-151.463.288 MWST",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Bahnhofstrasse 12",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-05752",
+   "Consignment Date": "01/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "",
+   "Currency Code": "CHF",
+   "Contact Name": ""
+  },
+  "Items": [
+   {
+    "Article ID": "MTR-61181",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "",
+    "Quantity": "33",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "LOT004149",
+    "Unit Price": "72.87",
+    "Net Amount": "2404.71",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "VAL-22563",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Order Number": "",
+    "Quantity": "50",
+    "UOM": "set",
+    "Serial Number": "SN85369516",
+    "Lot Number": "LOT633440",
+    "Unit Price": "394.66",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CBL-85204",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Quantity": "4",
+    "UOM": "pcs",
+    "Serial Number": "SN91496437",
+    "Lot Number": "LOT340277",
+    "Unit Price": "89.89",
+    "Net Amount": "359.56",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "22497.27",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "1822.28",
+     "rate": "8.1"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "24319.55",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-54354",
+   "kind": "upper",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "CH93 6363 6154 0455 2999 4",
+   "approved": "CH93 6363 6154 0455 2999 4",
+   "usual": "CH93 6363 6154 0455 2999 4"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Consignment Details.Contact Name",
+    "value": "Beat Steiner",
+    "kind": "blot",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Consignment Details.Consignment Number",
+    "value": "CSG-2026-05752",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   }
+  ],
+  "derivations": [
+   {
+    "path": "Consignment Details.Payment Due Date",
+    "value": "31/01/2026",
+    "method": "document date plus the 30 days of the printed payment terms",
+    "inputs": [
+     "Consignment Details.Consignment Date",
+     "Consignment Details.Payment Terms"
+    ]
+   },
+   {
+    "path": "Items.1.Net Amount",
+    "value": "19733.00",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.1.Quantity",
+     "Items.1.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00435182644689(17)290227(10)LOT633440(21)SN85369516",
+    "gtin": "0435182644689",
+    "expiry": "290227",
+    "lot": "LOT633440",
+    "serial": "SN85369516",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 2,
+    "symbology": "gs1-128",
+    "payload": "(01)00564147092415(17)290825(10)LOT340277(21)SN91496437",
+    "gtin": "0564147092415",
+    "expiry": "290825",
+    "lot": "LOT340277",
+    "serial": "SN91496437",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00435182644689(17)290227(10)LOT633440(21)SN85369516",
+    "row": 1,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00564147092415(17)290825(10)LOT340277(21)SN91496437",
+    "row": 2,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

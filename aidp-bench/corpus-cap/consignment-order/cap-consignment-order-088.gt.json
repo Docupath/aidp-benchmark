@@ -1,0 +1,207 @@
+{
+ "id": "cap-consignment-order-088",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "ja-JP",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": true,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "東京精密機器株式会社",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "大阪市",
+   "Postal Code": "530-0001",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "VAT No": "",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "株式会社中部医療器",
+   "Name 2": "",
+   "Street 1": "千代田区丸の内2-30-13",
+   "Street 2": "",
+   "City": "東京都",
+   "Postal Code": "104-0061",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "VAT No": "",
+   "Registration No": "T2163892444345",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "大阪市",
+   "Postal Code": "530-0001",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-12691",
+   "Consignment Date": "04/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "お支払いは30日以内にお願いします。",
+   "Payment Due Date": "",
+   "Currency Code": "JPY",
+   "Contact Name": "田中太郎"
+  },
+  "Items": [
+   {
+    "Article ID": "PMP-61021",
+    "Article Name": "Dosing Pump DP-12",
+    "Description": "12 l/h, PVDF head",
+    "Order Number": "",
+    "Quantity": "13",
+    "UOM": "box",
+    "Serial Number": "SN22470936",
+    "Lot Number": "LOT356741",
+    "Unit Price": "7508",
+    "Net Amount": "97604",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "BRG-90595",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Quantity": "47",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "LOT506858",
+    "Unit Price": "6155",
+    "Net Amount": "289285",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "BRG-50117",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Quantity": "35",
+    "UOM": "set",
+    "Serial Number": "SN20665963",
+    "Lot Number": "LOT818565",
+    "Unit Price": "6901",
+    "Net Amount": "241535",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "628424",
+   "Tax": [
+    {
+     "tax_code": "消費税",
+     "tax_total": "62842",
+     "rate": "10"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "691266",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-07095",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "6464133",
+   "approved": "6464133",
+   "usual": "6464133"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Consignment Details.Payment Due Date",
+    "value": "03/06/2026",
+    "method": "document date plus the 30 days of the printed payment terms",
+    "inputs": [
+     "Consignment Details.Consignment Date",
+     "Consignment Details.Payment Terms"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 2,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00280676568763(17)270818(10)LOT818565(21)SN20665963",
+    "gtin": "0280676568763",
+    "expiry": "270818",
+    "lot": "LOT818565",
+    "serial": "SN20665963",
+    "label_only": true,
+    "page": 2
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00280676568763(17)270818(10)LOT818565(21)SN20665963",
+    "row": 2,
+    "page": 2
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

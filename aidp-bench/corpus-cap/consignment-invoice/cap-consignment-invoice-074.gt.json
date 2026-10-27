@@ -1,0 +1,197 @@
+{
+ "id": "cap-consignment-invoice-074",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-DE",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Rheinland Logistik GmbH",
+   "Name 2": "",
+   "Street 1": "Hauptstraße 42",
+   "Street 2": "",
+   "City": "München",
+   "Postal Code": "80331",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "VAT No": "DE179087037",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Isar Verpackung",
+   "Name 2": "",
+   "Street 1": "Industrieweg 190",
+   "Street 2": "",
+   "City": "München",
+   "Postal Code": "80331",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "VAT No": "DE779002682",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Hauptstraße 42",
+   "Street 2": "",
+   "City": "München",
+   "Postal Code": "80331",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-22424",
+   "Consignment Date": "24/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Zahlbar innerhalb von 30 Tagen.",
+   "Payment Due Date": "23/06/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Jürgen Hoffmann"
+  },
+  "Items": [
+   {
+    "Article ID": "LBL-23781",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "",
+    "Quantity": "20",
+    "UOM": "pcs",
+    "Serial Number": "SN59983560",
+    "Lot Number": "LOT414078",
+    "Unit Price": "5595.02",
+    "Net Amount": "111900.40",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "WGT-98317",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "20",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "LOT064090",
+    "Unit Price": "552.09",
+    "Net Amount": "11041.80",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-13486",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "30",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "LOT388651",
+    "Unit Price": "1199.44",
+    "Net Amount": "35983.20",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "158925.40",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "30195.83",
+     "rate": "19"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "189121.23",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-53702",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "DE03 4814 2236 2860 6713 55",
+   "approved": "DE03 4814 2236 2860 6713 55",
+   "usual": "DE03 4814 2236 2860 6713 55"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00679373766730(17)290321(10)LOT414078(21)SN59983560",
+    "gtin": "0679373766730",
+    "expiry": "290321",
+    "lot": "LOT414078",
+    "serial": "SN59983560",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00679373766730(17)290321(10)LOT414078(21)SN59983560",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

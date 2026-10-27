@@ -53,6 +53,15 @@ ok('an identifier still matches without its separators: Article ID 4006-381-3339
   verdictOf({ Items: [{ 'Article ID': '4006381333931', 'Article Name': 'Widget' }] }, { Items: [{ 'Article ID': '4006-381-333931', 'Article Name': 'Widget' }] })
     .find((v) => v.path.endsWith('Article ID')).verdict === 'normalized');
 ok('a VAT number still matches without its spaces', one('Seller', 'VAT No', '162953333351864', '16295 3333 351864').verdict === 'normalized');
+ok('an IBAN still matches without its spaces', one('Payment Details', 'IBAN', 'DE89370400440532013000', 'DE89 3704 0044 0532 0130 00').verdict === 'normalized');
+ok('an IBAN with one digit changed fails, though its digits run past what a number holds', one('Payment Details', 'IBAN', 'DE89370400440532013000', 'DE89370400440532013001').verdict === 'wrong');
+ok('an IBAN with another country code fails', one('Payment Details', 'IBAN', 'DE89370400440532013000', 'AT89370400440532013000').verdict === 'wrong');
+ok('an Arabic street is not its house number alone', one('Seller', 'Street 1', 'شارع الشيخ زايد 134', '134').verdict === 'wrong');
+ok('an Arabic comma inside a street is punctuation: the street matches without it', one('Seller', 'Street 1', 'شارع الاتحاد 148', 'شارع الاتحاد، 148').verdict !== 'wrong');
+ok('a dash of another script inside a name is punctuation', one('Seller', 'Name', 'Smith-Jones Ltd', 'Smith\u2013Jones Ltd').verdict !== 'wrong');
+ok('an accent is part of its letter: Geneve does not pass for Genève', one('Seller', 'City', 'Genève', 'Geneve').verdict === 'wrong');
+ok('Japanese payment terms are not their number of days alone', one('Invoice Details', 'Payment Terms', 'お支払いは30日以内にお願いします。', '30').verdict === 'wrong');
+ok('a postal code written in digits alone still matches with its hyphen', one('Seller', 'Postal Code', '1040061', '104-0061').verdict === 'normalized');
 const tax = (got) => verdictOf({ 'Payment Details': { Tax: [{ tax_code: 'VAT', tax_total: '-8050.60', rate: '5' }] } }, { 'Payment Details': { Tax: [{ tax_code: 'VAT', tax_total: got, rate: '5' }] } })[0].verdict;
 ok('a nested tax total with its sign flipped is no longer a full match', tax('8050.60') !== 'correct');
 ok('a nested tax total written -8050.6 is a full match', tax('-8050.6') === 'correct');

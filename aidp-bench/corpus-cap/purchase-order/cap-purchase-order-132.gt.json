@@ -1,0 +1,202 @@
+{
+ "id": "cap-purchase-order-132",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "pt-PT",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Lusitana Ferramentas Lda",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 50",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT703073122"
+  },
+  "Seller": {
+   "Name": "Indústria Algarve",
+   "Name 2": "",
+   "Street 1": "Rua do Porto 25",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 50",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-27233",
+   "Compromisso Code": "",
+   "PO Date": "04/05/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "03/06/2026",
+   "Cost Center": "",
+   "Your Reference": "Inês Costa",
+   "Posting Date": "",
+   "Net Amount": "11611.49",
+   "Total Amount": "14282.13",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Contact Name": "Inês Costa"
+  },
+  "Items": [
+   {
+    "Article ID": "MTR-13005",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "39",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "250.51",
+    "Net Amount": "9769.89",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CHM-11965",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "8",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "230.20",
+    "Net Amount": "1841.60",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "23",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "2670.64",
+     "rate": "23"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "PT09 3876 8512 8003 1030 5442 2",
+    "BIC/SWIFT Code": "UPUIPTC6"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-20887",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "PT09 3876 8512 8003 1030 5442 2",
+   "approved": null,
+   "usual": "PT09 3876 8512 8003 1030 5442 2"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Methods.0.Account Number",
+     "Payment Methods.0.BIC/SWIFT Code"
+    ]
+   }
+  ]
+ }
+}

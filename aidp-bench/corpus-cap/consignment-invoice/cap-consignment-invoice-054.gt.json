@@ -1,0 +1,198 @@
+{
+ "id": "cap-consignment-invoice-054",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "pt-PT",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Atlântico Distribuição SA",
+   "Name 2": "",
+   "Street 1": "Rua Augusta 100",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT025452148",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Eletrónica Côa Lda",
+   "Name 2": "",
+   "Street 1": "Rua da Indústria 71",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT668506218",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Rua Augusta 100",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-00000",
+   "Consignment Date": "22/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "21/06/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "João Silva"
+  },
+  "Items": [
+   {
+    "Article ID": "TRN-59582",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Quantity": "34",
+    "UOM": "set",
+    "Serial Number": "SN24640855",
+    "Lot Number": "LOT174517",
+    "Unit Price": "194.51",
+    "Net Amount": "6613.34",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CONS-15255",
+    "Article Name": "Consulting Services",
+    "Description": "Senior consultant",
+    "Order Number": "",
+    "Quantity": "50",
+    "UOM": "pcs",
+    "Serial Number": "SN07977503",
+    "Lot Number": "LOT824027",
+    "Unit Price": "77.92",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "10509.34",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "2417.15",
+     "rate": "23"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "12926.49",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-54014",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "PT77 9506 8767 9206 6546 9213 3",
+   "approved": "PT77 9506 8767 9206 6546 9213 3",
+   "usual": "PT77 9506 8767 9206 6546 9213 3"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Recebido 28.12 - faltam 19 caixas",
+    "page": 1,
+    "place": "end"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Items.1.Net Amount",
+    "value": "3896.00",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.1.Quantity",
+     "Items.1.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00210056874276(17)270705(10)LOT174517(21)SN24640855",
+    "gtin": "0210056874276",
+    "expiry": "270705",
+    "lot": "LOT174517",
+    "serial": "SN24640855",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00210056874276(17)270705(10)LOT174517(21)SN24640855",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

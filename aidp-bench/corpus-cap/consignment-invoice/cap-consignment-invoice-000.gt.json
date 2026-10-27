@@ -1,0 +1,289 @@
+{
+ "id": "cap-consignment-invoice-000",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "fr-FR",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Atelier Provence SAS",
+   "Name 2": "",
+   "Street 1": "45 Avenue Victor Hugo",
+   "Street 2": "",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR32 821740352",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Ardèche Logistique S.A.S.",
+   "Name 2": "",
+   "Street 1": "146 Rue de Paris",
+   "Street 2": "",
+   "City": "Marseille",
+   "Postal Code": "13001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR74 680434677",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "45 Avenue Victor Hugo",
+   "Street 2": "",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-95028",
+   "Consignment Date": "27/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "26/06/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Sophie Bernard"
+  },
+  "Items": [
+   {
+    "Article ID": "FLT-60613",
+    "Article Name": "Filter Cartridge F9",
+    "Description": "HEPA class",
+    "Order Number": "",
+    "Quantity": "32",
+    "UOM": "EA",
+    "Serial Number": "SN86021826",
+    "Lot Number": "LOT668341",
+    "Unit Price": "59.51",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-81363",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "6",
+    "UOM": "kg",
+    "Serial Number": "SN00135341",
+    "Lot Number": "LOT507941",
+    "Unit Price": "381.84",
+    "Net Amount": "2291.04",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-60890",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "33",
+    "UOM": "set",
+    "Serial Number": "SN19138307",
+    "Lot Number": "LOT172502",
+    "Unit Price": "48.87",
+    "Net Amount": "1612.71",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "LBL-98423",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "",
+    "Quantity": "47",
+    "UOM": "box",
+    "Serial Number": "SN72410447",
+    "Lot Number": "LOT906873",
+    "Unit Price": "442.15",
+    "Net Amount": "20781.05",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "",
+   "Tax": [
+    {
+     "tax_code": "TVA",
+     "tax_total": "5317.82",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "31906.94",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-58734",
+   "kind": "punct",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "FR77 4911 6155 6318 2521 0408 256",
+   "approved": "FR77 4911 6155 6318 2521 0408 256",
+   "usual": "FR77 4911 6155 6318 2521 0408 256"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Payment Details.Subtotal",
+    "value": "26589.12",
+    "method": "sum of the line amounts",
+    "inputs": [
+     "Items[].Net Amount"
+    ]
+   },
+   {
+    "path": "Items.0.Net Amount",
+    "value": "1904.32",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.0.Quantity",
+     "Items.0.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00631000397816(17)271017(10)LOT668341(21)SN86021826",
+    "gtin": "0631000397816",
+    "expiry": "271017",
+    "lot": "LOT668341",
+    "serial": "SN86021826",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00356472233195(17)290506(10)LOT507941(21)SN00135341",
+    "gtin": "0356472233195",
+    "expiry": "290506",
+    "lot": "LOT507941",
+    "serial": "SN00135341",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L3",
+    "row": 2,
+    "symbology": "gs1-128",
+    "payload": "(01)00960160898223(17)280827(10)LOT172502(21)SN19138307",
+    "gtin": "0960160898223",
+    "expiry": "280827",
+    "lot": "LOT172502",
+    "serial": "SN19138307",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L4",
+    "row": 3,
+    "symbology": "gs1-128",
+    "payload": "(01)00744202760057(17)290408(10)LOT906873(21)SN72410447",
+    "gtin": "0744202760057",
+    "expiry": "290408",
+    "lot": "LOT906873",
+    "serial": "SN72410447",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00631000397816(17)271017(10)LOT668341(21)SN86021826",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00356472233195(17)290506(10)LOT507941(21)SN00135341",
+    "row": 1,
+    "page": 1
+   },
+   {
+    "id": "L3",
+    "symbology": "gs1-128",
+    "payload": "(01)00960160898223(17)280827(10)LOT172502(21)SN19138307",
+    "row": 2,
+    "page": 1
+   },
+   {
+    "id": "L4",
+    "symbology": "gs1-128",
+    "payload": "(01)00744202760057(17)290408(10)LOT906873(21)SN72410447",
+    "row": 3,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

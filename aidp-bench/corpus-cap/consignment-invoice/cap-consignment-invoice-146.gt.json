@@ -1,0 +1,180 @@
+{
+ "id": "cap-consignment-invoice-146",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Crestview Supplies LLC",
+   "Name 2": "",
+   "Street 1": "742 Evergreen Terrace",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US59-5425395",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Harborline Medical LLC",
+   "Name 2": "",
+   "Street 1": "169 Industrial Parkway",
+   "Street 2": "",
+   "City": "Cleveland",
+   "Postal Code": "44101",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US75-9610780",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "742 Evergreen Terrace",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-28679",
+   "Consignment Date": "10/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "09/04/2026",
+   "Currency Code": "USD",
+   "Contact Name": "John Carter"
+  },
+  "Items": [
+   {
+    "Article ID": "BRG-74260",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Quantity": "5",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "LOT260057",
+    "Unit Price": "153.57",
+    "Net Amount": "767.85",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-53014",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "46",
+    "UOM": "EA",
+    "Serial Number": "SN65578122",
+    "Lot Number": "LOT199848",
+    "Unit Price": "59.01",
+    "Net Amount": "2714.46",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "3482.31",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "296.00",
+     "rate": "8.5"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "3778.31",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-51077",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "454868771541",
+   "approved": null,
+   "usual": "454868771541"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00479755205457(17)290628(10)LOT199848(21)SN65578122",
+    "gtin": "0479755205457",
+    "expiry": "290628",
+    "lot": "LOT199848",
+    "serial": "SN65578122",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00479755205457(17)290628(10)LOT199848(21)SN65578122",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

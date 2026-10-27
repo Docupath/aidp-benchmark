@@ -1,0 +1,207 @@
+{
+ "id": "cap-invoice-118",
+ "slug": "invoice",
+ "category": "Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "es-ES",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Talleres Mediterráneo SA",
+   "Address": "Avenida Diagonal 220",
+   "City": "Barcelona",
+   "Postal Code": "08001",
+   "Country": "Spain",
+   "Country Code": "ES"
+  },
+  "Seller": {
+   "Name": "Embalajes Castilla S.A.",
+   "Address": "Calle Mayor 150",
+   "City": "Valencia",
+   "Postal Code": "46001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB32587572",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Avenida Diagonal 220",
+   "City": "Barcelona",
+   "Postal Code": "08001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Debit",
+   "Invoice Number": "INV-2026-75885",
+   "Compromisso Code": "",
+   "Invoice Date": "05/04/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "",
+   "Cost Center": "",
+   "Your Reference": "Lucía Fernández",
+   "Posting Date": "",
+   "Net Amount": "18872.84",
+   "Total Tax": "",
+   "Total Amount": "22836.14",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "TRN-06534",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "49",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "385.16",
+    "Net Amount": "18872.84",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "ES60 0564 4731 1608 7135 9327",
+     "BIC_or_Swift_code": "IIFQESQ3"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "21",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "",
+     "rate": "21"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-35401",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "ES60 0564 4731 1608 7135 9327",
+   "approved": null,
+   "usual": "ES60 0564 4731 1608 7135 9327"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Recibido 14.09 - faltan 5 cajas",
+    "page": 1,
+    "place": "end"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Invoice Details.Total Tax",
+    "value": "3963.30",
+    "method": "net times the printed tax rate",
+    "inputs": [
+     "Invoice Details.Net Amount",
+     "Payment Details.Tax Rate"
+    ]
+   },
+   {
+    "path": "Invoice Details.Due Date",
+    "value": "05/05/2026",
+    "method": "document date plus the 30 days of the printed payment terms",
+    "inputs": [
+     "Invoice Details.Invoice Date",
+     "Invoice Details.Payment Terms"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Details.Payment Methods.0.account_no",
+     "Payment Details.Payment Methods.0.BIC_or_Swift_code"
+    ]
+   }
+  ]
+ }
+}

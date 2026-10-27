@@ -1,0 +1,462 @@
+{
+ "tag": "aidp-v1-cap-contract",
+ "corpus": "AIDP-CAP",
+ "mode": "contract",
+ "status": "complete",
+ "api": "http://localhost:4191",
+ "platform": {
+  "git_sha": "5bd21304cc7f8cbb0fb8ac851457a6cdabbd0b97",
+  "flags_file": "<scratch>/cap-flags.txt",
+  "flags_sha256": "2faf9a856d4547e16cd8ac7e9b008fa605b7f1ebb7a51f1675cffd32314565ea"
+ },
+ "corpus_record": {
+  "dir": "<corpus>",
+  "seed": "aidp-cap-v1:b9338efa269d243a13478359e1b5d57c5f883f31b68477ee686db7e1f24edaa1",
+  "manifest_sha256": "d6dff0bc37a79275db020471dd51b7255cea31455808c0e97109d9509f23d9ba",
+  "documents": 960,
+  "copies": 30,
+  "bundles": 200
+ },
+ "account": {
+  "external_tenant": "aidpbench-aidp-v1-cap-contract-contract",
+  "customer_setup": {
+   "catalogues": [
+    {
+     "name": "suppliers",
+     "sha256": "aa569334c4cd3c2e94dbf1d9e94069fe07731221684817cc31fe892d0b9f1fd4",
+     "columns": [
+      "Supplier Code",
+      "Supplier Name",
+      "VAT Number",
+      "Street",
+      "Postal Code",
+      "City",
+      "Country Code",
+      "Approved Account",
+      "Approved BIC"
+     ]
+    },
+    {
+     "name": "bank_master",
+     "sha256": "698b6867417996909f2da441ab69047e4dd7e8b3f5fab9295d96d2a329117dc3",
+     "columns": [
+      "VAT Number",
+      "Approved Account"
+     ]
+    }
+   ],
+   "transformation_rules": [
+    {
+     "id": "supplier-by-vat",
+     "scope": "organization",
+     "catalogue": "suppliers",
+     "match_join": "all",
+     "conditions": [
+      {
+       "field": "Seller.VAT No",
+       "op": "eq",
+       "column": "VAT Number"
+      }
+     ],
+     "actions": [
+      {
+       "field": "Supplier Code",
+       "op": "set",
+       "from_column": "Supplier Code"
+      }
+     ]
+    },
+    {
+     "id": "supplier-by-registration",
+     "scope": "organization",
+     "catalogue": "suppliers",
+     "match_join": "all",
+     "conditions": [
+      {
+       "field": "Seller.Registration No",
+       "op": "eq",
+       "column": "VAT Number"
+      }
+     ],
+     "actions": [
+      {
+       "field": "Supplier Code",
+       "op": "set",
+       "from_column": "Supplier Code"
+      }
+     ]
+    },
+    {
+     "id": "supplier-by-name",
+     "scope": "organization",
+     "catalogue": "suppliers",
+     "match_join": "all",
+     "conditions": [
+      {
+       "field": "Seller.Name",
+       "op": "eq",
+       "column": "Supplier Name"
+      },
+      {
+       "field": "Seller.VAT No",
+       "op": "ne",
+       "column": "VAT Number"
+      },
+      {
+       "field": "Seller.Registration No",
+       "op": "ne",
+       "column": "VAT Number"
+      }
+     ],
+     "actions": [
+      {
+       "field": "Supplier Code",
+       "op": "set",
+       "from_column": "Supplier Code"
+      }
+     ]
+    },
+    {
+     "id": "supplier-by-street",
+     "scope": "organization",
+     "catalogue": "suppliers",
+     "match_join": "all",
+     "conditions": [
+      {
+       "field": "Seller.Address",
+       "op": "eq",
+       "column": "Street"
+      },
+      {
+       "field": "Seller.VAT No",
+       "op": "ne",
+       "column": "VAT Number"
+      },
+      {
+       "field": "Seller.Registration No",
+       "op": "ne",
+       "column": "VAT Number"
+      },
+      {
+       "field": "Seller.Name",
+       "op": "ne",
+       "column": "Supplier Name"
+      }
+     ],
+     "actions": [
+      {
+       "field": "Supplier Code",
+       "op": "set",
+       "from_column": "Supplier Code"
+      }
+     ]
+    },
+    {
+     "id": "supplier-by-street-1",
+     "scope": "organization",
+     "catalogue": "suppliers",
+     "match_join": "all",
+     "conditions": [
+      {
+       "field": "Seller.Street 1",
+       "op": "eq",
+       "column": "Street"
+      },
+      {
+       "field": "Seller.VAT No",
+       "op": "ne",
+       "column": "VAT Number"
+      },
+      {
+       "field": "Seller.Registration No",
+       "op": "ne",
+       "column": "VAT Number"
+      },
+      {
+       "field": "Seller.Name",
+       "op": "ne",
+       "column": "Supplier Name"
+      }
+     ],
+     "actions": [
+      {
+       "field": "Supplier Code",
+       "op": "set",
+       "from_column": "Supplier Code"
+      }
+     ]
+    },
+    {
+     "id": "bank-by-vat",
+     "scope": "organization",
+     "catalogue": "bank_master",
+     "match_join": "all",
+     "conditions": [
+      {
+       "field": "Seller.VAT No",
+       "op": "eq",
+       "column": "VAT Number"
+      },
+      {
+       "field": "Payment Details.Payment Methods.0.account_no",
+       "op": "ne",
+       "value": "ONE OF {Approved Account}"
+      }
+     ],
+     "actions": [],
+     "flags": [
+      {
+       "id": 1,
+       "name": "BANK_ACCOUNT_CHANGED"
+      }
+     ]
+    },
+    {
+     "id": "bank-by-registration",
+     "scope": "organization",
+     "catalogue": "bank_master",
+     "match_join": "all",
+     "conditions": [
+      {
+       "field": "Seller.Registration No",
+       "op": "eq",
+       "column": "VAT Number"
+      },
+      {
+       "field": "Payment Details.Payment Methods.0.account_no",
+       "op": "ne",
+       "value": "ONE OF {Approved Account}"
+      }
+     ],
+     "actions": [],
+     "flags": [
+      {
+       "id": 1,
+       "name": "BANK_ACCOUNT_CHANGED"
+      }
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "id": 1,
+     "name": "BANK_ACCOUNT_CHANGED"
+    }
+   ],
+   "match_policy": null,
+   "instructions": "Write every date in the format YYYY-MM-DD.\nWrite bank account numbers without spaces."
+  }
+ },
+ "phases": {
+  "A": [
+   "cap-consignment-invoice-003",
+   "cap-consignment-invoice-015",
+   "cap-consignment-invoice-024",
+   "cap-consignment-invoice-036",
+   "cap-consignment-invoice-039",
+   "cap-consignment-invoice-042",
+   "cap-consignment-invoice-049",
+   "cap-consignment-invoice-085",
+   "cap-consignment-invoice-092",
+   "cap-consignment-invoice-104",
+   "cap-consignment-invoice-109",
+   "cap-consignment-invoice-114",
+   "cap-consignment-invoice-116",
+   "cap-consignment-invoice-136",
+   "cap-consignment-invoice-145",
+   "cap-consignment-invoice-147",
+   "cap-consignment-invoice-148",
+   "cap-consignment-invoice-149",
+   "cap-consignment-invoice-153",
+   "cap-consignment-invoice-155",
+   "cap-consignment-order-003",
+   "cap-consignment-order-006",
+   "cap-consignment-order-010",
+   "cap-consignment-order-020",
+   "cap-consignment-order-026",
+   "cap-consignment-order-039",
+   "cap-consignment-order-049",
+   "cap-consignment-order-050",
+   "cap-consignment-order-070",
+   "cap-consignment-order-107",
+   "cap-consignment-order-119",
+   "cap-consignment-order-122",
+   "cap-consignment-order-124",
+   "cap-consignment-order-131",
+   "cap-consignment-order-144",
+   "cap-consignment-order-147",
+   "cap-consignment-order-149",
+   "cap-consignment-order-150",
+   "cap-consignment-order-152",
+   "cap-consignment-order-153",
+   "cap-credit-note-001",
+   "cap-credit-note-004",
+   "cap-credit-note-008",
+   "cap-credit-note-013",
+   "cap-credit-note-037",
+   "cap-credit-note-038",
+   "cap-credit-note-039",
+   "cap-credit-note-041",
+   "cap-credit-note-048",
+   "cap-credit-note-049",
+   "cap-credit-note-064",
+   "cap-credit-note-069",
+   "cap-credit-note-083",
+   "cap-credit-note-092",
+   "cap-credit-note-111",
+   "cap-credit-note-118",
+   "cap-credit-note-119",
+   "cap-credit-note-127",
+   "cap-credit-note-143",
+   "cap-credit-note-154",
+   "cap-freight-invoice-002",
+   "cap-freight-invoice-004",
+   "cap-freight-invoice-005",
+   "cap-freight-invoice-021",
+   "cap-freight-invoice-028",
+   "cap-freight-invoice-037",
+   "cap-freight-invoice-042",
+   "cap-freight-invoice-052",
+   "cap-freight-invoice-059",
+   "cap-freight-invoice-068",
+   "cap-freight-invoice-074",
+   "cap-freight-invoice-078",
+   "cap-freight-invoice-085",
+   "cap-freight-invoice-098",
+   "cap-freight-invoice-102",
+   "cap-freight-invoice-120",
+   "cap-freight-invoice-122",
+   "cap-freight-invoice-141",
+   "cap-freight-invoice-147",
+   "cap-freight-invoice-156",
+   "cap-invoice-032",
+   "cap-invoice-040",
+   "cap-invoice-043",
+   "cap-invoice-059",
+   "cap-invoice-061",
+   "cap-invoice-065",
+   "cap-invoice-067",
+   "cap-invoice-074",
+   "cap-invoice-087",
+   "cap-invoice-106",
+   "cap-invoice-109",
+   "cap-invoice-111",
+   "cap-invoice-113",
+   "cap-invoice-114",
+   "cap-invoice-116",
+   "cap-invoice-119",
+   "cap-invoice-124",
+   "cap-invoice-125",
+   "cap-invoice-143",
+   "cap-invoice-151",
+   "cap-purchase-order-016",
+   "cap-purchase-order-019",
+   "cap-purchase-order-023",
+   "cap-purchase-order-030",
+   "cap-purchase-order-039",
+   "cap-purchase-order-048",
+   "cap-purchase-order-057",
+   "cap-purchase-order-065",
+   "cap-purchase-order-067",
+   "cap-purchase-order-068",
+   "cap-purchase-order-069",
+   "cap-purchase-order-085",
+   "cap-purchase-order-089",
+   "cap-purchase-order-106",
+   "cap-purchase-order-113",
+   "cap-purchase-order-116",
+   "cap-purchase-order-117",
+   "cap-purchase-order-132",
+   "cap-purchase-order-151",
+   "cap-purchase-order-154"
+  ],
+  "B": []
+ },
+ "only": null,
+ "enabled_document_types": [
+  "Invoice",
+  "Purchase Order",
+  "Credit Note",
+  "Customer-Specific Invoice",
+  "Legal Invoice",
+  "Freight Invoice",
+  "Consignment Invoice",
+  "Argentine Invoice",
+  "Consignment Order",
+  "Quote",
+  "Receipt",
+  "Bank Statement",
+  "Medical Consumption Record",
+  "Form I-9",
+  "General Contract",
+  "Partnership Agreement",
+  "Confidentiality Agreement (NDA)",
+  "E-Signature Platform Contract",
+  "Execution Record"
+ ],
+ "retry_policy": {
+  "retries_per_request": 6,
+  "requeue_rounds": 8,
+  "first_backoff_ms": 2000,
+  "max_backoff_ms": 60000,
+  "round_pause_ms": 30000,
+  "request_timeout_ms": 3600000,
+  "processing_wait_ms": 10800000
+ },
+ "concurrency": 8,
+ "harness": {
+  "node": "v24.18.0",
+  "host": "<host>",
+  "argv": [
+   "--mode",
+   "contract",
+   "--corpus",
+   "<corpus>",
+   "--out",
+   "<repo>/aidp-bench/results/aidp-v1-cap-contract",
+   "--tag",
+   "aidp-v1-cap-contract",
+   "--api",
+   "http://localhost:4191",
+   "--conc",
+   "8",
+   "--timeout-ms",
+   "3600000",
+   "--platform-sha",
+   "5bd21304cc7f8cbb0fb8ac851457a6cdabbd0b97",
+   "--flags",
+   "<scratch>/cap-flags.txt",
+   "--env-file",
+   "<platform>/.env",
+   "--enabled-types",
+   "Invoice,Purchase Order,Credit Note,Customer-Specific Invoice,Legal Invoice,Freight Invoice,Consignment Invoice,Argentine Invoice,Consignment Order,Quote,Receipt,Bank Statement,Medical Consumption Record,Form I-9,General Contract,Partnership Agreement,Confidentiality Agreement (NDA),E-Signature Platform Contract,Execution Record",
+   "--port",
+   "8182"
+  ]
+ },
+ "started_at": "2026-10-27T07:54:53.901Z",
+ "sessions": [
+  {
+   "started_at": "2026-10-27T07:54:53.901Z",
+   "finished_at": "2026-10-27T08:28:44.656Z",
+   "status": "complete"
+  }
+ ],
+ "finished_at": "2026-10-27T08:28:44.656Z",
+ "counts": {
+  "items_planned": 120,
+  "items_ok": 120,
+  "items_failed": 0,
+  "this_session": {
+   "ran_ok": 120,
+   "already_done": 0,
+   "failed_attempts": 0,
+   "requests": 245,
+   "retries": 0,
+   "transport_failures": 0,
+   "processing_polls": 5
+  }
+ },
+ "permanent_failures": [],
+ "elapsed_s": 2031
+}

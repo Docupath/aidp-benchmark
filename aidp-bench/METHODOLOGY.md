@@ -88,8 +88,9 @@ diagnostic beside the score.
 
 ## 5. The measures
 
-The sixteen score-bearing measures, their units and denominators, are defined in section 5 of the
-specification and computed in `bench/scoring.mjs` (per document) and `bench/aidp-score.mjs` (combined).
+The thirty-one score-bearing measures, their units and denominators, are defined in section 5 of the
+specification. AIDP-2K's are computed in `bench/scoring.mjs` (per document) and `bench/aidp-score.mjs` (combined),
+and AIDP-CAP's eighteen in `bench/score-cap.mjs`, which combines them with AIDP-2K's thirteen into the AIDP Score.
 Points a reader is most likely to ask about:
 
 - **Read** compares the text the system read from the page with the corpus's correct text, as word

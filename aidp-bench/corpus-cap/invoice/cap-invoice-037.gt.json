@@ -1,0 +1,208 @@
+{
+ "id": "cap-invoice-037",
+ "slug": "invoice",
+ "category": "Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "fr-FR",
+ "dims": {
+  "scale": "medium",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "B",
+ "case": {
+  "kind": "po-variance",
+  "role": "control"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Société Lumière SARL",
+   "Address": "12 Rue de la République",
+   "City": "Marseille",
+   "Postal Code": "13001",
+   "Country": "France",
+   "Country Code": "FR"
+  },
+  "Seller": {
+   "Name": "Loire Distribution",
+   "Address": "150 Rue de Paris",
+   "City": "Paris",
+   "Postal Code": "75008",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR66 153546753",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "12 Rue de la République",
+   "City": "Marseille",
+   "Postal Code": "13001",
+   "Country": "France",
+   "Country Code": "FR",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Debit",
+   "Invoice Number": "INV-2026-60256",
+   "Compromisso Code": "",
+   "Invoice Date": "25/03/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "24/04/2026",
+   "Cost Center": "",
+   "Your Reference": "Sophie Bernard",
+   "Posting Date": "",
+   "Net Amount": "7969.48",
+   "Total Tax": "1593.90",
+   "Total Amount": "9563.38",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Purchase Order Number": "PO-2026-73592"
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "LBL-23636",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "23",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "17.84",
+    "Net Amount": "410.32",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "GSK-45279",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "21",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "359.96",
+    "Net Amount": "7559.16",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "FR71 7879 2080 3900 7919 2223 096",
+     "BIC_or_Swift_code": "TXKQFRD8"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "20",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "TVA",
+     "tax_total": "1593.90",
+     "rate": "20"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-18757",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "FR71 7879 2080 3900 7919 2223 096",
+   "approved": "FR71 7879 2080 3900 7919 2223 096",
+   "usual": "FR71 7879 2080 3900 7919 2223 096"
+  },
+  "po_number": "PO-2026-73592",
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [
+   {
+    "id": "Q1",
+    "symbology": "qrcode",
+    "payload": "BCD\n002\n1\nSCT\nTXKQFRD8\nLoire Distribution\nFR7178792080390079192223096\nEUR9563.38",
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

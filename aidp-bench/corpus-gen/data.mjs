@@ -14,7 +14,7 @@ const FIELD_MODE = new Set(['invoice', 'credit-note', 'customer-specific-invoice
 const ITEMY = new Set(['invoice', 'credit-note', 'customer-specific-invoice', 'purchase-order', 'consignment-invoice', 'consignment-order', 'quote', 'receipt']);
 const BUNDLE_OK = new Set(['invoice', 'purchase-order', 'consignment-order']);
 
-const CATEGORY = {
+export const CATEGORY = {
   invoice: 'Invoice', 'purchase-order': 'Purchase Order', 'credit-note': 'Credit Note', 'customer-specific-invoice': 'Customer-Specific Invoice',
   'legal-invoice': 'Legal Invoice', 'freight-invoice': 'Freight Invoice', 'consignment-invoice': 'Consignment Invoice',
   'argentine-invoice': 'Argentine Invoice', 'consignment-order': 'Consignment Order', quote: 'Quote', receipt: 'Receipt',
@@ -24,7 +24,7 @@ const CATEGORY = {
   'execution-record': 'Execution Record', other: 'Other',
 };
 
-function party(r, loc, withVat) {
+export function party(r, loc, withVat) {
   const [city, postal] = r.pick(loc.cities);
   return {
     name: r.pick(loc.companies), street: r.pick(loc.streets), city, postal,
@@ -57,15 +57,15 @@ export function ibanCheckDigits(country, bban) {
   const digits = [...`${bban}${country}00`].map((ch) => (/[0-9]/.test(ch) ? ch : String(ch.charCodeAt(0) - 55))).join('');
   return String(98n - (BigInt(digits) % 97n)).padStart(2, '0');
 }
-function iban(r, cc) {
+export function iban(r, cc) {
   const country = cc === 'CH' ? 'CH' : cc === 'GB' ? 'GB' : cc === 'JP' ? 'DE' : cc;
   const drawn = r.digits(2);
   const groups = [r.digits(4), r.digits(4), r.digits(4), r.digits(4), r.digits(2)];
   return `${country}${GEN_OPTIONS.validAccounts ? ibanCheckDigits(country, groups.join('')) : drawn} ${groups.join(' ')}`;
 }
-function bic(r) { return `${'ABCDEFG'[r.int(0, 6)]}${'XYZQRS'[r.int(0, 5)]}BK${r.pick(['DE', 'CH', 'GB', 'FR', 'SE'])}${r.digits(2)}`; }
+export function bic(r) { return `${'ABCDEFG'[r.int(0, 6)]}${'XYZQRS'[r.int(0, 5)]}BK${r.pick(['DE', 'CH', 'GB', 'FR', 'SE'])}${r.digits(2)}`; }
 
-function pickDims(r, slug) {
+export function pickDims(r, slug) {
   const locale = r.pick([...LOCALES.slice(0, 2), ...LOCALES, r.pick(LOCALES)]); // EN slightly heavier
   let scale = 'small';
   if (ITEMY.has(slug)) {
@@ -89,9 +89,9 @@ function pickDims(r, slug) {
   };
 }
 
-const itemsCount = (r, scale) => scale === 'small' ? r.int(1, 4) : scale === 'medium' ? r.int(18, 45) : scale === 'large' ? r.int(120, 220) : 500;
+export const itemsCount = (r, scale) => scale === 'small' ? r.int(1, 4) : scale === 'medium' ? r.int(18, 45) : scale === 'large' ? r.int(120, 220) : 500;
 
-function makeItems(r, loc, n, bank, withLotSerial) {
+export function makeItems(r, loc, n, bank, withLotSerial) {
   const items = [];
   for (let i = 0; i < n; i++) {
     const [pfx, name, desc] = r.pick(bank);
@@ -109,7 +109,7 @@ function makeItems(r, loc, n, bank, withLotSerial) {
 const sum = (items) => Math.round(items.reduce((a, it) => a + it.net, 0) * 100) / 100;
 
 /** Localized meta/totals/payment rows + GT/facts for the commercial family. */
-function commercialCore(r, slug, dims) {
+export function commercialCore(r, slug, dims) {
   const loc = dims.locale; const L = loc.labels;
   const seller = party(r, loc, true);
   const buyer = party(r, loc, ['purchase-order', 'consignment-invoice', 'consignment-order', 'customer-specific-invoice'].includes(slug));
@@ -143,7 +143,7 @@ function commercialCore(r, slug, dims) {
 }
 
 /** GT for the field-mode commercial types, keyed to the frozen field definitions. */
-function commercialGt(slug, c, dims) {
+export function commercialGt(slug, c, dims) {
   const gt = skeleton(slug);
   const setIf = (sec, f, v) => { if (gt[sec] && f in gt[sec]) gt[sec][f] = v; };
   const vatField = c.loc.vatField ?? 'VAT No'; // JA 登録番号 is a registration number, not a VAT No
@@ -245,7 +245,7 @@ function commercialGt(slug, c, dims) {
 }
 
 /** Render-model for the commercial family (also reused by quote/receipt with tweaks). */
-function commercialContent(slug, c, dims, titleOverride) {
+export function commercialContent(slug, c, dims, titleOverride) {
   const { L, loc } = c;
   const noDec = loc.noDecimals;
   const title = titleOverride ?? (slug === 'credit-note' ? L.creditNote : slug === 'purchase-order' ? L.purchaseOrder : slug.startsWith('consignment') ? `CONSIGNMENT ${slug.endsWith('order') ? 'ORDER' : 'INVOICE'}` : L.invoice);
@@ -281,7 +281,7 @@ function commercialContent(slug, c, dims, titleOverride) {
   };
 }
 
-function addBarcodes(r, slug, c, content, dims) {
+export function addBarcodes(r, slug, c, content, dims) {
   const out = { gtBarcodes: [], expectedFuture: [] };
   const L = content;
   if (['invoice', 'customer-specific-invoice', 'credit-note'].includes(slug) && r.chance(0.35)) {
@@ -314,7 +314,7 @@ function addBarcodes(r, slug, c, content, dims) {
   return out;
 }
 
-function buildBundle(r, slug, c, dims) {
+export function buildBundle(r, slug, c, dims) {
   // Two parent lines get granular breakdowns in an attachment; GT items = granular rows REPLACING parents.
   const loc = c.loc; const noDec = loc.noDecimals;
   const parents = c.items.slice(0, 2).map((p, pi) => {
@@ -478,7 +478,7 @@ function factDoc(slug, r, dims) {
 }
 
 // ---------------- special field-mode builders ----------------
-function freightDoc(r, dims) {
+export function freightDoc(r, dims) {
   const loc = dims.locale; const L = loc.labels;
   const c = commercialCore(r, 'invoice', dims);
   const shipRef = `SH-${r.digits(6)}`; const mbl = `MBL${r.digits(9)}`; const hbl = `HBL${r.digits(9)}`;

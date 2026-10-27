@@ -1,7 +1,7 @@
 {
  "aidp_version": "1.0",
  "tag": "aidp-v1-main",
- "scored_at": "2026-10-25T11:29:47.311Z",
+ "scored_at": "2026-10-27T12:33:13.984Z",
  "rules": {
   "exactNumbers": true,
   "keepMisclassified": true,
@@ -193505,18 +193505,18 @@
      },
      "L2": {
       "correct": 1647,
-      "normalized": 2,
-      "wrong": 23,
+      "normalized": 1,
+      "wrong": 24,
       "missing": 88,
       "spurious": 0,
       "gt_populated": 1760,
       "completeness": 0.95,
-      "correctness": 0.986244019138756,
+      "correctness": 0.9856459330143541,
       "hallucination": 0,
-      "precision": 0.986244019138756,
-      "recall": 0.9369318181818181,
-      "f1": 0.960955710955711,
-      "score": 0.9369318181818181,
+      "precision": 0.9856459330143541,
+      "recall": 0.9363636363636364,
+      "f1": 0.9603729603729604,
+      "score": 0.9363636363636364,
       "convention": 0
      },
      "facts": null,
@@ -193573,9 +193573,9 @@
        "flagged": true,
        "routed": null,
        "surfaced": null,
-       "errors": 111,
+       "errors": 112,
        "error_detail": {
-        "wrong": 23,
+        "wrong": 24,
         "missing": 88,
         "spurious": 0,
         "row_count": 0,
@@ -193689,23 +193689,17 @@
          "misconverted": 0
         },
         "text": {
-         "rate": 0.9980842911877394,
+         "rate": 0.9990412272291467,
          "passed": 1042,
-         "checked": 1044,
+         "checked": 1043,
          "scored": false,
          "canonical": 1042,
          "understood": 0,
-         "noncanonical": 2,
+         "noncanonical": 1,
          "misconverted": 0
         }
        },
        "samples": [
-        {
-         "path": "Seller.Street 1",
-         "gt": "شارع الشيخ زايد، مبنى 12",
-         "out": "12 شارع الشيخ زايد، مبنى",
-         "why": "non-canonical form"
-        },
         {
          "path": "Consignment Details.Payment Terms",
          "gt": "Payment due within 30 days.",
@@ -193772,6 +193766,12 @@
      "cls_ms": 79397,
      "misses": [
       {
+       "path": "Seller.Street 1",
+       "verdict": "wrong",
+       "gt": "شارع الشيخ زايد، مبنى 12",
+       "out": "12 شارع الشيخ زايد، مبنى"
+      },
+      {
        "path": "Items.1.Description",
        "verdict": "wrong",
        "gt": "0-10 bar, 4-20mA",
@@ -193824,12 +193824,6 @@
        "verdict": "missing",
        "gt": "SN54578959",
        "out": ""
-      },
-      {
-       "path": "Items.32.Lot Number",
-       "verdict": "missing",
-       "gt": "LOT763300",
-       "out": ""
       }
      ],
      "inventions": [],
@@ -193861,7 +193855,7 @@
        "n": 1760
       },
       "capture.fidelity": {
-       "p": 1649,
+       "p": 1648,
        "n": 1672
       },
       "capture.restraint": {
@@ -218711,18 +218705,18 @@
      },
      "L2": {
       "correct": 57,
-      "normalized": 3,
-      "wrong": 3,
+      "normalized": 0,
+      "wrong": 6,
       "missing": 1,
       "spurious": 1,
       "gt_populated": 64,
       "completeness": 0.984375,
-      "correctness": 0.9523809523809523,
+      "correctness": 0.9047619047619048,
       "hallucination": 0.015625,
-      "precision": 0.9375,
-      "recall": 0.9375,
-      "f1": 0.9375,
-      "score": 0.9228515625,
+      "precision": 0.890625,
+      "recall": 0.890625,
+      "f1": 0.890625,
+      "score": 0.876708984375,
       "convention": 0
      },
      "facts": null,
@@ -218779,9 +218773,9 @@
        "flagged": false,
        "routed": null,
        "surfaced": null,
-       "errors": 5,
+       "errors": 8,
        "error_detail": {
-        "wrong": 3,
+        "wrong": 6,
         "missing": 1,
         "spurious": 1,
         "row_count": 0,
@@ -218895,36 +218889,17 @@
          "misconverted": 0
         },
         "text": {
-         "rate": 0.9318181818181818,
+         "rate": 1,
          "passed": 41,
-         "checked": 44,
+         "checked": 41,
          "scored": false,
          "canonical": 41,
          "understood": 0,
-         "noncanonical": 3,
+         "noncanonical": 0,
          "misconverted": 0
         }
        },
-       "samples": [
-        {
-         "path": "Buyer.Street 1",
-         "gt": "شارع الشيخ زايد، مبنى 12",
-         "out": "12 شارع الشيخ زايد، مبنى",
-         "why": "non-canonical form"
-        },
-        {
-         "path": "Seller.Street 1",
-         "gt": "شارع الشيخ زايد، مبنى 12",
-         "out": "12 شارع الشيخ زايد، مبنى",
-         "why": "non-canonical form"
-        },
-        {
-         "path": "Shipping Details.Street 1",
-         "gt": "شارع الشيخ زايد، مبنى 12",
-         "out": "12 شارع الشيخ زايد، مبنى",
-         "why": "non-canonical form"
-        }
-       ]
+       "samples": []
       },
       "world_knowledge": {
        "rate": 1,
@@ -218992,10 +218967,22 @@
      "cls_ms": 59856,
      "misses": [
       {
+       "path": "Buyer.Street 1",
+       "verdict": "wrong",
+       "gt": "شارع الشيخ زايد، مبنى 12",
+       "out": "12 شارع الشيخ زايد، مبنى"
+      },
+      {
        "path": "Seller.Name",
        "verdict": "wrong",
        "gt": "الإمارات للمعدات الطبية ش.م.ح",
        "out": "الإمارات للمعدات الطبية ذ.م.م"
+      },
+      {
+       "path": "Seller.Street 1",
+       "verdict": "wrong",
+       "gt": "شارع الشيخ زايد، مبنى 12",
+       "out": "12 شارع الشيخ زايد، مبنى"
       },
       {
        "path": "Seller.VAT No",
@@ -219008,6 +218995,12 @@
        "verdict": "wrong",
        "gt": "AE-721841",
        "out": "AE-721841; 103503300659404"
+      },
+      {
+       "path": "Shipping Details.Street 1",
+       "verdict": "wrong",
+       "gt": "شارع الشيخ زايد، مبنى 12",
+       "out": "12 شارع الشيخ زايد، مبنى"
       },
       {
        "path": "Payment Details.Payment Methods",
@@ -219050,7 +219043,7 @@
        "n": 64
       },
       "capture.fidelity": {
-       "p": 60,
+       "p": 57,
        "n": 63
       },
       "capture.restraint": {
@@ -230688,18 +230681,18 @@
      },
      "L2": {
       "correct": 59,
-      "normalized": 2,
-      "wrong": 4,
+      "normalized": 1,
+      "wrong": 5,
       "missing": 0,
       "spurious": 1,
       "gt_populated": 65,
       "completeness": 1,
-      "correctness": 0.9384615384615385,
+      "correctness": 0.9230769230769231,
       "hallucination": 0.015151515151515152,
-      "precision": 0.9242424242424242,
-      "recall": 0.9384615384615385,
-      "f1": 0.9312977099236641,
-      "score": 0.9242424242424242,
+      "precision": 0.9090909090909091,
+      "recall": 0.9230769230769231,
+      "f1": 0.916030534351145,
+      "score": 0.9090909090909092,
       "convention": 0
      },
      "facts": null,
@@ -230754,9 +230747,9 @@
        "flagged": false,
        "routed": null,
        "surfaced": null,
-       "errors": 5,
+       "errors": 6,
        "error_detail": {
-        "wrong": 4,
+        "wrong": 5,
         "missing": 0,
         "spurious": 1,
         "row_count": 0,
@@ -230870,23 +230863,17 @@
          "misconverted": 0
         },
         "text": {
-         "rate": 0.9555555555555556,
+         "rate": 0.9772727272727273,
          "passed": 43,
-         "checked": 45,
+         "checked": 44,
          "scored": false,
          "canonical": 43,
          "understood": 0,
-         "noncanonical": 2,
+         "noncanonical": 1,
          "misconverted": 0
         }
        },
        "samples": [
-        {
-         "path": "Seller.Street 1",
-         "gt": "شارع الشيخ زايد، مبنى 12",
-         "out": "12 مبنى زايد، شارع الشيخ زايد",
-         "why": "non-canonical form"
-        },
         {
          "path": "Consignment Details.Payment Terms",
          "gt": "Payment due within 30 days.",
@@ -230965,6 +230952,12 @@
        "out": "المنطقة الصناعية"
       },
       {
+       "path": "Seller.Street 1",
+       "verdict": "wrong",
+       "gt": "شارع الشيخ زايد، مبنى 12",
+       "out": "12 مبنى زايد، شارع الشيخ زايد"
+      },
+      {
        "path": "Shipping Details.Street 1",
        "verdict": "wrong",
        "gt": "المنطقة الصناعية الثانية",
@@ -231011,7 +231004,7 @@
        "n": 65
       },
       "capture.fidelity": {
-       "p": 61,
+       "p": 60,
        "n": 65
       },
       "capture.restraint": {
@@ -314650,18 +314643,18 @@
      },
      "L2": {
       "correct": 33,
-      "normalized": 1,
-      "wrong": 3,
+      "normalized": 2,
+      "wrong": 2,
       "missing": 0,
       "spurious": 0,
       "gt_populated": 37,
       "completeness": 1,
-      "correctness": 0.918918918918919,
+      "correctness": 0.9459459459459459,
       "hallucination": 0,
-      "precision": 0.918918918918919,
-      "recall": 0.918918918918919,
-      "f1": 0.918918918918919,
-      "score": 0.918918918918919,
+      "precision": 0.9459459459459459,
+      "recall": 0.9459459459459459,
+      "f1": 0.9459459459459459,
+      "score": 0.9459459459459459,
       "convention": 0
      },
      "facts": null,
@@ -314716,9 +314709,9 @@
        "flagged": false,
        "routed": null,
        "surfaced": null,
-       "errors": 3,
+       "errors": 2,
        "error_detail": {
-        "wrong": 3,
+        "wrong": 2,
         "missing": 0,
         "spurious": 0,
         "row_count": 0,
@@ -314838,8 +314831,8 @@
          "scored": false,
          "canonical": 26,
          "understood": 0,
-         "noncanonical": 1,
-         "misconverted": 1
+         "noncanonical": 2,
+         "misconverted": 0
         }
        },
        "samples": [
@@ -314847,7 +314840,7 @@
          "path": "Seller.Street 1",
          "gt": "شارع الشيخ زايد، مبنى 12",
          "out": "شارع الشيخ زايد, مبنى 12",
-         "why": "number_separator"
+         "why": "non-canonical form"
         },
         {
          "path": "Consignment Details.Payment Terms",
@@ -314921,12 +314914,6 @@
        "out": "الإمارات للمعدات"
       },
       {
-       "path": "Seller.Street 1",
-       "verdict": "wrong",
-       "gt": "شارع الشيخ زايد، مبنى 12",
-       "out": "شارع الشيخ زايد, مبنى 12"
-      },
-      {
        "path": "Consignment Details.Contact Name",
        "verdict": "wrong",
        "gt": "أحمد المنصوري",
@@ -314962,7 +314949,7 @@
        "n": 37
       },
       "capture.fidelity": {
-       "p": 34,
+       "p": 35,
        "n": 37
       },
       "capture.restraint": {
@@ -339601,18 +339588,18 @@
      },
      "L2": {
       "correct": 1394,
-      "normalized": 2,
-      "wrong": 36,
+      "normalized": 1,
+      "wrong": 37,
       "missing": 13,
       "spurious": 0,
       "gt_populated": 1445,
       "completeness": 0.9910034602076124,
-      "correctness": 0.9748603351955307,
+      "correctness": 0.9741620111731844,
       "hallucination": 0,
-      "precision": 0.9748603351955307,
-      "recall": 0.9660899653979239,
-      "f1": 0.9704553354188391,
-      "score": 0.9660899653979239,
+      "precision": 0.9741620111731844,
+      "recall": 0.9653979238754326,
+      "f1": 0.9697601668404588,
+      "score": 0.9653979238754326,
       "convention": 0
      },
      "facts": null,
@@ -339676,9 +339663,9 @@
        "flagged": true,
        "routed": null,
        "surfaced": null,
-       "errors": 49,
+       "errors": 50,
        "error_detail": {
-        "wrong": 36,
+        "wrong": 37,
         "missing": 13,
         "spurious": 0,
         "row_count": 0,
@@ -339792,23 +339779,17 @@
          "misconverted": 0
         },
         "text": {
-         "rate": 0.9977802441731409,
+         "rate": 0.9988888888888889,
          "passed": 899,
-         "checked": 901,
+         "checked": 900,
          "scored": false,
          "canonical": 899,
          "understood": 0,
-         "noncanonical": 2,
+         "noncanonical": 1,
          "misconverted": 0
         }
        },
        "samples": [
-        {
-         "path": "Seller.Street 1",
-         "gt": "شارع الشيخ زايد، مبنى 12",
-         "out": "بارع الشيخ زايد، مبنى 12",
-         "why": "non-canonical form"
-        },
         {
          "path": "Consignment Details.Payment Terms",
          "gt": "Payment due within 30 days.",
@@ -339881,6 +339862,12 @@
        "out": "دبي"
       },
       {
+       "path": "Seller.Street 1",
+       "verdict": "wrong",
+       "gt": "شارع الشيخ زايد، مبنى 12",
+       "out": "بارع الشيخ زايد، مبنى 12"
+      },
+      {
        "path": "Shipping Details.City",
        "verdict": "wrong",
        "gt": "أبوظبي",
@@ -339927,12 +339914,6 @@
        "verdict": "missing",
        "gt": "SN38173608",
        "out": ""
-      },
-      {
-       "path": "Items.26.Lot Number",
-       "verdict": "missing",
-       "gt": "LOT372429",
-       "out": ""
       }
      ],
      "inventions": [],
@@ -339964,7 +339945,7 @@
        "n": 1445
       },
       "capture.fidelity": {
-       "p": 1396,
+       "p": 1395,
        "n": 1432
       },
       "capture.restraint": {
@@ -839410,18 +839391,18 @@
      },
      "L2": {
       "correct": 56,
-      "normalized": 2,
-      "wrong": 4,
+      "normalized": 1,
+      "wrong": 5,
       "missing": 1,
       "spurious": 1,
       "gt_populated": 63,
       "completeness": 0.9841269841269841,
-      "correctness": 0.9354838709677419,
+      "correctness": 0.9193548387096774,
       "hallucination": 0.015873015873015872,
-      "precision": 0.9206349206349206,
-      "recall": 0.9206349206349206,
-      "f1": 0.9206349206349206,
-      "score": 0.9060216679264298,
+      "precision": 0.9047619047619048,
+      "recall": 0.9047619047619048,
+      "f1": 0.9047619047619048,
+      "score": 0.890400604686319,
       "convention": 0
      },
      "facts": null,
@@ -839480,9 +839461,9 @@
        "flagged": true,
        "routed": null,
        "surfaced": null,
-       "errors": 6,
+       "errors": 7,
        "error_detail": {
-        "wrong": 4,
+        "wrong": 5,
         "missing": 1,
         "spurious": 1,
         "row_count": 0,
@@ -839596,23 +839577,17 @@
          "misconverted": 0
         },
         "text": {
-         "rate": 0.9512195121951219,
+         "rate": 0.975,
          "passed": 39,
-         "checked": 41,
+         "checked": 40,
          "scored": false,
          "canonical": 39,
          "understood": 0,
-         "noncanonical": 2,
+         "noncanonical": 1,
          "misconverted": 0
         }
        },
        "samples": [
-        {
-         "path": "Seller.Address",
-         "gt": "شارع الشيخ زايد، مبنى 12",
-         "out": "12 شارع الشيخ زايد، مبنى",
-         "why": "non-canonical form"
-        },
         {
          "path": "Invoice Details.Payment Terms",
          "gt": "Payment due within 30 days.",
@@ -839691,6 +839666,12 @@
        "out": "الإمارات للمعدات الطبية ش.م.ج"
       },
       {
+       "path": "Seller.Address",
+       "verdict": "wrong",
+       "gt": "شارع الشيخ زايد، مبنى 12",
+       "out": "12 شارع الشيخ زايد، مبنى"
+      },
+      {
        "path": "Items.1.Description",
        "verdict": "wrong",
        "gt": "0-10 bar, 4-20mA",
@@ -839739,7 +839720,7 @@
        "n": 63
       },
       "capture.fidelity": {
-       "p": 58,
+       "p": 57,
        "n": 62
       },
       "capture.restraint": {
@@ -1336080,7 +1336061,7 @@
     "key": "capture",
     "name": "Capture",
     "count": 6,
-    "raw": 0.9860917198897762,
+    "raw": 0.9860896240100234,
     "measures": [
      {
       "id": "capture.identification",
@@ -1336105,7 +1336086,7 @@
      {
       "id": "capture.fidelity",
       "label": "Fidelity",
-      "value": 0.9712755786223588
+      "value": 0.971263192354661
      },
      {
       "id": "capture.restraint",
@@ -1336274,14 +1336255,14 @@
     "layer": "capture",
     "capability": "Fidelity",
     "unit": "captured values",
-    "value": 0.9712755786223588,
+    "value": 0.971263192354661,
     "per_type": {
-     "invoice": 0.9988243371612915,
+     "invoice": 0.9988149318585818,
      "purchase-order": 0.9967113411748627,
      "credit-note": 0.9950413603469898,
      "freight-invoice": 0.9992417924027599,
      "consignment-order": 0.9056030854792827,
-     "consignment-invoice": 0.9322315551689667
+     "consignment-invoice": 0.9321666428654887
     }
    },
    {
@@ -1336958,10 +1336939,10 @@
       "text": {
        "canonical": 311624,
        "understood": 0,
-       "noncanonical": 533,
-       "misconverted": 3,
-       "checked": 312160,
-       "rate": 0.9982829318298309,
+       "noncanonical": 527,
+       "misconverted": 2,
+       "checked": 312153,
+       "rate": 0.9983053182253574,
        "scored": false
       }
      }
@@ -1337023,16 +1337004,16 @@
    "L2": {
     "docs": 1200,
     "gt_populated": 499834,
-    "correct": 479355,
-    "wrong": 15047,
+    "correct": 479349,
+    "wrong": 15053,
     "missing": 5432,
     "spurious": 2313,
     "convention_only_wrong": 16,
     "completeness": 0.9891323919541287,
-    "correctness": 0.9695652525677485,
+    "correctness": 0.9695531166945117,
     "hallucination": 0.004656593821406642,
-    "precision": 0.965050381003191,
-    "recall": 0.9590283974279461
+    "precision": 0.9650383016417865,
+    "recall": 0.9590163934426229
    },
    "facts": {
     "docs": 800,
@@ -1337510,10 +1337491,10 @@
        "text": {
         "canonical": 47532,
         "understood": 0,
-        "noncanonical": 212,
+        "noncanonical": 207,
         "misconverted": 0,
-        "checked": 47744,
-        "rate": 0.9955596514745308,
+        "checked": 47739,
+        "rate": 0.9956639225790235,
         "scored": false
        }
       }
@@ -1337575,16 +1337556,16 @@
     "L2": {
      "docs": 200,
      "gt_populated": 79594,
-     "correct": 71807,
-     "wrong": 5221,
+     "correct": 71802,
+     "wrong": 5226,
      "missing": 2566,
      "spurious": 316,
      "convention_only_wrong": 1,
      "completeness": 0.9677613890494259,
-     "correctness": 0.9322194526665628,
+     "correctness": 0.9321545412057953,
      "hallucination": 0.004085643359536616,
-     "precision": 0.9284107364501448,
-     "recall": 0.9021659924114883
+     "precision": 0.9283460901944559,
+     "recall": 0.9021031736060507
     },
     "facts": null,
     "L3": {
@@ -1337790,9 +1337771,9 @@
         "canonical": 56210,
         "understood": 0,
         "noncanonical": 54,
-        "misconverted": 2,
-        "checked": 56266,
-        "rate": 0.9990047275441652,
+        "misconverted": 1,
+        "checked": 56265,
+        "rate": 0.9990224828934506,
         "scored": false
        }
       }
@@ -1338889,10 +1338870,10 @@
        "text": {
         "canonical": 67576,
         "understood": 0,
-        "noncanonical": 46,
+        "noncanonical": 45,
         "misconverted": 1,
-        "checked": 67623,
-        "rate": 0.9993049702024459,
+        "checked": 67622,
+        "rate": 0.9993197480110023,
         "scored": false
        }
       }
@@ -1338954,16 +1338935,16 @@
     "L2": {
      "docs": 200,
      "gt_populated": 106477,
-     "correct": 106198,
-     "wrong": 125,
+     "correct": 106197,
+     "wrong": 126,
      "missing": 154,
      "spurious": 237,
      "convention_only_wrong": 0,
      "completeness": 0.9985536782591545,
-     "correctness": 0.9988243371612915,
+     "correctness": 0.9988149318585818,
      "hallucination": 0.002224099099099099,
-     "precision": 0.9966028528528529,
-     "recall": 0.9973797158071697
+     "precision": 0.9965934684684684,
+     "recall": 0.9973703241075538
     },
     "facts": null,
     "L3": {
@@ -1339975,10 +1339956,10 @@
        "text": {
         "canonical": 192580,
         "understood": 0,
-        "noncanonical": 285,
+        "noncanonical": 283,
         "misconverted": 0,
-        "checked": 192865,
-        "rate": 0.9985222824255308,
+        "checked": 192863,
+        "rate": 0.9985326371569456,
         "scored": false
        }
       }
@@ -1340040,16 +1340021,16 @@
     "L2": {
      "docs": 728,
      "gt_populated": 308990,
-     "correct": 296465,
-     "wrong": 9336,
+     "correct": 296463,
+     "wrong": 9338,
      "missing": 3189,
      "spurious": 1495,
      "convention_only_wrong": 7,
      "completeness": 0.9896792776465257,
-     "correctness": 0.9694703418236043,
+     "correctness": 0.9694638016226239,
      "hallucination": 0.004865016140789337,
-     "precision": 0.9647538529626158,
-     "recall": 0.9594647075957151
+     "precision": 0.9647473445798188,
+     "recall": 0.9594582348943331
     },
     "facts": {
      "docs": 453,
@@ -1340265,9 +1340246,9 @@
         "canonical": 71533,
         "understood": 0,
         "noncanonical": 144,
-        "misconverted": 2,
-        "checked": 71679,
-        "rate": 0.9979631412268586,
+        "misconverted": 1,
+        "checked": 71678,
+        "rate": 0.9979770640921901,
         "scored": false
        }
       }
@@ -1340553,10 +1340534,10 @@
        "text": {
         "canonical": 47511,
         "understood": 0,
-        "noncanonical": 104,
+        "noncanonical": 100,
         "misconverted": 1,
-        "checked": 47616,
-        "rate": 0.9977948588709677,
+        "checked": 47612,
+        "rate": 0.9978786860455348,
         "scored": false
        }
       }
@@ -1340618,16 +1340599,16 @@
     "L2": {
      "docs": 177,
      "gt_populated": 77674,
-     "correct": 73110,
-     "wrong": 3430,
+     "correct": 73106,
+     "wrong": 3434,
      "missing": 1134,
      "spurious": 321,
      "convention_only_wrong": 4,
      "completeness": 0.9854005201225635,
-     "correctness": 0.955186830415469,
+     "correctness": 0.9551345701593937,
      "hallucination": 0.004176370330857002,
-     "precision": 0.9511976164764966,
-     "recall": 0.941241599505626
+     "precision": 0.9511455744786043,
+     "recall": 0.9411901022221077
     },
     "facts": {
      "docs": 125,
@@ -1340844,10 +1340825,10 @@
        "text": {
         "canonical": 19217,
         "understood": 0,
-        "noncanonical": 165,
-        "misconverted": 2,
-        "checked": 19384,
-        "rate": 0.991384647131655,
+        "noncanonical": 161,
+        "misconverted": 1,
+        "checked": 19379,
+        "rate": 0.9916404355229888,
         "scored": false
        }
       }
@@ -1340909,16 +1340890,16 @@
     "L2": {
      "docs": 517,
      "gt_populated": 26488,
-     "correct": 25455,
-     "wrong": 474,
+     "correct": 25451,
+     "wrong": 478,
      "missing": 559,
      "spurious": 473,
      "convention_only_wrong": 15,
      "completeness": 0.9788961038961039,
-     "correctness": 0.9817193104246211,
+     "correctness": 0.9815650430020441,
      "hallucination": 0.017915309446254073,
-     "precision": 0.9641315051890008,
-     "recall": 0.9610012080942314
+     "precision": 0.9639800015150367,
+     "recall": 0.9608501963153125
     },
     "facts": {
      "docs": 800,
@@ -1341412,10 +1341393,10 @@
        "text": {
         "canonical": 233932,
         "understood": 0,
-        "noncanonical": 222,
+        "noncanonical": 220,
         "misconverted": 1,
-        "checked": 234155,
-        "rate": 0.9990476393841686,
+        "checked": 234153,
+        "rate": 0.999056172673423,
         "scored": false
        }
       }
@@ -1341477,16 +1341458,16 @@
     "L2": {
      "docs": 218,
      "gt_populated": 384231,
-     "correct": 368233,
-     "wrong": 12746,
+     "correct": 368231,
+     "wrong": 12748,
      "missing": 3252,
      "spurious": 599,
      "convention_only_wrong": 0,
      "completeness": 0.9915363414196148,
-     "correctness": 0.9665440877318697,
+     "correctness": 0.9665388380986879,
      "hallucination": 0.0015697970008753126,
-     "precision": 0.9650268097217345,
-     "recall": 0.9583635885704173
+     "precision": 0.965021568329411,
+     "recall": 0.9583583833683383
     },
     "facts": null,
     "L3": {
@@ -1341692,10 +1341673,10 @@
       "text": {
        "canonical": 20426,
        "understood": 0,
-       "noncanonical": 98,
-       "misconverted": 2,
-       "checked": 20526,
-       "rate": 0.9951281301763617,
+       "noncanonical": 92,
+       "misconverted": 1,
+       "checked": 20519,
+       "rate": 0.9954676153808665,
        "scored": false
       }
      }
@@ -1341757,16 +1341738,16 @@
    "L2": {
     "docs": 86,
     "gt_populated": 35208,
-    "correct": 31557,
-    "wrong": 3215,
+    "correct": 31551,
+    "wrong": 3221,
     "missing": 436,
     "spurious": 171,
     "convention_only_wrong": 0,
     "completeness": 0.9876164508066348,
-    "correctness": 0.9075405498677096,
+    "correctness": 0.907367997239158,
     "hallucination": 0.0048936839996565834,
-    "precision": 0.9030993331997825,
-    "recall": 0.8963019768234493
+    "precision": 0.9029276249892683,
+    "recall": 0.8961315610088616
    },
    "facts": {
     "docs": 56,

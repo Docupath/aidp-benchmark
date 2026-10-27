@@ -1,0 +1,215 @@
+{
+ "id": "cap-purchase-order-104",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "ja-JP",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "東京精密機器株式会社",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "東京都",
+   "Postal Code": "104-0061",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "VAT No": ""
+  },
+  "Seller": {
+   "Name": "北海製作所ホールディングス",
+   "Name 2": "",
+   "Street 1": "港区芝浦8-19-14",
+   "Street 2": "",
+   "City": "大阪市",
+   "Postal Code": "530-0001",
+   "Country": "Japan",
+   "Country Code": "JP"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "東京都",
+   "Postal Code": "104-0061",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "",
+   "Compromisso Code": "",
+   "PO Date": "27/02/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "お支払いは30日以内にお願いします。",
+   "Due Date": "29/03/2026",
+   "Cost Center": "",
+   "Your Reference": "佐藤健一",
+   "Posting Date": "",
+   "Net Amount": "27706",
+   "Total Amount": "30477",
+   "Rounding Amount": "",
+   "Currency Code": "JPY",
+   "Contact Name": "佐藤健一"
+  },
+  "Items": [
+   {
+    "Article ID": "BRG-94902",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "7",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "3958",
+    "Net Amount": "27706",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "10",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "消費税",
+     "tax_total": "2771",
+     "rate": "10"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "",
+    "Account Number": "6097588",
+    "BIC/SWIFT Code": "BJTKJPK0"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-88569",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "6097588",
+   "approved": "6097588",
+   "usual": "6097588"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "支払承認 DT",
+    "page": 1,
+    "place": "header"
+   }
+  ],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Order Details.PO Number",
+    "value": "PO-2026-55702",
+    "kind": "blot",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Order Details.Your Reference",
+    "value": "佐藤健一",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Order Details.Contact Name",
+    "value": "佐藤健一",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   }
+  ],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Methods.0.Account Number",
+     "Payment Methods.0.BIC/SWIFT Code"
+    ]
+   }
+  ]
+ }
+}

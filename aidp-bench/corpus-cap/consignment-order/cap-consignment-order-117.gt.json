@@ -1,0 +1,310 @@
+{
+ "id": "cap-consignment-order-117",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-IN",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Bharat Components Pvt Ltd",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "98AAACG7744A1Z9",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Konkan Pharma Ltd",
+   "Name 2": "",
+   "Street 1": "Plot 44, MG Road",
+   "Street 2": "",
+   "City": "Chennai",
+   "Postal Code": "600001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "45AAACG3950A1Z8",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-80577",
+   "Consignment Date": "17/04/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "",
+   "Currency Code": "INR",
+   "Contact Name": "Rahul Verma"
+  },
+  "Items": [
+   {
+    "Article ID": "GSK-52417",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "",
+    "Quantity": "17",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "LOT232512",
+    "Unit Price": "56.46",
+    "Net Amount": "959.82",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-62389",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "7",
+    "UOM": "EA",
+    "Serial Number": "SN73067359",
+    "Lot Number": "LOT049615",
+    "Unit Price": "412.19",
+    "Net Amount": "2885.33",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "FLT-22293",
+    "Article Name": "Filter Cartridge F9",
+    "Description": "HEPA class",
+    "Order Number": "",
+    "Quantity": "42",
+    "UOM": "kg",
+    "Serial Number": "SN44229140",
+    "Lot Number": "LOT338223",
+    "Unit Price": "168.84",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "PMP-19008",
+    "Article Name": "Dosing Pump DP-12",
+    "Description": "12 l/h, PVDF head",
+    "Order Number": "",
+    "Quantity": "41",
+    "UOM": "kg",
+    "Serial Number": "SN49992435",
+    "Lot Number": "LOT205052",
+    "Unit Price": "297.05",
+    "Net Amount": "12179.05",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "23115.48",
+   "Tax": [
+    {
+     "tax_code": "CGST",
+     "tax_total": "2080.39",
+     "rate": "9"
+    },
+    {
+     "tax_code": "SGST",
+     "tax_total": "2080.39",
+     "rate": "9"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "27276.26",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-20717",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "40634596521802",
+   "approved": "40634596521802",
+   "usual": "40634596521802"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Approved PJ 05.12",
+    "page": 1,
+    "place": "end"
+   },
+   {
+    "id": "M2",
+    "kind": "stamp",
+    "text": "COPY",
+    "page": 1,
+    "place": "top"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Consignment Details.Payment Due Date",
+    "value": "17/05/2026",
+    "method": "document date plus the 30 days of the printed payment terms",
+    "inputs": [
+     "Consignment Details.Consignment Date",
+     "Consignment Details.Payment Terms"
+    ]
+   },
+   {
+    "path": "Items.2.Net Amount",
+    "value": "7091.28",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.2.Quantity",
+     "Items.2.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00526007324401(17)271009(10)LOT232512",
+    "gtin": "0526007324401",
+    "expiry": "271009",
+    "lot": "LOT232512",
+    "serial": "",
+    "label_only": false,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00911599767925(17)290403(10)LOT049615(21)SN73067359",
+    "gtin": "0911599767925",
+    "expiry": "290403",
+    "lot": "LOT049615",
+    "serial": "SN73067359",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L3",
+    "row": 2,
+    "symbology": "gs1-128",
+    "payload": "(01)00068325167037(17)280808(10)LOT338223(21)SN44229140",
+    "gtin": "0068325167037",
+    "expiry": "280808",
+    "lot": "LOT338223",
+    "serial": "SN44229140",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L4",
+    "row": 3,
+    "symbology": "gs1-128",
+    "payload": "(01)00465281698122(17)280913(10)LOT205052(21)SN49992435",
+    "gtin": "0465281698122",
+    "expiry": "280913",
+    "lot": "LOT205052",
+    "serial": "SN49992435",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00526007324401(17)271009(10)LOT232512",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00911599767925(17)290403(10)LOT049615(21)SN73067359",
+    "row": 1,
+    "page": 1
+   },
+   {
+    "id": "L3",
+    "symbology": "gs1-128",
+    "payload": "(01)00068325167037(17)280808(10)LOT338223(21)SN44229140",
+    "row": 2,
+    "page": 1
+   },
+   {
+    "id": "L4",
+    "symbology": "gs1-128",
+    "payload": "(01)00465281698122(17)280913(10)LOT205052(21)SN49992435",
+    "row": 3,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

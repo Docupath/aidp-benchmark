@@ -1,0 +1,212 @@
+{
+ "id": "cap-consignment-invoice-090",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-IN",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Bharat Components Pvt Ltd",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Mumbai",
+   "Postal Code": "400001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "08AAACG8563A1Z4",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Mumbai Logistics Ltd",
+   "Name 2": "",
+   "Street 1": "Plot 204, Industrial Estate",
+   "Street 2": "",
+   "City": "Chennai",
+   "Postal Code": "600001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "42AAACG2716A1Z7",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Mumbai",
+   "Postal Code": "400001",
+   "Country": "India",
+   "Country Code": "IN",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-42473",
+   "Consignment Date": "05/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "04/06/2026",
+   "Currency Code": "INR",
+   "Contact Name": "Rahul Verma"
+  },
+  "Items": [
+   {
+    "Article ID": "BRG-33362",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Quantity": "6",
+    "UOM": "pcs",
+    "Serial Number": "SN54626099",
+    "Lot Number": "LOT397862",
+    "Unit Price": "30.30",
+    "Net Amount": "181.80",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "PMP-82766",
+    "Article Name": "Dosing Pump DP-12",
+    "Description": "12 l/h, PVDF head",
+    "Order Number": "",
+    "Quantity": "31",
+    "UOM": "set",
+    "Serial Number": "SN17687186",
+    "Lot Number": "LOT963778",
+    "Unit Price": "330.07",
+    "Net Amount": "10232.17",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "10413.97",
+   "Tax": [
+    {
+     "tax_code": "CGST",
+     "tax_total": "937.26",
+     "rate": "9"
+    },
+    {
+     "tax_code": "SGST",
+     "tax_total": "937.26",
+     "rate": "9"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "12288.49",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-22625",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "24113206456485",
+   "approved": null,
+   "usual": "24113206456485"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Line 2 damaged",
+    "page": 1,
+    "place": "header"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00198845263398(17)280217(10)LOT397862(21)SN54626099",
+    "gtin": "0198845263398",
+    "expiry": "280217",
+    "lot": "LOT397862",
+    "serial": "SN54626099",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00834349943854(17)290522(10)LOT963778(21)SN17687186",
+    "gtin": "0834349943854",
+    "expiry": "290522",
+    "lot": "LOT963778",
+    "serial": "SN17687186",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00198845263398(17)280217(10)LOT397862(21)SN54626099",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00834349943854(17)290522(10)LOT963778(21)SN17687186",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

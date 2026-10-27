@@ -1,0 +1,163 @@
+{
+ "id": "cap-consignment-invoice-109",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "pt-PT",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Atlântico Distribuição SA",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 50",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT900851179",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "DISTRIBUIÇÃO LUSITANA LDA",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 222",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT206329416",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 50",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-82917",
+   "Consignment Date": "24/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "23/06/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Inês Costa"
+  },
+  "Items": [
+   {
+    "Article ID": "CHM-08554",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "",
+    "Quantity": "41",
+    "UOM": "box",
+    "Serial Number": "SN60394653",
+    "Lot Number": "LOT312012",
+    "Unit Price": "113.32",
+    "Net Amount": "4646.12",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "4646.12",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "1068.61",
+     "rate": "23"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "5714.73",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-29331",
+   "kind": "upper",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "PT79 5476 3985 4529 9736 4290 0",
+   "approved": "PT79 5476 3985 4529 9736 4290 0",
+   "usual": "PT79 5476 3985 4529 9736 4290 0"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00327069985919(17)291001(10)LOT312012(21)SN60394653",
+    "gtin": "0327069985919",
+    "expiry": "291001",
+    "lot": "LOT312012",
+    "serial": "SN60394653",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00327069985919(17)291001(10)LOT312012(21)SN60394653",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,223 @@
+{
+ "id": "cap-consignment-order-030",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Northwind Trading Inc",
+   "Name 2": "",
+   "Street 1": "450 Madison Avenue",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US99-6152942",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Pinecrest Supplies LLC",
+   "Name 2": "",
+   "Street 1": "40 Harbor Road",
+   "Street 2": "",
+   "City": "Springfield",
+   "Postal Code": "62701",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US39-8356316",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "450 Madison Avenue",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-45274",
+   "Consignment Date": "20/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "19/02/2026",
+   "Currency Code": "USD",
+   "Contact Name": "John Carter"
+  },
+  "Items": [
+   {
+    "Article ID": "WGT-23070",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "5",
+    "UOM": "box",
+    "Serial Number": "SN85807730",
+    "Lot Number": "LOT453778",
+    "Unit Price": "210.61",
+    "Net Amount": "1053.05",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CHM-14254",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "",
+    "Quantity": "18",
+    "UOM": "EA",
+    "Serial Number": "SN09623595",
+    "Lot Number": "LOT332403",
+    "Unit Price": "399.59",
+    "Net Amount": "7192.62",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "8245.67",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "745.12",
+     "rate": "8.5"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "8990.79",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-07914",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "282256887934",
+   "approved": "282256887934",
+   "usual": "282256887934"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Qty 7 missing on line 2",
+    "page": 1,
+    "place": "end"
+   },
+   {
+    "id": "M2",
+    "kind": "note",
+    "text": "Qty 5 missing on line 2",
+    "page": 1,
+    "place": "end"
+   },
+   {
+    "id": "M3",
+    "kind": "stamp",
+    "text": "COPY",
+    "page": 1,
+    "place": "top"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": {
+   "kind": "tax"
+  },
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00894293260759(17)270720(10)LOT453778(21)SN85807730",
+    "gtin": "0894293260759",
+    "expiry": "270720",
+    "lot": "LOT453778",
+    "serial": "SN85807730",
+    "label_only": false,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00362645827436(17)280801(10)LOT332403(21)SN09623595",
+    "gtin": "0362645827436",
+    "expiry": "280801",
+    "lot": "LOT332403",
+    "serial": "SN09623595",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00894293260759(17)270720(10)LOT453778(21)SN85807730",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00362645827436(17)280801(10)LOT332403(21)SN09623595",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

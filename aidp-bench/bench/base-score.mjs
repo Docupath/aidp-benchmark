@@ -24,7 +24,9 @@ const SKIP_SECTIONS = new Set(['Barcodes']);
 const SKIP_FIELDS = new Set(['Payment Details Description']);
 
 export const normStr = (v) => String(v ?? '').toLowerCase().replace(/\s+/g, ' ').replace(/[.,;:!'"()’´`]+$/g, '').trim();
-const squash = (v) => normStr(v).replace(/[^a-z0-9-￿]+/g, '');
+// Letters (with their marks) and digits of any script, and nothing else: section 5.1 compares text and identifiers
+// "on letters and digits alone", so punctuation of every script is set aside, not only ASCII's.
+const squash = (v) => normStr(v).normalize('NFC').replace(/[^\p{L}\p{M}\p{N}]+/gu, '');
 
 export function normNum(v) {
   let s = String(v ?? '').trim().replace(/[^\d.,\-']/g, '');
@@ -134,13 +136,21 @@ export function fieldKind(gtValue, leaf = '') {
 function valuesEqual(gt, out, leaf = '', rules = RULES) {
   const g = String(gt ?? '').trim(), o = String(out ?? '').trim();
   if (g === o) return 'correct';
-  if (rules.exactNumbers && fieldKind(g, leaf) === 'number') {
+  const kind = fieldKind(g, leaf);
+  if (rules.exactNumbers && kind === 'number') {
     const gn = parseNumber(g), on = parseNumber(o);
     return gn != null && on != null && gn === on ? 'normalized' : 'wrong';
   }
-  const gn = normNum(g), on = normNum(o);
-  if (gn != null && on != null && /\d/.test(g) && /\d/.test(o) && !/[a-z]{3,}/i.test(g)) {
-    if (gn === on) return 'normalized';
+  // The digits-only comparison is for an identifier the key writes in digits alone (4006-381-333931 and 4006381333931
+  // name the same article), and it compares the digits as a string, in order, so a long account number keeps every
+  // digit. A value with a letter of any script is text: "شارع الشيخ زايد 134" is not "134", and an IBAN's country code
+  // and every one of its digits count.
+  if (kind === 'identifier') {
+    const gd = g.replace(/\D/g, ''), od = o.replace(/\D/g, '');
+    if (gd && gd === od) return 'normalized';
+  } else if (!rules.exactNumbers && kind === 'number') {
+    const gn = normNum(g), on = normNum(o);
+    if (gn != null && on != null && gn === on) return 'normalized';
   }
   const gd = normDate(g), od = normDate(o);
   if (gd && od) return gd === od ? 'normalized' : 'wrong';

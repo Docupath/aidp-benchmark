@@ -18,7 +18,8 @@
  *   7. The held-out check's consignment documents: Fidelity, the median document, the share of wrong values held by
  *      the five lowest documents, and a 95% range from resampling each type's documents (seeded).
  *   8. Traceability's count: the evidence entries it reads, the returned values that carry none, by section and by
- *      document type, and what Traceability and the AIDP Score would be if those values counted as untraceable.
+ *      document type, and what Traceability and the reference run's sixteen-measure board would be if those values
+ *      counted as untraceable.
  *
  *   node aidp-bench/bench/paper-checks.mjs --corpus aidp-bench/corpus --run aidp-bench/results/aidp-v1-main \
  *     [--heldout aidp-bench/results/aidp-v1-heldout-main]
@@ -218,4 +219,4 @@ const geo = (vals) => 100 * Math.exp(mean(vals.map((v) => Math.log(v))));
 const scoreNow = geo(measures.map((m) => m.value));
 const scoreCounted = geo(measures.map((m) => (m.id === 'trust.provenance' ? untraceable : m.value)));
 const fr = TR['freight-invoice'];
-line(`8. Traceability's count: ${entries} evidence entries, ${barcodeEntries} of them for barcode values; ${withoutEntry} of the ${returnedValues} values returned outside the barcode and flag fields (${(100 * withoutEntry / returnedValues).toFixed(1)}%) carry none, by section ${JSON.stringify(Object.fromEntries(Object.entries(bySection).sort((a, b) => b[1] - a[1])))}; on freight invoices ${fr.without} of ${fr.returned} (${(100 * fr.without / fr.returned).toFixed(1)}%). Traceability as scored ${(100 * asScored).toFixed(2)}%; counting those values as untraceable ${(100 * untraceable).toFixed(2)}% (freight invoices ${(100 * fr.traceable / (fr.entries + fr.without)).toFixed(2)}%), and the AIDP Score ${scoreNow.toFixed(2)} would be ${scoreCounted.toFixed(2)}.`);
+line(`8. Traceability's count: ${entries} evidence entries, ${barcodeEntries} of them for barcode values; ${withoutEntry} of the ${returnedValues} values returned outside the barcode and flag fields (${(100 * withoutEntry / returnedValues).toFixed(1)}%) carry none, by section ${JSON.stringify(Object.fromEntries(Object.entries(bySection).sort((a, b) => b[1] - a[1])))}; on freight invoices ${fr.without} of ${fr.returned} (${(100 * fr.without / fr.returned).toFixed(1)}%). Traceability as scored ${(100 * asScored).toFixed(2)}%; counting those values as untraceable ${(100 * untraceable).toFixed(2)}% (freight invoices ${(100 * fr.traceable / (fr.entries + fr.without)).toFixed(2)}%), and the reference run's sixteen-measure board, ${scoreNow.toFixed(2)}, would read ${scoreCounted.toFixed(2)}.`);

@@ -1,0 +1,181 @@
+{
+ "id": "cap-consignment-invoice-096",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "sv-SE",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Mälardalen Kemi AB",
+   "Name 2": "",
+   "Street 1": "Industrivägen 3",
+   "Street 2": "",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "VAT No": "SE605894173101",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Göta Förpackning AB",
+   "Name 2": "",
+   "Street 1": "Industrivägen 77",
+   "Street 2": "",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "VAT No": "",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industrivägen 3",
+   "Street 2": "",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-88834",
+   "Consignment Date": "15/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "14/06/2026",
+   "Currency Code": "SEK",
+   "Contact Name": ""
+  },
+  "Items": [
+   {
+    "Article ID": "CBL-21925",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Quantity": "43",
+    "UOM": "box",
+    "Serial Number": "SN03672531",
+    "Lot Number": "LOT590472",
+    "Unit Price": "386.82",
+    "Net Amount": "16633.26",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "16633.26",
+   "Tax": [
+    {
+     "tax_code": "Moms",
+     "tax_total": "4158.31",
+     "rate": "25"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "20791.57",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "",
+   "kind": "legal",
+   "vat_printed": false,
+   "listed": false
+  },
+  "bank": {
+   "printed": "SE41 7412 2654 9972 8949 1257",
+   "approved": null,
+   "usual": "SE41 7412 2654 9972 8949 1257"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Consignment Details.Contact Name",
+    "value": "Anna Söderberg",
+    "kind": "blot",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Consignment Details.Consignment Number",
+    "value": "CSG-2026-88834",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   }
+  ],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00989342073241(17)271101(10)LOT590472(21)SN03672531",
+    "gtin": "0989342073241",
+    "expiry": "271101",
+    "lot": "LOT590472",
+    "serial": "SN03672531",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00989342073241(17)271101(10)LOT590472(21)SN03672531",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

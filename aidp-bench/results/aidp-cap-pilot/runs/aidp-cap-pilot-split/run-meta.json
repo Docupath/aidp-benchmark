@@ -1,0 +1,129 @@
+{
+ "tag": "aidp-cap-pilot-split",
+ "corpus": "AIDP-CAP",
+ "mode": "split",
+ "status": "complete",
+ "api": "<file server>",
+ "platform": {
+  "git_sha": "5bd21304cc7f8cbb0fb8ac851457a6cdabbd0b97",
+  "flags_file": "<scratch>/cap-flags.txt",
+  "flags_sha256": "2faf9a856d4547e16cd8ac7e9b008fa605b7f1ebb7a51f1675cffd32314565ea"
+ },
+ "corpus_record": {
+  "dir": "<local>",
+  "seed": "pilot-seed-6",
+  "manifest_sha256": "f8de434a7ce8ac8b473bdb9c8174646fe55b10ebf9071e4259d776a5e5fd4e26",
+  "documents": 960,
+  "copies": 30,
+  "bundles": 200
+ },
+ "account": {
+  "external_tenant": "aidpbench-aidp-cap-pilot-split-split",
+  "customer_setup": null
+ },
+ "phases": {
+  "A": [
+   "cap-bundle-001",
+   "cap-bundle-002",
+   "cap-bundle-003",
+   "cap-bundle-004",
+   "cap-single-001",
+   "cap-single-002"
+  ],
+  "B": []
+ },
+ "only": [
+  "cap-bundle-001",
+  "cap-bundle-002",
+  "cap-bundle-003",
+  "cap-bundle-004",
+  "cap-single-001",
+  "cap-single-002"
+ ],
+ "enabled_document_types": [
+  "Invoice",
+  "Purchase Order",
+  "Credit Note",
+  "Customer-Specific Invoice",
+  "Legal Invoice",
+  "Freight Invoice",
+  "Consignment Invoice",
+  "Argentine Invoice",
+  "Consignment Order",
+  "Quote",
+  "Receipt",
+  "Bank Statement",
+  "Medical Consumption Record",
+  "Form I-9",
+  "General Contract",
+  "Partnership Agreement",
+  "Confidentiality Agreement (NDA)",
+  "E-Signature Platform Contract",
+  "Execution Record"
+ ],
+ "retry_policy": {
+  "retries_per_request": 6,
+  "requeue_rounds": 8,
+  "first_backoff_ms": 2000,
+  "max_backoff_ms": 60000,
+  "round_pause_ms": 30000,
+  "request_timeout_ms": 1200000,
+  "processing_wait_ms": 10800000
+ },
+ "concurrency": 2,
+ "harness": {
+  "node": "v24.18.0",
+  "host": "Sherans-MacBook-Air.local",
+  "argv": [
+   "--mode",
+   "split",
+   "--corpus",
+   "<local>",
+   "--out",
+   "<local>",
+   "--tag",
+   "aidp-cap-pilot-split",
+   "--only",
+   "cap-bundle-001,cap-bundle-002,cap-bundle-003,cap-bundle-004,cap-single-001,cap-single-002",
+   "--api",
+   "<file server>",
+   "--conc",
+   "2",
+   "--platform-sha",
+   "5bd21304cc7f8cbb0fb8ac851457a6cdabbd0b97",
+   "--flags",
+   "<scratch>/cap-flags.txt",
+   "--env-file",
+   "<platform>/.env",
+   "--enabled-types",
+   "Invoice,Purchase Order,Credit Note,Customer-Specific Invoice,Legal Invoice,Freight Invoice,Consignment Invoice,Argentine Invoice,Consignment Order,Quote,Receipt,Bank Statement,Medical Consumption Record,Form I-9,General Contract,Partnership Agreement,Confidentiality Agreement (NDA),E-Signature Platform Contract,Execution Record",
+   "--port",
+   "8285"
+  ]
+ },
+ "started_at": "2026-10-26T18:47:39.924Z",
+ "sessions": [
+  {
+   "started_at": "2026-10-26T18:47:39.924Z",
+   "finished_at": "2026-10-26T18:57:59.760Z",
+   "status": "complete"
+  }
+ ],
+ "finished_at": "2026-10-26T18:57:59.760Z",
+ "counts": {
+  "items_planned": 6,
+  "items_ok": 6,
+  "items_failed": 0,
+  "this_session": {
+   "ran_ok": 6,
+   "already_done": 0,
+   "failed_attempts": 0,
+   "requests": 6,
+   "retries": 0,
+   "transport_failures": 0,
+   "processing_polls": 0
+  }
+ },
+ "permanent_failures": [],
+ "elapsed_s": 620
+}

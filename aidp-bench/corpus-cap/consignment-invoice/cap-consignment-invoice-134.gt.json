@@ -1,0 +1,171 @@
+{
+ "id": "cap-consignment-invoice-134",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-IN",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": {
+  "kind": "duplicate",
+  "role": "original"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Bharat Components Pvt Ltd",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "98AAACG6579A1Z2",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Himalaya Packaging Private Limited",
+   "Name 2": "",
+   "Street 1": "Plot 136, Nehru Street",
+   "Street 2": "",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "67AAACG9878A1Z6",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-90437",
+   "Consignment Date": "15/04/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "15/05/2026",
+   "Currency Code": "INR",
+   "Contact Name": "Priya Sharma"
+  },
+  "Items": [
+   {
+    "Article ID": "CBL-38341",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Quantity": "37",
+    "UOM": "kg",
+    "Serial Number": "SN41190044",
+    "Lot Number": "LOT794825",
+    "Unit Price": "369.74",
+    "Net Amount": "13680.38",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "13680.38",
+   "Tax": [
+    {
+     "tax_code": "CGST",
+     "tax_total": "1231.23",
+     "rate": "9"
+    },
+    {
+     "tax_code": "SGST",
+     "tax_total": "1231.23",
+     "rate": "9"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "16142.84",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-11120",
+   "kind": "punct",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "65434317105906",
+   "approved": "65434317105906",
+   "usual": "65434317105906"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00833409694026(17)280420(10)LOT794825(21)SN41190044",
+    "gtin": "0833409694026",
+    "expiry": "280420",
+    "lot": "LOT794825",
+    "serial": "SN41190044",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00833409694026(17)280420(10)LOT794825(21)SN41190044",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

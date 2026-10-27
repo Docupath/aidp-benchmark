@@ -1,0 +1,166 @@
+{
+ "id": "cap-consignment-invoice-071",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-DE",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": {
+  "kind": "duplicate",
+  "role": "original"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Müller Industrietechnik GmbH",
+   "Name 2": "",
+   "Street 1": "Hauptstraße 42",
+   "Street 2": "",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "VAT No": "DE229900569",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Donau Industrietechnik GmbH & Co KG",
+   "Name 2": "",
+   "Street 1": "Industrieweg 90",
+   "Street 2": "",
+   "City": "Stuttgart",
+   "Postal Code": "70173",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "VAT No": "",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Hauptstraße 42",
+   "Street 2": "",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-74147",
+   "Consignment Date": "01/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Zahlbar innerhalb von 30 Tagen.",
+   "Payment Due Date": "31/01/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Anna Weber"
+  },
+  "Items": [
+   {
+    "Article ID": "MAINT-98234",
+    "Article Name": "Maintenance Contract",
+    "Description": "Quarterly service",
+    "Order Number": "",
+    "Quantity": "16",
+    "UOM": "kg",
+    "Serial Number": "SN86815047",
+    "Lot Number": "LOT891690",
+    "Unit Price": "145.58",
+    "Net Amount": "2329.28",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "2329.28",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "442.56",
+     "rate": "19"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "2771.84",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-98523",
+   "kind": "punct",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "DE56 2758 4083 7469 2704 16",
+   "approved": null,
+   "usual": "DE56 2758 4083 7469 2704 16"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00573011992539(17)270902(10)LOT891690(21)SN86815047",
+    "gtin": "0573011992539",
+    "expiry": "270902",
+    "lot": "LOT891690",
+    "serial": "SN86815047",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00573011992539(17)270902(10)LOT891690(21)SN86815047",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

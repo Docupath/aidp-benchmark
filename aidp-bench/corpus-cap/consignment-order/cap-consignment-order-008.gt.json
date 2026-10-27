@@ -1,0 +1,163 @@
+{
+ "id": "cap-consignment-order-008",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-CH",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Alpina Medical SA",
+   "Name 2": "",
+   "Street 1": "Bahnhofstrasse 12",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "VAT No": "CHE-627.461.547 MWST",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "ALPINA WERKZEUG AG",
+   "Name 2": "",
+   "Street 1": "Hauptstrasse 5",
+   "Street 2": "",
+   "City": "Zürich",
+   "Postal Code": "8001",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "VAT No": "CHE-094.841.056 MWST",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Bahnhofstrasse 12",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-13732",
+   "Consignment Date": "05/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "04/06/2026",
+   "Currency Code": "CHF",
+   "Contact Name": "Beat Steiner"
+  },
+  "Items": [
+   {
+    "Article ID": "LBL-76285",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "",
+    "Quantity": "23",
+    "UOM": "box",
+    "Serial Number": "SN80532109",
+    "Lot Number": "LOT271125",
+    "Unit Price": "105.86",
+    "Net Amount": "2434.78",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "2434.78",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "197.22",
+     "rate": "8.1"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "2632.00",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-44278",
+   "kind": "upper",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "CH75 3646 7480 4378 2900 6",
+   "approved": "CH75 3646 7480 4378 2900 6",
+   "usual": "CH75 3646 7480 4378 2900 6"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00384569335361(17)281024(10)LOT271125(21)SN80532109",
+    "gtin": "0384569335361",
+    "expiry": "281024",
+    "lot": "LOT271125",
+    "serial": "SN80532109",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00384569335361(17)281024(10)LOT271125(21)SN80532109",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

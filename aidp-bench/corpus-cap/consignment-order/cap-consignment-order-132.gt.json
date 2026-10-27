@@ -1,0 +1,194 @@
+{
+ "id": "cap-consignment-order-132",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "fr-FR",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Société Lumière SARL",
+   "Name 2": "",
+   "Street 1": "12 Rue de la République",
+   "Street 2": "",
+   "City": "Marseille",
+   "Postal Code": "13001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR30 538750220",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Horizon Outillage SARL",
+   "Name 2": "",
+   "Street 1": "93 Avenue Victor Hugo",
+   "Street 2": "",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR51 997802156",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "12 Rue de la République",
+   "Street 2": "",
+   "City": "Marseille",
+   "Postal Code": "13001",
+   "Country": "France",
+   "Country Code": "FR",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-41898",
+   "Consignment Date": "15/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "14/04/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Pierre Martin"
+  },
+  "Items": [
+   {
+    "Article ID": "CHM-63765",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "",
+    "Quantity": "9",
+    "UOM": "set",
+    "Serial Number": "SN94976350",
+    "Lot Number": "LOT857359",
+    "Unit Price": "422.53",
+    "Net Amount": "3802.77",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "",
+   "Tax": [
+    {
+     "tax_code": "TVA",
+     "tax_total": "760.55",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "4563.32",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-64597",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "FR73 0391 0750 2834 5365 9144 433",
+   "approved": "FR73 0391 0750 2834 5365 9144 433",
+   "usual": "FR73 0391 0750 2834 5365 9144 433"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "stamp",
+    "text": "PAYÉ 24/03/2026",
+    "page": 1,
+    "place": "top"
+   },
+   {
+    "id": "M2",
+    "kind": "note",
+    "text": "Livraison partielle, 19 à suivre",
+    "page": 1,
+    "place": "end"
+   },
+   {
+    "id": "M3",
+    "kind": "signature",
+    "text": "Sophie Bernard",
+    "page": 1,
+    "place": "end"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Payment Details.Subtotal",
+    "value": "3802.77",
+    "method": "sum of the line amounts",
+    "inputs": [
+     "Items[].Net Amount"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00771709110061(17)280728(10)LOT857359(21)SN94976350",
+    "gtin": "0771709110061",
+    "expiry": "280728",
+    "lot": "LOT857359",
+    "serial": "SN94976350",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00771709110061(17)280728(10)LOT857359(21)SN94976350",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

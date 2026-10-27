@@ -2,11 +2,11 @@
 
 Agentic IDP Accuracy Standard (AIDP) v1.0. Corpus seed `aidp-heldout-v1:a08a1442472d155862ddfcb7b2af089b3c4d5c78d2d82e5f260a37efbf1b273f`, 300 of 300 documents scored (population: plan, 300 planned).
 
-## The AIDP Score
+## The AIDP-2K board
 
 **99.00**
 
-Equal-weight geometric mean of 16 score-bearing measures, each of the six field-key document types counting equally, as each does in the corpus. Layer scores recombine to the score exactly, weighted by their measure counts.
+Equal-weight geometric mean of the 16 AIDP-2K measures this board counts, each of the six field-key document types counting equally, as each does in the corpus. Layer scores recombine to the board's figure exactly, weighted by their measure counts. The AIDP Score keeps thirteen of these measures, reports Decoding, Contract and Traceability beside the score, and adds AIDP-CAP's eighteen (`bench/score-cap.mjs`).
 
 ### Layers
 

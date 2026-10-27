@@ -1,0 +1,182 @@
+{
+ "id": "cap-consignment-order-042",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "ar-AE",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "الإمارات للمعدات الطبية ش.م.ح",
+   "Name 2": "",
+   "Street 1": "شارع الشيخ زايد، مبنى 12",
+   "Street 2": "",
+   "City": "دبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE",
+   "VAT No": "123000142858032",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "شركة النخيل للإلكترونيات ش.م.ح",
+   "Name 2": "",
+   "Street 1": "شارع الشيخ زايد 219",
+   "Street 2": "",
+   "City": "أبوظبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE",
+   "VAT No": "155731688845609",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "شارع الشيخ زايد، مبنى 12",
+   "Street 2": "",
+   "City": "دبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-85704",
+   "Consignment Date": "22/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "",
+   "Currency Code": "AED",
+   "Contact Name": "أحمد المنصوري"
+  },
+  "Items": [
+   {
+    "Article ID": "MAINT-82869",
+    "Article Name": "Maintenance Contract",
+    "Description": "Quarterly service",
+    "Order Number": "",
+    "Quantity": "4",
+    "UOM": "pcs",
+    "Serial Number": "SN83617590",
+    "Lot Number": "LOT967147",
+    "Unit Price": "474.89",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "1899.56",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "94.98",
+     "rate": "5"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "1994.54",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-63902",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "AE25 4062 7439 3005 5885 061",
+   "approved": null,
+   "usual": "AE25 4062 7439 3005 5885 061"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Consignment Details.Payment Due Date",
+    "value": "21/04/2026",
+    "method": "document date plus the 30 days of the printed payment terms",
+    "inputs": [
+     "Consignment Details.Consignment Date",
+     "Consignment Details.Payment Terms"
+    ]
+   },
+   {
+    "path": "Items.0.Net Amount",
+    "value": "1899.56",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.0.Quantity",
+     "Items.0.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00850167352876(17)290207(10)LOT967147(21)SN83617590",
+    "gtin": "0850167352876",
+    "expiry": "290207",
+    "lot": "LOT967147",
+    "serial": "SN83617590",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00850167352876(17)290207(10)LOT967147(21)SN83617590",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

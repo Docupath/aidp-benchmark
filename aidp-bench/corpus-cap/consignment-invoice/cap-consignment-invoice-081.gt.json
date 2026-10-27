@@ -1,0 +1,217 @@
+{
+ "id": "cap-consignment-invoice-081",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "fr-FR",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Atelier Provence SAS",
+   "Name 2": "",
+   "Street 1": "45 Avenue Victor Hugo",
+   "Street 2": "",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR13 378159829",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Ardèche Logistique S.A.",
+   "Name 2": "",
+   "Street 1": "196 Avenue Jean Jaurès",
+   "Street 2": "",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR54 609677789",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "45 Avenue Victor Hugo",
+   "Street 2": "",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-59479",
+   "Consignment Date": "21/04/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "21/05/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Pierre Martin"
+  },
+  "Items": [
+   {
+    "Article ID": "MTR-06213",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "",
+    "Quantity": "11",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "LOT768775",
+    "Unit Price": "7.47",
+    "Net Amount": "82.17",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "",
+    "Quantity": "43",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "LOT485566",
+    "Unit Price": "234.79",
+    "Net Amount": "10095.97",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "GSK-64882",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "",
+    "Quantity": "1",
+    "UOM": "EA",
+    "Serial Number": "SN31457676",
+    "Lot Number": "LOT243196",
+    "Unit Price": "363.25",
+    "Net Amount": "363.25",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "10541.39",
+   "Tax": [
+    {
+     "tax_code": "TVA",
+     "tax_total": "2108.28",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "11936.21",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-83800",
+   "kind": "punct",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "FR18 6535 3856 2972 9023 1917 188",
+   "approved": "FR18 6535 3856 2972 9023 1917 188",
+   "usual": "FR18 6535 3856 2972 9023 1917 188"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Items.1.Article ID",
+    "value": "LBL-68700",
+    "kind": "blot",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Items.2.Article ID",
+    "value": "GSK-64882",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   }
+  ],
+  "derivations": [],
+  "contradiction": {
+   "kind": "total"
+  },
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00736951340260(17)280402(10)LOT768775",
+    "gtin": "0736951340260",
+    "expiry": "280402",
+    "lot": "LOT768775",
+    "serial": "",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00736951340260(17)280402(10)LOT768775",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

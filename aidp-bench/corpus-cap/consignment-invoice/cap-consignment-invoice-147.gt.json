@@ -1,0 +1,228 @@
+{
+ "id": "cap-consignment-invoice-147",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "es-ES",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Talleres Mediterráneo SA",
+   "Name 2": "",
+   "Street 1": "Avenida Diagonal 220",
+   "Street 2": "",
+   "City": "Barcelona",
+   "Postal Code": "08001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB30067387",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Distribuciones Navarra S.A.",
+   "Name 2": "",
+   "Street 1": "Paseo de Gracia 29",
+   "Street 2": "",
+   "City": "Valencia",
+   "Postal Code": "46001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB36023702",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Avenida Diagonal 220",
+   "Street 2": "",
+   "City": "Barcelona",
+   "Postal Code": "08001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-63461",
+   "Consignment Date": "28/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "27/02/2026",
+   "Currency Code": "EUR",
+   "Contact Name": ""
+  },
+  "Items": [
+   {
+    "Article ID": "FLT-01148",
+    "Article Name": "Filter Cartridge F9",
+    "Description": "HEPA class",
+    "Order Number": "",
+    "Quantity": "27",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "LOT711592",
+    "Unit Price": "319.42",
+    "Net Amount": "8624.34",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "MTR-64827",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "",
+    "Quantity": "21",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "LOT026175",
+    "Unit Price": "475.73",
+    "Net Amount": "9990.33",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "18614.67",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "3909.08",
+     "rate": "21"
+    },
+    {
+     "tax_code": "RE",
+     "tax_total": "967.96",
+     "rate": "5.2"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "24745.79",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-20067",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "ES06 7461 4815 6727 0999 5934",
+   "approved": "ES06 7461 4815 6727 0999 5934",
+   "usual": "ES06 7461 4815 6727 0999 5934"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Recibido 06.05 - faltan 20 cajas",
+    "page": 1,
+    "place": "header"
+   },
+   {
+    "id": "M2",
+    "kind": "tick",
+    "text": null,
+    "page": 1,
+    "place": "row",
+    "row": 1
+   },
+   {
+    "id": "M3",
+    "kind": "stamp",
+    "text": "PAGADO 30/01/2026",
+    "page": 1,
+    "place": "top"
+   }
+  ],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Consignment Details.Contact Name",
+    "value": "Carlos García",
+    "kind": "label",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Consignment Details.Consignment Number",
+    "value": "CSG-2026-63461",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   }
+  ],
+  "derivations": [],
+  "contradiction": {
+   "kind": "total"
+  },
+  "labels": [
+   {
+    "id": "L1",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00980317693501(17)270704(10)LOT026175",
+    "gtin": "0980317693501",
+    "expiry": "270704",
+    "lot": "LOT026175",
+    "serial": "",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00980317693501(17)270704(10)LOT026175",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}
