@@ -68,12 +68,15 @@ const filled = (v) => v != null && !(typeof v === 'string' && v.trim() === '') &
 const getPath = (obj, p) => String(p).split('.').reduce((o, k) => (o == null ? undefined : o[k]), obj);
 function setPathIn(o, p, v) { const ks = String(p).split('.'); let x = o; for (let i = 0; i < ks.length - 1; i++) { x = x?.[/^\d+$/.test(ks[i]) ? Number(ks[i]) : ks[i]]; if (x == null) return; } x[ks.at(-1)] = v; }
 const CJK = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u;
+const CJK_OR_RUN = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]|[^\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]+/gu;
 /** Words and numbers, lower case, Japanese and Chinese split into single characters (they print no spaces). */
 export function tokens(text) {
   const out = [];
   for (const m of String(text ?? '').normalize('NFKC').toLowerCase().matchAll(/[\p{L}\p{N}]+/gu)) {
     const t = m[0];
-    if (CJK.test(t)) out.push(...[...t]); else out.push(t);
+    // each Japanese or Chinese character is a word of its own, and a run of anything else in it stays whole: the
+    // "10" of 消費税10% is one number, not a "1" and a "0"
+    if (CJK.test(t)) for (const p of t.matchAll(CJK_OR_RUN)) out.push(p[0]); else out.push(t);
   }
   return out;
 }
@@ -204,15 +207,23 @@ export function datesIn(text) {
 }
 const withoutDates = (text) => DATE_FORMS.reduce((t, [rx]) => t.replace(rx, ' '), String(text ?? ''));
 const CJK_CHAR = /^[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]$/u;
-/** A page's reading less the words the page itself prints: each printed word takes one occurrence out of the reading,
- *  so "Approved by" printed under a signature line is never read as a stamp. Single Japanese and Chinese characters stay,
- *  since a page prints most of them somewhere. */
+/** A page's reading less the words the page itself prints. Each printed word takes one occurrence of itself out of the
+ *  reading: the one that sits among the same neighbouring words as the printed word does on the page, and the first of
+ *  those where several do equally well. So "Approved by" printed under a signature line is never read as a stamp, and a
+ *  handwritten "10" written above a printed "10%" stays. Single Japanese and Chinese characters stay, since a page
+ *  prints most of them somewhere. */
+const NEIGHBOURS = 3;
 export function beyondPrint(readingText, printedText) {
-  const printed = new Map();
-  for (const t of tokens(printedText)) if (!CJK_CHAR.test(t)) printed.set(t, (printed.get(t) ?? 0) + 1);
-  const out = [];
-  for (const t of tokens(readingText)) { const c = printed.get(t) ?? 0; if (c) printed.set(t, c - 1); else out.push(t); }
-  return out.join(' ');
+  const p = tokens(printedText), r = tokens(readingText);
+  const at = new Map();
+  r.forEach((t, i) => { if (!CJK_CHAR.test(t)) { if (!at.has(t)) at.set(t, []); at.get(t).push(i); } });
+  const near = (pi, ri) => { let n = 0; for (let k = 1; k <= NEIGHBOURS; k++) { if (pi - k >= 0 && p[pi - k] === r[ri - k]) n++; if (pi + k < p.length && p[pi + k] === r[ri + k]) n++; } return n; };
+  const pairs = [];
+  p.forEach((t, pi) => { if (!CJK_CHAR.test(t)) for (const ri of at.get(t) ?? []) pairs.push([near(pi, ri), ri, pi]); });
+  pairs.sort((x, y) => y[0] - x[0] || x[1] - y[1] || x[2] - y[2]);
+  const out = new Set(), used = new Set();
+  for (const [, ri, pi] of pairs) if (!out.has(ri) && !used.has(pi)) { out.add(ri); used.add(pi); }
+  return r.filter((_, i) => !out.has(i)).join(' ');
 }
 /** A mark's words are in a text when they occur there together with at most one character in five different, and each
  *  short word of letters or digits (initials, a count) occurs exactly. */
@@ -225,6 +236,9 @@ function wordsIn(words, text) {
 /** Handwriting and stamps: a written note or a stamp is read when its words are in what the system recorded for its
  *  page, apart from what the page prints (its page description, and its reading less the page's printed words), and a
  *  stamp's date is there in any written form; a signature or a tick when the system reports one on its page. */
+const RTL_LOCALE = /^(ar|he|fa|ur)\b/i;
+/** A note as a right-to-left page draws it: each run of digits or Latin letters reversed ("01.11" shows as "11.10"). */
+export const drawnRtl = (s) => String(s ?? '').replace(/[0-9A-Za-z]+(?:[.,:/-][0-9A-Za-z]+)*/g, (run) => [...run].reverse().join(''));
 export function scoreMarks(key, raw, map = null) {
   const u = unit();
   for (const m of key.cap.marks ?? []) {
@@ -234,9 +248,12 @@ export function scoreMarks(key, raw, map = null) {
       const own = `${notes} ${beyondPrint(reading, map?.pages?.find((p) => p.page === m.page)?.text ?? '')}`;
       const dates = m.kind === 'stamp' ? datesIn(m.text) : new Set();
       const found = datesIn(`${notes} ${reading}`);
-      const ok = dates.size
-        ? wordsIn(withoutDates(m.text), own) && [...dates].some((d) => found.has(d))
-        : wordsIn(m.text, own);
+      // a handwritten note is drawn one character at a time, so on a right-to-left page each run of digits or Latin
+      // letters in it is drawn in reverse ("24" shows as "42"): the note may be read as the key writes it or as drawn
+      const texts = m.kind === 'note' && RTL_LOCALE.test(key.locale ?? '') ? [m.text, drawnRtl(m.text)] : [m.text];
+      const ok = texts.some((t) => (dates.size
+        ? wordsIn(withoutDates(t), own) && [...dates].some((d) => found.has(d))
+        : wordsIn(t, own)));
       add(u, ok, { mark: m.id, kind: m.kind, page: m.page, text: m.text });
     } else add(u, reported[m.kind](raw, m.page), { mark: m.id, kind: m.kind, page: m.page });
   }
@@ -353,7 +370,26 @@ export function recordedAsComputed(raw, geo, q) {
   return (raw.derived_fields?.derivations ?? []).some((x) => x.kind === 'derived' && x.field_path === q)
     || raw.field_confidence?.fields?.[q]?.source === 'derived'
     || !!raw.field_confidence?.model_derivations?.[q]
+    // in its own words for the field: a value it marks as inferred, with its reason, or a line's field it names as
+    // derived without the line's number, when it does not claim that line's value was printed
+    || (raw.field_confidence?.fields?.[q]?.source === 'inferred' && !!raw.field_confidence?.fields?.[q]?.justification)
+    || (/\.\d+\./.test(q) && !!raw.field_confidence?.model_derivations?.[q.replace(/\.\d+\./, '.')] && raw.field_confidence?.fields?.[q]?.source !== 'exact')
     || (geo?.ok && geo.answer?.fields?.[q]?.basis === 'derived-source');
+}
+/** The figures a page prints: every number to the cent, and every date as year-month-day. */
+export function printedFigures(text) {
+  const nums = new Set(), dates = new Set();
+  for (const t of String(text ?? '').match(/-?\d[\d.,' ]*\d|\d/g) ?? []) { const n = normNum(t.replace(/ /g, '')); if (n != null) nums.add(Number(n).toFixed(2)); }
+  for (const t of String(text ?? '').match(/\d{1,4}[./-]\d{1,2}[./-]\d{1,4}/g) ?? []) { const k = dayKey(t); if (k) dates.add(k); }
+  return { nums, dates };
+}
+const dayKey = (s) => { const x = String(s).match(/(\d{1,4})[./-](\d{1,2})[./-](\d{1,4})/); if (!x) return null; const [a, b, c] = x.slice(1).map(Number); return a > 31 ? `${a}-${b}-${c}` : `${c}-${b}-${a}`; };
+/** The values a page implies and does not print. A value whose figure the page prints after all (a one-line document's
+ *  subtotal is its line amount, and so is the unit price of a line of quantity one) is read there, not computed, so
+ *  Computation and Traceability leave it out; Calibration still judges it against the value it implies. */
+export function impliedOnly(key, figures) {
+  const printed = (x) => (/date/i.test(x.path) ? figures.dates.has(dayKey(x.value)) : figures.nums.has(Number(normNum(x.value)).toFixed(2)));
+  return { ...key, cap: { ...key.cap, derivations: (key.cap.derivations ?? []).filter((x) => !printed(x)) } };
 }
 /** Computation: the value is right, and the system records it as computed. */
 export function scoreComputation(key, raw, geo = null) {
@@ -707,6 +743,7 @@ export function scoreCap({ corpus, mainDir, splitDir, contractDir, rulesDir }) {
   for (const d of manifest.docs) {
     const key = keys.get(d.id);
     const map = readJson(path.join(corpus, d.map));
+    const implied = impliedOnly(key, printedFigures(fs.readFileSync(path.join(corpus, d.text), 'utf8')));
     const r = raw(mainDir, d.id, 'pipeline');
     const geo = mainDir ? readJson(path.join(mainDir, 'raw', `${d.id}.geometry.json`)) : null;
     for (const pg of intakePages(key, map, r)) pages.push({ ...pg, doc: d.id, slug: d.slug });
@@ -716,9 +753,9 @@ export function scoreCap({ corpus, mainDir, splitDir, contractDir, rulesDir }) {
     put('cap.legibility', d.id, d.slug, scoreLegibility(key, r));
     put('cap.parsing', d.id, d.slug, scoreParsing(key, r));
     put('cap.decoding', d.id, d.slug, scoreDecoding(key, r));
-    put('cap.computation', d.id, d.slug, scoreComputation(key, r, geo));
+    put('cap.computation', d.id, d.slug, scoreComputation(implied, r, geo));
     if (resTypes.has(d.slug)) put('cap.resolution', d.id, d.slug, scoreResolution(key, r));
-    put('cap.traceability', d.id, d.slug, scoreTraceability(key, map, r, geo));
+    put('cap.traceability', d.id, d.slug, scoreTraceability(implied, map, r, geo));
     const cal = calibrationValues(key, r);
     extra.calibration_no_confidence += cal.no_confidence;
     if (cal.vals.length) (own(d.id, d.slug).m['cap.calibration'] ??= { vals: [] }).vals.push(...cal.vals);
@@ -809,6 +846,28 @@ export function combinedScore(board, capValues) {
   const recombined = r2(Math.exp(layers.reduce((s, L) => s + L.count * Math.log(L.raw), 0) / ids.length));
   if (recombined !== r2(raw)) throw new Error(`layers recombine to ${recombined}, not ${r2(raw)}`);
   return { score: r2(raw), raw, layers: layers.map((L) => ({ ...L, score: r2(L.raw) })), measures: ids.map((id) => ({ id, value: all[id], source: id.startsWith('cap.') ? 'AIDP-CAP' : 'AIDP-2K' })) };
+}
+
+/** The thirteen AIDP-2K measures the AIDP Score keeps, on one AIDP-2K board (the reference run's or the held-out
+ *  check's): their equal-weight geometric mean, its layers among them, and its 95% range from resampling the board's
+ *  documents within type. The held-out check ran on AIDP-2K's documents only, so this is how it is reported. */
+export function thirteen(board, { resamples = 2000, seed = 'aidp-v1.0-cap-bootstrap' } = {}) {
+  const geo = (xs) => Math.exp(xs.reduce((s, x) => s + Math.log(Math.min(x, 1)), 0) / xs.length);
+  const ids = KEPT_2K.map((m) => m.id), kept = new Set(ids);
+  const w = weightsFor('type-equal');
+  const layers = LAYERS_V1.map((L) => ({ name: L.name, ids: L.measures.filter((id) => kept.has(id)) })).filter((L) => L.ids.length);
+  const valuesOf = (u) => Object.fromEntries(KEPT_2K.map((m) => [m.id, measure2k(m, u, w).value]));
+  const scoreOf = (v) => ({ score: geo(ids.map((id) => v[id])) * 100, layers: layers.map((L) => geo(L.ids.map((id) => v[id])) * 100) });
+  const units = unitsOf(board);
+  const point = scoreOf(valuesOf(units));
+  const rnd = mulberry32(hashSeed(seed));
+  const groupBy = (list, f) => { const m = new Map(); for (const x of list) { const k = f(x); if (!m.has(k)) m.set(k, []); m.get(k).push(x); } return [...m.values()]; };
+  const pipe = groupBy(units.pipeline, (x) => x.slug), stab = groupBy(units.stability ?? [], (x) => x.slug);
+  const draw = (groups) => groups.flatMap((xs) => Array.from({ length: xs.length }, () => xs[Math.floor(rnd() * xs.length)]));
+  const scores = [];
+  for (let r = 0; r < resamples; r++) { const v = valuesOf({ pipeline: draw(pipe), stability: draw(stab) }); if (!Object.values(v).some((x) => x == null)) scores.push(scoreOf(v).score); }
+  const q = (xs, p) => { const s = xs.slice().sort((a, b) => a - b); const i = (s.length - 1) * p, lo = Math.floor(i), hi = Math.ceil(i); return s[lo] + (s[hi] - s[lo]) * (i - lo); };
+  return { score: point.score, low: q(scores, 0.025), high: q(scores, 0.975), layers: Object.fromEntries(layers.map((L, i) => [L.name, point.layers[i]])) };
 }
 
 /** 95% ranges: AIDP-2K's documents resampled within type as bootstrap.mjs does, and AIDP-CAP's owners (documents,

@@ -19,7 +19,7 @@ import path from 'node:path';
 import {
   scoreCap, CAP_MEASURES, LAYERS_V1, alignRows, compact, nearIn, payloadKey, pageTokens, printedTablesOf, tokens, datesIn, oneMinusEce, auroc,
   contradictionFlagged, scoreSegmentation, scoreLegibility, scoreTraceability, scoreInstructions, scoreMarks, combinedScore,
-  intakePages, scoreContract, scoreAnomaly, calibrationValues,
+  intakePages, scoreContract, scoreAnomaly, calibrationValues, beyondPrint, drawnRtl, recordedAsComputed, impliedOnly, printedFigures,
 } from './score-cap.mjs';
 import { applicablePacks } from './rule-packs-cap.mjs';
 
@@ -42,6 +42,21 @@ ok('approximate match refuses an unrelated note', !nearIn(compact('Goods returne
 ok('GS1 payload read raw equals its human-readable form', payloadKey(']C101001165837487171728041510LOT982645\u001d21SN48511287') === payloadKey('(01)00116583748717(17)280415(10)LOT982645(21)SN48511287'));
 const epc = 'BCD\n002\n1\nSCT\nYHZCFRU1\nGaronne Industrie Groupe SA\nFR8439854581517641305505839\nEUR154373.06';
 ok('a payment code read with escaped line breaks equals it', payloadKey(epc.replace(/\n/g, '\\n')) === payloadKey(epc));
+// decided after the capability run (specification, Annex B): the scorer brought back to its written rules
+ok('a number inside Japanese text stays whole', JSON.stringify(tokens('消費税10%')) === JSON.stringify(['消', '費', '税', '10']));
+ok('a note read exactly beside printed Japanese text keeps its own number', tokens(beyondPrint('1行目 破損 消費税 10%', '消費税10%')).includes('1'));
+// a printed word takes out the occurrence that sits where the page prints it, not a handwritten one met earlier
+ok('a printed number takes out its own place in the reading, not the same number in a note above it', compact(beyondPrint('一部納品 残り10\n消費税 10%', '消費税10%')).includes('残り10'));
+ok('a note keeps its line number when the same number starts a printed row below it', compact(beyondPrint('Credit owed for line 2\nPAID\n1 Widget 5\n2 Gasket 7', '1\nWidget\n5\n2\nGasket\n7')).includes('creditowedforline2'));
+ok('a word the page prints and nothing else repeats is still taken out', beyondPrint('Total 100\nApproved by', 'Total 100\nApproved by') === '');
+ok('with nothing around it to tell them apart, a printed word takes out the first of its repeats', beyondPrint('5 x 5', '5') === 'x 5');
+ok('a note on a right-to-left page may be read as drawn, its digits and Latin letters reversed',
+  drawnRtl('تم الاستلام 01.11 - ينقص 24 صناديق') === 'تم الاستلام 11.10 - ينقص 42 صناديق' && drawnRtl('موافق للدفع - SP') === 'موافق للدفع - PS');
+ok('a value the system marks as inferred, with its reason, is recorded as computed', recordedAsComputed({ ok: true, field_confidence: { fields: { 'Items.2.Net Amount': { source: 'inferred', justification: 'computed from printed quantity multiplied by unit price' } } } }, null, 'Items.2.Net Amount'));
+ok('a line value it names as derived without the line number is recorded as computed', recordedAsComputed({ ok: true, field_confidence: { model_derivations: { 'Items.Net Amount': 'computed from quantity times price' }, fields: { 'Items.2.Net Amount': { source: 'inferred' } } } }, null, 'Items.2.Net Amount'));
+ok('a line value it says it read from the page is not recorded as computed', !recordedAsComputed({ ok: true, field_confidence: { model_derivations: { 'Items.Net Amount': 'computed' }, fields: { 'Items.0.Net Amount': { source: 'exact', justification: 'printed on the page' } } } }, null, 'Items.0.Net Amount'));
+ok('an implied value whose figure the page prints is left out of Computation; one it does not print stays',
+  JSON.stringify(impliedOnly({ cap: { derivations: [{ path: 'Items.0.Net Amount', value: '831.82' }, { path: 'Payment Details.Total', value: '1000.00' }] } }, printedFigures('Subtotal 831,82\nVAT 168,18')).cap.derivations.map((x) => x.path)) === JSON.stringify(['Payment Details.Total']));
 ok('a payment code read with its lines joined by spaces equals it', payloadKey(epc.replace(/\n/g, ' ')) === payloadKey(epc));
 ok('a payment code with one digit of its account changed does not', payloadKey(epc.replace('5839', '5838')) !== payloadKey(epc));
 ok('an Arabic page is judged by its numbers and its other words', pageTokens('ف ش .م.حيل لل ت غ لي خش رك ة 134 ديخ زاي, United Arab Emirates 00000').join(' ') === '134 united arab emirates 00000');
@@ -101,6 +116,9 @@ const apKey = { cap: { marks: [{ id: 'M1', kind: 'stamp', text: 'APPROVED JB', p
 const apMap = { pages: [{ page: 1, text: 'Approved by\nSignature' }] };
 ok('marks: a stamp is not read from the printed words "Approved by"', scoreMarks(apKey, { ok: true, ocr_text: '# --- | Page 1 | --- #\n\nApproved by\nSignature', classification: { annotations: [{ page: 1, signatures: ['handwritten signature above the Approved by line'] }] } }, apMap).p === 0);
 ok('marks: a stamp the system recorded is read', scoreMarks(apKey, { ok: true, ocr_text: '# --- | Page 1 | --- #\n\nApproved by\nSignature', classification: { annotations: [{ page: 1, stamps: ['blue stamp reading "APPROVED JB"'] }] } }, apMap).p === 1);
+const rnKey = { locale: 'ja-JP', cap: { marks: [{ id: 'M1', kind: 'note', text: '2/7 返品', page: 1 }] } };
+const rnMap = { pages: [{ page: 1, text: '1\nWGT\n15\n2\nGSK\n15' }] };
+ok('marks: a note read above a printed row that starts with the same number is read', scoreMarks(rnKey, { ok: true, ocr_text: '# --- | Page 1 | --- #\n\n支払済\n2/7 返品\n1 WGT 15\n2 GSK 15' }, rnMap).p === 1);
 // Contract: a value the key holds and the answer leaves out does not meet the customer's format
 const ctKey = { gt: { 'Invoice Details': { 'Invoice Date': '12/03/2026', 'Total Amount': '100.00' } } };
 const ctContract = { sections: [{ name: 'Invoice Details', shape: 'object', fields: ['Invoice Date', 'Total Amount'] }] };

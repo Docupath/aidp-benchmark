@@ -24,7 +24,9 @@ const SKIP_SECTIONS = new Set(['Barcodes']);
 const SKIP_FIELDS = new Set(['Payment Details Description']);
 
 export const normStr = (v) => String(v ?? '').toLowerCase().replace(/\s+/g, ' ').replace(/[.,;:!'"()’´`]+$/g, '').trim();
-const squash = (v) => normStr(v).replace(/[^a-z0-9-￿]+/g, '');
+// Letters (with their marks) and digits of any script, and nothing else: section 5.1 compares text and identifiers
+// "on letters and digits alone", so punctuation of every script is set aside, not only ASCII's.
+const squash = (v) => normStr(v).normalize('NFC').replace(/[^\p{L}\p{M}\p{N}]+/gu, '');
 
 export function normNum(v) {
   let s = String(v ?? '').trim().replace(/[^\d.,\-']/g, '');
