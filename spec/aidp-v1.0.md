@@ -4,8 +4,9 @@
 Maintained by Docupath. Licensed CC BY 4.0. Its scoring rules were fixed and committed before each benchmark
 run they govern: for the reference run on AIDP-2K in Docupath's private development repository, and for the
 capability run on AIDP-CAP in the public repository that publishes this standard, before that run's documents
-existed. Annex B gives each commit and time, and lists every decision made after a run; none of them changes a
-score.
+existed. Annex B gives each commit and time, and lists every decision made after a run. None of them changes a
+rule; after the capability run, six corrections brought its scoring code into line with this standard, and Annex B
+gives what each one moves, with the scoreboard as registered published beside the corrected one.
 
 This document defines how to measure the accuracy of an automated document processing system: what
 to count, how to count it, how to combine the counts into one score, and what must be published
@@ -881,7 +882,7 @@ never contributes to a score. A result may report it, for example as the rate at
 corrected values need correcting again, and must then state the period over which the system was
 observed.
 
-## Annex B. The pre-registered reference run
+## Annex B. The pre-registered runs
 
 The reference implementation of this standard is the AIDP-Bench harness in this repository, run against the
 Docupath platform.
@@ -1013,6 +1014,11 @@ These choices were fixed and committed before the run:
   published values to two decimals, one end of one range moves (Fidelity's lower end, 95.93% to 95.92%), and the
   held-out check does not change. The published scoreboard, ranges and calibration of the reference run are the
   re-scored ones.
+- **Value comparison, punctuation of every script**, corrected on 27 October 2026, after the capability run
+  (correction 2 under "Decided after the capability run"): text is compared on letters and digits alone, as section 5.1
+  says, setting aside the punctuation of every script and not only the Latin alphabet's. Re-scoring the reference run
+  moves 1 captured value, in 1 document, from wrong to right: no published figure, range or calibration changes, and
+  the held-out check does not change.
 - **Diagnostics beside the score**: the six figures computed from the run's published outputs (`aidp-bench/bench/post-run/`)
   use measurements defined after the run, on outputs already stored. They change no score.
 - **Publication**: the published evidence replaces two document-type names in the platform's catalogue, which name a
@@ -1067,3 +1073,104 @@ adds `aidp-bench/bench/samples/cap-v1.json`; GitHub records the push time. The r
   generator), never a test the release failed: every failure of the release the pilot showed stays in the registered
   set. No AIDP-CAP document was shown to the release before its seed existed.
 
+### Record of the capability run
+
+- **Registration and draw**: the registration (commit b806fa2, `aidp-bench/bench/samples/cap-v1.json`) was pushed to
+  this public repository at 09:55:48 IST on 27 October 2026, as GitHub records. Its seed is `aidp-cap-v1:` followed
+  by the randomness of drand round 6588206, published at 10:30:00 IST and read at 10:30:02 IST
+  (`aidp-bench/bench/samples/cap-v1-evidence/`). The corpus was drawn from that seed by the registered generator.
+- **When**: the run's first request was sent at 10:51:13 IST on 27 October 2026, and its last lane completed at
+  17:07:37 IST. Every lane records its sessions, each with its start, its end and whether it was interrupted
+  (`run-meta.json` in each lane's results).
+- **Pauses on the benchmark machine**: the run was stopped at 11:27 IST and resumed at 12:34 IST, and stopped again
+  at 12:45 IST (the instruction lane at 12:58 IST), because other work on the shared benchmark machine, where the
+  release ran as its own dedicated instance with its own database, folders and processes, had used up its memory (a load of up to 101 on
+  its 8 cores, 8.4 of its 9.2 GB of swap in use), and 10 of the first 38 barcode scans had run into the raised
+  600-second limit. The documents those 10 scans read are named in `aidp-bench/results/aidp-v1-cap/touched.txt`.
+- **A change of machine**: the run's database, stored documents, corpus and answers were then copied to a dedicated
+  cloud server (an AWS EC2 c8g.16xlarge, 64 Arm cores and 128 GB of memory, in eu-central-1), running the same
+  release with the same environment files, the same models and the same page-reading service with its pinned
+  packages, under the same folder paths. Every file of the corpus and every answer was compared by SHA-256 on both
+  machines and found identical. The page-reading service read 12 pages at a time instead of 2, with the same 4
+  threads for each page; its own notes say the number of pages read at once never changes an answer, and the number
+  of threads, which can in principle, was kept. Before the run continued, both machines' page-reading services read
+  the same 57 rendered pages of 25 documents: all 15,699 words and every line had the same text, 16 word boxes were
+  one pixel apart and 16 word scores at most 0.0002 apart; and the server's barcode scanner read 24 documents exactly
+  as the benchmark machine's complete scans had (`aidp-bench/results/aidp-v1-cap/machine-parity/`). The run resumed
+  there at 13:24:53 IST.
+- **The model provider's refusals**: from 14:08:29 IST the model provider refused calls because the run's account
+  had run out of credits: until 14:24:32 IST it refused 865 calls and answered 771, and from then until the lanes were
+  stopped at 14:50 IST it refused all 2,943. Credits were added, and the run resumed at 15:56 IST. The release records
+  every refused call in its usage ledger, against its document, 3,808 in all. Requests that returned no answer were sent again, as transport failures are; the 114 answers
+  that came back between 14:07 and 14:25 IST are kept, since an answer is never sent again for its content.
+- **One other failed model call**: at 13:58:38 IST one call to the model timed out inside the release, which recorded
+  it and continued; the document's answer, in the contract lane, passed all 616 of its checks.
+- **Completion**: all 1,370 submissions completed with an answer: 990 in the full lane (960 documents and 30
+  copies), 200 files to the splitting step, 60 documents in the text lane with their instructions, and 120 documents
+  under the customer's contract. No request failed permanently.
+
+### Decided after the capability run
+
+- **Documents the run's own setup touched**, decided on 27 October 2026, after the run: a sensitivity figure, beside
+  the score and never in it, leaves out every document a fault of the benchmark's own setup touched, in the lane where
+  it happened: the 10 whose barcode scan ran into its limit on the overloaded machine, and every document with a model
+  call refused for lack of credits (192 documents in all lanes). The list is `aidp-bench/results/aidp-v1-cap/touched.txt`,
+  and `score-cap.mjs`'s per-document records recompute every measure without them. All 43 documents that Segmentation
+  counts as not cut exactly lie in 15 files answered between 14:07 and 14:23 IST, each marked by the release as having
+  no usable page descriptions.
+- **Six corrections to the scoring code**, made on 27 October 2026, after the run. Reading the run's results against
+  its documents, and three independent reviews of the scorer, each by a separate AI agent working apart from
+  the author and given only the code and the same evidence, found six places where
+  the scoring code did not do what this standard says. Each was corrected with a test that fails on the code as
+  registered and passes on the corrected code (`test-score-cap.mjs`, `test-scoring.mjs`), and every measure was
+  computed again from the stored answers; no document was sent to the release again. The effect given for each is what
+  taking that one correction back out of the corrected code changes:
+  1. **Numbers in Japanese and Chinese text** (section 5.8, Handwriting and stamps). The scorer split Japanese and
+     Chinese text into single characters, digits included, so the count "10" in a note was compared as a "1" and a
+     "0", which the page's other figures hold. A run of digits or Latin letters in such text now stays whole.
+     Handwriting and stamps: 2 more marks read.
+  2. **Punctuation of every script** (section 5.1: text is compared "on letters and digits alone"). The comparison set
+     aside the punctuation of the Latin alphabet only, so an Arabic comma, or a dash outside that alphabet, still
+     counted. It now sets aside the punctuation of every script. Parsing: 5 more parts in their own field; Calibration:
+     one minus calibration error 96.20% instead of 96.23%, and discrimination 70.77% instead of 70.88%. On the
+     reference run it moves 1 captured value, in 1 document, from wrong to right, and changes no published figure,
+     range or calibration; the held-out check does not change.
+  3. **The system's own words that it computed a value** (section 5.8, Computation and Traceability). A value the
+     system marks as inferred, with its reason, and a line's field its derivation record names as derived without the
+     line's number, where it does not claim that line's value was printed, now count as recorded as computed.
+     Computation: 2 more values; Traceability: 2 more values.
+  4. **Notes on right-to-left pages** (section 5.8, Handwriting and stamps). The generator draws a handwritten note one
+     character at a time, so on an Arabic page each run of digits or Latin letters in a note is drawn reversed: the
+     page shows "42" where the answer key holds "24". A note may now be read as the key writes it or as the page draws
+     it. Handwriting and stamps: 1 more mark read.
+  5. **Values the page prints after all** (section 5.8, Computation: "values the page implies but does not print").
+     12 values the answer key holds as implied are printed on their page as another figure: on 11 documents of one
+     line, the line amount and the subtotal are one figure, which the page prints as one of them, and on 1 line of
+     quantity one the line amount is the unit price. They are read, not computed, and leave Computation and
+     Traceability, which each count 12 values fewer, 5 of which had passed; Calibration still judges them. A value leaves when its
+     figure appears anywhere on its page, so a coincidence, such as a date's parts, could take one out; in this run the
+     12 are exactly the cases named.
+  6. **The page's printed words** (section 5.8, Handwriting and stamps: "its reading less the page's own printed
+     words"). Each printed word took out the first occurrence of itself in the reading, so where a handwritten note
+     repeats a word the page prints further down ("Credit owed for line 2" above a table whose second row starts with
+     2), the note's word was taken out and the printed one kept. Each printed word now takes out the occurrence that
+     sits among the same neighbouring words as it does on the page, and the first of those where more than one does
+     equally well. Handwriting and stamps: 6 more marks read.
+
+  Together they move the AIDP Score from 82.75 (95% range 79.43 to 84.53) to 82.90 (79.57 to 84.67), and the Read
+  layer from 96.93 to 97.01, the Understand layer from 55.59 to 55.93 and the Trust layer from 88.60 to 88.57. Each
+  of the 21 handwritten notes still counted as not read was checked by eye against the system's reading: in each, the
+  reading differs from the note by more than the rule allows. The scoreboard as registered, before these corrections,
+  is published beside the corrected one, in `aidp-bench/results/aidp-v1-cap/as-registered/`.
+- **The reading-order judge's own description**: the comment at the head of `post-run/reading-order.mjs` said a cell's
+  punctuation is set aside; its code, as registered and as used, counts it (a cell read "4,304,97" for "4,304.97" is
+  misread), and the comment now says so. No figure changes.
+- **The registration's summary of the release**: the registration file's one-line summary (`release_under_test`)
+  names three settings that differ from the reference run; the five raised time limits differ too. They were fixed and
+  published in the same commit, in this annex and in the pilot's record, so nothing changed, but that summary sentence
+  is incomplete.
+- **Publication**: the published evidence follows the reference run's publication rules (above), with the name of the
+  machine that ran each lane given as "<host>". In two records of the instruction lane, the two-decimal instruction on
+  invoices 147 and 151, the platform's 88 notes on how it recovered that instruction internally are left out, with the
+  internal flag each record carried, and one record's status, which named that step, reads "applied". No measure reads
+  them, and both scoreboards re-score unchanged without them.

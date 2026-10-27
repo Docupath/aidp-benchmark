@@ -6,7 +6,9 @@ evidence is what lets every result be checked, argued with and improved on.
 The findings below were recorded on the reference run of 23 and 24 October 2026 (IST):
 `results/aidp-v1-main` (all 2,000 documents, both lanes), `results/aidp-v1-stability` (200 documents, three runs each)
 and `results/aidp-v1-rules` (60 documents, three written instructions), with the held-out check in
-`results/aidp-v1-heldout-main` and `results/aidp-v1-heldout-stability`. They use the layers and capabilities of
+`results/aidp-v1-heldout-main` and `results/aidp-v1-heldout-stability`. Section D records the capability run of 27 October
+2026 (IST) on AIDP-CAP, from `results/aidp-v1-cap-main`, `results/aidp-v1-cap-split`, `results/aidp-v1-cap-rules` and
+`results/aidp-v1-cap-contract`. They use the layers and capabilities of
 [`../spec/aidp-v1.0.md`](../spec/aidp-v1.0.md). Every count can be recomputed from the raw evidence with the scripts in
 `bench/`.
 
@@ -113,8 +115,8 @@ rightly notice the disagreement. The generator's `--due-dates-from-terms` settin
 Freight invoices print no payment terms, but their answer keys hold the standard 30-day terms, so a system that rightly
 returns nothing there is charged one missing value on every freight invoice: 200 on AIDP-2K, which are all 200 of the
 full lane's missing values on freight invoices, and 30 on the held-out documents. The platform returned nothing there.
-Without those terms in the keys, the AIDP Score would be 99.17 rather than 99.15, Completeness 99.01 per cent rather
-than 98.76, and the held-out score 99.01 rather than 99.00. This edition publishes the scores as measured; the next
+Without those terms in the keys, the reference run's sixteen-measure board would read 99.17 rather than 99.15,
+Completeness 99.01 per cent rather than 98.76, and the held-out check's board 99.01 rather than 99.00. This edition publishes the scores as measured; the next
 edition's generator keys only the terms a page prints.
 
 ### B4. Numbers in tables laid out with spaces
@@ -238,16 +240,98 @@ counts the values that carry an entry. 10,648 of the 507,923 values returned on 
 barcode fields (2.1 per cent) carry none: 7,548 in payment and tax tables and 3,100 in freight shipment, charge,
 container and location tables, which on freight invoices is 4,900 of 16,006 values (30.6 per cent). They fall outside
 the measure's count of 498,311 entries, which also covers 1,036 barcode values. Counted as untraceable, they would
-make Traceability 93.90 per cent and bring the AIDP Score to 98.77; the score without the three proxy measures, 98.97,
-does not use Traceability. `bench/paper-checks.mjs` prints these figures. **For the next edition:** count a returned
+make Traceability 93.90 per cent and bring the reference run's sixteen-measure board to 98.77. The AIDP Score keeps the
+other thirteen AIDP-2K measures (98.97 on their own), reports this figure beside the score, and measures Traceability
+on AIDP-CAP against where each value is printed. `bench/paper-checks.mjs` prints these figures. **For the next edition:** count a returned
 value with no evidence entry as evidence `none`.
 
 ---
 
 ## C. The held-out check
 
-The same release on 300 newly generated documents scored 99.00 (95% range 98.66 to 99.28), a range that contains its
-AIDP-2K score of 99.15. No measure's 95% range lies below its AIDP-2K range; three lie above it, the normalisation of
+The same release on 300 newly generated documents scored 98.77 (95% range 98.30 to 99.13) on the thirteen AIDP-2K
+measures in the AIDP Score, a range that contains its 98.97 on AIDP-2K; its board over sixteen measures reads 99.00
+(95% range 98.66 to 99.28), against 99.15. No measure's 95% range lies below its AIDP-2K range; three lie above it, the normalisation of
 numbers and of country and currency codes, and Contract, where every or almost every held-out value was correct.
 Consignment Fidelity is the lowest held-out measure, as on AIDP-2K (A1): 84.10 per cent on consignment invoices and
 87.80 per cent on consignment orders, over 30 documents each.
+
+---
+
+## D. The capability run (AIDP-CAP)
+
+The capability run of 27 October 2026 (IST) tested the same release on all 960 documents of AIDP-CAP, under the
+customer's setup its registration fixed. What it found about the platform is reported measure by measure in
+[`results/aidp-v1-cap/scoreboard-cap.json`](results/aidp-v1-cap/scoreboard-cap.json) and in section 7 of the paper
+"Precision Beyond the Page". The specification's Annex B records the run itself: its pauses, its change of machine,
+the model provider's refusals while the run's account was out of credits, the 202 documents a fault of the run's own
+setup touched ([`results/aidp-v1-cap/touched.txt`](results/aidp-v1-cap/touched.txt)), and the six corrections made to
+the scoring code after the run, with the board as registered in
+[`results/aidp-v1-cap/as-registered/`](results/aidp-v1-cap/as-registered/).
+
+This section lists where the registered rules judge a capability narrowly, in either direction. Each was found by
+checking the run's failures against their documents. They are choices of the
+registered rules themselves, not places where the code departed from the rules (those are the six corrections in the
+specification's Annex B), so the score keeps them; each count comes from the published evidence.
+
+### D1. A signature counts only when the system reports one
+
+Handwriting and stamps counts a signature as read when the system reports a signature on its page (specification,
+section 5.8). The platform reported 39 of the 76 signatures. Of the 37 it did not report, its reading of the page holds
+the signer's name as text, apart from the words the page prints, for 34; for 1 the name appears only where the page
+prints it, and for 2 nowhere. Counting the 34 as read would make the measure 97.82 per cent rather than 94.73.
+**For the next edition:** decide whether a signer's name read as text is a signature read, and register the decision.
+
+### D2. Barcodes does not charge payloads returned beyond those printed
+
+Barcodes counts each symbol printed whole that the system returns. The platform also returned 14 payloads that no
+symbol on their document carries, and 33 repeats of a printed one, across 46 documents; neither changes the measure.
+**For the next edition:** count every returned payload against the printed symbols, so an invented or repeated one
+costs.
+
+### D3. A file holding one document passes Segmentation when it comes back whole
+
+The 50 files that hold one document are Segmentation's controls, and a control passes when one returned part spans the
+whole file, which is also what a system that never splits returns. All 50 passed; the 456 documents in the 150 files
+holding more than one carry the test. **For the next edition:** give the controls pages that invite a split, such as a
+second page that repeats the first page's header, so that a control tests splitting too much and not only splitting
+at all.
+
+### D4. Intake judges an Arabic page by its numbers and its other words
+
+Intake compares the words and numbers a page prints with the system's reading of it, and leaves out words in a
+right-to-left script, which a PDF hands back in visual order and in pieces (specification, section 5.8). 86 of the
+1,366 pages Intake checks belong to Arabic documents and are judged by their numbers and their Latin-script words
+alone; all 86 passed. **For the next edition:** take each page's right-to-left words from the generator's own record
+of what it drew on that page.
+
+### D5. Calibration counts a value in a field the answer key leaves empty as wrong
+
+Calibration covers every header value the system returns in a field the answer key defines, and a value in a field the
+key leaves empty counts as wrong (specification, section 5.8): 722 of the 29,571 values fall there. Over the 28,849
+values the key holds, one minus the calibration error is 94.22 per cent and discrimination 84.37 per cent, against
+96.20 and 70.77 over all 29,571.
+
+### D6. Containment counts every change outside an instruction's scope
+
+Containment compares each instructed answer with the platform's two answers to the same text with no instruction, and
+leaves out any value those two answers disagree on. Of the 36 values counted as not kept, the instruction moved 15 to
+the answer key's value, 19 away from it, and 2 from one wrong value to another: the measure counts any change, so it
+charges the 15 that came out right as well. **For the next edition:** report the changes that reach the key's value
+apart from the others.
+
+### D7. Contract rests mostly on number formats
+
+The customer's contract is checked on 120 documents with 15,395 checks: 8,467 that a line item's number is a plain
+number, 4,827 that a contracted field is present, 1,120 that each contracted section is present in its shape, 689
+that a header number is a plain number, 232 that a date is written as YYYY-MM-DD and 60 that a bank account number has
+no spaces. The platform's 26 failures are all header numbers. The measure therefore rests for 55 per cent on the
+format of line-item numbers. **For the next edition:** report the contract's checks by kind beside the measure.
+
+### D8. Rows not read in order, by cause
+
+Reading order counts a row as read in order only when the reading holds it on one line with every cell in order
+(specification, section 5.8). Of the 256 rows that are not: in 105 a cell's text is not in the reading as printed
+(misread, dropped or marked unreadable), in 102 a cell that wraps onto a second line has its rest placed under another
+column, 18 have cells the judge cannot place on the row's lines, 9 have a cell on another line, 8 are out of order, and
+for 14 the judge records no single cause.

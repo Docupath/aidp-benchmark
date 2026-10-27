@@ -44,7 +44,7 @@ authors, its results are written in this format, and `bench/score-run.mjs` score
   }
 ```
 
-Repeatability, one of the sixteen measures, needs its own files: for each document of the declared sample
+Repeatability, one of AIDP-2K's measures in the score, needs its own files: for each document of the declared sample
 (`bench/samples/stability-v1.json`), `<id>.stability.json` holding `runs`, the three submissions, each
 `{ ok: true, extraction: { } }`, in `results/<system>-<date>-stability/raw/` beside the main run's folder. Without
 them the AIDP Score cannot be computed.

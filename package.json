@@ -30,6 +30,8 @@
     "rescore:heldout": "node aidp-bench/bench/score-run.mjs --corpus aidp-bench/corpus-heldout --tag aidp-v1-heldout-main --stability-tag aidp-v1-heldout-stability --out aidp-bench/results/rescore-heldout",
     "paper-checks": "node aidp-bench/bench/paper-checks.mjs --corpus aidp-bench/corpus --run aidp-bench/results/aidp-v1-main --heldout aidp-bench/results/aidp-v1-heldout-main",
     "cap": "node aidp-bench/bench/make-cap.mjs --round aidp-bench/bench/samples/cap-v1-evidence/drand-round.json --out aidp-bench/corpus-cap",
-    "test:cap": "node aidp-bench/bench/test-score-cap.mjs --corpus aidp-bench/corpus-cap"
+    "test:cap": "node aidp-bench/bench/test-score-cap.mjs --corpus aidp-bench/corpus-cap",
+    "rescore:cap": "node aidp-bench/bench/score-cap.mjs --corpus aidp-bench/corpus-cap --main aidp-bench/results/aidp-v1-cap-main --split aidp-bench/results/aidp-v1-cap-split --contract aidp-bench/results/aidp-v1-cap-contract --rules aidp-bench/results/aidp-v1-cap-rules --board aidp-bench/results/aidp-v1-main/scoreboard.json --out aidp-bench/results/rescore-cap --resamples 2000",
+    "thirteen": "node aidp-bench/bench/thirteen.mjs"
   }
 }

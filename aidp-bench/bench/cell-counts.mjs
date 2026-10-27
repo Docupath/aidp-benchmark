@@ -3,7 +3,9 @@
  *
  * The white paper prints two tables from a scoreboard: Table 2, every score-bearing measure read from
  * the page and from the correct text with its 95% range, and Table 4, every
- * measure by document type with an Overall column. This script re-scores the run's raw evidence with the
+ * measure by document type with an Overall column. Where they also print AIDP-CAP's eighteen measures, the AIDP
+ * Score over thirty-one measures, its layers and the sensitivity figures, those cells are recomputed from the
+ * capability run's published board (results/aidp-v1-cap/) and the reference run's, with the paper's display rules. This script re-scores the run's raw evidence with the
  * scorer's own functions (scoring.mjs, aidp-score.mjs, bootstrap.mjs; it holds no scoring logic of its
  * own) and writes, for every cell: what the figure counts, how many were checked and how many passed,
  * over how many documents, and whether the figure is a pooled ratio or an average of per-document rates.
@@ -32,6 +34,7 @@ import { loadCorpus, scoreDocuments, scoreStabilityRuns } from './scoring.mjs';
 import { scoreLegibility } from './score-das.mjs';
 import { MEASURES, combine, weightsFor } from './aidp-score.mjs';
 import { bootstrap } from './bootstrap.mjs';
+import { CAP_MEASURES, KEPT_2K, combinedScore, combinedBootstrap, aggregate } from './score-cap.mjs';
 
 const BENCH = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -429,6 +432,104 @@ function compareUnits() {
   return { compared, differ: differ.length, examples: differ.slice(0, 20) };
 }
 
+// AIDP-CAP's rows, the AIDP Score over thirty-one measures, its layers and the sensitivity figures, recomputed from
+// the capability run's published board and the reference run's, in the forms the paper prints.
+const CAP_ROW = new Map([
+  ['Intake: pages read', 'cap.intake'], ['Handwriting and stamps: marks read', 'cap.marks'], ['Barcodes: symbols decoded', 'cap.barcodes'],
+  ['Reading order: table rows read in order', 'cap.reading_order'], ['Legibility: unreadable values declared', 'cap.legibility'],
+  ['Segmentation: documents cut out exactly', 'cap.segmentation'], ['Parsing: parts in their own field', 'cap.parsing'],
+  ['Decoding: label fields on the right line', 'cap.decoding'], ['Computation: implied values computed and shown', 'cap.computation'],
+  ['Consistency: contradictions flagged', 'cap.consistency_flags'], ['Resolution: supplier identified', 'cap.resolution'],
+  ['Instructions: adherence', 'cap.adherence'], ['Instructions: containment', 'cap.containment'],
+  ['Contract: the customer\u2019s contract', 'cap.contract'], ['Traceability: values located on the page', 'cap.traceability'],
+  ['Calibration: one minus calibration error', 'cap.calibration_error'], ['Calibration: discrimination', 'cap.calibration_discrimination'],
+  ['Anomaly detection: unusual documents handled', 'cap.anomaly'],
+]);
+const CAP_LANE = { 'cap.segmentation': 'split', 'cap.adherence': 'rules', 'cap.containment': 'rules', 'cap.contract': 'contract' };
+function checkCapTables(t2, t4, see, res) {
+  const cap = readJson(path.join(ROOT, 'aidp-v1-cap', 'scoreboard-cap.json'));
+  const board2k = readJson(BOARD);
+  const touchedText = fs.existsSync(path.join(ROOT, 'aidp-v1-cap', 'touched.txt')) ? fs.readFileSync(path.join(ROOT, 'aidp-v1-cap', 'touched.txt'), 'utf8') : null;
+  if (!cap || !board2k || touchedText == null) { res.error = 'the capability run\'s board or touched.txt, or the reference run\'s board, is missing'; return; }
+  // a rate from its counts: no failure shows the one-sided 95% lower bound, marked; a rate that rounds to 100.00% more decimals
+  const floorPct = (x) => (Math.floor(x * 10000 + 1e-9) / 100).toFixed(2) + '%';
+  const p2 = (v) => { let t = (v * 100).toFixed(2); if (t === '100.00') t = (v * 100).toFixed(3); if (t === '100.000') t = (v * 100).toFixed(4); return t + '%'; };
+  const rate = (p, n) => (n && p === n ? '\u2265' + floorPct(Math.pow(0.05, 1 / n)) : p2(p / n));
+  const rangeOf = (lo, hi, p, n) => {
+    if (n && p === n) return floorPct(Math.pow(0.05, 1 / n)) + ' or higher';
+    return hi >= 100 ? `${p2(lo / 100)} or higher` : `${p2(lo / 100)} to ${p2(hi / 100)}`;
+  };
+  const s2 = (x) => x.toFixed(2);
+  const num = (n) => n.toLocaleString('en-US');
+  const geo = (xs) => Math.exp(xs.reduce((a, x) => a + Math.log(Math.min(x, 1)), 0) / xs.length);
+  // the bootstrap's ranges unrounded, as the paper's builder reads them
+  const unrounded = (fn) => { const orig = Number.prototype.toFixed; Number.prototype.toFixed = function () { return String(this.valueOf()); }; try { return fn(); } finally { Number.prototype.toFixed = orig; } };
+  const combined = combinedScore(board2k, cap.measures);
+  const boot = unrounded(() => combinedBootstrap(board2k, { values: cap.measures, owners: cap.owners }, { resamples: 2000 }));
+  const end = t2.rows.findIndex((r) => r.bold && /^Sensitivity/.test(String(r.cells?.[0] ?? '')));
+  for (const r of (end >= 0 ? t2.rows.slice(0, end) : t2.rows)) {
+    const [label, counted, page, range, text] = r.cells;
+    if (label === 'AIDP Score') {
+      see('Table 2, AIDP Score', page, s2(combined.raw * 100));
+      see('Table 2, AIDP Score, 95% range', range, `${s2(boot.score.low)} to ${s2(boot.score.high)}`);
+      continue;
+    }
+    const layer = r.bold ? combined.layers.find((L) => `${L.name} layer` === label) : null;
+    if (layer) {
+      see(`Table 2, ${label}`, page, s2(layer.raw * 100));
+      see(`Table 2, ${label}, 95% range`, range, `${s2(boot.layers[layer.name].low)} to ${s2(boot.layers[layer.name].high)}`);
+      see(`Table 2, ${label}, measures`, counted, `${layer.count} measures`);
+      continue;
+    }
+    const id = CAP_ROW.get(String(label));
+    if (!id) continue; // an AIDP-2K measure, checked by checkPaper
+    const m = cap.measures[id], b = boot.measures[id];
+    if (m.agg === 'pooled') {
+      see(`Table 2, ${label}, page`, page, rate(m.passes, m.checks));
+      see(`Table 2, ${label}, 95% range`, range, rangeOf(b.low, b.high, m.passes, m.checks));
+      see(`Table 2, ${label}, correct text`, text, 'not tested');
+    } else if (m.agg === 'packs') {
+      see(`Table 2, ${label}, page`, page, 'not tested');
+      see(`Table 2, ${label}, 95% range`, range, rangeOf(b.low, b.high));
+      see(`Table 2, ${label}, correct text`, text, p2(m.value));
+    } else {
+      see(`Table 2, ${label}, page`, page, p2(m.value));
+      see(`Table 2, ${label}, 95% range`, range, rangeOf(b.low, b.high));
+      see(`Table 2, ${label}, correct text`, text, 'not tested');
+    }
+    const n = num(m.checks ?? m.values);
+    see(`Table 2, ${label}, what was counted`, String(counted).includes(n) ? n : counted, n);
+  }
+  // the sensitivity figures, which are not the AIDP Score
+  const all = Object.fromEntries(combined.measures.map((x) => [x.id, x.value]));
+  const touched = touchedText.split('\n').map((l) => l.trim().split(/\s+/)).filter((x) => x.length === 2);
+  const isTouched = (lane, id) => touched.some(([l, d]) => l === lane && (d === id || d === id.replace(/--copy$/, '')));
+  const kept = Object.fromEntries(CAP_MEASURES.map((x) => [x.id, aggregate(x, cap.owners.filter((o) => !isTouched(CAP_LANE[x.id] ?? 'main', o.id)))]));
+  const sensitivity = {
+    'AIDP-2K\u2019s thirteen measures alone': s2(geo(KEPT_2K.map((x) => all[x.id])) * 100),
+    'AIDP-CAP\u2019s eighteen measures alone': s2(geo(CAP_MEASURES.map((x) => all[x.id])) * 100),
+    'Score with the five layers weighted equally': s2(geo(combined.layers.map((L) => L.raw)) * 100),
+  };
+  for (const r of (end >= 0 ? t2.rows.slice(end + 1) : [])) {
+    const [label, , page] = r.cells;
+    const cut = String(label).match(/^Score without the ([\d,]+) AIDP-CAP documents/);
+    if (cut) {
+      see('Table 2, sensitivity, documents left out', cut[1], num(touched.length));
+      see('Table 2, sensitivity, without them', page, s2(combinedScore(board2k, kept).raw * 100));
+    } else if (sensitivity[label] != null) see(`Table 2, sensitivity, ${label}`, page, sensitivity[label]);
+    else see(`Table 2, sensitivity, ${label}`, page, 'a figure this script computes');
+  }
+  // the annex's AIDP-CAP rows, by document type
+  const start = t4.rows.findIndex((r) => String(r.cells?.[0] ?? '') === 'AIDP-CAP');
+  for (const r of t4.rows.slice(start + 1)) {
+    const id = CAP_ROW.get(String(r.cells[0]));
+    if (!id) { see(`Annex, ${r.cells[0]}`, r.cells[0], 'an AIDP-CAP measure'); continue; }
+    const m = cap.measures[id];
+    ANNEX_TYPES.forEach((t, j) => { const x = m.per_type?.[t]; see(`Annex, ${r.cells[0]}, ${TYPE_NAME[t]}`, r.cells[j + 1], x?.n ? rate(x.p, x.n) : ''); });
+    see(`Annex, ${r.cells[0]}, Overall`, r.cells[ANNEX_TYPES.length + 1], m.agg === 'pooled' ? rate(m.passes, m.checks) : p2(m.value));
+  }
+}
+
 // 2. Every printed cell of the paper's tables, when given.
 function checkPaper() {
   if (!PAPER) return null;
@@ -456,9 +557,13 @@ function checkPaper() {
   const find = (table, column, id) => cells.find((c) => c.table === table && c.column === column && c.measure_id === id);
   // the measure rows, in register order (the paper's table builder), above the sensitivity figures, which are not measures
   const end = t2.rows.findIndex((r) => r.bold && /^Sensitivity/.test(String(r.cells?.[0] ?? '')));
-  const rows = (end >= 0 ? t2.rows.slice(0, end) : t2.rows).filter((r) => !r.bold);
-  if (rows.length !== MEASURES.length) return { error: `Table 2 has ${rows.length} measure rows, the register ${MEASURES.length}` };
-  MEASURES.forEach((m, k) => {
+  const measureRows = (end >= 0 ? t2.rows.slice(0, end) : t2.rows).filter((r) => !r.bold);
+  // AIDP v1.0's paper prints AIDP-CAP's eighteen measures among AIDP-2K's thirteen kept ones (checkCapTables)
+  const rows = measureRows.filter((r) => !CAP_ROW.has(String(r.cells?.[0] ?? '')));
+  const capPrinted = rows.length !== measureRows.length;
+  const kept = capPrinted ? MEASURES.filter((m) => KEPT_2K.some((k) => k.id === m.id)) : MEASURES;
+  if (rows.length !== kept.length) return { error: `Table 2 has ${rows.length} AIDP-2K measure rows, the register ${kept.length}` };
+  kept.forEach((m, k) => {
     const [, counted, page, range, text] = rows[k].cells;
     const r = ranges?.find((x) => x.measure_id === m.id);
     const rangeDecimals = r?.high_prints_100 && r.published.high < 100 ? r.unrounded_display.decimals : null;
@@ -473,15 +578,18 @@ function checkPaper() {
     const ourN = m.agg === 'mean' ? pageCell.documents : pageCell.counts.checked;
     if (printedN === ourN) res.same++; else res.differ.push({ where: `Table 2, ${m.label}, what was counted`, printed: counted, ours: ourN });
   });
-  if (t4.rows.length !== MEASURES.length) return { ...res, error: `the annex has ${t4.rows.length} rows, the register ${MEASURES.length}` };
-  MEASURES.forEach((m, k) => {
+  const capStart = t4.rows.findIndex((r) => String(r.cells?.[0] ?? '') === 'AIDP-CAP');
+  const rows4 = capStart >= 0 ? t4.rows.slice(0, capStart) : t4.rows;
+  if (rows4.length !== kept.length) return { ...res, error: `the annex has ${rows4.length} AIDP-2K rows, the register ${kept.length}` };
+  kept.forEach((m, k) => {
     ANNEX_TYPES.forEach((t, j) => {
       const c = find('Annex', TYPE_NAME[t], m.id);
-      see(`Annex, ${m.label}, ${TYPE_NAME[t]}`, t4.rows[k].cells[j + 1], c.published_display, cellForm(c));
+      see(`Annex, ${m.label}, ${TYPE_NAME[t]}`, rows4[k].cells[j + 1], c.published_display, cellForm(c));
     });
     const o = find('Annex', 'Overall', m.id);
-    see(`Annex, ${m.label}, Overall`, t4.rows[k].cells[ANNEX_TYPES.length + 1], o.published_display, cellForm(o));
+    see(`Annex, ${m.label}, Overall`, rows4[k].cells[ANNEX_TYPES.length + 1], o.published_display, cellForm(o));
   });
+  if (capPrinted) checkCapTables(t2, t4, see, res);
   return res;
 }
 
