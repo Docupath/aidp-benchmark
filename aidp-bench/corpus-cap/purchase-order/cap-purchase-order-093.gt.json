@@ -1,0 +1,214 @@
+{
+ "id": "cap-purchase-order-093",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-IN",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Bharat Components Pvt Ltd",
+   "Name 2": "",
+   "Street 1": "Plot 14, MIDC Industrial Area",
+   "Street 2": "",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "30AAACG7801A1Z2"
+  },
+  "Seller": {
+   "Name": "Deccan Pharma LLP",
+   "Name 2": "",
+   "Street 1": "Plot 91, Industrial Estate",
+   "Street 2": "",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Plot 14, MIDC Industrial Area",
+   "Street 2": "",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-29300",
+   "Compromisso Code": "",
+   "PO Date": "18/05/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "17/06/2026",
+   "Cost Center": "",
+   "Your Reference": "Priya Sharma",
+   "Posting Date": "",
+   "Net Amount": "3178.18",
+   "Total Amount": "3750.26",
+   "Rounding Amount": "",
+   "Currency Code": "INR",
+   "Contact Name": "Priya Sharma"
+  },
+  "Items": [
+   {
+    "Article ID": "CHM-68050",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "3",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "273.34",
+    "Net Amount": "820.02",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "GSK-28427",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "28",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "84.22",
+    "Net Amount": "2358.16",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "CGST",
+     "tax_total": "286.04",
+     "rate": "9"
+    },
+    {
+     "tax_code": "SGST",
+     "tax_total": "286.04",
+     "rate": "9"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "",
+    "Account Number": "40286458225659",
+    "BIC/SWIFT Code": "STZGINX1"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": false
+  },
+  "bank": {
+   "printed": "40286458225659",
+   "approved": null,
+   "usual": "40286458225659"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [
+   {
+    "id": "C1",
+    "symbology": "code128",
+    "payload": "PO-2026-29300",
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Methods.0.Account Number",
+     "Payment Methods.0.BIC/SWIFT Code"
+    ]
+   }
+  ]
+ }
+}

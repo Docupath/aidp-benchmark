@@ -1,0 +1,223 @@
+{
+ "id": "cap-purchase-order-014",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Summit Medical Devices Inc",
+   "Name 2": "",
+   "Street 1": "1200 Industrial Parkway",
+   "Street 2": "",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US07-2757140"
+  },
+  "Seller": {
+   "Name": "Brightwater Medical",
+   "Name 2": "",
+   "Street 1": "89 Lake Street",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "1200 Industrial Parkway",
+   "Street 2": "",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-84223",
+   "Compromisso Code": "",
+   "PO Date": "11/04/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "11/05/2026",
+   "Cost Center": "",
+   "Your Reference": "David Kim",
+   "Posting Date": "",
+   "Net Amount": "4021.52",
+   "Total Amount": "4363.35",
+   "Rounding Amount": "",
+   "Currency Code": "USD",
+   "Contact Name": "David Kim"
+  },
+  "Items": [
+   {
+    "Article ID": "",
+    "Article Name": "Freight & Handling",
+    "Description": "Road transport",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "24",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "123.61",
+    "Net Amount": "3089.78",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "FRT-40430",
+    "Article Name": "Freight & Handling",
+    "Description": "Road transport",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "3",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "310.58",
+    "Net Amount": "931.74",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "8.5",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "341.83",
+     "rate": "8.5"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "",
+    "Account Number": "787617325472",
+    "BIC/SWIFT Code": "AIURUSS9"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-34343",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "787617325472",
+   "approved": null,
+   "usual": "787617325472"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Items.0.Article ID",
+    "value": "FRT-86350",
+    "kind": "blot",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Items.1.Article ID",
+    "value": "FRT-40430",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   }
+  ],
+  "derivations": [],
+  "contradiction": {
+   "kind": "line",
+   "row": 0
+  },
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Methods.0.Account Number",
+     "Payment Methods.0.BIC/SWIFT Code"
+    ]
+   }
+  ]
+ }
+}

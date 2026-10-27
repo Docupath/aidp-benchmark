@@ -1,0 +1,220 @@
+{
+ "id": "cap-purchase-order-107",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "pt-PT",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": true,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": {
+  "kind": "po-variance",
+  "role": "reference"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Atlântico Distribuição SA",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 50",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT445828350"
+  },
+  "Seller": {
+   "Name": "Logística Arrábida SA",
+   "Name 2": "",
+   "Street 1": "Rua do Comércio 94",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 50",
+   "Street 2": "",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-83975",
+   "Compromisso Code": "",
+   "PO Date": "18/05/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "17/06/2026",
+   "Cost Center": "",
+   "Your Reference": "João Silva",
+   "Posting Date": "",
+   "Net Amount": "24804.16",
+   "Total Amount": "30509.12",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Contact Name": "João Silva"
+  },
+  "Items": [
+   {
+    "Article ID": "MAINT-53345",
+    "Article Name": "Maintenance Contract",
+    "Description": "Quarterly service",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "36",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "443.21",
+    "Net Amount": "15955.56",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "TRN-12982",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "37",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "57.07",
+    "Net Amount": "2111.59",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "DEV-49846",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "3",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "21",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "320.81",
+    "Net Amount": "6737.01",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "23",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "5704.96",
+     "rate": "23"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "PT35 3997 0766 5021 9419 3533 6",
+    "BIC/SWIFT Code": "YZQNPTQ4"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-89996",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "PT35 3997 0766 5021 9419 3533 6",
+   "approved": "PT35 3997 0766 5021 9419 3533 6",
+   "usual": "PT35 3997 0766 5021 9419 3533 6"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,251 @@
+{
+ "id": "cap-freight-invoice-102",
+ "slug": "freight-invoice",
+ "category": "Freight Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "pt-PT",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Atlântico Distribuição SA",
+   "Address": "Avenida da Liberdade 50",
+   "City": "Lisboa",
+   "Postal Code": "1100-053",
+   "Country": "Portugal",
+   "Country Code": "PT"
+  },
+  "Seller": {
+   "Name": "Distribuição Mondego SA",
+   "Address": "Rua do Comércio 137",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT474903224",
+   "Registration No": ""
+  },
+  "Invoice Details": {
+   "Invoice Number": "INV-2026-30100",
+   "Invoice Date": "04/05/2026",
+   "Due Date": "03/06/2026",
+   "Payment Terms": "",
+   "Currency Code": "EUR",
+   "Net Amount": "2716.39",
+   "Total Tax": "624.77",
+   "Total Amount": "3341.16"
+  },
+  "Payment Details": {
+   "Payment Details Description": ""
+  },
+  "Freight Shipments": [
+   {
+    "Shipment Reference": "SH-463644",
+    "Job Number": "",
+    "Mode Of Transport": "OCEAN",
+    "Service Level": "",
+    "Carrier Name": "",
+    "Carrier Code": "",
+    "Booking Number": "",
+    "Master Bill Of Lading": "MBL750699184",
+    "House Bill Of Lading": "HBL851780979",
+    "Vessel Name": "MAERSK ESSEX",
+    "Voyage Number": "2355W",
+    "Ship From": "SF1",
+    "Ship To": "ST1",
+    "Origin Location": "Hamburg, DE",
+    "Departure Location": "DL1",
+    "Origin Country Code": "DE",
+    "Departure Date": "",
+    "Destination Location": "Singapore, SG",
+    "Arrival Location": "AL1",
+    "Destination Country Code": "SG",
+    "Arrival Date": "",
+    "Incoterms": "",
+    "Customer Reference": "",
+    "Shipper Reference": "",
+    "Customs Reference": "",
+    "Packages": "",
+    "Weight": "",
+    "Chargeable Weight": "",
+    "Volume": "",
+    "Equipment Type": "",
+    "Containers": "S1-N1",
+    "Shipment Total": "",
+    "Line Charges": "S1-C1,S1-C2,S1-C3,S1-C4"
+   }
+  ],
+  "Invoice Containers": [
+   {
+    "Container ID": "MSKU3404276",
+    "Equipment Type": ""
+   }
+  ],
+  "Invoice Charges": [],
+  "Payment Methods": [],
+  "Tax": [
+   {
+    "tax_code": "IVA",
+    "tax_total": "624.77",
+    "rate": "23"
+   }
+  ],
+  "Line Charges": [
+   {
+    "Charge ID": "S1-C1",
+    "Charge Group": "",
+    "Charge Code": "Ocean Freight",
+    "Description": "Ocean Freight",
+    "Currency": "",
+    "Amount": "2416.63",
+    "Rate": "",
+    "VAT Rate": "",
+    "VAT Amount": "",
+    "PrepaidOrCollect": ""
+   },
+   {
+    "Charge ID": "S1-C2",
+    "Charge Group": "",
+    "Charge Code": "THC Origin",
+    "Description": "THC Origin",
+    "Currency": "",
+    "Amount": "112.07",
+    "Rate": "",
+    "VAT Rate": "",
+    "VAT Amount": "",
+    "PrepaidOrCollect": ""
+   },
+   {
+    "Charge ID": "S1-C3",
+    "Charge Group": "",
+    "Charge Code": "Documentation Fee",
+    "Description": "Documentation Fee",
+    "Currency": "",
+    "Amount": "51.30",
+    "Rate": "",
+    "VAT Rate": "",
+    "VAT Amount": "",
+    "PrepaidOrCollect": ""
+   },
+   {
+    "Charge ID": "S1-C4",
+    "Charge Group": "",
+    "Charge Code": "Fuel Surcharge",
+    "Description": "Fuel Surcharge",
+    "Currency": "",
+    "Amount": "136.39",
+    "Rate": "",
+    "VAT Rate": "",
+    "VAT Amount": "",
+    "PrepaidOrCollect": ""
+   }
+  ],
+  "Ship From": [
+   {
+    "ID": "SF1",
+    "Company Name": "",
+    "Street Address": "",
+    "Postal Code": "",
+    "City": "",
+    "Country": ""
+   }
+  ],
+  "Ship To": [
+   {
+    "ID": "ST1",
+    "Company Name": "",
+    "Street Address": "",
+    "Postal Code": "",
+    "City": "",
+    "Country": ""
+   }
+  ],
+  "Departure Location": [
+   {
+    "ID": "DL1",
+    "Postal Code": "",
+    "City": "Hamburg",
+    "IATA Code": "",
+    "UNLOC Code": ""
+   }
+  ],
+  "Arrival Location": [
+   {
+    "ID": "AL1",
+    "Postal Code": "",
+    "City": "Singapore",
+    "IATA Code": "",
+    "UNLOC Code": ""
+   }
+  ],
+  "Line Containers": [
+   {
+    "ID": "S1-N1",
+    "Container ID": "MSKU3404276",
+    "Equipment Type": ""
+   }
+  ]
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-87866",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": null,
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "vessel-voyage",
+    "parts": [
+     "Freight Shipments.0.Vessel Name",
+     "Freight Shipments.0.Voyage Number"
+    ]
+   },
+   {
+    "compound": "origin-city-country",
+    "parts": [
+     "Departure Location.0.City",
+     "Freight Shipments.0.Origin Country Code"
+    ]
+   },
+   {
+    "compound": "destination-city-country",
+    "parts": [
+     "Arrival Location.0.City",
+     "Freight Shipments.0.Destination Country Code"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "seller-postal-city",
+    "parts": [
+     "Seller.Postal Code",
+     "Seller.City"
+    ]
+   }
+  ]
+ }
+}

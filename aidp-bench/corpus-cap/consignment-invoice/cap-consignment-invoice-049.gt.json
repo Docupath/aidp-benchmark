@@ -1,0 +1,163 @@
+{
+ "id": "cap-consignment-invoice-049",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": true,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Bluepeak Industries Inc",
+   "Name 2": "",
+   "Street 1": "1200 Industrial Parkway",
+   "Street 2": "",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US12-6887107",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Highland Foods Corp",
+   "Name 2": "",
+   "Street 1": "160 Industrial Parkway",
+   "Street 2": "",
+   "City": "Cleveland",
+   "Postal Code": "44101",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "1200 Industrial Parkway",
+   "Street 2": "",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-09599",
+   "Consignment Date": "11/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "10/06/2026",
+   "Currency Code": "USD",
+   "Contact Name": "Sarah Mitchell"
+  },
+  "Items": [
+   {
+    "Article ID": "BRG-28824",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Quantity": "30",
+    "UOM": "pcs",
+    "Serial Number": "SN00039387",
+    "Lot Number": "LOT446452",
+    "Unit Price": "55.87",
+    "Net Amount": "1676.10",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "1676.10",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "142.47",
+     "rate": "8.5"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "1818.57",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-27978",
+   "kind": "legal",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "416126667258",
+   "approved": null,
+   "usual": "416126667258"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00114331371927(17)280415(10)LOT446452(21)SN00039387",
+    "gtin": "0114331371927",
+    "expiry": "280415",
+    "lot": "LOT446452",
+    "serial": "SN00039387",
+    "label_only": true,
+    "page": 2
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00114331371927(17)280415(10)LOT446452(21)SN00039387",
+    "row": 0,
+    "page": 2
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

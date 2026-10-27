@@ -1,0 +1,202 @@
+{
+ "id": "cap-purchase-order-002",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Westbrook Pharma Ltd",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB477070765"
+  },
+  "Seller": {
+   "Name": "Tyneside Packaging",
+   "Name 2": "",
+   "Street 1": "128 Church Road",
+   "Street 2": "",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-09923",
+   "Compromisso Code": "",
+   "PO Date": "01/02/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "03/03/2026",
+   "Cost Center": "",
+   "Your Reference": "Amelia Clarke",
+   "Posting Date": "",
+   "Net Amount": "21692.55",
+   "Total Amount": "26031.06",
+   "Rounding Amount": "",
+   "Currency Code": "GBP",
+   "Contact Name": "Amelia Clarke"
+  },
+  "Items": [
+   {
+    "Article ID": "CHM-63252",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "30",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "210.79",
+    "Net Amount": "6323.70",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "PMP-43386",
+    "Article Name": "Dosing Pump DP-12",
+    "Description": "12 l/h, PVDF head",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "35",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "439.11",
+    "Net Amount": "15368.85",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "20",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "4338.51",
+     "rate": "20"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "GB87 PXOE 2690 5672 7797 29",
+    "BIC/SWIFT Code": "JJBIGBO2"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-19101",
+   "kind": "no-form",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "GB87 PXOE 2690 5672 7797 29",
+   "approved": "GB87 PXOE 2690 5672 7797 29",
+   "usual": "GB87 PXOE 2690 5672 7797 29"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Methods.0.Account Number",
+     "Payment Methods.0.BIC/SWIFT Code"
+    ]
+   }
+  ]
+ }
+}

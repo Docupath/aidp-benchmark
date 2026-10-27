@@ -1,0 +1,253 @@
+{
+ "id": "cap-consignment-invoice-020",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Albion Components Ltd",
+   "Name 2": "",
+   "Street 1": "Unit 7, Riverside Estate",
+   "Street 2": "",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB257292222",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Langdale Tools Ltd",
+   "Name 2": "",
+   "Street 1": "115 Mill Lane",
+   "Street 2": "",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB651763954",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Unit 7, Riverside Estate",
+   "Street 2": "",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-42340",
+   "Consignment Date": "20/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "19/04/2026",
+   "Currency Code": "GBP",
+   "Contact Name": "Amelia Clarke"
+  },
+  "Items": [
+   {
+    "Article ID": "CHM-06981",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "",
+    "Quantity": "22",
+    "UOM": "pcs",
+    "Serial Number": "SN94526194",
+    "Lot Number": "LOT062402",
+    "Unit Price": "142.14",
+    "Net Amount": "3127.08",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-31674",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "24",
+    "UOM": "kg",
+    "Serial Number": "SN85519063",
+    "Lot Number": "LOT029642",
+    "Unit Price": "306.30",
+    "Net Amount": "7351.20",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "VAL-18443",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Order Number": "",
+    "Quantity": "38",
+    "UOM": "box",
+    "Serial Number": "SN36551792",
+    "Lot Number": "LOT049734",
+    "Unit Price": "332.85",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "23126.58",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "4625.32",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": false
+  },
+  "bank": {
+   "printed": "GB63 RUCP 9238 7374 5187 85",
+   "approved": null,
+   "usual": "GB63 RUCP 9238 7374 5187 85"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Payment Details.Total",
+    "value": "27751.90",
+    "method": "net plus tax",
+    "inputs": [
+     "Payment Details.Subtotal"
+    ]
+   },
+   {
+    "path": "Items.2.Net Amount",
+    "value": "12648.30",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.2.Quantity",
+     "Items.2.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00676438356813(17)271113(10)LOT062402(21)SN94526194",
+    "gtin": "0676438356813",
+    "expiry": "271113",
+    "lot": "LOT062402",
+    "serial": "SN94526194",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00970115278536(17)270308(10)LOT029642(21)SN85519063",
+    "gtin": "0970115278536",
+    "expiry": "270308",
+    "lot": "LOT029642",
+    "serial": "SN85519063",
+    "label_only": false,
+    "page": 1
+   },
+   {
+    "id": "L3",
+    "row": 2,
+    "symbology": "gs1-128",
+    "payload": "(01)00854095535769(17)280627(10)LOT049734(21)SN36551792",
+    "gtin": "0854095535769",
+    "expiry": "280627",
+    "lot": "LOT049734",
+    "serial": "SN36551792",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00676438356813(17)271113(10)LOT062402(21)SN94526194",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00970115278536(17)270308(10)LOT029642(21)SN85519063",
+    "row": 1,
+    "page": 1
+   },
+   {
+    "id": "L3",
+    "symbology": "gs1-128",
+    "payload": "(01)00854095535769(17)280627(10)LOT049734(21)SN36551792",
+    "row": 2,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

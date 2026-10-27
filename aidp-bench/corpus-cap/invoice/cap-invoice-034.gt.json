@@ -1,0 +1,201 @@
+{
+ "id": "cap-invoice-034",
+ "slug": "invoice",
+ "category": "Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "B",
+ "case": {
+  "kind": "po-variance",
+  "role": "anomaly"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Northwind Trading Inc",
+   "Address": "450 Madison Avenue",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US"
+  },
+  "Seller": {
+   "Name": "Clearwater Foods",
+   "Address": "125 Lake Street",
+   "City": "Springfield",
+   "Postal Code": "62701",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US72-9627212",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "450 Madison Avenue",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Debit",
+   "Invoice Number": "INV-2026-05731",
+   "Compromisso Code": "",
+   "Invoice Date": "10/01/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "09/02/2026",
+   "Cost Center": "",
+   "Your Reference": "John Carter",
+   "Posting Date": "",
+   "Net Amount": "16301.11",
+   "Total Tax": "1385.59",
+   "Total Amount": "17686.70",
+   "Rounding Amount": "",
+   "Currency Code": "USD",
+   "Purchase Order Number": "PO-2026-91472"
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "GSK-46776",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "37",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "141.61",
+    "Net Amount": "5239.57",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "WGT-61686",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "42",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "263.37",
+    "Net Amount": "11061.54",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "",
+     "account_no": "432878444961",
+     "BIC_or_Swift_code": "UDDBUSQ9"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "8.5",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "1385.59",
+     "rate": "8.5"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-91796",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "432878444961",
+   "approved": "432878444961",
+   "usual": "432878444961"
+  },
+  "po_number": "PO-2026-91472",
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

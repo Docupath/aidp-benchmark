@@ -1,0 +1,173 @@
+{
+ "id": "cap-consignment-order-040",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Granite & Co Ltd",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB679083999",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Bramley Pharma",
+   "Name 2": "",
+   "Street 1": "72 Riverside Way",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB669254466",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-36532",
+   "Consignment Date": "04/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "03/06/2026",
+   "Currency Code": "GBP",
+   "Contact Name": "Amelia Clarke"
+  },
+  "Items": [
+   {
+    "Article ID": "CHM-53007",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "",
+    "Quantity": "39",
+    "UOM": "box",
+    "Serial Number": "SN17807494",
+    "Lot Number": "LOT266448",
+    "Unit Price": "39.59",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "1544.01",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "308.80",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "1852.81",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-69206",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "GB38 VTFY 5512 5481 9451 81",
+   "approved": "GB38 VTFY 5512 5481 9451 81",
+   "usual": "GB38 VTFY 5512 5481 9451 81"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Items.0.Net Amount",
+    "value": "1544.01",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.0.Quantity",
+     "Items.0.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00532306156179(17)270424(10)LOT266448(21)SN17807494",
+    "gtin": "0532306156179",
+    "expiry": "270424",
+    "lot": "LOT266448",
+    "serial": "SN17807494",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00532306156179(17)270424(10)LOT266448(21)SN17807494",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

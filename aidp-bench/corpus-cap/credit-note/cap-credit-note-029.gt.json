@@ -1,0 +1,246 @@
+{
+ "id": "cap-credit-note-029",
+ "slug": "credit-note",
+ "category": "Credit Note",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-IN",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": 1
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Ganga Pharma Ltd",
+   "Address": "Plot 14, MIDC Industrial Area",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN"
+  },
+  "Seller": {
+   "Name": "Coromandel Components Private Limited",
+   "Address": "Plot 52, Industrial Estate",
+   "City": "Chennai",
+   "Postal Code": "600001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Plot 14, MIDC Industrial Area",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "",
+   "Compromisso Code": "",
+   "Invoice Date": "26/05/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "25/06/2026",
+   "Cost Center": "",
+   "Your Reference": "Rahul Verma",
+   "Posting Date": "",
+   "Net Amount": "18004.17",
+   "Total Tax": "3240.76",
+   "Total Amount": "21244.93",
+   "Rounding Amount": "",
+   "Currency Code": "INR",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "DEV-59373",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "36",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "66.21",
+    "Net Amount": "2383.56",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "TRN-22901",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "43",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "363.27",
+    "Net Amount": "15620.61",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "",
+     "account_no": "70858709252940",
+     "BIC_or_Swift_code": "VULBIND0"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "CGST",
+     "tax_total": "1620.38",
+     "rate": "9"
+    },
+    {
+     "tax_code": "SGST",
+     "tax_total": "1620.38",
+     "rate": "9"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-95588",
+   "kind": "punct",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "70858709252940",
+   "approved": "70858709252940",
+   "usual": "70858709252940"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "stamp",
+    "text": "APPROVED JB",
+    "page": 1,
+    "place": "top"
+   },
+   {
+    "id": "M2",
+    "kind": "note",
+    "text": "Partial delivery, 3 to follow",
+    "page": 1,
+    "place": "header"
+   }
+  ],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Invoice Details.Invoice Number",
+    "value": "CN-2026-25133",
+    "kind": "blot",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Invoice Details.Your Reference",
+    "value": "Rahul Verma",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   }
+  ],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Details.Payment Methods.0.account_no",
+     "Payment Details.Payment Methods.0.BIC_or_Swift_code"
+    ]
+   }
+  ]
+ }
+}

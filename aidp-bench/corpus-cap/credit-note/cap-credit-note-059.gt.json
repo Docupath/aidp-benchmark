@@ -1,0 +1,211 @@
+{
+ "id": "cap-credit-note-059",
+ "slug": "credit-note",
+ "category": "Credit Note",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "B",
+ "case": {
+  "kind": "bank-history",
+  "role": "anomaly"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Crestview Supplies LLC",
+   "Address": "742 Evergreen Terrace",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US"
+  },
+  "Seller": {
+   "Name": "Brightwater Medical LLC",
+   "Address": "89 Lake Street",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US21-3112221",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "742 Evergreen Terrace",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "CN-2026-55034",
+   "Compromisso Code": "",
+   "Invoice Date": "24/05/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "23/06/2026",
+   "Cost Center": "",
+   "Your Reference": "John Carter",
+   "Posting Date": "",
+   "Net Amount": "5613.88",
+   "Total Tax": "477.18",
+   "Total Amount": "6091.06",
+   "Rounding Amount": "",
+   "Currency Code": "USD",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "GSK-74160",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "14",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "384.53",
+    "Net Amount": "5383.42",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "PMP-94039",
+    "Article Name": "Dosing Pump DP-12",
+    "Description": "12 l/h, PVDF head",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "23",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "10.02",
+    "Net Amount": "230.46",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "",
+     "account_no": "425876098344",
+     "BIC_or_Swift_code": "AIURUSS9"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "8.5",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "477.18",
+     "rate": "8.5"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-34343",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "425876098344",
+   "approved": null,
+   "usual": "787617325472"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Details.Payment Methods.0.account_no",
+     "Payment Details.Payment Methods.0.BIC_or_Swift_code"
+    ]
+   }
+  ]
+ }
+}

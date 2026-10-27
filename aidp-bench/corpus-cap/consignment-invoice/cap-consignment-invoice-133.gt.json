@@ -1,0 +1,165 @@
+{
+ "id": "cap-consignment-invoice-133",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "ar-AE",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "شركة الخليج للتجارة ذ.م.م",
+   "Name 2": "",
+   "Street 1": "المنطقة الصناعية الثانية",
+   "Street 2": "",
+   "City": "دبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE",
+   "VAT No": "106229387347769",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "المنارة للإلكترونيات",
+   "Name 2": "",
+   "Street 1": "شارع الخليج 62",
+   "Street 2": "",
+   "City": "أبوظبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE",
+   "VAT No": "190098557255041",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "المنطقة الصناعية الثانية",
+   "Street 2": "",
+   "City": "دبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-17603",
+   "Consignment Date": "26/02/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "28/03/2026",
+   "Currency Code": "AED",
+   "Contact Name": "فاطمة الزهراء"
+  },
+  "Items": [
+   {
+    "Article ID": "GSK-92190",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "",
+    "Quantity": "50",
+    "UOM": "pcs",
+    "Serial Number": "SN92090576",
+    "Lot Number": "LOT206971",
+    "Unit Price": "439.84",
+    "Net Amount": "21992.00",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "21992.00",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "1099.60",
+     "rate": "5"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "21787.80",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-20437",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "AE78 2341 0360 8840 9042 674",
+   "approved": "AE78 2341 0360 8840 9042 674",
+   "usual": "AE78 2341 0360 8840 9042 674"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": {
+   "kind": "total"
+  },
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00762733568584(17)270727(10)LOT206971(21)SN92090576",
+    "gtin": "0762733568584",
+    "expiry": "270727",
+    "lot": "LOT206971",
+    "serial": "SN92090576",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00762733568584(17)270727(10)LOT206971(21)SN92090576",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,201 @@
+{
+ "id": "cap-consignment-invoice-016",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Granite & Co Ltd",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB499625803",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Thamesview Pharma",
+   "Name 2": "",
+   "Street 1": "58 Station Road",
+   "Street 2": "",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB332321064",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-61184",
+   "Consignment Date": "01/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "31/01/2026",
+   "Currency Code": "GBP",
+   "Contact Name": "Amelia Clarke"
+  },
+  "Items": [
+   {
+    "Article ID": "FRT-53350",
+    "Article Name": "Freight & Handling",
+    "Description": "Road transport",
+    "Order Number": "",
+    "Quantity": "32",
+    "UOM": "set",
+    "Serial Number": "SN43894014",
+    "Lot Number": "LOT888188",
+    "Unit Price": "30.80",
+    "Net Amount": "985.60",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "DEV-44737",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Quantity": "3",
+    "UOM": "box",
+    "Serial Number": "SN80539272",
+    "Lot Number": "LOT883563",
+    "Unit Price": "69.78",
+    "Net Amount": "209.34",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "1194.94",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "234.64",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "1429.58",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": false
+  },
+  "bank": {
+   "printed": "GB21 ZYXT 8749 8759 8267 60",
+   "approved": null,
+   "usual": "GB21 ZYXT 8749 8759 8267 60"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": {
+   "kind": "tax"
+  },
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00934582858578(17)290312(10)LOT888188(21)SN43894014",
+    "gtin": "0934582858578",
+    "expiry": "290312",
+    "lot": "LOT888188",
+    "serial": "SN43894014",
+    "label_only": false,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00950670268203(17)290802(10)LOT883563(21)SN80539272",
+    "gtin": "0950670268203",
+    "expiry": "290802",
+    "lot": "LOT883563",
+    "serial": "SN80539272",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00934582858578(17)290312(10)LOT888188(21)SN43894014",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00950670268203(17)290802(10)LOT883563(21)SN80539272",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

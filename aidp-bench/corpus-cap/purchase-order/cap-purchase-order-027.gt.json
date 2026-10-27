@@ -1,0 +1,211 @@
+{
+ "id": "cap-purchase-order-027",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "fr-FR",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Groupe Horizon SA",
+   "Name 2": "",
+   "Street 1": "45 Avenue Victor Hugo",
+   "Street 2": "",
+   "City": "Marseille",
+   "Postal Code": "13001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR36 090983497"
+  },
+  "Seller": {
+   "Name": "Lorraine Emballage",
+   "Name 2": "",
+   "Street 1": "112 Rue de Paris",
+   "Street 2": "",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "45 Avenue Victor Hugo",
+   "Street 2": "",
+   "City": "Marseille",
+   "Postal Code": "13001",
+   "Country": "France",
+   "Country Code": "FR",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-87872",
+   "Compromisso Code": "",
+   "PO Date": "25/05/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "24/06/2026",
+   "Cost Center": "",
+   "Your Reference": "Pierre Martin",
+   "Posting Date": "",
+   "Net Amount": "",
+   "Total Amount": "14494.56",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Contact Name": "Pierre Martin"
+  },
+  "Items": [
+   {
+    "Article ID": "SNS-09076",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "9",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "64.26",
+    "Net Amount": "578.34",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-42572",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "46",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "250.01",
+    "Net Amount": "11500.46",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "20",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "TVA",
+     "tax_total": "2415.76",
+     "rate": "20"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "FR81 9171 1651 6073 6047 3681 243",
+    "BIC/SWIFT Code": "SZAGFRQ2"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-61146",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "FR81 9171 1651 6073 6047 3681 243",
+   "approved": "FR81 9171 1651 6073 6047 3681 243",
+   "usual": "FR81 9171 1651 6073 6047 3681 243"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Order Details.Net Amount",
+    "value": "12078.80",
+    "method": "sum of the line amounts",
+    "inputs": [
+     "Items[].Net Amount"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [
+   {
+    "id": "C1",
+    "symbology": "code128",
+    "payload": "PO-2026-87872",
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

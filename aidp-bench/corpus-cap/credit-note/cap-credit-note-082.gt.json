@@ -1,0 +1,202 @@
+{
+ "id": "cap-credit-note-082",
+ "slug": "credit-note",
+ "category": "Credit Note",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "sv-SE",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Nordiska Verktyg AB",
+   "Address": "Industrivägen 3",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE"
+  },
+  "Seller": {
+   "Name": "Svea Industri (publ) AB",
+   "Address": "Industrivägen 209",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "VAT No": "SE830641490801",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Industrivägen 3",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "CN-2026-79976",
+   "Compromisso Code": "",
+   "Invoice Date": "17/05/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "",
+   "Cost Center": "",
+   "Your Reference": "Erik Lindqvist",
+   "Posting Date": "",
+   "Net Amount": "",
+   "Total Tax": "2849.72",
+   "Total Amount": "14248.58",
+   "Rounding Amount": "",
+   "Currency Code": "SEK",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "GSK-95297",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "27",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "422.18",
+    "Net Amount": "11398.86",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "SE07 4239 6153 5067 0577 6933",
+     "BIC_or_Swift_code": "JYFXSEN6"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "25",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "Moms",
+     "tax_total": "2849.72",
+     "rate": "25"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-64169",
+   "kind": "punct",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "SE07 4239 6153 5067 0577 6933",
+   "approved": "SE07 4239 6153 5067 0577 6933",
+   "usual": "SE07 4239 6153 5067 0577 6933"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "stamp",
+    "text": "BETALD 2026-05-22",
+    "page": 1,
+    "place": "top"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Invoice Details.Net Amount",
+    "value": "11398.86",
+    "method": "sum of the line amounts",
+    "inputs": [
+     "Items[].Net Amount"
+    ]
+   },
+   {
+    "path": "Invoice Details.Due Date",
+    "value": "16/06/2026",
+    "method": "document date plus the 30 days of the printed payment terms",
+    "inputs": [
+     "Invoice Details.Invoice Date",
+     "Invoice Details.Payment Terms"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

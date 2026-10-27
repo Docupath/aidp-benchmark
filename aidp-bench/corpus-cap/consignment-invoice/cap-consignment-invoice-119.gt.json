@@ -1,0 +1,199 @@
+{
+ "id": "cap-consignment-invoice-119",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "fr-FR",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Société Lumière SARL",
+   "Name 2": "",
+   "Street 1": "12 Rue de la République",
+   "Street 2": "",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR69 049598935",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Lumière Outillage SARL",
+   "Name 2": "",
+   "Street 1": "101 Rue de la République",
+   "Street 2": "",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR36 117940988",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "12 Rue de la République",
+   "Street 2": "",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-29550",
+   "Consignment Date": "01/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "31/05/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Pierre Martin"
+  },
+  "Items": [
+   {
+    "Article ID": "CHM-35306",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "",
+    "Quantity": "1",
+    "UOM": "box",
+    "Serial Number": "SN79777048",
+    "Lot Number": "LOT164912",
+    "Unit Price": "2255.46",
+    "Net Amount": "2255.46",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "LBL-25364",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "",
+    "Quantity": "45",
+    "UOM": "pcs",
+    "Serial Number": "SN71433661",
+    "Lot Number": "LOT321927",
+    "Unit Price": "1996.31",
+    "Net Amount": "89833.95",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "92089.41",
+   "Tax": [
+    {
+     "tax_code": "TVA",
+     "tax_total": "18417.88",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "110507.29",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-98142",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "FR09 5929 2074 0157 6187 5164 622",
+   "approved": "FR09 5929 2074 0157 6187 5164 622",
+   "usual": "FR09 5929 2074 0157 6187 5164 622"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00175846099584(17)271026(10)LOT164912(21)SN79777048",
+    "gtin": "0175846099584",
+    "expiry": "271026",
+    "lot": "LOT164912",
+    "serial": "SN79777048",
+    "label_only": false,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00999787284942(17)280202(10)LOT321927(21)SN71433661",
+    "gtin": "0999787284942",
+    "expiry": "280202",
+    "lot": "LOT321927",
+    "serial": "SN71433661",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00175846099584(17)271026(10)LOT164912(21)SN79777048",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00999787284942(17)280202(10)LOT321927(21)SN71433661",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

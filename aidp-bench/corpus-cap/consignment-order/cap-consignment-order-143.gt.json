@@ -1,0 +1,181 @@
+{
+ "id": "cap-consignment-order-143",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Granite & Co Ltd",
+   "Name 2": "",
+   "Street 1": "14 King Street",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB392232718",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Hartley Supplies",
+   "Name 2": "",
+   "Street 1": "44 High Street",
+   "Street 2": "",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB869427925",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "14 King Street",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-40001",
+   "Consignment Date": "02/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "01/02/2026",
+   "Currency Code": "GBP",
+   "Contact Name": ""
+  },
+  "Items": [
+   {
+    "Article ID": "SNS-44374",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "46",
+    "UOM": "kg",
+    "Serial Number": "SN08955194",
+    "Lot Number": "LOT446512",
+    "Unit Price": "343.47",
+    "Net Amount": "15799.62",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "15799.62",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "3159.92",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "18959.54",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-73431",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "GB22 DAHM 2276 8112 8533 77",
+   "approved": "GB22 DAHM 2276 8112 8533 77",
+   "usual": "GB22 DAHM 2276 8112 8533 77"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Consignment Details.Contact Name",
+    "value": "Oliver Bennett",
+    "kind": "label",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Consignment Details.Consignment Number",
+    "value": "CSG-2026-40001",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   }
+  ],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00271931251537(17)281214(10)LOT446512(21)SN08955194",
+    "gtin": "0271931251537",
+    "expiry": "281214",
+    "lot": "LOT446512",
+    "serial": "SN08955194",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00271931251537(17)281214(10)LOT446512(21)SN08955194",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

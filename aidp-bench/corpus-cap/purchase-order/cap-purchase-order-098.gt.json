@@ -1,0 +1,207 @@
+{
+ "id": "cap-purchase-order-098",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "ja-JP",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "大阪商事株式会社",
+   "Name 2": "",
+   "Street 1": "中央区銀座4-5-6",
+   "Street 2": "",
+   "City": "東京都",
+   "Postal Code": "104-0061",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "VAT No": ""
+  },
+  "Seller": {
+   "Name": "高橋電機",
+   "Name 2": "",
+   "Street 1": "北区梅田8-16-3",
+   "Street 2": "",
+   "City": "東京都",
+   "Postal Code": "104-0061",
+   "Country": "Japan",
+   "Country Code": "JP"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "中央区銀座4-5-6",
+   "Street 2": "",
+   "City": "東京都",
+   "Postal Code": "104-0061",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "",
+   "Compromisso Code": "",
+   "PO Date": "23/02/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "お支払いは30日以内にお願いします。",
+   "Due Date": "25/03/2026",
+   "Cost Center": "",
+   "Your Reference": "佐藤健一",
+   "Posting Date": "",
+   "Net Amount": "38952",
+   "Total Amount": "42847",
+   "Rounding Amount": "",
+   "Currency Code": "JPY",
+   "Contact Name": "佐藤健一"
+  },
+  "Items": [
+   {
+    "Article ID": "BRK-20060",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "12",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "3246",
+    "Net Amount": "38952",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "10",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "消費税",
+     "tax_total": "3895",
+     "rate": "10"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "",
+    "Account Number": "9779044",
+    "BIC/SWIFT Code": "SAEDJPS7"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-00908",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "9779044",
+   "approved": null,
+   "usual": "9779044"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Order Details.PO Number",
+    "value": "PO-2026-44973",
+    "kind": "blot",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Order Details.Your Reference",
+    "value": "佐藤健一",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Order Details.Contact Name",
+    "value": "佐藤健一",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   }
+  ],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Methods.0.Account Number",
+     "Payment Methods.0.BIC/SWIFT Code"
+    ]
+   }
+  ]
+ }
+}

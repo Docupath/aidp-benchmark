@@ -1,0 +1,199 @@
+{
+ "id": "cap-consignment-order-110",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Westbrook Pharma Ltd",
+   "Name 2": "",
+   "Street 1": "14 King Street",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB934076206",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Bramley Pharma PLC",
+   "Name 2": "",
+   "Street 1": "213 Church Road",
+   "Street 2": "",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB260626882",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "14 King Street",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-29243",
+   "Consignment Date": "19/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "18/06/2026",
+   "Currency Code": "GBP",
+   "Contact Name": "Harry Whitfield"
+  },
+  "Items": [
+   {
+    "Article ID": "PMP-99049",
+    "Article Name": "Dosing Pump DP-12",
+    "Description": "12 l/h, PVDF head",
+    "Order Number": "",
+    "Quantity": "42",
+    "UOM": "pcs",
+    "Serial Number": "SN92900350",
+    "Lot Number": "LOT690711",
+    "Unit Price": "241.35",
+    "Net Amount": "10136.70",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "BRK-53934",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "",
+    "Quantity": "5",
+    "UOM": "pcs",
+    "Serial Number": "SN30929677",
+    "Lot Number": "LOT318919",
+    "Unit Price": "72.37",
+    "Net Amount": "361.85",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "FLT-58674",
+    "Article Name": "Filter Cartridge F9",
+    "Description": "HEPA class",
+    "Order Number": "",
+    "Quantity": "36",
+    "UOM": "pcs",
+    "Serial Number": "SN47419597",
+    "Lot Number": "LOT212496",
+    "Unit Price": "79.64",
+    "Net Amount": "2867.04",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "12996.50",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "2599.30",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "15595.80",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-29721",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "GB45 XQAR 9816 1386 9748 27",
+   "approved": "GB45 XQAR 9816 1386 9748 27",
+   "usual": "GB45 XQAR 9816 1386 9748 27"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": {
+   "kind": "subtotal"
+  },
+  "labels": [
+   {
+    "id": "L1",
+    "row": 2,
+    "symbology": "gs1-128",
+    "payload": "(01)00556106872220(17)280410(10)LOT212496(21)SN47419597",
+    "gtin": "0556106872220",
+    "expiry": "280410",
+    "lot": "LOT212496",
+    "serial": "SN47419597",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00556106872220(17)280410(10)LOT212496(21)SN47419597",
+    "row": 2,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

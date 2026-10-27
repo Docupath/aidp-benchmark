@@ -1,0 +1,227 @@
+{
+ "id": "cap-purchase-order-145",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "sv-SE",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": {
+  "kind": "po-variance",
+  "role": "reference"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Svea Logistik AB",
+   "Name 2": "",
+   "Street 1": "Industrivägen 3",
+   "Street 2": "",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "VAT No": "SE570228525701"
+  },
+  "Seller": {
+   "Name": "Bergslagen Logistik",
+   "Name 2": "",
+   "Street 1": "Industrivägen 212",
+   "Street 2": "",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industrivägen 3",
+   "Street 2": "",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-04655",
+   "Compromisso Code": "",
+   "PO Date": "25/01/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "24/02/2026",
+   "Cost Center": "",
+   "Your Reference": "Anna Söderberg",
+   "Posting Date": "",
+   "Net Amount": "18766.06",
+   "Total Amount": "23457.58",
+   "Rounding Amount": "",
+   "Currency Code": "SEK",
+   "Contact Name": "Anna Söderberg"
+  },
+  "Items": [
+   {
+    "Article ID": "VAL-68740",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "17",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "256.30",
+    "Net Amount": "4357.10",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "PMP-26068",
+    "Article Name": "Dosing Pump DP-12",
+    "Description": "12 l/h, PVDF head",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "48",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "140.69",
+    "Net Amount": "6753.12",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "LBL-48796",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "3",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "16",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "478.49",
+    "Net Amount": "7655.84",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "25",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "Moms",
+     "tax_total": "4691.52",
+     "rate": "25"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "SE60 8814 1448 9047 4970 9852",
+    "BIC/SWIFT Code": "HTHNSEI5"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-85665",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "SE60 8814 1448 9047 4970 9852",
+   "approved": "SE60 8814 1448 9047 4970 9852",
+   "usual": "SE60 8814 1448 9047 4970 9852"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Methods.0.Account Number",
+     "Payment Methods.0.BIC/SWIFT Code"
+    ]
+   }
+  ]
+ }
+}

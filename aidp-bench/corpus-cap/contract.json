@@ -1,0 +1,1057 @@
+{
+ "description": "The output contract of each AIDP-CAP type: the same published contract as AIDP-2K (aidp-bench/corpus/contract.json). The customer contract that Contract is checked against adds the customer's own field and formats: see aidp-bench/bench/cap-customer.mjs.",
+ "fields_version": "1.0",
+ "contracts": {
+  "invoice": {
+   "slug": "invoice",
+   "sections": [
+    {
+     "name": "Buyer",
+     "internal": "Buyer",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Address",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code"
+     ]
+    },
+    {
+     "name": "Seller",
+     "internal": "Seller",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Address",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "VAT No",
+      "Registration No"
+     ]
+    },
+    {
+     "name": "Remit To",
+     "internal": "Remit To",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Street",
+      "Street 2",
+      "City",
+      "Province",
+      "Postal Code",
+      "Country",
+      "Country Code"
+     ]
+    },
+    {
+     "name": "Shipping Details",
+     "internal": "Shipping Details",
+     "shape": "object",
+     "fields": [
+      "Ship To Name",
+      "Address",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "Shipping Method",
+      "Tracking Number"
+     ]
+    },
+    {
+     "name": "Invoice Details",
+     "internal": "Invoice Details",
+     "shape": "object",
+     "fields": [
+      "Invoice Type",
+      "Invoice Number",
+      "Compromisso Code",
+      "Invoice Date",
+      "Period Start Date",
+      "Period End Date",
+      "Delivery Date",
+      "Delivery Note No",
+      "Payment Terms",
+      "GRN No",
+      "Due Date",
+      "Cost Center",
+      "Your Reference",
+      "Posting Date",
+      "Net Amount",
+      "Total Tax",
+      "Total Amount",
+      "Rounding Amount",
+      "Currency Code",
+      "Purchase Order Number"
+     ]
+    },
+    {
+     "name": "Items",
+     "internal": "Items",
+     "shape": "array",
+     "fields": [
+      "Item No",
+      "Period Start Date",
+      "Period End Date",
+      "Article ID",
+      "Article Name",
+      "Description",
+      "Order Number",
+      "Size",
+      "Color",
+      "Your Reference Number",
+      "Quantity",
+      "UOM",
+      "Serial Number",
+      "Lot Number",
+      "Unit Price",
+      "Net Amount",
+      "Tax Rate",
+      "Tax Amount",
+      "Note Number",
+      "Buyer Article ID",
+      "Discount Amount",
+      "Discount %",
+      "Gross Amount"
+     ]
+    },
+    {
+     "name": "Payment Details",
+     "internal": "Payment Details",
+     "shape": "object",
+     "fields": [
+      "Payment Details Description",
+      "Payment Methods",
+      "Invoice Amount",
+      "Rounding Amount",
+      "Tax Amount",
+      "Tax Rate",
+      "Exchange Rate",
+      "Tax Amount Diff",
+      "Tax",
+      "Payment Reference",
+      "UUID",
+      "Total",
+      "Amount Due"
+     ]
+    },
+    {
+     "name": "Barcodes",
+     "internal": "Barcodes",
+     "shape": "array",
+     "fields": [
+      "Text"
+     ]
+    }
+   ],
+   "allowed": [
+    "Buyer",
+    "Seller",
+    "Remit To",
+    "Shipping Details",
+    "Invoice Details",
+    "Items",
+    "Payment Details",
+    "Barcodes",
+    "Additional Fields",
+    "Process Control",
+    "Document References",
+    "Supporting Documents",
+    "Preceding Invoices",
+    "Tax Representative",
+    "Document Allowances",
+    "Document Charges",
+    "Flags",
+    "extra_fields_array"
+   ]
+  },
+  "purchase-order": {
+   "slug": "purchase-order",
+   "sections": [
+    {
+     "name": "Buyer",
+     "internal": "Buyer",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Name 2",
+      "Street 1",
+      "Street 2",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "VAT No"
+     ]
+    },
+    {
+     "name": "Seller",
+     "internal": "Seller",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Name 2",
+      "Street 1",
+      "Street 2",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code"
+     ]
+    },
+    {
+     "name": "Remit To",
+     "internal": "Remit To",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Name 2",
+      "Street 1",
+      "Street 2",
+      "City",
+      "Province",
+      "Postal Code",
+      "Country",
+      "Country Code"
+     ]
+    },
+    {
+     "name": "Shipping Details",
+     "internal": "Shipping Details",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Name 2",
+      "Street 1",
+      "Street 2",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "ShipTo",
+      "Shipping Method",
+      "Tracking Number"
+     ]
+    },
+    {
+     "name": "Order Details",
+     "internal": "Order Details",
+     "shape": "object",
+     "fields": [
+      "PO Number",
+      "Compromisso Code",
+      "PO Date",
+      "Delivery Date",
+      "Delivery Note No",
+      "Payment Terms",
+      "Due Date",
+      "Cost Center",
+      "Your Reference",
+      "Posting Date",
+      "Net Amount",
+      "Total Amount",
+      "Rounding Amount",
+      "Currency Code",
+      "Contact Name"
+     ]
+    },
+    {
+     "name": "Items",
+     "internal": "Items",
+     "shape": "array",
+     "fields": [
+      "Article ID",
+      "Article Name",
+      "Description",
+      "Order Number",
+      "Size",
+      "Color",
+      "Your Reference Number",
+      "Quantity",
+      "UOM",
+      "Serial Number",
+      "Lot Number",
+      "Unit Price",
+      "Net Amount",
+      "Tax Rate",
+      "Tax Amount",
+      "Note Number",
+      "Buyer Article ID",
+      "Discount Amount",
+      "Discount %",
+      "Gross Amount"
+     ]
+    },
+    {
+     "name": "Payment Details",
+     "internal": "Payment Details",
+     "shape": "object",
+     "fields": [
+      "Payment Details Description",
+      "Subtotal",
+      "Tax Rate",
+      "Exchange Rate",
+      "Tax Amount Difference",
+      "Tax",
+      "Total",
+      "Amount Due",
+      "Payment Reference",
+      "UUID"
+     ]
+    },
+    {
+     "name": "Payment Methods",
+     "internal": "Payment Methods",
+     "shape": "array",
+     "fields": [
+      "Payment Method",
+      "Account Number",
+      "BIC/SWIFT Code"
+     ]
+    },
+    {
+     "name": "Additional Fields",
+     "internal": "Additional Fields",
+     "shape": "object",
+     "fields": [
+      "Payment Notes"
+     ]
+    },
+    {
+     "name": "Barcodes",
+     "internal": "Barcodes",
+     "shape": "array",
+     "fields": [
+      "Text"
+     ]
+    }
+   ],
+   "allowed": [
+    "Buyer",
+    "Seller",
+    "Remit To",
+    "Shipping Details",
+    "Order Details",
+    "Items",
+    "Payment Details",
+    "Payment Methods",
+    "Additional Fields",
+    "Barcodes",
+    "Process Control",
+    "Document References",
+    "Supporting Documents",
+    "Preceding Invoices",
+    "Tax Representative",
+    "Document Allowances",
+    "Document Charges",
+    "Flags",
+    "extra_fields_array"
+   ]
+  },
+  "credit-note": {
+   "slug": "credit-note",
+   "sections": [
+    {
+     "name": "Buyer",
+     "internal": "Buyer",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Address",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code"
+     ]
+    },
+    {
+     "name": "Seller",
+     "internal": "Seller",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Address",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "VAT No",
+      "Registration No"
+     ]
+    },
+    {
+     "name": "Remit To",
+     "internal": "Remit To",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Street",
+      "Street 2",
+      "City",
+      "Province",
+      "Postal Code",
+      "Country",
+      "Country Code"
+     ]
+    },
+    {
+     "name": "Shipping Details",
+     "internal": "Shipping Details",
+     "shape": "object",
+     "fields": [
+      "Ship To Name",
+      "Address",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "Shipping Method",
+      "Tracking Number"
+     ]
+    },
+    {
+     "name": "Invoice Details",
+     "internal": "Invoice Details",
+     "shape": "object",
+     "fields": [
+      "Invoice Type",
+      "Invoice Number",
+      "Compromisso Code",
+      "Invoice Date",
+      "Period Start Date",
+      "Period End Date",
+      "Delivery Date",
+      "Delivery Note No",
+      "Payment Terms",
+      "GRN No",
+      "Due Date",
+      "Cost Center",
+      "Your Reference",
+      "Posting Date",
+      "Net Amount",
+      "Total Tax",
+      "Total Amount",
+      "Rounding Amount",
+      "Currency Code",
+      "Purchase Order Number"
+     ]
+    },
+    {
+     "name": "Items",
+     "internal": "Items",
+     "shape": "array",
+     "fields": [
+      "Item No",
+      "Period Start Date",
+      "Period End Date",
+      "Article ID",
+      "Article Name",
+      "Description",
+      "Order Number",
+      "Size",
+      "Color",
+      "Your Reference Number",
+      "Quantity",
+      "UOM",
+      "Serial Number",
+      "Lot Number",
+      "Unit Price",
+      "Net Amount",
+      "Tax Rate",
+      "Tax Amount",
+      "Note Number",
+      "Buyer Article ID",
+      "Discount Amount",
+      "Discount %",
+      "Gross Amount"
+     ]
+    },
+    {
+     "name": "Payment Details",
+     "internal": "Payment Details",
+     "shape": "object",
+     "fields": [
+      "Payment Details Description",
+      "Payment Methods",
+      "Invoice Amount",
+      "Rounding Amount",
+      "Tax Amount",
+      "Tax Rate",
+      "Exchange Rate",
+      "Tax Amount Diff",
+      "Tax",
+      "Payment Reference",
+      "UUID",
+      "Total",
+      "Amount Due"
+     ]
+    },
+    {
+     "name": "Additional Fields",
+     "internal": "Additional Fields",
+     "shape": "object",
+     "fields": [
+      "Payment Notes"
+     ]
+    },
+    {
+     "name": "Barcodes",
+     "internal": "Barcodes",
+     "shape": "array",
+     "fields": [
+      "Text"
+     ]
+    }
+   ],
+   "allowed": [
+    "Buyer",
+    "Seller",
+    "Remit To",
+    "Shipping Details",
+    "Invoice Details",
+    "Items",
+    "Payment Details",
+    "Additional Fields",
+    "Barcodes",
+    "Process Control",
+    "Document References",
+    "Supporting Documents",
+    "Preceding Invoices",
+    "Tax Representative",
+    "Document Allowances",
+    "Document Charges",
+    "Flags",
+    "extra_fields_array"
+   ]
+  },
+  "freight-invoice": {
+   "slug": "freight-invoice",
+   "sections": [
+    {
+     "name": "Buyer",
+     "internal": "Buyer",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Address",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code"
+     ]
+    },
+    {
+     "name": "Seller",
+     "internal": "Seller",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Address",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "VAT No",
+      "Registration No"
+     ]
+    },
+    {
+     "name": "Invoice Details",
+     "internal": "Invoice Details",
+     "shape": "object",
+     "fields": [
+      "Invoice Number",
+      "Invoice Date",
+      "Due Date",
+      "Payment Terms",
+      "Currency Code",
+      "Net Amount",
+      "Total Tax",
+      "Total Amount"
+     ]
+    },
+    {
+     "name": "Payment Details",
+     "internal": "Payment Details",
+     "shape": "object",
+     "fields": [
+      "Payment Details Description"
+     ]
+    },
+    {
+     "name": "Freight Shipments",
+     "internal": "Freight Shipments",
+     "shape": "array",
+     "fields": [
+      "Shipment Reference",
+      "Job Number",
+      "Mode Of Transport",
+      "Service Level",
+      "Carrier Name",
+      "Carrier Code",
+      "Booking Number",
+      "Master Bill Of Lading",
+      "House Bill Of Lading",
+      "Vessel Name",
+      "Voyage Number",
+      "Ship From",
+      "Ship To",
+      "Origin Location",
+      "Departure Location",
+      "Origin Country Code",
+      "Departure Date",
+      "Destination Location",
+      "Arrival Location",
+      "Destination Country Code",
+      "Arrival Date",
+      "Incoterms",
+      "Customer Reference",
+      "Shipper Reference",
+      "Customs Reference",
+      "Packages",
+      "Weight",
+      "Chargeable Weight",
+      "Volume",
+      "Equipment Type",
+      "Containers",
+      "Shipment Total",
+      "Line Charges"
+     ]
+    },
+    {
+     "name": "Invoice Containers",
+     "internal": "Containers",
+     "shape": "array",
+     "fields": [
+      "Container ID",
+      "Equipment Type"
+     ]
+    },
+    {
+     "name": "Invoice Charges",
+     "internal": "Charges",
+     "shape": "array",
+     "fields": [
+      "Charge Group",
+      "Charge Code",
+      "Description",
+      "Shipment Reference",
+      "Job Number",
+      "Currency",
+      "Amount",
+      "Rate",
+      "VAT Rate",
+      "VAT Amount",
+      "PrepaidOrCollect"
+     ]
+    },
+    {
+     "name": "Payment Methods",
+     "internal": "Payment Methods",
+     "shape": "array",
+     "fields": [
+      "payment_method",
+      "account_no",
+      "BIC_or_Swift_code",
+      "Payment Reference"
+     ]
+    },
+    {
+     "name": "Tax",
+     "internal": "Tax",
+     "shape": "array",
+     "fields": [
+      "tax_code",
+      "tax_total",
+      "rate"
+     ]
+    },
+    {
+     "name": "Line Charges",
+     "internal": "Line Charges",
+     "shape": "array",
+     "fields": [
+      "Charge ID",
+      "Charge Group",
+      "Charge Code",
+      "Description",
+      "Currency",
+      "Amount",
+      "Rate",
+      "VAT Rate",
+      "VAT Amount",
+      "PrepaidOrCollect"
+     ]
+    },
+    {
+     "name": "Ship From",
+     "internal": "Ship From",
+     "shape": "array",
+     "fields": [
+      "ID",
+      "Company Name",
+      "Street Address",
+      "Postal Code",
+      "City",
+      "Country"
+     ]
+    },
+    {
+     "name": "Ship To",
+     "internal": "Ship To",
+     "shape": "array",
+     "fields": [
+      "ID",
+      "Company Name",
+      "Street Address",
+      "Postal Code",
+      "City",
+      "Country"
+     ]
+    },
+    {
+     "name": "Departure Location",
+     "internal": "Departure Location",
+     "shape": "array",
+     "fields": [
+      "ID",
+      "Postal Code",
+      "City",
+      "IATA Code",
+      "UNLOC Code"
+     ]
+    },
+    {
+     "name": "Arrival Location",
+     "internal": "Arrival Location",
+     "shape": "array",
+     "fields": [
+      "ID",
+      "Postal Code",
+      "City",
+      "IATA Code",
+      "UNLOC Code"
+     ]
+    },
+    {
+     "name": "Line Containers",
+     "internal": "Freight Shipments.Containers",
+     "shape": "array",
+     "fields": [
+      "ID",
+      "Container ID",
+      "Equipment Type"
+     ]
+    }
+   ],
+   "allowed": [
+    "Buyer",
+    "Seller",
+    "Invoice Details",
+    "Payment Details",
+    "Freight Shipments",
+    "Invoice Containers",
+    "Invoice Charges",
+    "Payment Methods",
+    "Tax",
+    "Line Charges",
+    "Ship From",
+    "Ship To",
+    "Departure Location",
+    "Arrival Location",
+    "Line Containers",
+    "Barcodes",
+    "Process Control",
+    "Document References",
+    "Supporting Documents",
+    "Preceding Invoices",
+    "Payee",
+    "Tax Representative",
+    "Delivery",
+    "Document Allowances",
+    "Document Charges",
+    "Flags",
+    "extra_fields_array"
+   ]
+  },
+  "consignment-order": {
+   "slug": "consignment-order",
+   "sections": [
+    {
+     "name": "Buyer",
+     "internal": "Buyer",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Name 2",
+      "Street 1",
+      "Street 2",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "VAT No",
+      "Contact Name"
+     ]
+    },
+    {
+     "name": "Seller",
+     "internal": "Seller",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Name 2",
+      "Street 1",
+      "Street 2",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "VAT No",
+      "Registration No",
+      "GLN No",
+      "Email"
+     ]
+    },
+    {
+     "name": "Shipping Details",
+     "internal": "Shipping Details",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Name 2",
+      "Street 1",
+      "Street 2",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "ShipTo",
+      "Shipping Method",
+      "Tracking Number"
+     ]
+    },
+    {
+     "name": "Consignment Details",
+     "internal": "Consignment Details",
+     "shape": "object",
+     "fields": [
+      "Consignment Number",
+      "Consignment Date",
+      "Delivery Date",
+      "Payment Terms",
+      "Payment Due Date",
+      "Currency Code",
+      "Contact Name"
+     ]
+    },
+    {
+     "name": "Items",
+     "internal": "Items",
+     "shape": "array",
+     "fields": [
+      "Article ID",
+      "Article Name",
+      "Description",
+      "Order Number",
+      "Quantity",
+      "UOM",
+      "Serial Number",
+      "Lot Number",
+      "Unit Price",
+      "Net Amount",
+      "Tax Rate",
+      "Tax Amount",
+      "Discount Amount",
+      "Discount %",
+      "Gross Amount"
+     ]
+    },
+    {
+     "name": "Payment Details",
+     "internal": "Payment Details",
+     "shape": "object",
+     "fields": [
+      "Payment Methods",
+      "Subtotal",
+      "Tax",
+      "Exchange Rate",
+      "Tax Amount Difference",
+      "Total",
+      "Amount Due",
+      "Payment Reference"
+     ]
+    },
+    {
+     "name": "Barcodes",
+     "internal": "Barcodes",
+     "shape": "array",
+     "fields": [
+      "Text"
+     ]
+    }
+   ],
+   "allowed": [
+    "Buyer",
+    "Seller",
+    "Shipping Details",
+    "Consignment Details",
+    "Items",
+    "Payment Details",
+    "Barcodes",
+    "Process Control",
+    "Document References",
+    "Supporting Documents",
+    "Preceding Invoices",
+    "Payee",
+    "Tax Representative",
+    "Document Allowances",
+    "Document Charges",
+    "Flags",
+    "extra_fields_array"
+   ]
+  },
+  "consignment-invoice": {
+   "slug": "consignment-invoice",
+   "sections": [
+    {
+     "name": "Buyer",
+     "internal": "Buyer",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Name 2",
+      "Street 1",
+      "Street 2",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "VAT No",
+      "Contact Name"
+     ]
+    },
+    {
+     "name": "Seller",
+     "internal": "Seller",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Name 2",
+      "Street 1",
+      "Street 2",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "VAT No",
+      "Registration No",
+      "GLN No",
+      "Email"
+     ]
+    },
+    {
+     "name": "Shipping Details",
+     "internal": "Shipping Details",
+     "shape": "object",
+     "fields": [
+      "Name",
+      "Name 2",
+      "Street 1",
+      "Street 2",
+      "City",
+      "Postal Code",
+      "Country",
+      "Country Code",
+      "ShipTo",
+      "Shipping Method",
+      "Tracking Number"
+     ]
+    },
+    {
+     "name": "Consignment Details",
+     "internal": "Consignment Details",
+     "shape": "object",
+     "fields": [
+      "Consignment Number",
+      "Consignment Date",
+      "Delivery Date",
+      "Payment Terms",
+      "Payment Due Date",
+      "Currency Code",
+      "Contact Name"
+     ]
+    },
+    {
+     "name": "Items",
+     "internal": "Items",
+     "shape": "array",
+     "fields": [
+      "Article ID",
+      "Article Name",
+      "Description",
+      "Order Number",
+      "Quantity",
+      "UOM",
+      "Serial Number",
+      "Lot Number",
+      "Unit Price",
+      "Net Amount",
+      "Tax Rate",
+      "Tax Amount",
+      "Discount Amount",
+      "Discount %",
+      "Gross Amount"
+     ]
+    },
+    {
+     "name": "Payment Details",
+     "internal": "Payment Details",
+     "shape": "object",
+     "fields": [
+      "Payment Methods",
+      "Subtotal",
+      "Tax",
+      "Exchange Rate",
+      "Tax Amount Difference",
+      "Total",
+      "Amount Due",
+      "Payment Reference"
+     ]
+    },
+    {
+     "name": "Barcodes",
+     "internal": "Barcodes",
+     "shape": "array",
+     "fields": [
+      "Text"
+     ]
+    }
+   ],
+   "allowed": [
+    "Buyer",
+    "Seller",
+    "Shipping Details",
+    "Consignment Details",
+    "Items",
+    "Payment Details",
+    "Barcodes",
+    "Process Control",
+    "Document References",
+    "Supporting Documents",
+    "Preceding Invoices",
+    "Payee",
+    "Tax Representative",
+    "Document Allowances",
+    "Document Charges",
+    "Flags",
+    "extra_fields_array"
+   ]
+  }
+ }
+}

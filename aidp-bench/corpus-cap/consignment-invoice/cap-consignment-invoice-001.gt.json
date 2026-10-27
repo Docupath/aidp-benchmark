@@ -1,0 +1,295 @@
+{
+ "id": "cap-consignment-invoice-001",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "sv-SE",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Svea Logistik AB",
+   "Name 2": "",
+   "Street 1": "Industrivägen 3",
+   "Street 2": "",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "VAT No": "SE320962599301",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Dala Kemi AB",
+   "Name 2": "",
+   "Street 1": "Hamngatan 199",
+   "Street 2": "",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "VAT No": "",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industrivägen 3",
+   "Street 2": "",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-83407",
+   "Consignment Date": "17/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "16/06/2026",
+   "Currency Code": "SEK",
+   "Contact Name": "Erik Lindqvist"
+  },
+  "Items": [
+   {
+    "Article ID": "DEV-94288",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Quantity": "41",
+    "UOM": "pcs",
+    "Serial Number": "SN84103492",
+    "Lot Number": "LOT116404",
+    "Unit Price": "158.74",
+    "Net Amount": "6508.34",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CONS-02390",
+    "Article Name": "Consulting Services",
+    "Description": "Senior consultant",
+    "Order Number": "",
+    "Quantity": "15",
+    "UOM": "EA",
+    "Serial Number": "SN29466823",
+    "Lot Number": "LOT906419",
+    "Unit Price": "145.40",
+    "Net Amount": "2181.00",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "TRN-09502",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Quantity": "12",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "LOT534917",
+    "Unit Price": "415.03",
+    "Net Amount": "4980.36",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "DEV-31205",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Quantity": "39",
+    "UOM": "EA",
+    "Serial Number": "SN80273336",
+    "Lot Number": "LOT061910",
+    "Unit Price": "140.00",
+    "Net Amount": "5460.00",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "19129.70",
+   "Tax": [
+    {
+     "tax_code": "Moms",
+     "tax_total": "4782.43",
+     "rate": "25"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-66072",
+   "kind": "legal",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "SE78 7517 6417 9417 6343 2962",
+   "approved": "SE78 7517 6417 9417 6343 2962",
+   "usual": "SE78 7517 6417 9417 6343 2962"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Pris överenskommet med Erik",
+    "page": 1,
+    "place": "header"
+   },
+   {
+    "id": "M2",
+    "kind": "stamp",
+    "text": "BETALD 2026-05-22",
+    "page": 1,
+    "place": "top"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Payment Details.Total",
+    "value": "23912.13",
+    "method": "net plus tax",
+    "inputs": [
+     "Payment Details.Subtotal"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00150942990393(17)270910(10)LOT116404(21)SN84103492",
+    "gtin": "0150942990393",
+    "expiry": "270910",
+    "lot": "LOT116404",
+    "serial": "SN84103492",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00715736555631(17)291114(10)LOT906419(21)SN29466823",
+    "gtin": "0715736555631",
+    "expiry": "291114",
+    "lot": "LOT906419",
+    "serial": "SN29466823",
+    "label_only": false,
+    "page": 1
+   },
+   {
+    "id": "L3",
+    "row": 2,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00159831110102(17)270202(10)LOT534917",
+    "gtin": "0159831110102",
+    "expiry": "270202",
+    "lot": "LOT534917",
+    "serial": "",
+    "label_only": false,
+    "page": 1
+   },
+   {
+    "id": "L4",
+    "row": 3,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00197539543914(17)271104(10)LOT061910(21)SN80273336",
+    "gtin": "0197539543914",
+    "expiry": "271104",
+    "lot": "LOT061910",
+    "serial": "SN80273336",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00150942990393(17)270910(10)LOT116404(21)SN84103492",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00715736555631(17)291114(10)LOT906419(21)SN29466823",
+    "row": 1,
+    "page": 1
+   },
+   {
+    "id": "L3",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00159831110102(17)270202(10)LOT534917",
+    "row": 2,
+    "page": 1
+   },
+   {
+    "id": "L4",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00197539543914(17)271104(10)LOT061910(21)SN80273336",
+    "row": 3,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

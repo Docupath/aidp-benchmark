@@ -1,0 +1,238 @@
+{
+ "id": "cap-consignment-order-013",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": 1
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Granite & Co Ltd",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB070590737",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Tyneside Pharma Ltd",
+   "Name 2": "",
+   "Street 1": "49 Riverside Way",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB064051537",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-80715",
+   "Consignment Date": "12/02/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "14/03/2026",
+   "Currency Code": "GBP",
+   "Contact Name": "Harry Whitfield"
+  },
+  "Items": [
+   {
+    "Article ID": "WGT-36844",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "49",
+    "UOM": "kg",
+    "Serial Number": "SN93963071",
+    "Lot Number": "LOT002392",
+    "Unit Price": "401.87",
+    "Net Amount": "19691.63",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "FLT-42803",
+    "Article Name": "Filter Cartridge F9",
+    "Description": "HEPA class",
+    "Order Number": "",
+    "Quantity": "5",
+    "UOM": "EA",
+    "Serial Number": "SN24986375",
+    "Lot Number": "LOT001733",
+    "Unit Price": "35.18",
+    "Net Amount": "175.90",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "MTR-43178",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "",
+    "Quantity": "8",
+    "UOM": "box",
+    "Serial Number": "SN90384656",
+    "Lot Number": "LOT561916",
+    "Unit Price": "300.93",
+    "Net Amount": "2407.44",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "WGT-14496",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "21",
+    "UOM": "pcs",
+    "Serial Number": "SN87586922",
+    "Lot Number": "LOT168536",
+    "Unit Price": "234.30",
+    "Net Amount": "4920.30",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "5439.05",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "32634.32",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": false
+  },
+  "bank": {
+   "printed": "GB80 RFDO 4179 1786 9644 53",
+   "approved": null,
+   "usual": "GB80 RFDO 4179 1786 9644 53"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Checked against delivery 09.07",
+    "page": 1,
+    "place": "header"
+   },
+   {
+    "id": "M2",
+    "kind": "stamp",
+    "text": "RECEIVED 17/02/2026",
+    "page": 1,
+    "place": "top"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Payment Details.Subtotal",
+    "value": "27195.27",
+    "method": "sum of the line amounts",
+    "inputs": [
+     "Items[].Net Amount"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 1,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00814530568011(17)271107(10)LOT001733(21)SN24986375",
+    "gtin": "0814530568011",
+    "expiry": "271107",
+    "lot": "LOT001733",
+    "serial": "SN24986375",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00814530568011(17)271107(10)LOT001733(21)SN24986375",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,201 @@
+{
+ "id": "cap-credit-note-158",
+ "slug": "credit-note",
+ "category": "Credit Note",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "ar-AE",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "مؤسسة النخيل للتوريدات",
+   "Address": "شارع الشيخ زايد، مبنى 12",
+   "City": "أبوظبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE"
+  },
+  "Seller": {
+   "Name": "الإمارات للإلكترونيات",
+   "Address": "شارع الشيخ زايد 95",
+   "City": "أبوظبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE",
+   "VAT No": "121457387557339",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "شارع الشيخ زايد، مبنى 12",
+   "City": "أبوظبي",
+   "Postal Code": "00000",
+   "Country": "United Arab Emirates",
+   "Country Code": "AE",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "CN-2026-05903",
+   "Compromisso Code": "",
+   "Invoice Date": "27/05/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "26/06/2026",
+   "Cost Center": "",
+   "Your Reference": "أحمد المنصوري",
+   "Posting Date": "",
+   "Net Amount": "",
+   "Total Tax": "388.38",
+   "Total Amount": "8155.94",
+   "Rounding Amount": "",
+   "Currency Code": "AED",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "DEV-38280",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "23",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "337.72",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "AE85 4716 3174 9721 8425 228",
+     "BIC_or_Swift_code": "SHJSAEL1"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "5",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "388.38",
+     "rate": "5"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": false
+  },
+  "bank": {
+   "printed": "AE85 4716 3174 9721 8425 228",
+   "approved": null,
+   "usual": "AE85 4716 3174 9721 8425 228"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Invoice Details.Net Amount",
+    "value": "7767.56",
+    "method": "sum of the line amounts",
+    "inputs": [
+     "Items[].Net Amount"
+    ]
+   },
+   {
+    "path": "Items.0.Net Amount",
+    "value": "7767.56",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.0.Quantity",
+     "Items.0.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Details.Payment Methods.0.account_no",
+     "Payment Details.Payment Methods.0.BIC_or_Swift_code"
+    ]
+   }
+  ]
+ }
+}

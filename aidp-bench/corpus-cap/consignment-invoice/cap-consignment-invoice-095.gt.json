@@ -1,0 +1,180 @@
+{
+ "id": "cap-consignment-invoice-095",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": 1
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Summit Medical Devices Inc",
+   "Name 2": "",
+   "Street 1": "1200 Industrial Parkway",
+   "Street 2": "",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US41-9881534",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Westfield Trading L.L.C.",
+   "Name 2": "",
+   "Street 1": "86 Harbor Road",
+   "Street 2": "",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US38-3663283",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "1200 Industrial Parkway",
+   "Street 2": "",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-97601",
+   "Consignment Date": "08/04/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "08/05/2026",
+   "Currency Code": "USD",
+   "Contact Name": "Sarah Mitchell"
+  },
+  "Items": [
+   {
+    "Article ID": "WGT-94219",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "25",
+    "UOM": "kg",
+    "Serial Number": "SN62509236",
+    "Lot Number": "LOT219188",
+    "Unit Price": "48.08",
+    "Net Amount": "1202.00",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "SNS-93838",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "18",
+    "UOM": "set",
+    "Serial Number": "SN05713030",
+    "Lot Number": "LOT703262",
+    "Unit Price": "353.83",
+    "Net Amount": "6368.94",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "7570.94",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "643.53",
+     "rate": "8.5"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "8214.47",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-46807",
+   "kind": "punct",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "688161105839",
+   "approved": "688161105839",
+   "usual": "688161105839"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00492342724735(17)271013(10)LOT219188(21)SN62509236",
+    "gtin": "0492342724735",
+    "expiry": "271013",
+    "lot": "LOT219188",
+    "serial": "SN62509236",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00492342724735(17)271013(10)LOT219188(21)SN62509236",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

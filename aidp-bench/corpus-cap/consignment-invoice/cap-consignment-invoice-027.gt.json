@@ -1,0 +1,180 @@
+{
+ "id": "cap-consignment-invoice-027",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "ja-JP",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "株式会社山田製作所",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "東京都",
+   "Postal Code": "104-0061",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "VAT No": "",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "株式会社大阪医療器",
+   "Name 2": "",
+   "Street 1": "北区梅田6-2-20",
+   "Street 2": "",
+   "City": "東京都",
+   "Postal Code": "104-0061",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "VAT No": "",
+   "Registration No": "T8627611036031",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "港区芝浦1-2-3",
+   "Street 2": "",
+   "City": "東京都",
+   "Postal Code": "104-0061",
+   "Country": "Japan",
+   "Country Code": "JP",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-80685",
+   "Consignment Date": "05/02/2026",
+   "Delivery Date": "",
+   "Payment Terms": "お支払いは30日以内にお願いします。",
+   "Payment Due Date": "07/03/2026",
+   "Currency Code": "JPY",
+   "Contact Name": "佐藤健一"
+  },
+  "Items": [
+   {
+    "Article ID": "TRN-48825",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Quantity": "10",
+    "UOM": "EA",
+    "Serial Number": "SN37037107",
+    "Lot Number": "LOT845909",
+    "Unit Price": "601",
+    "Net Amount": "6010",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CONS-33755",
+    "Article Name": "Consulting Services",
+    "Description": "Senior consultant",
+    "Order Number": "",
+    "Quantity": "33",
+    "UOM": "kg",
+    "Serial Number": "SN78813955",
+    "Lot Number": "LOT516616",
+    "Unit Price": "3308",
+    "Net Amount": "109164",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "115174",
+   "Tax": [
+    {
+     "tax_code": "消費税",
+     "tax_total": "11517",
+     "rate": "10"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "126691",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-67941",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "1075966",
+   "approved": "1075966",
+   "usual": "1075966"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00759646450884(17)281011(10)LOT845909(21)SN37037107",
+    "gtin": "0759646450884",
+    "expiry": "281011",
+    "lot": "LOT845909",
+    "serial": "SN37037107",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00759646450884(17)281011(10)LOT845909(21)SN37037107",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

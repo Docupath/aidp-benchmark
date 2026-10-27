@@ -1,0 +1,226 @@
+{
+ "id": "cap-invoice-045",
+ "slug": "invoice",
+ "category": "Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "medium",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "B",
+ "case": {
+  "kind": "po-variance",
+  "role": "control"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Granite & Co Ltd",
+   "Address": "Unit 7, Riverside Estate",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB"
+  },
+  "Seller": {
+   "Name": "Mercia Components",
+   "Address": "64 King Street",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Unit 7, Riverside Estate",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Debit",
+   "Invoice Number": "INV-2026-73120",
+   "Compromisso Code": "",
+   "Invoice Date": "07/02/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "09/03/2026",
+   "Cost Center": "",
+   "Your Reference": "Harry Whitfield",
+   "Posting Date": "",
+   "Net Amount": "2968.46",
+   "Total Tax": "593.69",
+   "Total Amount": "3562.15",
+   "Rounding Amount": "",
+   "Currency Code": "GBP",
+   "Purchase Order Number": "PO-2026-48882"
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "BRK-09252",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "6",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "166.48",
+    "Net Amount": "998.88",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "CHM-21812",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "1",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "350.88",
+    "Net Amount": "350.88",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "3",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "CHM-84126",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "5",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "323.74",
+    "Net Amount": "1618.70",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "GB56 UWLV 5252 5508 8632 44",
+     "BIC_or_Swift_code": "VYFWGBD2"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "20",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "593.69",
+     "rate": "20"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-10327",
+   "kind": "short",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "GB56 UWLV 5252 5508 8632 44",
+   "approved": null,
+   "usual": "GB56 UWLV 5252 5508 8632 44"
+  },
+  "po_number": "PO-2026-48882",
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

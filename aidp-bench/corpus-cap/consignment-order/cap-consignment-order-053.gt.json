@@ -1,0 +1,204 @@
+{
+ "id": "cap-consignment-order-053",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-IN",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Ganga Pharma Ltd",
+   "Name 2": "",
+   "Street 1": "Plot 14, MIDC Industrial Area",
+   "Street 2": "",
+   "City": "Chennai",
+   "Postal Code": "600001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "14AAACG2165A1Z5",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Konkan Pharma",
+   "Name 2": "",
+   "Street 1": "Plot 44, MG Road",
+   "Street 2": "",
+   "City": "Chennai",
+   "Postal Code": "600001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "45AAACG3950A1Z8",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Plot 14, MIDC Industrial Area",
+   "Street 2": "",
+   "City": "Chennai",
+   "Postal Code": "600001",
+   "Country": "India",
+   "Country Code": "IN",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-32908",
+   "Consignment Date": "02/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "01/02/2026",
+   "Currency Code": "INR",
+   "Contact Name": "Priya Sharma"
+  },
+  "Items": [
+   {
+    "Article ID": "WGT-21722",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "4",
+    "UOM": "EA",
+    "Serial Number": "SN61900006",
+    "Lot Number": "LOT301645",
+    "Unit Price": "453.61",
+    "Net Amount": "1814.44",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CHM-28009",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "",
+    "Quantity": "42",
+    "UOM": "box",
+    "Serial Number": "SN66743434",
+    "Lot Number": "LOT618185",
+    "Unit Price": "96.01",
+    "Net Amount": "4032.42",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "5846.86",
+   "Tax": [
+    {
+     "tax_code": "CGST",
+     "tax_total": "526.22",
+     "rate": "9"
+    },
+    {
+     "tax_code": "SGST",
+     "tax_total": "526.22",
+     "rate": "9"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "6899.30",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-20717",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "40634596521802",
+   "approved": "40634596521802",
+   "usual": "40634596521802"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00945997979260(17)290706(10)LOT301645(21)SN61900006",
+    "gtin": "0945997979260",
+    "expiry": "290706",
+    "lot": "LOT301645",
+    "serial": "SN61900006",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00071975080687(17)281214(10)LOT618185(21)SN66743434",
+    "gtin": "0071975080687",
+    "expiry": "281214",
+    "lot": "LOT618185",
+    "serial": "SN66743434",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00945997979260(17)290706(10)LOT301645(21)SN61900006",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00071975080687(17)281214(10)LOT618185(21)SN66743434",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

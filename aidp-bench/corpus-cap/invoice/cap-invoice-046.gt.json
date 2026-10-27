@@ -1,0 +1,213 @@
+{
+ "id": "cap-invoice-046",
+ "slug": "invoice",
+ "category": "Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "fr-FR",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Groupe Horizon SA",
+   "Address": "45 Avenue Victor Hugo",
+   "City": "Paris",
+   "Postal Code": "75008",
+   "Country": "France",
+   "Country Code": "FR"
+  },
+  "Seller": {
+   "Name": "Ardèche Logistique",
+   "Address": "146 Rue de Paris",
+   "City": "Marseille",
+   "Postal Code": "13001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR74 680434677",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "45 Avenue Victor Hugo",
+   "City": "Paris",
+   "Postal Code": "75008",
+   "Country": "France",
+   "Country Code": "FR",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Debit",
+   "Invoice Number": "INV-2026-80600",
+   "Compromisso Code": "",
+   "Invoice Date": "24/03/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "23/04/2026",
+   "Cost Center": "",
+   "Your Reference": "Pierre Martin",
+   "Posting Date": "",
+   "Net Amount": "7109.32",
+   "Total Tax": "1421.86",
+   "Total Amount": "8531.18",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "GSK-03716",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "36",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "162.14",
+    "Net Amount": "5837.04",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "VAL-83526",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "17",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "74.84",
+    "Net Amount": "1272.28",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "FR77 4911 6155 6318 2521 0408 256",
+     "BIC_or_Swift_code": "NNFAFRB0"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "20",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "TVA",
+     "tax_total": "1421.86",
+     "rate": "20"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-58734",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "FR77 4911 6155 6318 2521 0408 256",
+   "approved": "FR77 4911 6155 6318 2521 0408 256",
+   "usual": "FR77 4911 6155 6318 2521 0408 256"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Prix convenu avec Pierre",
+    "page": 1,
+    "place": "end"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [
+   {
+    "id": "Q1",
+    "symbology": "qrcode",
+    "payload": "BCD\n002\n1\nSCT\nNNFAFRB0\nArdèche Logistique\nFR7749116155631825210408256\nEUR8531.18",
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

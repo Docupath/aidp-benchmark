@@ -1,0 +1,232 @@
+{
+ "id": "cap-invoice-038",
+ "slug": "invoice",
+ "category": "Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "fr-FR",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Groupe Horizon SA",
+   "Address": "45 Avenue Victor Hugo",
+   "City": "Paris",
+   "Postal Code": "75008",
+   "Country": "France",
+   "Country Code": "FR"
+  },
+  "Seller": {
+   "Name": "Horizon Outillage SARL",
+   "Address": "93 Avenue Victor Hugo",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR51 997802156",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "45 Avenue Victor Hugo",
+   "City": "Paris",
+   "Postal Code": "75008",
+   "Country": "France",
+   "Country Code": "FR",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Debit",
+   "Invoice Number": "INV-2026-93703",
+   "Compromisso Code": "",
+   "Invoice Date": "03/05/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "02/06/2026",
+   "Cost Center": "",
+   "Your Reference": "Pierre Martin",
+   "Posting Date": "",
+   "Net Amount": "22285.28",
+   "Total Tax": "4457.06",
+   "Total Amount": "",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "CONS-52326",
+    "Article Name": "Consulting Services",
+    "Description": "Senior consultant",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "43",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "198.49",
+    "Net Amount": "8535.07",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "TRN-58233",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "31",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "434.10",
+    "Net Amount": "13457.10",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "3",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "DEV-29210",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "1",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "293.11",
+    "Net Amount": "293.11",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "FR73 0391 0750 2834 5365 9144 433",
+     "BIC_or_Swift_code": "YNXRFRG3"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "20",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "TVA",
+     "tax_total": "4457.06",
+     "rate": "20"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-64597",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "FR73 0391 0750 2834 5365 9144 433",
+   "approved": "FR73 0391 0750 2834 5365 9144 433",
+   "usual": "FR73 0391 0750 2834 5365 9144 433"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Invoice Details.Total Amount",
+    "value": "26742.34",
+    "method": "net plus tax",
+    "inputs": [
+     "Invoice Details.Net Amount"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

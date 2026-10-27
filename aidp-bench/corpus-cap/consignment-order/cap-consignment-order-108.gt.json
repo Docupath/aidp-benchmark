@@ -1,0 +1,199 @@
+{
+ "id": "cap-consignment-order-108",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Westbrook Pharma Ltd",
+   "Name 2": "",
+   "Street 1": "14 King Street",
+   "Street 2": "",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB797773806",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Langdale Pharma PLC",
+   "Name 2": "",
+   "Street 1": "88 King Street",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB080036155",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "14 King Street",
+   "Street 2": "",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-04095",
+   "Consignment Date": "27/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "26/04/2026",
+   "Currency Code": "GBP",
+   "Contact Name": "Harry Whitfield"
+  },
+  "Items": [
+   {
+    "Article ID": "CBL-62166",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Quantity": "40",
+    "UOM": "EA",
+    "Serial Number": "SN07774413",
+    "Lot Number": "LOT406604",
+    "Unit Price": "470.63",
+    "Net Amount": "18825.20",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "BRG-35530",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Quantity": "33",
+    "UOM": "EA",
+    "Serial Number": "SN99287820",
+    "Lot Number": "LOT462555",
+    "Unit Price": "30.13",
+    "Net Amount": "994.29",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "19819.49",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "3963.90",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "23783.39",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": false
+  },
+  "bank": {
+   "printed": "GB61 UVQB 7104 1497 1344 48",
+   "approved": null,
+   "usual": "GB61 UVQB 7104 1497 1344 48"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00164522451952(17)290713(10)LOT406604(21)SN07774413",
+    "gtin": "0164522451952",
+    "expiry": "290713",
+    "lot": "LOT406604",
+    "serial": "SN07774413",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00879504967429(17)280327(10)LOT462555(21)SN99287820",
+    "gtin": "0879504967429",
+    "expiry": "280327",
+    "lot": "LOT462555",
+    "serial": "SN99287820",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00164522451952(17)290713(10)LOT406604(21)SN07774413",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00879504967429(17)280327(10)LOT462555(21)SN99287820",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

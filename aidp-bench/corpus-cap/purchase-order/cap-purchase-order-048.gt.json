@@ -1,0 +1,183 @@
+{
+ "id": "cap-purchase-order-048",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-CH",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Zürichsee Handels AG",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 55",
+   "Street 2": "",
+   "City": "Basel",
+   "Postal Code": "4051",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "VAT No": "CHE-905.458.732 MWST"
+  },
+  "Seller": {
+   "Name": "Pilatus Werkzeug AG",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 159",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 55",
+   "Street 2": "",
+   "City": "Basel",
+   "Postal Code": "4051",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-42751",
+   "Compromisso Code": "",
+   "PO Date": "05/03/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "",
+   "Cost Center": "",
+   "Your Reference": "Marc Dubois",
+   "Posting Date": "",
+   "Net Amount": "3806.64",
+   "Total Amount": "4114.98",
+   "Rounding Amount": "",
+   "Currency Code": "CHF",
+   "Contact Name": "Marc Dubois"
+  },
+  "Items": [
+   {
+    "Article ID": "TRN-46476",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "12",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "317.22",
+    "Net Amount": "3806.64",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "8.1",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "308.34",
+     "rate": "8.1"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "CH81 7108 1935 5732 4189 2",
+    "BIC/SWIFT Code": "ZQMUCHS7"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-44961",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "CH81 7108 1935 5732 4189 2",
+   "approved": null,
+   "usual": "CH81 7108 1935 5732 4189 2"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Order Details.Due Date",
+    "value": "04/04/2026",
+    "method": "document date plus the 30 days of the printed payment terms",
+    "inputs": [
+     "Order Details.PO Date",
+     "Order Details.Payment Terms"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

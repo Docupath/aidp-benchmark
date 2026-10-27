@@ -1,0 +1,224 @@
+{
+ "id": "cap-purchase-order-096",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-CH",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Zürichsee Handels AG",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 55",
+   "Street 2": "",
+   "City": "Zürich",
+   "Postal Code": "8001",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "VAT No": "CHE-845.599.113 MWST"
+  },
+  "Seller": {
+   "Name": "Aare Präzision SA",
+   "Name 2": "",
+   "Street 1": "Bahnhofstrasse 215",
+   "Street 2": "",
+   "City": "Basel",
+   "Postal Code": "4051",
+   "Country": "Switzerland",
+   "Country Code": "CH"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 55",
+   "Street 2": "",
+   "City": "Zürich",
+   "Postal Code": "8001",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-40039",
+   "Compromisso Code": "",
+   "PO Date": "05/04/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "05/05/2026",
+   "Cost Center": "",
+   "Your Reference": "Claudia Frei",
+   "Posting Date": "",
+   "Net Amount": "23613.11",
+   "Total Amount": "25525.77",
+   "Rounding Amount": "",
+   "Currency Code": "CHF",
+   "Contact Name": "Claudia Frei"
+  },
+  "Items": [
+   {
+    "Article ID": "TRN-60518",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "19",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "81.65",
+    "Net Amount": "1551.35",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "DEV-33058",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "40",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "287.94",
+    "Net Amount": "11517.60",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "DEV-39344",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "3",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "48",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "219.67",
+    "Net Amount": "10544.16",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "8.1",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "1912.66",
+     "rate": "8.1"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "CH37 1901 2516 0591 2188 3",
+    "BIC/SWIFT Code": "JFZVCHA0"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-87094",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "CH37 1901 2516 0591 2188 3",
+   "approved": "CH37 1901 2516 0591 2188 3",
+   "usual": "CH37 1901 2516 0591 2188 3"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Methods.0.Account Number",
+     "Payment Methods.0.BIC/SWIFT Code"
+    ]
+   }
+  ]
+ }
+}

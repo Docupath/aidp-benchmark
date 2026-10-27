@@ -1,0 +1,221 @@
+{
+ "id": "cap-credit-note-125",
+ "slug": "credit-note",
+ "category": "Credit Note",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-IN",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Bharat Components Pvt Ltd",
+   "Address": "Plot 14, MIDC Industrial Area",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN"
+  },
+  "Seller": {
+   "Name": "Deccan Electronics Ltd",
+   "Address": "Plot 214, Station Road",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "82AAACG6406A1Z8",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Plot 14, MIDC Industrial Area",
+   "City": "Bengaluru",
+   "Postal Code": "560001",
+   "Country": "India",
+   "Country Code": "IN",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "CN-2026-47654",
+   "Compromisso Code": "",
+   "Invoice Date": "01/01/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "31/01/2026",
+   "Cost Center": "",
+   "Your Reference": "Rahul Verma",
+   "Posting Date": "",
+   "Net Amount": "-6175.74",
+   "Total Tax": "-1111.64",
+   "Total Amount": "-7287.38",
+   "Rounding Amount": "",
+   "Currency Code": "INR",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "TRN-31501",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "33",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "170.21",
+    "Net Amount": "-5616.93",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "TRN-24211",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "3",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "186.27",
+    "Net Amount": "-558.81",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "",
+     "account_no": "17638000609386",
+     "BIC_or_Swift_code": "XIXGINL2"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "CGST",
+     "tax_total": "-555.82",
+     "rate": "9"
+    },
+    {
+     "tax_code": "SGST",
+     "tax_total": "-555.82",
+     "rate": "9"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": false
+  },
+  "bank": {
+   "printed": "17638000609386",
+   "approved": null,
+   "usual": "17638000609386"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Checked against delivery 21.11",
+    "page": 1,
+    "place": "end"
+   },
+   {
+    "id": "M2",
+    "kind": "note",
+    "text": "Goods returned 24.04",
+    "page": 1,
+    "place": "header"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

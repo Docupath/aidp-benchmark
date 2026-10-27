@@ -1,0 +1,277 @@
+{
+ "id": "cap-consignment-order-159",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "pt-PT",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Lusitana Ferramentas Lda",
+   "Name 2": "",
+   "Street 1": "Rua Augusta 100",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT420642584",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Indústria Algarve",
+   "Name 2": "",
+   "Street 1": "Rua do Porto 25",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT003348480",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Rua Augusta 100",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "",
+   "Consignment Date": "09/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "08/06/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "João Silva"
+  },
+  "Items": [
+   {
+    "Article ID": "PMP-81532",
+    "Article Name": "Dosing Pump DP-12",
+    "Description": "12 l/h, PVDF head",
+    "Order Number": "",
+    "Quantity": "26",
+    "UOM": "kg",
+    "Serial Number": "SN76846506",
+    "Lot Number": "LOT202785",
+    "Unit Price": "291.47",
+    "Net Amount": "7578.22",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "WGT-78693",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "12",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "LOT520060",
+    "Unit Price": "156.98",
+    "Net Amount": "1883.76",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "WGT-41976",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "21",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "LOT913453",
+    "Unit Price": "292.65",
+    "Net Amount": "6145.65",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "",
+    "Quantity": "14",
+    "UOM": "kg",
+    "Serial Number": "SN72672959",
+    "Lot Number": "LOT963593",
+    "Unit Price": "56.84",
+    "Net Amount": "795.76",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "3772.78",
+     "rate": "23"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "20176.17",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-20887",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "PT09 3876 8512 8003 1030 5442 2",
+   "approved": null,
+   "usual": "PT09 3876 8512 8003 1030 5442 2"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Consignment Details.Consignment Number",
+    "value": "CSG-2026-44072",
+    "kind": "blot",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Consignment Details.Contact Name",
+    "value": "João Silva",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   },
+   {
+    "id": "O2",
+    "path": "Items.3.Article ID",
+    "value": "LBL-13051",
+    "kind": "label",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C2",
+    "path": "Items.2.Article ID",
+    "value": "WGT-41976",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O2",
+    "page": 1
+   }
+  ],
+  "derivations": [
+   {
+    "path": "Payment Details.Subtotal",
+    "value": "16403.39",
+    "method": "sum of the line amounts",
+    "inputs": [
+     "Items[].Net Amount"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00938450610862(17)281105(10)LOT202785(21)SN76846506",
+    "gtin": "0938450610862",
+    "expiry": "281105",
+    "lot": "LOT202785",
+    "serial": "SN76846506",
+    "label_only": false,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00793083237219(17)290205(10)LOT520060",
+    "gtin": "0793083237219",
+    "expiry": "290205",
+    "lot": "LOT520060",
+    "serial": "",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00938450610862(17)281105(10)LOT202785(21)SN76846506",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00793083237219(17)290205(10)LOT520060",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

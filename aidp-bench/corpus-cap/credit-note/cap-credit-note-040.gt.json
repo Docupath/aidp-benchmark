@@ -1,0 +1,201 @@
+{
+ "id": "cap-credit-note-040",
+ "slug": "credit-note",
+ "category": "Credit Note",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-DE",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Schwarzwald Medizintechnik AG",
+   "Address": "Hauptstraße 42",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE"
+  },
+  "Seller": {
+   "Name": "Bayerische Industrietechnik GmbH",
+   "Address": "Bahnhofstraße 212",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "VAT No": "",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Hauptstraße 42",
+   "City": "Hamburg",
+   "Postal Code": "20095",
+   "Country": "Germany",
+   "Country Code": "DE",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "CN-2026-92957",
+   "Compromisso Code": "",
+   "Invoice Date": "14/04/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Zahlbar innerhalb von 30 Tagen.",
+   "GRN No": "",
+   "Due Date": "14/05/2026",
+   "Cost Center": "",
+   "Your Reference": "Jürgen Hoffmann",
+   "Posting Date": "",
+   "Net Amount": "10312.67",
+   "Total Tax": "1959.41",
+   "Total Amount": "12272.08",
+   "Rounding Amount": "",
+   "Currency Code": "EUR",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "WGT-35254",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "50",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "4.05",
+    "Net Amount": "202.50",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "CBL-23484",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "47",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "215.11",
+    "Net Amount": "10110.17",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "DE11 9114 3617 8287 2794 56",
+     "BIC_or_Swift_code": "GEFADEP3"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "19",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "1959.41",
+     "rate": "19"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-63634",
+   "kind": "legal",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "DE11 9114 3617 8287 2794 56",
+   "approved": "DE11 9114 3617 8287 2794 56",
+   "usual": "DE11 9114 3617 8287 2794 56"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

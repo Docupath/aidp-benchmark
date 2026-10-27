@@ -1,0 +1,190 @@
+{
+ "id": "cap-purchase-order-141",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Westbrook Pharma Ltd",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB576554226"
+  },
+  "Seller": {
+   "Name": "KINGSWAY FOODS LLP",
+   "Name 2": "",
+   "Street 1": "199 Mill Lane",
+   "Street 2": "",
+   "City": "Bristol",
+   "Postal Code": "BS1 5TR",
+   "Country": "United Kingdom",
+   "Country Code": "GB"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "221 Baker Street",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-98034",
+   "Compromisso Code": "",
+   "PO Date": "06/04/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "06/05/2026",
+   "Cost Center": "",
+   "Your Reference": "Harry Whitfield",
+   "Posting Date": "",
+   "Net Amount": "5277.15",
+   "Total Amount": "6332.58",
+   "Rounding Amount": "",
+   "Currency Code": "GBP",
+   "Contact Name": "Harry Whitfield"
+  },
+  "Items": [
+   {
+    "Article ID": "VAL-71320",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "33",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "146.73",
+    "Net Amount": "5277.15",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "20",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "1055.43",
+     "rate": "20"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "GB80 PDZU 1920 2002 3692 63",
+    "BIC/SWIFT Code": "FVMVGBO6"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-71731",
+   "kind": "upper",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "GB80 PDZU 1920 2002 3692 63",
+   "approved": "GB80 PDZU 1920 2002 3692 63",
+   "usual": "GB80 PDZU 1920 2002 3692 63"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": {
+   "kind": "line",
+   "row": 0
+  },
+  "labels": [],
+  "barcodes": [
+   {
+    "id": "C1",
+    "symbology": "code128",
+    "payload": "PO-2026-98034",
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Methods.0.Account Number",
+     "Payment Methods.0.BIC/SWIFT Code"
+    ]
+   }
+  ]
+ }
+}

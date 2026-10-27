@@ -1,0 +1,238 @@
+{
+ "id": "cap-consignment-invoice-037",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-IN",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Bharat Components Pvt Ltd",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Mumbai",
+   "Postal Code": "400001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "76AAACG3061A1Z4",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Godavari Chemicals",
+   "Name 2": "",
+   "Street 1": "Plot 168, Industrial Estate",
+   "Street 2": "",
+   "City": "Chennai",
+   "Postal Code": "600001",
+   "Country": "India",
+   "Country Code": "IN",
+   "VAT No": "97AAACG6840A1Z9",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "22 MG Road",
+   "Street 2": "",
+   "City": "Mumbai",
+   "Postal Code": "400001",
+   "Country": "India",
+   "Country Code": "IN",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-20929",
+   "Consignment Date": "11/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "",
+   "Currency Code": "INR",
+   "Contact Name": "Rahul Verma"
+  },
+  "Items": [
+   {
+    "Article ID": "TRN-70151",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Quantity": "45",
+    "UOM": "box",
+    "Serial Number": "SN86823395",
+    "Lot Number": "LOT264927",
+    "Unit Price": "262.42",
+    "Net Amount": "11808.90",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CONS-29167",
+    "Article Name": "Consulting Services",
+    "Description": "Senior consultant",
+    "Order Number": "",
+    "Quantity": "15",
+    "UOM": "box",
+    "Serial Number": "SN84264394",
+    "Lot Number": "LOT322705",
+    "Unit Price": "453.56",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "",
+   "Subtotal": "18612.30",
+   "Tax": [
+    {
+     "tax_code": "CGST",
+     "tax_total": "1675.11",
+     "rate": "9"
+    },
+    {
+     "tax_code": "SGST",
+     "tax_total": "1675.11",
+     "rate": "9"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "21962.52",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-21374",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "91526596096164",
+   "approved": null,
+   "usual": "91526596096164"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "stamp",
+    "text": "APPROVED LD",
+    "page": 1,
+    "place": "top"
+   },
+   {
+    "id": "M2",
+    "kind": "note",
+    "text": "Call Rahul re: price",
+    "page": 1,
+    "place": "header"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Items.1.Net Amount",
+    "value": "6803.40",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.1.Quantity",
+     "Items.1.Unit Price"
+    ]
+   },
+   {
+    "path": "Consignment Details.Payment Due Date",
+    "value": "10/04/2026",
+    "method": "document date plus the 30 days of the printed payment terms",
+    "inputs": [
+     "Consignment Details.Consignment Date",
+     "Consignment Details.Payment Terms"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00984850913195(17)290923(10)LOT264927(21)SN86823395",
+    "gtin": "0984850913195",
+    "expiry": "290923",
+    "lot": "LOT264927",
+    "serial": "SN86823395",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00105524328316(17)290828(10)LOT322705(21)SN84264394",
+    "gtin": "0105524328316",
+    "expiry": "290828",
+    "lot": "LOT322705",
+    "serial": "SN84264394",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00984850913195(17)290923(10)LOT264927(21)SN86823395",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00105524328316(17)290828(10)LOT322705(21)SN84264394",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

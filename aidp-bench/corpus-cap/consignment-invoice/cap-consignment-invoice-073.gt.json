@@ -1,0 +1,242 @@
+{
+ "id": "cap-consignment-invoice-073",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "nl-NL",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Van Dijk Handel BV",
+   "Name 2": "",
+   "Street 1": "Industrieweg 88",
+   "Street 2": "",
+   "City": "Rotterdam",
+   "Postal Code": "3011 AA",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL152919240B01",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Utrechtse Precisie NV",
+   "Name 2": "",
+   "Street 1": "Keizersgracht 36",
+   "Street 2": "",
+   "City": "Rotterdam",
+   "Postal Code": "3011 AA",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industrieweg 88",
+   "Street 2": "",
+   "City": "Rotterdam",
+   "Postal Code": "3011 AA",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-73894",
+   "Consignment Date": "02/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "01/04/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Emma Bakker"
+  },
+  "Items": [
+   {
+    "Article ID": "CBL-17862",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Quantity": "46",
+    "UOM": "pcs",
+    "Serial Number": "SN50755790",
+    "Lot Number": "LOT111396",
+    "Unit Price": "54.67",
+    "Net Amount": "2514.82",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CBL-66058",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Quantity": "44",
+    "UOM": "set",
+    "Serial Number": "SN09570368",
+    "Lot Number": "LOT973395",
+    "Unit Price": "312.64",
+    "Net Amount": "13756.16",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "",
+    "Article Name": "Pressure Sensor PS-10",
+    "Description": "0-10 bar, 4-20mA",
+    "Order Number": "",
+    "Quantity": "38",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "LOT135371",
+    "Unit Price": "140.20",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "BRG-50159",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Quantity": "2",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "LOT421185",
+    "Unit Price": "419.81",
+    "Net Amount": "839.62",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "22438.20",
+   "Tax": [
+    {
+     "tax_code": "BTW",
+     "tax_total": "4712.02",
+     "rate": "21"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "27150.22",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "",
+   "kind": "legal",
+   "vat_printed": false,
+   "listed": false
+  },
+  "bank": {
+   "printed": "NL67 CYFS 8856 9289 16",
+   "approved": null,
+   "usual": "NL67 CYFS 8856 9289 16"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Items.2.Article ID",
+    "value": "SNS-02156",
+    "kind": "blot",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Items.3.Article ID",
+    "value": "BRG-50159",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   }
+  ],
+  "derivations": [
+   {
+    "path": "Items.2.Net Amount",
+    "value": "5327.60",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.2.Quantity",
+     "Items.2.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00619576251893(17)270910(10)LOT973395(21)SN09570368",
+    "gtin": "0619576251893",
+    "expiry": "270910",
+    "lot": "LOT973395",
+    "serial": "SN09570368",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00619576251893(17)270910(10)LOT973395(21)SN09570368",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "id": "cap-consignment-invoice-045",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "es-ES",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Suministros del Norte SL",
+   "Name 2": "",
+   "Street 1": "Avenida Diagonal 220",
+   "Street 2": "",
+   "City": "Valencia",
+   "Postal Code": "46001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB94045131",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Embalajes Castilla SA",
+   "Name 2": "",
+   "Street 1": "Calle Mayor 150",
+   "Street 2": "",
+   "City": "Valencia",
+   "Postal Code": "46001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB32587572",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Avenida Diagonal 220",
+   "Street 2": "",
+   "City": "Valencia",
+   "Postal Code": "46001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-22727",
+   "Consignment Date": "14/05/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "13/06/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Carlos García"
+  },
+  "Items": [
+   {
+    "Article ID": "WGT-38704",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "1",
+    "UOM": "kg",
+    "Serial Number": "SN92949565",
+    "Lot Number": "LOT449571",
+    "Unit Price": "444.65",
+    "Net Amount": "444.65",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "454.00",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "95.34",
+     "rate": "21"
+    },
+    {
+     "tax_code": "RE",
+     "tax_total": "23.61",
+     "rate": "5.2"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "572.95",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-35401",
+   "kind": "punct",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "ES60 0564 4731 1608 7135 9327",
+   "approved": null,
+   "usual": "ES60 0564 4731 1608 7135 9327"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": {
+   "kind": "subtotal"
+  },
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00640311612679(17)290701(10)LOT449571(21)SN92949565",
+    "gtin": "0640311612679",
+    "expiry": "290701",
+    "lot": "LOT449571",
+    "serial": "SN92949565",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00640311612679(17)290701(10)LOT449571(21)SN92949565",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

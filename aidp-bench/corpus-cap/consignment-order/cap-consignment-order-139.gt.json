@@ -1,0 +1,173 @@
+{
+ "id": "cap-consignment-order-139",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "pt-PT",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": 1
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Atlântico Distribuição SA",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 50",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT464342279",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Distribuição Mondego SA",
+   "Name 2": "",
+   "Street 1": "Rua do Comércio 137",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "VAT No": "PT474903224",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Avenida da Liberdade 50",
+   "Street 2": "",
+   "City": "Porto",
+   "Postal Code": "4000-322",
+   "Country": "Portugal",
+   "Country Code": "PT",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-01529",
+   "Consignment Date": "10/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "09/04/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "João Silva"
+  },
+  "Items": [
+   {
+    "Article ID": "TRN-15045",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Quantity": "44",
+    "UOM": "set",
+    "Serial Number": "SN36229073",
+    "Lot Number": "LOT449550",
+    "Unit Price": "205.47",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "9040.68",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "2079.36",
+     "rate": "23"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "11120.04",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-87866",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "PT03 0351 0260 4834 4451 2782 3",
+   "approved": "PT03 0351 0260 4834 4451 2782 3",
+   "usual": "PT03 0351 0260 4834 4451 2782 3"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Items.0.Net Amount",
+    "value": "9040.68",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.0.Quantity",
+     "Items.0.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00892180245858(17)270705(10)LOT449550(21)SN36229073",
+    "gtin": "0892180245858",
+    "expiry": "270705",
+    "lot": "LOT449550",
+    "serial": "SN36229073",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00892180245858(17)270705(10)LOT449550(21)SN36229073",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

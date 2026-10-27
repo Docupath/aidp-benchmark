@@ -1,0 +1,236 @@
+{
+ "id": "cap-credit-note-066",
+ "slug": "credit-note",
+ "category": "Credit Note",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "sv-SE",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "B",
+ "case": {
+  "kind": "bank-history",
+  "role": "anomaly"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Nordiska Verktyg AB",
+   "Address": "Kungsgatan 8",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE"
+  },
+  "Seller": {
+   "Name": "Halland Elektronik (publ) AB",
+   "Address": "Fabriksgatan 77",
+   "City": "Göteborg",
+   "Postal Code": "411 05",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "VAT No": "",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Kungsgatan 8",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "CN-2026-17356",
+   "Compromisso Code": "",
+   "Invoice Date": "03/05/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "02/06/2026",
+   "Cost Center": "",
+   "Your Reference": "Erik Lindqvist",
+   "Posting Date": "",
+   "Net Amount": "12664.70",
+   "Total Tax": "3166.18",
+   "Total Amount": "15830.88",
+   "Rounding Amount": "",
+   "Currency Code": "SEK",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "CBL-94086",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "16",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "11.74",
+    "Net Amount": "187.84",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "VAL-31257",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "30",
+    "UOM": "EA",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "388.33",
+    "Net Amount": "11649.90",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "3",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "FLT-20782",
+    "Article Name": "Filter Cartridge F9",
+    "Description": "HEPA class",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "2",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "413.48",
+    "Net Amount": "826.96",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "SE52 1894 1522 3385 1081 9399",
+     "BIC_or_Swift_code": "QQTUSEX2"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "25",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "Moms",
+     "tax_total": "3166.18",
+     "rate": "25"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-36138",
+   "kind": "punct",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "SE52 1894 1522 3385 1081 9399",
+   "approved": null,
+   "usual": "SE62 8479 3951 5339 4716 5146"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Details.Payment Methods.0.account_no",
+     "Payment Details.Payment Methods.0.BIC_or_Swift_code"
+    ]
+   }
+  ]
+ }
+}

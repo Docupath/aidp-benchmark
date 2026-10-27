@@ -1,0 +1,217 @@
+{
+ "id": "cap-consignment-order-127",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "nl-NL",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Van Dijk Handel BV",
+   "Name 2": "",
+   "Street 1": "Industrieweg 88",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL669090975B01",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Veluwe Logistiek",
+   "Name 2": "",
+   "Street 1": "Dorpsstraat 192",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industrieweg 88",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "",
+   "Consignment Date": "19/04/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "19/05/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Jan de Vries"
+  },
+  "Items": [
+   {
+    "Article ID": "BRK-41640",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "",
+    "Quantity": "48",
+    "UOM": "box",
+    "Serial Number": "SN01221364",
+    "Lot Number": "LOT354840",
+    "Unit Price": "98.49",
+    "Net Amount": "4727.52",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CHM-90344",
+    "Article Name": "Cleaning Agent CX",
+    "Description": "5L canister",
+    "Order Number": "",
+    "Quantity": "1",
+    "UOM": "pcs",
+    "Serial Number": "SN98579518",
+    "Lot Number": "LOT043771",
+    "Unit Price": "246.51",
+    "Net Amount": "246.51",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "4974.03",
+   "Tax": [
+    {
+     "tax_code": "BTW",
+     "tax_total": "1044.55",
+     "rate": "21"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "6018.58",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-94078",
+   "kind": "short",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "NL14 QQQU 9953 1034 68",
+   "approved": null,
+   "usual": "NL14 QQQU 9953 1034 68"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [
+   {
+    "id": "O1",
+    "path": "Consignment Details.Consignment Number",
+    "value": "CSG-2026-24950",
+    "kind": "blot",
+    "hidden": true,
+    "page": 1
+   },
+   {
+    "id": "C1",
+    "path": "Consignment Details.Contact Name",
+    "value": "Jan de Vries",
+    "kind": "ring",
+    "hidden": false,
+    "control_for": "O1",
+    "page": 1
+   }
+  ],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00161653789404(17)280506(10)LOT354840(21)SN01221364",
+    "gtin": "0161653789404",
+    "expiry": "280506",
+    "lot": "LOT354840",
+    "serial": "SN01221364",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00941069676853(17)270120(10)LOT043771(21)SN98579518",
+    "gtin": "0941069676853",
+    "expiry": "270120",
+    "lot": "LOT043771",
+    "serial": "SN98579518",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00161653789404(17)280506(10)LOT354840(21)SN01221364",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1-128",
+    "payload": "(01)00941069676853(17)270120(10)LOT043771(21)SN98579518",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

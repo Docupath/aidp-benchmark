@@ -1,0 +1,182 @@
+{
+ "id": "cap-consignment-order-105",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "nl-NL",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Randstad Componenten BV",
+   "Name 2": "",
+   "Street 1": "Industrieweg 88",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL308483442B01",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Gelderse Componenten NV",
+   "Name 2": "",
+   "Street 1": "Kerkstraat 134",
+   "Street 2": "",
+   "City": "Rotterdam",
+   "Postal Code": "3011 AA",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industrieweg 88",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-08439",
+   "Consignment Date": "02/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "01/02/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Jan de Vries"
+  },
+  "Items": [
+   {
+    "Article ID": "BRK-17985",
+    "Article Name": "Mounting Bracket L",
+    "Description": "Steel bracket, left",
+    "Order Number": "",
+    "Quantity": "26",
+    "UOM": "set",
+    "Serial Number": "SN07833142",
+    "Lot Number": "LOT267199",
+    "Unit Price": "317.42",
+    "Net Amount": "8252.92",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "GSK-48306",
+    "Article Name": "Gasket Set EPDM",
+    "Description": "Set of 8",
+    "Order Number": "",
+    "Quantity": "47",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "LOT660856",
+    "Unit Price": "49.12",
+    "Net Amount": "2308.64",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "10561.56",
+   "Tax": [
+    {
+     "tax_code": "BTW",
+     "tax_total": "2217.93",
+     "rate": "21"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "12546.45",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-86113",
+   "kind": "legal",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "NL29 FHNL 8488 0296 55",
+   "approved": "NL29 FHNL 8488 0296 55",
+   "usual": "NL29 FHNL 8488 0296 55"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": {
+   "kind": "total"
+  },
+  "labels": [
+   {
+    "id": "L1",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00309062342777(17)270718(10)LOT660856",
+    "gtin": "0309062342777",
+    "expiry": "270718",
+    "lot": "LOT660856",
+    "serial": "",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00309062342777(17)270718(10)LOT660856",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

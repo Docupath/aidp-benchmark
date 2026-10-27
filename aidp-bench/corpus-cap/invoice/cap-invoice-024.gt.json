@@ -1,0 +1,241 @@
+{
+ "id": "cap-invoice-024",
+ "slug": "invoice",
+ "category": "Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "B",
+ "case": {
+  "kind": "po-variance",
+  "role": "anomaly"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Harborline Foods Corp",
+   "Address": "1200 Industrial Parkway",
+   "City": "Cleveland",
+   "Postal Code": "44101",
+   "Country": "United States",
+   "Country Code": "US"
+  },
+  "Seller": {
+   "Name": "Brightwater Medical Group LLC",
+   "Address": "42 Madison Avenue",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US96-0872471",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "1200 Industrial Parkway",
+   "City": "Cleveland",
+   "Postal Code": "44101",
+   "Country": "United States",
+   "Country Code": "US",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Debit",
+   "Invoice Number": "INV-2026-12502",
+   "Compromisso Code": "",
+   "Invoice Date": "20/02/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "22/03/2026",
+   "Cost Center": "",
+   "Your Reference": "Sarah Mitchell",
+   "Posting Date": "",
+   "Net Amount": "24944.37",
+   "Total Tax": "2120.27",
+   "Total Amount": "27064.64",
+   "Rounding Amount": "",
+   "Currency Code": "USD",
+   "Purchase Order Number": "PO-2026-56609"
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "VAL-13622",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "17",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "454.31",
+    "Net Amount": "7723.27",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "BRG-65656",
+    "Article Name": "Ball Bearing 6204",
+    "Description": "Sealed, C3 clearance",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "48",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "257.92",
+    "Net Amount": "12380.16",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "3",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "CBL-42763",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "26",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "186.19",
+    "Net Amount": "4840.94",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "",
+     "account_no": "360381440909",
+     "BIC_or_Swift_code": "YEOTUSX2"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "8.5",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "2120.27",
+     "rate": "8.5"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-19657",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "360381440909",
+   "approved": null,
+   "usual": "360381440909"
+  },
+  "po_number": "PO-2026-56609",
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "stamp",
+    "text": "RECEIVED 02/23/2026",
+    "page": 1,
+    "place": "top"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   },
+   {
+    "compound": "bank-line",
+    "parts": [
+     "Payment Details.Payment Methods.0.account_no",
+     "Payment Details.Payment Methods.0.BIC_or_Swift_code"
+    ]
+   }
+  ]
+ }
+}

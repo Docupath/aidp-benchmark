@@ -1,0 +1,216 @@
+{
+ "id": "cap-consignment-order-075",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "es-ES",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Suministros del Norte SL",
+   "Name 2": "",
+   "Street 1": "Avenida Diagonal 220",
+   "Street 2": "",
+   "City": "Madrid",
+   "Postal Code": "28001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB60617926",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Electrónica Tajo",
+   "Name 2": "",
+   "Street 1": "Calle Mayor 125",
+   "Street 2": "",
+   "City": "Valencia",
+   "Postal Code": "46001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Avenida Diagonal 220",
+   "Street 2": "",
+   "City": "Madrid",
+   "Postal Code": "28001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-94438",
+   "Consignment Date": "19/02/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "21/03/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Carlos García"
+  },
+  "Items": [
+   {
+    "Article ID": "DEV-35416",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Quantity": "47",
+    "UOM": "pcs",
+    "Serial Number": "SN73261017",
+    "Lot Number": "LOT008674",
+    "Unit Price": "28.84",
+    "Net Amount": "1355.48",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "FRT-39891",
+    "Article Name": "Freight & Handling",
+    "Description": "Road transport",
+    "Order Number": "",
+    "Quantity": "29",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "LOT019300",
+    "Unit Price": "21.71",
+    "Net Amount": "629.59",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "DEV-74234",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Quantity": "40",
+    "UOM": "EA",
+    "Serial Number": "SN39935429",
+    "Lot Number": "LOT239836",
+    "Unit Price": "84.00",
+    "Net Amount": "3360.00",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "5345.07",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "1122.46",
+     "rate": "21"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "6467.53",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-35339",
+   "kind": "short",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "ES85 1698 1189 5845 9759 4063",
+   "approved": null,
+   "usual": "ES85 1698 1189 5845 9759 4063"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00499695117894(17)290904(10)LOT008674(21)SN73261017",
+    "gtin": "0499695117894",
+    "expiry": "290904",
+    "lot": "LOT008674",
+    "serial": "SN73261017",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 2,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00310125455334(17)270303(10)LOT239836(21)SN39935429",
+    "gtin": "0310125455334",
+    "expiry": "270303",
+    "lot": "LOT239836",
+    "serial": "SN39935429",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00499695117894(17)290904(10)LOT008674(21)SN73261017",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00310125455334(17)270303(10)LOT239836(21)SN39935429",
+    "row": 2,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

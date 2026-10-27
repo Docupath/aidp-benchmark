@@ -1,0 +1,216 @@
+{
+ "id": "cap-credit-note-108",
+ "slug": "credit-note",
+ "category": "Credit Note",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "sv-SE",
+ "dims": {
+  "scale": "small",
+  "noise": "none",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Svea Logistik AB",
+   "Address": "Industrivägen 3",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE"
+  },
+  "Seller": {
+   "Name": "VÄNERN ELEKTRONIK AB",
+   "Address": "Storgatan 71",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "VAT No": "SE933829980501",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Industrivägen 3",
+   "City": "Stockholm",
+   "Postal Code": "111 43",
+   "Country": "Sweden",
+   "Country Code": "SE",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Credit",
+   "Invoice Number": "CN-2026-38987",
+   "Compromisso Code": "",
+   "Invoice Date": "19/02/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "21/03/2026",
+   "Cost Center": "",
+   "Your Reference": "Erik Lindqvist",
+   "Posting Date": "",
+   "Net Amount": "7858.79",
+   "Total Tax": "1964.70",
+   "Total Amount": "9823.49",
+   "Rounding Amount": "",
+   "Currency Code": "SEK",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "DEV-48988",
+    "Article Name": "Software Development",
+    "Description": "Sprint delivery",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "29",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "240.83",
+    "Net Amount": "6984.07",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Item No": "2",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "CONS-75756",
+    "Article Name": "Consulting Services",
+    "Description": "Senior consultant",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "22",
+    "UOM": "kg",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "39.76",
+    "Net Amount": "874.72",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "SE91 0256 8650 6230 3098 3059",
+     "BIC_or_Swift_code": "NYEMSES5"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "25",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "Moms",
+     "tax_total": "1964.70",
+     "rate": "25"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-24657",
+   "kind": "upper",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "SE91 0256 8650 6230 3098 3059",
+   "approved": null,
+   "usual": "SE91 0256 8650 6230 3098 3059"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Rad 1 skadad",
+    "page": 1,
+    "place": "end"
+   },
+   {
+    "id": "M2",
+    "kind": "note",
+    "text": "Rad 2 skadad",
+    "page": 1,
+    "place": "end"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

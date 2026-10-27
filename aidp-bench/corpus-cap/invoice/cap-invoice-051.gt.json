@@ -1,0 +1,176 @@
+{
+ "id": "cap-invoice-051",
+ "slug": "invoice",
+ "category": "Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-CH",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "B",
+ "case": {
+  "kind": "amount-history",
+  "role": "control"
+ },
+ "gt": {
+  "Buyer": {
+   "Name": "Zürichsee Handels AG",
+   "Address": "Bahnhofstrasse 12",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH"
+  },
+  "Seller": {
+   "Name": "Aare Präzision SA",
+   "Address": "Bahnhofstrasse 215",
+   "City": "Basel",
+   "Postal Code": "4051",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "VAT No": "CHE-941.515.552 MWST",
+   "Registration No": ""
+  },
+  "Remit To": {
+   "Name": "",
+   "Street": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Ship To Name": "",
+   "Address": "Bahnhofstrasse 12",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Invoice Details": {
+   "Invoice Type": "Debit",
+   "Invoice Number": "INV-2026-92487",
+   "Compromisso Code": "",
+   "Invoice Date": "07/03/2026",
+   "Period Start Date": "",
+   "Period End Date": "",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "GRN No": "",
+   "Due Date": "06/04/2026",
+   "Cost Center": "",
+   "Your Reference": "Claudia Frei",
+   "Posting Date": "",
+   "Net Amount": "12248.85",
+   "Total Tax": "992.16",
+   "Total Amount": "13241.01",
+   "Rounding Amount": "",
+   "Currency Code": "CHF",
+   "Purchase Order Number": ""
+  },
+  "Items": [
+   {
+    "Item No": "1",
+    "Period Start Date": "",
+    "Period End Date": "",
+    "Article ID": "PMP-25712",
+    "Article Name": "Dosing Pump DP-12",
+    "Description": "12 l/h, PVDF head",
+    "Order Number": "",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "37",
+    "UOM": "pcs",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "331.05",
+    "Net Amount": "12248.85",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Payment Methods": [
+    {
+     "payment_method": "IBAN",
+     "account_no": "CH37 1901 2516 0591 2188 3",
+     "BIC_or_Swift_code": "JFZVCHA0"
+    }
+   ],
+   "Invoice Amount": "",
+   "Rounding Amount": "",
+   "Tax Amount": "",
+   "Tax Rate": "8.1",
+   "Exchange Rate": "",
+   "Tax Amount Diff": "",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "992.16",
+     "rate": "8.1"
+    }
+   ],
+   "Payment Reference": "",
+   "UUID": "",
+   "Total": "",
+   "Amount Due": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-87094",
+   "kind": "legal",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "CH37 1901 2516 0591 2188 3",
+   "approved": "CH37 1901 2516 0591 2188 3",
+   "usual": "CH37 1901 2516 0591 2188 3"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Address",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,201 @@
+{
+ "id": "cap-consignment-invoice-087",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "nl-NL",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Hollandse Precisie BV",
+   "Name 2": "",
+   "Street 1": "Industrieweg 88",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL126269929B01",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Zeeuwse Logistiek B.V.",
+   "Name 2": "",
+   "Street 1": "Industrieweg 156",
+   "Street 2": "",
+   "City": "Rotterdam",
+   "Postal Code": "3011 AA",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "VAT No": "NL796681004B01",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industrieweg 88",
+   "Street 2": "",
+   "City": "Amsterdam",
+   "Postal Code": "1015 CX",
+   "Country": "Netherlands",
+   "Country Code": "NL",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-78140",
+   "Consignment Date": "12/04/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "12/05/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Jan de Vries"
+  },
+  "Items": [
+   {
+    "Article ID": "TRN-84750",
+    "Article Name": "Training Workshop",
+    "Description": "On-site, 1 day",
+    "Order Number": "",
+    "Quantity": "46",
+    "UOM": "pcs",
+    "Serial Number": "SN03298797",
+    "Lot Number": "LOT759118",
+    "Unit Price": "479.55",
+    "Net Amount": "22059.30",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "CONS-60824",
+    "Article Name": "Consulting Services",
+    "Description": "Senior consultant",
+    "Order Number": "",
+    "Quantity": "6",
+    "UOM": "set",
+    "Serial Number": "SN33243487",
+    "Lot Number": "LOT136704",
+    "Unit Price": "147.61",
+    "Net Amount": "885.66",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "22944.96",
+   "Tax": [
+    {
+     "tax_code": "BTW",
+     "tax_total": "4818.44",
+     "rate": "21"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "28693.44",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-84488",
+   "kind": "punct",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "NL49 MTRW 1535 7569 62",
+   "approved": "NL49 MTRW 1535 7569 62",
+   "usual": "NL49 MTRW 1535 7569 62"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": {
+   "kind": "total"
+  },
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00451278851519(17)270625(10)LOT759118(21)SN03298797",
+    "gtin": "0451278851519",
+    "expiry": "270625",
+    "lot": "LOT759118",
+    "serial": "SN03298797",
+    "label_only": true,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "row": 1,
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00898915381730(17)290221(10)LOT136704(21)SN33243487",
+    "gtin": "0898915381730",
+    "expiry": "290221",
+    "lot": "LOT136704",
+    "serial": "SN33243487",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00451278851519(17)270625(10)LOT759118(21)SN03298797",
+    "row": 0,
+    "page": 1
+   },
+   {
+    "id": "L2",
+    "symbology": "gs1datamatrix",
+    "payload": "(01)00898915381730(17)290221(10)LOT136704(21)SN33243487",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

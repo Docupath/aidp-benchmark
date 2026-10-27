@@ -1,0 +1,180 @@
+{
+ "id": "cap-consignment-invoice-130",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "fr-FR",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Groupe Horizon SA",
+   "Name 2": "",
+   "Street 1": "12 Rue de la République",
+   "Street 2": "",
+   "City": "Paris",
+   "Postal Code": "75008",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR32 098775261",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Lumière Outillage",
+   "Name 2": "",
+   "Street 1": "101 Rue de la République",
+   "Street 2": "",
+   "City": "Lyon",
+   "Postal Code": "69001",
+   "Country": "France",
+   "Country Code": "FR",
+   "VAT No": "FR36 117940988",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "12 Rue de la République",
+   "Street 2": "",
+   "City": "Paris",
+   "Postal Code": "75008",
+   "Country": "France",
+   "Country Code": "FR",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-81336",
+   "Consignment Date": "08/03/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "07/04/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Sophie Bernard"
+  },
+  "Items": [
+   {
+    "Article ID": "WGT-08258",
+    "Article Name": "Widget Pro 2000",
+    "Description": "Precision widget, anodized",
+    "Order Number": "",
+    "Quantity": "11",
+    "UOM": "box",
+    "Serial Number": "SN36244378",
+    "Lot Number": "LOT049535",
+    "Unit Price": "4011.06",
+    "Net Amount": "44121.66",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "MTR-43367",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "",
+    "Quantity": "29",
+    "UOM": "box",
+    "Serial Number": "SN88211405",
+    "Lot Number": "LOT559038",
+    "Unit Price": "1871.85",
+    "Net Amount": "54283.65",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "98405.31",
+   "Tax": [
+    {
+     "tax_code": "TVA",
+     "tax_total": "19681.06",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "118086.37",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-98142",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "FR09 5929 2074 0157 6187 5164 622",
+   "approved": "FR09 5929 2074 0157 6187 5164 622",
+   "usual": "FR09 5929 2074 0157 6187 5164 622"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 1,
+    "symbology": "gs1-128",
+    "payload": "(01)00995846274435(17)270110(10)LOT559038(21)SN88211405",
+    "gtin": "0995846274435",
+    "expiry": "270110",
+    "lot": "LOT559038",
+    "serial": "SN88211405",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00995846274435(17)270110(10)LOT559038(21)SN88211405",
+    "row": 1,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,189 @@
+{
+ "id": "cap-consignment-order-068",
+ "slug": "consignment-order",
+ "category": "Consignment Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-GB",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Thamesview Logistics Ltd",
+   "Name 2": "",
+   "Street 1": "Unit 7, Riverside Estate",
+   "Street 2": "",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "GB189283194",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "LANGDALE COMPONENTS LTD",
+   "Name 2": "",
+   "Street 1": "207 Church Road",
+   "Street 2": "",
+   "City": "Manchester",
+   "Postal Code": "M1 2AB",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "VAT No": "",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Unit 7, Riverside Estate",
+   "Street 2": "",
+   "City": "Leeds",
+   "Postal Code": "LS1 4DY",
+   "Country": "United Kingdom",
+   "Country Code": "GB",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-32089",
+   "Consignment Date": "16/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "15/02/2026",
+   "Currency Code": "GBP",
+   "Contact Name": "Harry Whitfield"
+  },
+  "Items": [
+   {
+    "Article ID": "CBL-03919",
+    "Article Name": "Cable Assembly 3m",
+    "Description": "Shielded, 3 meter",
+    "Order Number": "",
+    "Quantity": "19",
+    "UOM": "kg",
+    "Serial Number": "SN84547789",
+    "Lot Number": "LOT505993",
+    "Unit Price": "43.78",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "831.82",
+   "Tax": [
+    {
+     "tax_code": "VAT",
+     "tax_total": "166.36",
+     "rate": "20"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-91744",
+   "kind": "upper",
+   "vat_printed": false,
+   "listed": true
+  },
+  "bank": {
+   "printed": "GB50 VEIR 8021 1254 0682 62",
+   "approved": null,
+   "usual": "GB50 VEIR 8021 1254 0682 62"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "OK to pay - GD",
+    "page": 1,
+    "place": "end"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Items.0.Net Amount",
+    "value": "831.82",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.0.Quantity",
+     "Items.0.Unit Price"
+    ]
+   },
+   {
+    "path": "Payment Details.Total",
+    "value": "998.18",
+    "method": "net plus tax",
+    "inputs": [
+     "Payment Details.Subtotal"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00154757107298(17)280308(10)LOT505993(21)SN84547789",
+    "gtin": "0154757107298",
+    "expiry": "280308",
+    "lot": "LOT505993",
+    "serial": "SN84547789",
+    "label_only": false,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00154757107298(17)280308(10)LOT505993(21)SN84547789",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

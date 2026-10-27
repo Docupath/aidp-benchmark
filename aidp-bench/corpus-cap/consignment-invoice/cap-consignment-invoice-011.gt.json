@@ -1,0 +1,219 @@
+{
+ "id": "cap-consignment-invoice-011",
+ "slug": "consignment-invoice",
+ "category": "Consignment Invoice",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "es-ES",
+ "dims": {
+  "scale": "small",
+  "noise": "medium",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Distribuciones Ibérica SL",
+   "Name 2": "",
+   "Street 1": "Avenida Diagonal 220",
+   "Street 2": "",
+   "City": "Valencia",
+   "Postal Code": "46001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB04237651",
+   "Contact Name": ""
+  },
+  "Seller": {
+   "Name": "Logística Ibérica",
+   "Name 2": "",
+   "Street 1": "Avenida Diagonal 157",
+   "Street 2": "",
+   "City": "Valencia",
+   "Postal Code": "46001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "VAT No": "ESB43395500",
+   "Registration No": "",
+   "GLN No": "",
+   "Email": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Avenida Diagonal 220",
+   "Street 2": "",
+   "City": "Valencia",
+   "Postal Code": "46001",
+   "Country": "Spain",
+   "Country Code": "ES",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Consignment Details": {
+   "Consignment Number": "CSG-2026-31391",
+   "Consignment Date": "25/01/2026",
+   "Delivery Date": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Payment Due Date": "24/02/2026",
+   "Currency Code": "EUR",
+   "Contact Name": "Lucía Fernández"
+  },
+  "Items": [
+   {
+    "Article ID": "PMP-61354",
+    "Article Name": "Dosing Pump DP-12",
+    "Description": "12 l/h, PVDF head",
+    "Order Number": "",
+    "Quantity": "40",
+    "UOM": "pcs",
+    "Serial Number": "SN89062070",
+    "Lot Number": "LOT627289",
+    "Unit Price": "12575.02",
+    "Net Amount": "503000.80",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "LBL-36590",
+    "Article Name": "Label Roll 50x30",
+    "Description": "Thermal, 1000/roll",
+    "Order Number": "",
+    "Quantity": "44",
+    "UOM": "kg",
+    "Serial Number": "SN34821912",
+    "Lot Number": "LOT211929",
+    "Unit Price": "8130.01",
+    "Net Amount": "357720.44",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "FLT-15380",
+    "Article Name": "Filter Cartridge F9",
+    "Description": "HEPA class",
+    "Order Number": "",
+    "Quantity": "44",
+    "UOM": "set",
+    "Serial Number": "SN47441182",
+    "Lot Number": "LOT458013",
+    "Unit Price": "11205.62",
+    "Net Amount": "493047.28",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Methods": "IBAN",
+   "Subtotal": "1353768.52",
+   "Tax": [
+    {
+     "tax_code": "IVA",
+     "tax_total": "284291.39",
+     "rate": "21"
+    }
+   ],
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Total": "1638059.91",
+   "Amount Due": "",
+   "Payment Reference": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-47801",
+   "kind": "short",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "ES16 5903 1122 8215 3498 7987",
+   "approved": null,
+   "usual": "ES16 5903 1122 8215 3498 7987"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "stamp",
+    "text": "APPROVED LD",
+    "page": 1,
+    "place": "top"
+   },
+   {
+    "id": "M2",
+    "kind": "note",
+    "text": "Entrega parcial, faltan 18",
+    "page": 1,
+    "place": "header"
+   },
+   {
+    "id": "M3",
+    "kind": "note",
+    "text": "Conforme para pago - TJ",
+    "page": 1,
+    "place": "end"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [
+   {
+    "id": "L1",
+    "row": 0,
+    "symbology": "gs1-128",
+    "payload": "(01)00180034455035(17)280913(10)LOT627289(21)SN89062070",
+    "gtin": "0180034455035",
+    "expiry": "280913",
+    "lot": "LOT627289",
+    "serial": "SN89062070",
+    "label_only": true,
+    "page": 1
+   }
+  ],
+  "barcodes": [
+   {
+    "id": "L1",
+    "symbology": "gs1-128",
+    "payload": "(01)00180034455035(17)280913(10)LOT627289(21)SN89062070",
+    "row": 0,
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,217 @@
+{
+ "id": "cap-purchase-order-140",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "de-CH",
+ "dims": {
+  "scale": "small",
+  "noise": "heavy",
+  "coverPage": false,
+  "scanned": true,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Zürichsee Handels AG",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 55",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "VAT No": "CHE-368.328.399 MWST"
+  },
+  "Seller": {
+   "Name": "Zürichsee Logistik",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 133",
+   "Street 2": "",
+   "City": "Basel",
+   "Postal Code": "4051",
+   "Country": "Switzerland",
+   "Country Code": "CH"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "Industriestrasse 55",
+   "Street 2": "",
+   "City": "Genève",
+   "Postal Code": "1201",
+   "Country": "Switzerland",
+   "Country Code": "CH",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-18525",
+   "Compromisso Code": "",
+   "PO Date": "26/02/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "28/03/2026",
+   "Cost Center": "",
+   "Your Reference": "Marc Dubois",
+   "Posting Date": "",
+   "Net Amount": "18801.84",
+   "Total Amount": "20324.79",
+   "Rounding Amount": "",
+   "Currency Code": "CHF",
+   "Contact Name": "Marc Dubois"
+  },
+  "Items": [
+   {
+    "Article ID": "MTR-34523",
+    "Article Name": "Servo Motor SM-400",
+    "Description": "400W, with encoder",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "40",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "441.46",
+    "Net Amount": "17658.40",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   },
+   {
+    "Article ID": "VAL-04210",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Order Number": "2",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "4",
+    "UOM": "set",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "285.86",
+    "Net Amount": "1143.44",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "8.1",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "MwSt",
+     "tax_total": "1522.95",
+     "rate": "8.1"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "IBAN",
+    "Account Number": "CH07 7996 3094 9289 3334 2",
+    "BIC/SWIFT Code": "HTSWCHE7"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-41541",
+   "kind": "no-form",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "CH07 7996 3094 9289 3334 2",
+   "approved": "CH07 7996 3094 9289 3334 2",
+   "usual": "CH07 7996 3094 9289 3334 2"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "stamp",
+    "text": "BEZAHLT 05.03.2026",
+    "page": 1,
+    "place": "top"
+   },
+   {
+    "id": "M2",
+    "kind": "note",
+    "text": "Mit Lieferung geprüft 19.06",
+    "page": 1,
+    "place": "header"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [
+   {
+    "id": "C1",
+    "symbology": "code128",
+    "payload": "PO-2026-18525",
+    "page": 1
+   }
+  ],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}

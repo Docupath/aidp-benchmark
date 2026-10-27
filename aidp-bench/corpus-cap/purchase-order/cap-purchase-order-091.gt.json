@@ -1,0 +1,214 @@
+{
+ "id": "cap-purchase-order-091",
+ "slug": "purchase-order",
+ "category": "Purchase Order",
+ "category_alt": [],
+ "mode": "fields",
+ "locale": "en-US",
+ "dims": {
+  "scale": "small",
+  "noise": "light",
+  "coverPage": false,
+  "scanned": false,
+  "upside_down_page": null
+ },
+ "phase": "A",
+ "case": null,
+ "gt": {
+  "Buyer": {
+   "Name": "Crestview Supplies LLC",
+   "Name 2": "",
+   "Street 1": "450 Madison Avenue",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "VAT No": "US08-1620726"
+  },
+  "Seller": {
+   "Name": "EASTGATE MEDICAL CORP",
+   "Name 2": "",
+   "Street 1": "2 Lake Street",
+   "Street 2": "",
+   "City": "Denver",
+   "Postal Code": "80201",
+   "Country": "United States",
+   "Country Code": "US"
+  },
+  "Remit To": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "",
+   "Street 2": "",
+   "City": "",
+   "Province": "",
+   "Postal Code": "",
+   "Country": "",
+   "Country Code": ""
+  },
+  "Shipping Details": {
+   "Name": "",
+   "Name 2": "",
+   "Street 1": "450 Madison Avenue",
+   "Street 2": "",
+   "City": "Austin",
+   "Postal Code": "73301",
+   "Country": "United States",
+   "Country Code": "US",
+   "ShipTo": "",
+   "Shipping Method": "",
+   "Tracking Number": ""
+  },
+  "Order Details": {
+   "PO Number": "PO-2026-17314",
+   "Compromisso Code": "",
+   "PO Date": "13/03/2026",
+   "Delivery Date": "",
+   "Delivery Note No": "",
+   "Payment Terms": "Payment due within 30 days.",
+   "Due Date": "",
+   "Cost Center": "",
+   "Your Reference": "Sarah Mitchell",
+   "Posting Date": "",
+   "Net Amount": "1234.11",
+   "Total Amount": "1339.01",
+   "Rounding Amount": "",
+   "Currency Code": "USD",
+   "Contact Name": "Sarah Mitchell"
+  },
+  "Items": [
+   {
+    "Article ID": "VAL-07482",
+    "Article Name": "Control Valve DN50",
+    "Description": "Brass body",
+    "Order Number": "1",
+    "Size": "",
+    "Color": "",
+    "Your Reference Number": "",
+    "Quantity": "3",
+    "UOM": "box",
+    "Serial Number": "",
+    "Lot Number": "",
+    "Unit Price": "411.37",
+    "Net Amount": "",
+    "Tax Rate": "",
+    "Tax Amount": "",
+    "Note Number": "",
+    "Buyer Article ID": "",
+    "Discount Amount": "",
+    "Discount %": "",
+    "Gross Amount": ""
+   }
+  ],
+  "Payment Details": {
+   "Payment Details Description": "",
+   "Subtotal": "",
+   "Tax Rate": "8.5",
+   "Exchange Rate": "",
+   "Tax Amount Difference": "",
+   "Tax": [
+    {
+     "tax_code": "Sales Tax",
+     "tax_total": "104.90",
+     "rate": "8.5"
+    }
+   ],
+   "Total": "",
+   "Amount Due": "",
+   "Payment Reference": "",
+   "UUID": ""
+  },
+  "Payment Methods": [
+   {
+    "Payment Method": "",
+    "Account Number": "058713139895",
+    "BIC/SWIFT Code": "CYKJUSG5"
+   }
+  ],
+  "Additional Fields": {
+   "Payment Notes": ""
+  },
+  "Barcodes": []
+ },
+ "cap": {
+  "supplier": {
+   "code": "SUP-64974",
+   "kind": "upper",
+   "vat_printed": true,
+   "listed": true
+  },
+  "bank": {
+   "printed": "058713139895",
+   "approved": null,
+   "usual": "058713139895"
+  },
+  "po_number": null,
+  "amount_jump": null,
+  "marks": [
+   {
+    "id": "M1",
+    "kind": "note",
+    "text": "Call David re: price",
+    "page": 1,
+    "place": "header"
+   },
+   {
+    "id": "M2",
+    "kind": "note",
+    "text": "Credit owed for line 1",
+    "page": 1,
+    "place": "header"
+   },
+   {
+    "id": "M3",
+    "kind": "note",
+    "text": "Paid by card 11/09",
+    "page": 1,
+    "place": "header"
+   }
+  ],
+  "occlusions": [],
+  "derivations": [
+   {
+    "path": "Order Details.Due Date",
+    "value": "12/04/2026",
+    "method": "document date plus the 30 days of the printed payment terms",
+    "inputs": [
+     "Order Details.PO Date",
+     "Order Details.Payment Terms"
+    ]
+   },
+   {
+    "path": "Items.0.Net Amount",
+    "value": "1234.11",
+    "method": "quantity times unit price",
+    "inputs": [
+     "Items.0.Quantity",
+     "Items.0.Unit Price"
+    ]
+   }
+  ],
+  "contradiction": null,
+  "labels": [],
+  "barcodes": [],
+  "parsing": [
+   {
+    "compound": "seller-address-line",
+    "parts": [
+     "Seller.Street 1",
+     "Seller.Postal Code",
+     "Seller.City",
+     "Seller.Country"
+    ]
+   },
+   {
+    "compound": "buyer-postal-city",
+    "parts": [
+     "Buyer.Postal Code",
+     "Buyer.City"
+    ]
+   }
+  ]
+ }
+}
