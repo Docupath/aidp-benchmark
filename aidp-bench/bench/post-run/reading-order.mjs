@@ -372,7 +372,7 @@ function hiddenCells({ cellsText, judged, assign, toks, dir, stickerWords }) {
   return { row_tagged: toks.some((x) => LEGIBILITY_TAG.test(x.t)), gaps: out };
 }
 
-function judgeDocument({ doc, gen, tables, reading, coverage, rtl }) {
+export function judgeDocument({ doc, gen, tables, reading, coverage, rtl }) {
   // what each sticker prints under its bars: the GTIN, lot and serial of its GS1 payload
   const stickerWords = (gen.content.stickers ?? []).flatMap((st) => String(st.text).toLowerCase().split(/\(\d{2}\)/).filter((w) => w.length >= 6));
   const lines = String(reading ?? '').split('\n');
