@@ -1,6 +1,6 @@
 # AIDP-2K and AIDP-CAP
 
-The two synthetic document datasets of AIDP v1.0, the Agentic IDP Accuracy Standard, described in the white paper
+The two document datasets of AIDP v1.0, the Agentic IDP Accuracy Standard, described in the white paper
 "Precision Beyond the Page" (Docupath Research, 28 October 2026).
 
 Intelligent document processing (IDP) turns business documents such as invoices and purchase orders into data. These
@@ -73,7 +73,7 @@ itself. The white paper describes the method and the results in full.
 
 ## Privacy
 
-Every document is synthetic. Every person, address, account number, article and amount was invented by the generator,
+Every document was generated for these datasets. Every person, address, account number, article and amount was invented,
 and so was every company name, with two exceptions: one Portuguese company is named after the publisher, Docupath,
 and the freight invoices print a vessel name that carries a real shipping line's name, with real container-owner
 codes. No customer document, customer name or value from a customer's document appears in this repository.
